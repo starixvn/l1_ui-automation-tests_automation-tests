@@ -40,7 +40,7 @@ smoketest:
     - auto-test-prod
   script:
     - cd /app
-    - npm run test --env=$ENV --gameid=$GAMEID
+    - npm run test --env=$ENV --gameid=$GAMEID --project=$PROJECT
   after_script:
     - du -hs /ms-playwright/*
   retry: 0
