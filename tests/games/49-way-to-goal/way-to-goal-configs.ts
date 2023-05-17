@@ -33,6 +33,8 @@ export const WayToGoalConfigs: Components.GameConfiguration = {
         sit: "supertestsaba66",
         uat: "IT55Test789",
         prod: "supertestte120201011",
+        vguat: "TestSep2747",
+        vgprod: "VNtest050",
     },
     productId: "1656"
 };

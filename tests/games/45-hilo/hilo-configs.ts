@@ -44,6 +44,8 @@ export const HiLoConfigs: Components.GameConfiguration = {
         sit: "supertestsaba67",
         uat: "IT56Test789",
         prod: "supertestte120201006",
+        vguat: "TestSep2742",
+        vgprod: "VNtest040",
     },
     productId: "1651"
 };

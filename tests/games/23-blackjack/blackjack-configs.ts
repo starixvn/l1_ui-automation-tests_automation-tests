@@ -28,6 +28,8 @@ export const BlackJackConfigs: Components.GameConfiguration = {
         sit: "supertestsaba66",
         uat: "IT55Test789",
         prod: "supertestte120201013",
+        vguat: "TestSep2740",
+        vgprod: "VNtest041",
     },
     productId: "1634"
 };

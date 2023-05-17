@@ -32,6 +32,8 @@ export const generateConfig = (
       sit: "supertestsaba68",
       uat: "IT57Test789",
       prod: "supertestte120201001",
+      vguat: "TestSep2749",
+      vgprod: "VNtest041",
     },
     productId: "0",
   };

@@ -15,6 +15,7 @@ class TexasHoldemPokerrSmokeSpec extends SmokeBases.CardGameBase {
             locators: TexasHoldemPokerrLocators,
             waitBetTimeout: 1000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);
@@ -42,7 +43,7 @@ class TexasHoldemPokerrSmokeSpec extends SmokeBases.CardGameBase {
         Components.test("THEN player able to place a bet and settle", async () => {
             // Arrange
             Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-            const bet = { choice: this.options.placeBetChoices[0], amount: 1 };
+            const bet = { choice: this.options.placeBetChoices[0], amount:this.options.placeBetAmount??1 };
             this.game.attachSocketAndCaptureEvent(GameEvent.Deal);        
            
             // Act

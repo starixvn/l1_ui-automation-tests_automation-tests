@@ -13,6 +13,7 @@ class KenoProMaxSmokeSpec extends SmokeBases.TableGameBase {
             locators: KenoProMaxLocators,
             waitBetTimeout: 9000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);

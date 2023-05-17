@@ -26,6 +26,8 @@ export const TurboOddEvenConfigs: Components.GameConfiguration = {
         sit: "supertestsaba66",
         uat: "IT55Test789",
         prod: "supertestte120201008",
+        vguat: "TestSep2744",
+        vgprod: "VNtest050",
     },
     productId: "1617"
 };

@@ -33,6 +33,8 @@ export const FourGuardiansConfigs: Components.GameConfiguration = {
         sit: "supertestsaba67",
         uat: "IT56Test789",
         prod: "supertestte120201007",
+        vguat: "TestSep2746",
+        vgprod: "VNtest046",
     },
     productId: "1640"
 };

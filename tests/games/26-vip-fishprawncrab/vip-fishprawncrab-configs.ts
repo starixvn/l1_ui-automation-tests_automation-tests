@@ -29,6 +29,8 @@ export const VIPFPCConfigs: Components.GameConfiguration = {
         sit: "supertestsaba69",
         uat: "IT58Test789",
         prod: "supertestte120201004",
+        vguat: "TestSep2743",
+        vgprod: "VNtest050",
     },
     productId: "1637"
 };

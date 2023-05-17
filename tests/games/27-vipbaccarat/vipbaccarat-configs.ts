@@ -30,6 +30,8 @@ export const VipBaccaratConfigs: Components.GameConfiguration = {
         sit: "supertestsaba70",
         uat: "IT59Test789",
         prod: "supertestte120201005",
+        vguat: "TestSep2744",
+        vgprod: "VNtest040",
     },
     productId: "1638"
 };

@@ -13,6 +13,7 @@ class BlackJackSmokeSpec extends SmokeBases.CardGameBase {
             locators: BlackJackLocators,
             waitBetTimeout: 1000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);

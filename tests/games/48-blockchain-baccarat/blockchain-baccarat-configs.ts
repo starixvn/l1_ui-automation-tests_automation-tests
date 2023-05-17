@@ -30,6 +30,8 @@ export const BlockchainBaccaratConfigs: Components.GameConfiguration = {
         sit: "supertestsaba70",
         uat: "IT59Test789",
         prod: "supertestte120201009",
+        vguat: "TestSep2746",
+        vgprod: "VNtest046",
     },
     productId: "1655"
 };

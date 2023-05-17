@@ -13,13 +13,13 @@ class BigSmallSicBoSmokeSpec extends SmokeBases.TableGameBase {
             waitBetTimeout: 12000,
             placeBetChoices: [BigSmallSicBoConfigs.choices[6]],
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);
     }
 
-    protected inGameDealerTests(): void {
-        
+    protected inGameDealerTests(): void {  
     }
 }
 

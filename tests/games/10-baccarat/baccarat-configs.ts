@@ -30,6 +30,8 @@ export const BaccaratConfigs: Components.GameConfiguration = {
         sit: "supertestsaba70",
         uat: "IT59Test789",
         prod: "supertestte120201013",
+        vguat: "TestSep2748",
+        vgprod: "VNtest046",
     },
     productId: "1621"
 };

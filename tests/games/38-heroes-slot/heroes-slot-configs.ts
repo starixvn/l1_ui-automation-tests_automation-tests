@@ -33,6 +33,8 @@ export const HeroesSlotConfigs: Components.GameConfiguration = {
       sit: "supertestsaba66",
       uat: "IT55Test789",
       prod: "supertestte120201012",
+      vguat: "TestSep2749",
+      vgprod: "VNtest041",
   },
   productId: "1644"
 };

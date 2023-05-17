@@ -26,13 +26,15 @@ export const HappyFishConfigs: Components.GameConfiguration = {
     },
     slotsgame: true,
     accounts: {
-        local: "222265",
-        local1: "222265",
-        local2: "222265",
-        local3: "222265",
+        local: "222269",
+        local1: "222269",
+        local2: "222269",
+        local3: "222269",
         sit: "supertestsaba70",
         uat: "IT59Test789",
         prod: "supertestte120201004",
+        vguat: "TestSep2743",
+        vgprod: "VNtest041",
     },
     productId: "1670"
 };

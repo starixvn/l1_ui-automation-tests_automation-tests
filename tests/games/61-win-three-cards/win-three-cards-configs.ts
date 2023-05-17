@@ -41,6 +41,8 @@ export const winthreecardsConfigs: Components.GameConfiguration = {
         sit: "supertestsaba70",
         uat: "IT55Test789",
         prod: "supertestte120201002",
+        vguat: "TestSep2741",
+        vgprod: "VNtest050",
     },
     productId: "1668"
 };

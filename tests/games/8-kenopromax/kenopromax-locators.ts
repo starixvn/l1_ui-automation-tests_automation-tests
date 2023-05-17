@@ -9,6 +9,7 @@ export const KenoProMaxLocators = [
     new Components.ImageLocator("historyMenu", 32, 352, 40, 40),
     new Components.ImageLocator("historyPopup", 579, 80, 250, 30),
     new Components.ImageLocator("stake1", 441, 616, 0, 0),
+    new Components.ImageLocator("stake10", 441, 616, 0, 0),
     new Components.ImageLocator("errorMessage", 476, 508, 320, 20),
     new Components.ImageLocator("msgMaxbetLimit", 492, 504, 350, 22),
     new Components.ImageLocator("btnRightArrow", 931, 600, 35, 35),

@@ -15,6 +15,7 @@ class HiLoSmokeSpec extends SmokeBases.MiniGameBase {
             locators: HiLoLocators,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);
@@ -40,7 +41,7 @@ class HiLoSmokeSpec extends SmokeBases.MiniGameBase {
     protected placeBetAndSettleTests(): void {
         Components.test("THEN player able to place a bet and settle", async () => {
             Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-            const bet = { choice: this.options.placeBetChoices[0], amount: 1 };
+            const bet = { choice: this.options.placeBetChoices[0], amount:this.options.placeBetAmount??1 };
 
             // Act
             const settledResults = await placeBethilo(this.game, bet.choice, bet.amount);

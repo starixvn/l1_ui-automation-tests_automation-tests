@@ -13,6 +13,7 @@ class ThreeCardsSmokeSpec extends SmokeBases.TableGameBase {
             locators: ThreeCardsLocators,
             waitBetTimeout: 7000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);

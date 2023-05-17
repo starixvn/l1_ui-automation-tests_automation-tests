@@ -15,6 +15,7 @@ class LotterySmokeSpec extends SmokeBases.TableGameBase {
             locators: LotteryLocators,
             waitBetTimeout: 9000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);

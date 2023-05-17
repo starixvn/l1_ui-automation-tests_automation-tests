@@ -12,6 +12,7 @@ export const TurboOddEvenLocators = [
     new Components.ImageLocator("oddChoiceBetBoard", 391, 369, 157, 42),
     new Components.ImageLocator("evenChoiceBetBoard", 742, 369, 157, 42),
     new Components.ImageLocator("stake1", 436, 489, 97, 36),
+    new Components.ImageLocator("stake10", 436, 489, 97, 36),
     new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
     new Components.ImageLocator("outside", 5, 5, 5, 5),
     new Components.ImageLocator("msgMaxbetLimit", 488, 368, 350, 25),

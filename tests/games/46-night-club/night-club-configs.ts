@@ -33,6 +33,8 @@ export const NightClubConfigs: Components.GameConfiguration = {
       sit: "supertestsaba68",
       uat: "IT57Test789",
       prod: "supertestte120201007",
+      vguat: "TestSep2744",
+      vgprod: "VNtest041",
   },
   productId: "1653"
 };

@@ -29,6 +29,8 @@ export const MiniSedie1Configs: Components.GameConfiguration = {
         sit: "supertestsaba69",
         uat: "IT58Test789",
         prod: "supertestte120201012",
+        vguat: "TestSep2747",
+        vgprod: "VNtest044",
     },
     productId: "1620"
 }

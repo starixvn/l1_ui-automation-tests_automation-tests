@@ -13,6 +13,7 @@ class SedieWarSmokeSpec extends SmokeBases.TableGameBase {
             waitBetTimeout: 10000,
             placeBetChoices: [SedieWarConfigs.choices[0]],
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);

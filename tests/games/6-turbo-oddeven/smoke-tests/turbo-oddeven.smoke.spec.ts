@@ -9,11 +9,11 @@ class TurboBigSmallSmokeSpec extends SmokeBases.BalancedBettingGameBase {
     constructor() {
         const smokeOptions: SmokeBases.IBaseOptions = {
             placeBetChoices: [TurboOddEvenConfigs.choices[0]],
-            placeBetAmount: 1,
             gameConfiguration: TurboOddEvenConfigs,
             locators: TurboOddEvenLocators,
             snapshotFolderPath: __filename,
             waitBetTimeout: 9000,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
         super(smokeOptions);
     }

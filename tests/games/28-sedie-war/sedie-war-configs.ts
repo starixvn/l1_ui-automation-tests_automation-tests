@@ -57,6 +57,8 @@ export const SedieWarConfigs: Components.GameConfiguration = {
         sit: "supertestsaba66",
         uat: "IT55Test789",
         prod: "supertestte120201006",
+        vguat: "TestSep2745",
+        vgprod: "VNtest041",
     },
     productId: "1639"
 };

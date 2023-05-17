@@ -14,6 +14,7 @@ class RouletteSmokeSpec extends SmokeBases.MiniGameBase {
             locators: RouletteLocators,
             waitBetTimeout: 15000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);
@@ -25,8 +26,7 @@ class RouletteSmokeSpec extends SmokeBases.MiniGameBase {
         Components.test("THEN player able to place a bet and settle", async () => {
             // Arrange
             Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-            // this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
-            const bet = { choice: RouletteConfigs.choices[0], amount: 1 };
+            const bet = { choice: RouletteConfigs.choices[0], amount:this.options.placeBetAmount };
 
             // Act
             const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);

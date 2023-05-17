@@ -14,6 +14,7 @@ export const BigSmallLocators = [
     new Components.ImageLocator("bigChoiceBetBoard", 391, 369, 157, 42),
     new Components.ImageLocator("smallChoiceBetBoard", 742, 369, 157, 42),
     new Components.ImageLocator("stake1", 436, 489, 97, 36),
+    new Components.ImageLocator("stake10", 436, 489, 97, 36),
     new Components.ImageLocator("stake1000", 774, 552, 60, 20),
     new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
     new Components.ImageLocator("outside", 5, 5, 5, 5),

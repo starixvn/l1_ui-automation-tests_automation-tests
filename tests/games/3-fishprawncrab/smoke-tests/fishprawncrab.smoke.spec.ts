@@ -16,6 +16,7 @@ class FPCSmokeSpec extends SmokeBases.MiniGameBase {
             locators: FPCLocators,
             waitBetTimeout: 10000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);
@@ -26,6 +27,7 @@ class FPCSmokeSpec extends SmokeBases.MiniGameBase {
         Components.test("THEN player able to place a bet and settle", async () => {
             Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
             const bet = { choice: this.options.placeBetChoices[0], amount: this.options.placeBetAmount ?? 1 };
+            
             this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
             // Act

@@ -13,6 +13,7 @@ class NightClubSmokeSpec extends SmokeBases.SlotGameBase {
             locators: NightClubLocators,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
         super(smokeOptions);
     }

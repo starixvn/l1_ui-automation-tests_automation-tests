@@ -10,11 +10,11 @@ class VipSedieSmokeSpec extends SmokeBases.TableGameBase {
     constructor() {
         const smokeOptions: SmokeBases.IBaseOptions = {
             placeBetChoices: [VipSedieConfigs.choices[1]],
-            placeBetAmount: 10,
             waitBetTimeout: 10000,
             gameConfiguration: VipSedieConfigs,
             locators: VipSedieLocators,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 50 : 10
         };
 
         super(smokeOptions);

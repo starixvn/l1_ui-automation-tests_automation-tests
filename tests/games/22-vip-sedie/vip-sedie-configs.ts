@@ -30,6 +30,8 @@ export const VipSedieConfigs: Components.GameConfiguration = {
         sit: "supertestsaba70",
         uat: "IT59Test789",
         prod: "supertestte120201012",
+        vguat: "TestSep2750",
+        vgprod: "VNtest040",
     },
     productId: "1633"
 };

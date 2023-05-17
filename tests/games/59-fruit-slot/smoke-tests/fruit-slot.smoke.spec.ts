@@ -14,6 +14,7 @@ class FruitSlotSmokeSpec extends SmokeBases.TableGameBase {
             waitBetTimeout: 10000,
             locators: FruitSlotLocators,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
 
         super(smokeOptions);

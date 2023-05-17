@@ -32,6 +32,8 @@ export const LotteryConfigs: Components.GameConfiguration = {
         sit: "supertestsaba68",
         uat: "IT57Test789",
         prod: "supertestte120201008",
+        vguat: "TestSep2747",
+        vgprod: "VNtest050",
     },
     productId: "1642"
 };

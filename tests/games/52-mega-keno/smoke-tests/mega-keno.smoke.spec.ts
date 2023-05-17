@@ -1,9 +1,5 @@
 import { MegaKenoLocators } from "../mega-keno-locators";
-import {
-  MegaKenoConfigs,
-  MegaKeno2Configs,
-  KenoMiniConfigs,
-} from "../mega-keno-configs";
+import { MegaKenoConfigs, MegaKeno2Configs } from "../mega-keno-configs";
 import { expect } from "@playwright/test";
 import { SmokeBases, Components } from "sc-automation-core";
 
@@ -19,6 +15,7 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       locators: MegaKenoLocators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
+      placeBetAmount: process.env.npm_config_project === "vg" ? 10 : 1,
     };
 
     super(smokeOptions);
@@ -33,7 +30,7 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
         await this.game.clickLocator("mnuKeno");
         await this.game.waitForTimeout(1000);
         await this.game.clickLocator("icoMegaKeno");
-        await this.game.waitForTimeout(this.options.waitBetTimeout *5);
+        await this.game.waitForTimeout(this.options.waitBetTimeout * 5);
 
         // Act
         const gamename1 = await this.game.captureLocator("imgGame1");

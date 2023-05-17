@@ -27,6 +27,8 @@ export const BitCoinMasterConfigs: Components.GameConfiguration = {
         sit: "supertestsaba66",
         uat: "IT55Test789",
         prod: "supertestte120201005",
+        vguat: "TestSep2741",
+        vgprod: "VNtest050",
     },
     productId: "1649"
 };

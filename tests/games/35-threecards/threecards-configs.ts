@@ -29,6 +29,8 @@ export const ThreeCardsConfigs: Components.GameConfiguration = {
         sit: "supertestsaba70",
         uat: "IT59Test789",
         prod: "supertestte120201013",
+        vguat: "TestSep2748",
+        vgprod: "VNtest040",
     },
     productId: "1643"
 };

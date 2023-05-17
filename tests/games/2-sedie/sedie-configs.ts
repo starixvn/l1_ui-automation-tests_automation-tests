@@ -29,6 +29,8 @@ export const SedieConfigs: Components.GameConfiguration = {
         sit: "supertestsaba67",
         uat: "IT56Test789",
         prod: "supertestte120201003",
+        vguat: "TestSep2741",
+        vgprod: "VNtest041",
     },
     productId: "1613"
 };

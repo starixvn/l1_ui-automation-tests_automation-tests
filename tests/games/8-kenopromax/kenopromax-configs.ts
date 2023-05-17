@@ -32,6 +32,8 @@ export const KenoProMaxConfigs: Components.GameConfiguration = {
         sit: "supertestsaba68",
         uat: "IT57Test789",
         prod: "supertestte120201011",
+        vguat: "TestSep2746",
+        vgprod: "VNtest041",
     },
     productId: "1619"
 };

@@ -26,6 +26,8 @@ export const TurboBigSmallConfigs: Components.GameConfiguration = {
         sit: "supertestsaba69",
         uat: "IT58Test789",
         prod: "supertestte120201006",
+        vguat: "TestSep2743",
+        vgprod: "VNtest046",
     },
     productId: "1615"
 };

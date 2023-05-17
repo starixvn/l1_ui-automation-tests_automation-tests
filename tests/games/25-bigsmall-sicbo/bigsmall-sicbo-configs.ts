@@ -66,6 +66,8 @@ export const BigSmallSicBoConfigs: Components.GameConfiguration = {
         sit: "supertestsaba68",
         uat: "IT57Test789",
         prod: "supertestte120201003",
+        vguat: "TestSep2742",
+        vgprod: "VNtest046",
     },
     productId: "1636"
 };

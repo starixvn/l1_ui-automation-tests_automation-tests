@@ -34,6 +34,8 @@ export const RouletteConfigs: Components.GameConfiguration = {
         sit: "supertestsaba69",
         uat: "IT58Test789",
         prod: "supertestte120201011",
+        vguat: "TestSep2749",
+        vgprod: "VNtest050",
     },
     productId: "1632"
 };

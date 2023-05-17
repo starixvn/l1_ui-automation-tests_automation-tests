@@ -26,6 +26,8 @@ export const FPCConfigs: Components.GameConfiguration = {
         sit: "supertestsaba68",
         uat: "IT57Test789",
         prod: "supertestte120201004",
+        vguat: "TestSep2742",
+        vgprod: "VNtest044",
     },
     productId: "1614"
 };

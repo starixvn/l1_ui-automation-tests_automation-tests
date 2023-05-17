@@ -8,6 +8,7 @@ export const RouletteLocators = [
     new Components.ImageLocator("historyMenu", 43, 372, 40, 40),
     new Components.ImageLocator("historyPopup", 526, 82, 250, 40),
     new Components.ImageLocator("stake1", 221, 627, 50, 50),
+    new Components.ImageLocator("stake10", 221, 627, 50, 50),
     new Components.ImageLocator("straightUpChoiceBetBoard", 129, 210, 50, 100),
     new Components.ImageLocator("evenChoiceBetBoard", 340, 510, 120, 60),
     new Components.ImageLocator("oddChoiceBetBoard", 750, 510, 120, 60),

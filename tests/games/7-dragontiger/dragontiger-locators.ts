@@ -12,6 +12,7 @@ export const DragonTigerLocators = [
     new Components.ImageLocator("historyMenu", 345, 321, 0, 0),
     new Components.ImageLocator("historyPopup", 566, 75, 150, 50),
     new Components.ImageLocator("stake1", 467, 497, 0, 0),
+    new Components.ImageLocator("stake10", 467, 497, 0, 0),
     new Components.ImageLocator("errorMessage", 500, 423, 300, 18),
     new Components.ImageLocator("msgMaxbetLimit", 512, 422, 350, 25),
     new Components.ImageLocator("btnRightArrow", 864, 480, 35, 35),

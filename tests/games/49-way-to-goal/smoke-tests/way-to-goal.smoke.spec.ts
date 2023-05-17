@@ -1,6 +1,6 @@
 import { WayToGoalLocators } from "../way-to-goal-locators";
 import { WayToGoalConfigs } from "../way-to-goal-configs";
-import { SmokeBases, Components } from "sc-automation-core";
+import { SmokeBases} from "sc-automation-core";
 
 
 class WayToGoalSmokeSpec extends SmokeBases.SlotGameBase {
@@ -14,6 +14,7 @@ class WayToGoalSmokeSpec extends SmokeBases.SlotGameBase {
             locators: WayToGoalLocators,
             waitBetTimeout: 8000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
         super(smokeOptions);
     }

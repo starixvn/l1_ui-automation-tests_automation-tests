@@ -10,6 +10,7 @@ export const BaccaratLocators = [
     new Components.ImageLocator("historyMenu", 57, 366, 0, 0),
     new Components.ImageLocator("historyPopup", 555, 40, 200, 40),
     new Components.ImageLocator("stake1", 441, 616, 0, 0),
+    new Components.ImageLocator("stake10", 441, 616, 0, 0),
     new Components.ImageLocator("errorMessage", 500, 562, 300, 25),
     new Components.ImageLocator("msgMaxbetLimit", 481, 565, 350, 22),
     new Components.ImageLocator("btnRightArrow", 921, 616, 35, 35),

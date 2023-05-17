@@ -8,6 +8,7 @@ export const BlackJackLocators = [
     new Components.ImageLocator("historyMenu", 71, 438, 20, 20),
     new Components.ImageLocator("historyPopup", 554, 68, 150, 40),
     new Components.ImageLocator("stake1", 426, 600, 40, 40),
+    new Components.ImageLocator("stake10", 426, 600, 40, 40),
     new Components.ImageLocator("submitBetBoard", 1200, 245, 60, 60),
     new Components.ImageLocator("hitcard", 1200, 245, 60, 60),
     new Components.ImageLocator("standcard", 1184, 448, 90, 90),

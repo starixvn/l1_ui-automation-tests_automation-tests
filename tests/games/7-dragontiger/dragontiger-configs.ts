@@ -26,6 +26,8 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
         sit: "supertestsaba67",
         uat: "IT56Test789",
         prod: "supertestte120201009",
+        vguat: "TestSep2745",
+        vgprod: "VNtest040",
     },
      productId: "1618"
 };

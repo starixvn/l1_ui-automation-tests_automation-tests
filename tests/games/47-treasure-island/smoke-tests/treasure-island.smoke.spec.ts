@@ -15,6 +15,7 @@ class TreasureIslandSmokeSpec extends SmokeBases.SlotGameBase {
             locators: TreasureIslandLocators,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
         super(smokeOptions);
     }
@@ -24,12 +25,12 @@ class TreasureIslandSmokeSpec extends SmokeBases.SlotGameBase {
             // Arrange
             Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
 
-            const bet = { choice: TreasureIslandConfigs.choices[0], amount: 1 };
+            const bet = { choice: TreasureIslandConfigs.choices[0], amount:this.options.placeBetAmount??1 };
             this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
             // Act
             const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
-            const settledResults = await this.game.waitForSettlement();
+            await this.game.waitForSettlement();
             
             // Assert
             expect(placeBetResponse.endBet).toBe(bet.amount * parseFloat(bet.choice));
