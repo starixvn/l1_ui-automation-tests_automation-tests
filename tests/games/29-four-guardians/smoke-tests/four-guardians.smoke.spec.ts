@@ -1,4 +1,4 @@
-import { FourGuardiansLocators } from "./four-guardians-locators";
+import { FourGuardiansLocators } from "../four-guardians-locators";
 import { FourGuardiansConfigs } from "../four-guardians-configs";
 import { SmokeBases } from "sc-automation-core";
 

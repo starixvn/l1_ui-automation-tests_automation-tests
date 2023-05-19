@@ -9,8 +9,11 @@ export const FortuneCatLocators = [
     new ImageLocator("hamburgerMenu", 60, 135, 0, 0),
     new ImageLocator("historyMenu", 60, 393, 0, 0),
     new ImageLocator("historyPopup", 485, 30, 310, 62),
-    new ImageLocator("stake1", 282, 622),
+    //new ImageLocator("stake1", 282, 622),
+    new ImageLocator("stake1", 325, 600, 57, 40),
+    new ImageLocator("imgStakeLevelsc",186, 600, 190, 40),
+    new ImageLocator("imgStakeLevelvg",186, 600, 190, 40),
     new ImageLocator("spin", 1125, 588),
-    new ImageLocator("submitBetBoard", 635, 650),
+    new ImageLocator("submitPayline", 635, 650),
     new ImageLocator("clearChoices", 975, 575),
 ];
