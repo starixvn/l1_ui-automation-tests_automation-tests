@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
     use: {
         actionTimeout: 0,
         trace: "off",
-        headless: true,
+        headless: false,
         viewport: {
             width: 1280,
             height: 720,
@@ -50,7 +50,7 @@ const config: PlaywrightTestConfig = {
         },
         {
             name: "Guide",
-            testMatch: `**/${testMatch}/*.gameguide.spec.ts`,
+            testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
             use: {
                 ...devices["Desktop Chrome"],
             },

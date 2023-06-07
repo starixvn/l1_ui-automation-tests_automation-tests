@@ -65,6 +65,8 @@ const placeBethilo = async (game: any, choice: string, amount: number) => {
     await game.waitForTimeout(2000);
     await game.clickLocator(choice + "Choice");
     await game.waitForTimeout(2000);
+    await game.clickLocator("loChoice");
+    await game.waitForTimeout(2000);
     await game.clickLocator("collect");
     await game.waitForTimeout(500);
     let message = await game.latestCaptureEvent(GameEvent.EndDeal);
