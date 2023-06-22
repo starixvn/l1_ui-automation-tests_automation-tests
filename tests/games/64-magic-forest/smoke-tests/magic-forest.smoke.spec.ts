@@ -1,6 +1,6 @@
 import { MagicForestLocators } from "../magic-forest-locators";
 import { MagicForestConfigs } from "../magic-forest-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
 
 class MagicForestSmokeSpec extends SmokeBases.SlotGameBase {
   /**
@@ -16,6 +16,21 @@ class MagicForestSmokeSpec extends SmokeBases.SlotGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
     super(smokeOptions);
+  }
+
+  protected getFPS(): void {
+    Components.test("Get FPS value", async () => {
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      let cc: any;
+      await this.game.page.evaluate(() => {
+        console.log("FPS VALUE : ", 1 / cc.director.getDeltaTime());
+      });
+    });
+  }
+
+  protected runScenario(): void {
+    super.runScenario();
+    this.getFPS();
   }
 }
 

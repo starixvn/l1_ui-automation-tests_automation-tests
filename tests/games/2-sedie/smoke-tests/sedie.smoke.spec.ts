@@ -1,6 +1,6 @@
 import { SedieLocators } from "../sedie-locators";
 import { SedieConfigs } from "../sedie-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
 
 class SedieSmokeSpec extends SmokeBases.TableGameBase {
   /**
@@ -17,6 +17,20 @@ class SedieSmokeSpec extends SmokeBases.TableGameBase {
     };
 
     super(smokeOptions);
+  }
+  protected getFPS(): void {
+    Components.test("Get FPS value", async () => {
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      let cc: any;
+      await this.game.page.evaluate(() => {
+        console.log("FPS VALUE : ", 1 / cc.director.getDeltaTime());
+      });
+    });
+  }
+
+  protected runScenario(): void {
+    this.getFPS();
+    super.runScenario();
   }
 }
 
