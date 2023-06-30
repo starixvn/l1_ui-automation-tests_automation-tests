@@ -4,7 +4,7 @@ export const FruitSlotConfigs: Components.GameConfiguration = {
   id: 59,
   name: "FruitSlot",
   durations: {
-    wholeRound: 42 * 1000,
+    wholeRound: 50 * 1000,
     placingBets: 30 * 1000,
     lockingBet: 7 * 1000,
     shakeThePlateDuration: 5 * 1000,
