@@ -44,7 +44,7 @@ smoketest:
     - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - du -hs /ms-playwright/*
-  retry: 0
+  retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
       when: always

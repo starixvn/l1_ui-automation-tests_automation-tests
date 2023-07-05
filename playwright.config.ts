@@ -14,7 +14,7 @@ const config: PlaywrightTestConfig = {
   },
   /* Run tests in files in parallel */
   fullyParallel: false,
-  reporter: [['list'],["html", { open: "never" }],],
+  reporter: [["list"], ["html", { open: "never" }]],
   // reporter: 'list',
   use: {
     actionTimeout: 0,
@@ -26,9 +26,7 @@ const config: PlaywrightTestConfig = {
     },
     screenshot: "only-on-failure",
     launchOptions: {
-      // force GPU hardware acceleration (even in headless mode)
-      // without hardware acceleration, our tests will be much slower
-      args: ["--no-sandbox", "--use-gl=egl"],
+      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu"],
     },
   },
 
