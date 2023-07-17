@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import * as actions from "./autobot.funcs";
-import { inputDataL2, RERL2, outputData } from "../autobot/autobot.dataset";
+import { inputDataL2, RERL2 } from "../autobot/autobot.dataset";
 const fs = require("fs");
 let autobBetData ;
 
