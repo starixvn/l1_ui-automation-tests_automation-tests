@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "msgpack-lite": "^0.1.26",
-    "sc-automation-core": "1.5.14-beta.2"
+    "sc-automation-core": "1.5.14-beta.4"
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",
