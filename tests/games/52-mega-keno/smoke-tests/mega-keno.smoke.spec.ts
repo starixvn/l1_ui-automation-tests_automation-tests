@@ -22,8 +22,7 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
   }
 
   protected inGameBetChoiceTests(): void {
-    Components.test(
-      "AND bet choices should be displayed on table",
+    Components.test("AND bet choices should be displayed on table",
       async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
@@ -46,6 +45,20 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       }
     );
   }
+
+  protected hedgeBetTests(): void {
+    Components.test("THEN player should get error when they hedge their bets", async () => {
+      // Arrange
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      // Act
+      await this.player.placeHedgeBet(this.options.gameConfiguration.hedgeBetGroups[0], 1);
+      await this.game.waitForTimeout(100)
+      const error = await this.game.captureErrorMessage();
+      // Assert
+      expect(error.image).toMatchSnapshot(error.name);
+  });
+  }
+
 }
 
 new MultiMiniSedieSmokeSpec().start();
