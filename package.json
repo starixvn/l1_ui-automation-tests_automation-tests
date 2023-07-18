@@ -16,7 +16,7 @@
   "author": "pentagon@luminet.com",
   "license": "MIT",
   "dependencies": {
-    "sc-automation-core": "1.5.10"
+    "sc-automation-core": "1.5.11-beta.14"
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",
