@@ -7,7 +7,8 @@
     "test": "playwright test --project=Smoke_CI",
     "e2e": "playwright test --project=E2E_CI",
     "guide": "playwright test --project=Guide ",
-    "update-snapshots": "playwright test --update-snapshots --project=Smoke_CI"
+    "update-snapshots": "playwright test --update-snapshots --project=Smoke_CI",
+    "clonegame": "node clonegame.js"
   },
   "repository": {
     "type": "git",
@@ -16,12 +17,14 @@
   "author": "pentagon@luminet.com",
   "license": "MIT",
   "dependencies": {
-    "sc-automation-core": "1.5.13"
+    "fs-extra": "^11.1.1",
+    "msgpack-lite": "^0.1.26",
+    "sc-automation-core": "1.5.14-beta.4"
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",
-    "tslib": "2.4.1",
     "notepack.io": "^3.0.1",
-    "tesseract.ts": "^1.1.2"
+    "tesseract.ts": "^1.1.2",
+    "tslib": "2.4.1"
   }
 }
