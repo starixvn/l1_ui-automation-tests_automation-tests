@@ -188,12 +188,12 @@ export const CandyLandConfigs: Components.GameConfiguration = {
           odds: 5,
         },
       ],
-    },9
+    },
   },
   slotsgame: true,
   accounts: {
-    local: "222271",
-    local1: "222271",
+    local: "222274",
+    local1: "222274",
     local2: "222271",
     local3: "222271",
     sit: "supertestsaba66",
