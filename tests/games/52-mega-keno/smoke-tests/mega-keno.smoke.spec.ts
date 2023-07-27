@@ -26,10 +26,7 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-        await this.game.clickLocator("mnuKeno");
-        await this.game.waitForTimeout(1000);
-        await this.game.clickLocator("icoMegaKeno");
-        await this.game.waitForTimeout(this.options.waitBetTimeout * 5);
+         await this.game.waitForTimeout(this.options.waitBetTimeout);
 
         // Act
         const gamename1 = await this.game.captureLocator("imgGame1");
