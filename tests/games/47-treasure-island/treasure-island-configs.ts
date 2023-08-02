@@ -9,7 +9,7 @@ export const TreasureIslandConfigs: Components.GameConfiguration = {
     lockingBet: 0,
     shakeThePlateDuration: 0,
   },
-  choices: ["1.2", "25"],
+  choices: ["1", "25"],
   maxTimeout: 100 * 1000, // miliseconds,
   odds: {
     symbols: {

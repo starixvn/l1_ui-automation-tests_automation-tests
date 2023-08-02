@@ -1,3 +1,4 @@
+
 import { Components } from "sc-automation-core";
 
 export const CandyLandConfigs: Components.GameConfiguration = {
@@ -194,13 +195,13 @@ export const CandyLandConfigs: Components.GameConfiguration = {
   accounts: {
     local: "222274",
     local1: "222274",
-    local2: "222271",
-    local3: "222271",
+    local2: "222274",
+    local3: "222274",
     sit: "supertestsaba66",
     uat: "IT57Test789",
     prod: "supertestte120201006",
     l2uat: "TestSep2746",
     l2prod: "VNtest045",
   },
-  productId: "1673",
+  productId: "1675",
 };
