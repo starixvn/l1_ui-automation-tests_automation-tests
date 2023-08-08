@@ -29,7 +29,7 @@ class SedieE2ESpec extends E2EBases.TableGameBase {
 
       const winamount = ticketdata[ticketdata?.length - 1];
       const betChoiceAmount = ticketdata[ticketdata?.length - 7];
-      
+
       // Assert
       CustomExpect.expect(winamount.trim()).toEqual(global.settledata.betwin);
       CustomExpect.expect(betChoiceAmount).toEqual(global.settledata.bet);
@@ -38,31 +38,6 @@ class SedieE2ESpec extends E2EBases.TableGameBase {
       await this.game.clickOutSide();
     });
   }
-
-  protected sockettest(): void {
-    Components.test("test", async () => {
-    global.wsMessageReceived = []
-      // Act 1
-      this.game.page.on("websocket", async (ws) => {
-        ws.on("framereceived", async (msg: any) => {
-          console.log(msg.payload);
-            global.wsMessageReceived.push(msg.payload);
-
-      })
-    })
-      
-    //  await this.game.page.screenshot({path: `testsocket.png`}) 
-    console.log(global.wsMessageReceived);
-      
-    });
-  }
-
-  
-  protected runScenario(): void {
-    this.sockettest();
-  }
-
-
 }
 
 new SedieE2ESpec().start();
