@@ -129,14 +129,14 @@ export const verifyRetrieveEndRound = async (
     getData[iterator] = RetrieveEndRound;
   }
 
-  // let data = JSON.stringify(getData);
-  // fs.writeFileSync("RER2.json", data);
+  let data = JSON.stringify(getData);
+  fs.writeFileSync("RER2.json", data);
   for (const i of tcs) {      
     await expect.soft(getData[i].totalAmount,`verify total amount ${i}, ${getData[i].totalAmount}`).toBe(expectdata[i].totalAmount);
     await expect.soft(getData[i].totalWin,`verify totalWin ${i}`).toBe(expectdata[i].totalWin);
     await expect.soft(getData[i].validBetAmount,`verify validBetAmount ${i}, ${getData[i].validBetAmount}`).toBe(expectdata[i].validBetAmount);
-    await expect(getData[i].errorCode).toBe(expectdata[i].errorCode);
-    await expect(getData[i].errorDescription).toBe(
+    await expect.soft(getData[i].errorCode).toBe(expectdata[i].errorCode);
+    await expect.soft(getData[i].errorDescription).toBe(
       expectdata[i].errorDescription
     );
   }

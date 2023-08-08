@@ -26,8 +26,8 @@ test.beforeAll(async ({}, testInfo) => {
 
 test("Verify Retrieve End Round", async ({ page }) => {
   await actions.loginAdmin(page);
-  // let data = JSON.stringify(autobBetData);
-  // fs.writeFileSync("autobBetDataHFJP.json", data);
+  let data = JSON.stringify(autobBetData);
+  fs.writeFileSync("autobBetDataHFJP.json", data);
   await actions.verifyRetrieveEndRound(page, gameType, autobBetData, RERL2);
 });
 
@@ -72,8 +72,8 @@ test("Verify Bet Ticket Detail", async ({ page, context }) => {
 
     let payline = await newTab.locator('//*/table[@class="table-paylines"]');
     let detail = await newTab.locator('//*[@id="game-ticket"]/table[2]');
-    await expect(payline).toHaveScreenshot(`${gameName}-${i}_payline.png`);
-    await expect(detail, `${i}`).toHaveScreenshot(
+    await expect.soft(payline).toHaveScreenshot(`${gameName}-${i}_payline.png`);
+    await expect.soft(detail, `${i}`).toHaveScreenshot(
       `${gameName}_${i}_details.png`,
       { maxDiffPixelRatio: 1 }
     );

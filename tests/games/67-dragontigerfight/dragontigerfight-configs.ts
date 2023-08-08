@@ -4,10 +4,10 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
   id: 67,
   name: "dragontigerfight",
   durations: {
-    wholeRound: 39 * 1000,
+    wholeRound: 41 * 1000,
     placingBets: 30 * 1000,
     lockingBet: 5 * 1000,
-    shakeThePlateDuration: 3 * 1000,
+    shakeThePlateDuration: 5 * 1000,
   },
   choices: ["dragon","tiger","tie","blackDragon","redDragon","blackTiger","redTiger"],
   hedgeBetGroups: [["dragon", "tiger"]],
@@ -34,4 +34,5 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
     l2prod: "VNtest040",
   },
   productId: "1618",
+  rebet: true
 };

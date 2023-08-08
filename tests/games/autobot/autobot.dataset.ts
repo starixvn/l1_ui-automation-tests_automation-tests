@@ -541,7 +541,7 @@ export const RERL2 = {
   },
   TC024: {
     totalAmount: 0,
-    totalWin: 34.6,
+    totalWin: 10.0,
     validBetAmount: 0,
     endTime: "2023-07-17T07:18:03.449+00:00",
     errorCode: "0",
@@ -559,7 +559,7 @@ export const RERL2 = {
   },
   TC036: {
     totalAmount: 0,
-    totalWin: 56.8,
+    totalWin: 41.4,
     validBetAmount: 0,
     endTime: "2023-07-17T07:18:04.545+00:00",
     errorCode: "0",
@@ -568,7 +568,7 @@ export const RERL2 = {
   },
   TC003: {
     totalAmount: 0,
-    totalWin: 34.6,
+    totalWin: 10,
     validBetAmount: 0,
     endTime: "2023-07-17T07:18:05.892+00:00",
     errorCode: "0",
@@ -577,7 +577,7 @@ export const RERL2 = {
   },
   TC015: {
     totalAmount: 0,
-    totalWin: 56.8,
+    totalWin: 41.4,
     validBetAmount: 0,
     endTime: "2023-07-17T07:18:01.958+00:00",
     errorCode: "0",

@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const DragonTigerLocators = [
   new Components.ImageLocator("dealer", 574, 5, 125, 95),
-  new Components.ImageLocator("dragonChoice", 420, 285, 100, 80),
+  new Components.ImageLocator("dragonChoice", 436, 335, 100, 80),
   new Components.ImageLocator("dragonOwnbet", 450, 370, 30, 30),
   new Components.ImageLocator("tigerChoice", 800, 328, 100, 85),
   new Components.ImageLocator("tigerOwnbet", 790, 370, 30, 30),
