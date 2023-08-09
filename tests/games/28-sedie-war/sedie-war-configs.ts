@@ -29,7 +29,7 @@ export const SedieWarConfigs: Components.GameConfiguration = {
     "bankerWhite4",
   ],
   hedgeBetGroups: [["player", "banker"]],
-  maxTimeout: 100 * 1000, // miliseconds,
+  maxTimeout: 120 * 1000, // miliseconds,
   odds: {
     player: 2.6,
     banker: 2.6,
