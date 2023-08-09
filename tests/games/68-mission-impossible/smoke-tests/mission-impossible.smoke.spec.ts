@@ -4,7 +4,7 @@ import { SmokeBases } from "sc-automation-core";
 
 class MissionImpossibleSmokeSpec extends SmokeBases.SlotGameBase {
   /**
-   *
+   *MI7
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
