@@ -7,7 +7,7 @@
     "test": "playwright test --project=Smoke_CI",
     "e2e": "playwright test --project=E2E_CI",
     "guide": "playwright test --project=Guide ",
-    "update-snapshots": "playwright test --update-snapshots --project=jackpote2e",
+    "update-snapshots": "playwright test --update-snapshots --project=E2E_CI",
     "clonegame": "node clonegame.js",
     "autobot": "playwright test --project=autobot",
     "jackpot": "playwright test --project=jackpot",

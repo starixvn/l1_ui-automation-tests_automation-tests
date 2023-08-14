@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const BigSmallCityLocators = [
-    new Components.ImageLocator("bigChoice", 255, 320, 100, 55),
+    new Components.ImageLocator("bigChoice", 274, 329, 63, 39),
     new Components.ImageLocator("bigOwnbet", 282, 408, 66, 30),
     new Components.ImageLocator("smallChoice", 600, 320, 115, 60),
     new Components.ImageLocator("smallOwnbet", 621, 408, 66, 30),

@@ -10,7 +10,7 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.3,
+      maxDiffPixelRatio: 0.03,
     },
   },
   /* Run tests in files in parallel */
@@ -41,7 +41,7 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: "E2E_CI",
-      testMatch: `**/${process.env.npm_config_gameid}-*/e2e-tests/*.e2e.spec.ts`,
+      testMatch: `**/${testMatch}/e2e-tests/*.e2e.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
       },

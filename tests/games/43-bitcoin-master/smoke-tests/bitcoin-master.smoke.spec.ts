@@ -31,7 +31,7 @@ class BitCoinMasterSmokeSpec extends SmokeBases.MiniGameBase {
           // Act
           const betChoice = await this.game.captureChoice(placeBetChoice);
           // Assert
-          expect(betChoice.image).toMatchSnapshot(betChoice.name);
+          expect(betChoice.image).toMatchSnapshot(betChoice.name, {maxDiffPixelRatio:0.3});
         }
       }
     );

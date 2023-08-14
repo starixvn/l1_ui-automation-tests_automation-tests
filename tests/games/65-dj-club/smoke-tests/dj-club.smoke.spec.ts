@@ -17,9 +17,5 @@ class DJClubSmokeSpec extends SmokeBases.SlotGameBase {
     };
     super(smokeOptions);
   }
-  protected inGameOddsTests(): void {
-    
-  }
 }
-
 new DJClubSmokeSpec().start();

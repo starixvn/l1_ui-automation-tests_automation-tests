@@ -10,7 +10,7 @@ export const winthreecardsLocators = [
     new ImageLocator("playerBalance", 148, 672, 115, 23),
     new ImageLocator("hamburgerMenu", 26, 115, 34, 34),
     new ImageLocator("historyMenu", 33, 315, 27, 27),
-    new ImageLocator("historyPopup", 507, 35, 263, 38),
+    new ImageLocator("historyPopup", 518, 76, 254, 32),
     new ImageLocator("errorMessage", 440, 517, 409, 35),
     new ImageLocator("msgMaxbetLimit", 440, 517, 350, 30),
     new ImageLocator("btnRightArrow", 900, 610, 35, 35),
