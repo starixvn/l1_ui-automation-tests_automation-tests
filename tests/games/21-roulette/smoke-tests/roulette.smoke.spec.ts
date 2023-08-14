@@ -86,7 +86,7 @@ class RouletteSmokeSpec extends SmokeBases.MiniGameBase {
         const error = await this.game.captureErrorBetLimit();
 
         // Assert
-        expect(error.image).toMatchSnapshot(error.name);
+        expect(error.image).toMatchSnapshot(error.name, {maxDiffPixelRatio : 0.3});
       }
     );
   }

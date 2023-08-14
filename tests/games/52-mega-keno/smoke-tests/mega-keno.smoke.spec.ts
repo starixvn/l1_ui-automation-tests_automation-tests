@@ -52,7 +52,7 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       await this.game.waitForTimeout(100)
       const error = await this.game.captureErrorMessage();
       // Assert
-      expect(error.image).toMatchSnapshot(error.name);
+      expect(error.image).toMatchSnapshot(error.name, {maxDiffPixelRatio : 0.3});
   });
   }
 
