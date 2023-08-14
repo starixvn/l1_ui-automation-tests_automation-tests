@@ -62,7 +62,7 @@ e2etest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
-    - e2e-test
+    - auto-test-prod
   script:
     - rm -r *
     - cp -r /app/* ./
