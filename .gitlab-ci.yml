@@ -64,8 +64,6 @@ e2etest:
   tags:
     - e2e-test
   script:
-    # - rm -r *
-    # - cp -r /app/* ./
     - npm run e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - du -hs /ms-playwright/*
