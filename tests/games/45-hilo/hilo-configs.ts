@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const HiLoConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 45,
     name: "Hilo",
     durations: {
@@ -48,4 +49,53 @@ export const HiLoConfigs: Components.GameConfiguration = {
         vgprod: "VNtest040",
     },
     productId: "1651"
+=======
+  id: 45,
+  name: "Hilo",
+  durations: {
+    wholeRound: 0,
+    placingBets: 0,
+    lockingBet: 0,
+    shakeThePlateDuration: 0,
+  },
+  choices: ["hi", "lo"],
+  maxTimeout: 200 * 1000, // miliseconds,
+  odds: {
+    high3: 0.05,
+    high4: 0.16,
+    high5: 0.28,
+    high6: 0.44,
+    high7: 0.63,
+    high8: 0.9,
+    high9: 1.27,
+    high10: 1.83,
+    high11: 2.76,
+    high12: 4.62,
+    high13: 10.2,
+    low3: 10.2,
+    low4: 4.62,
+    low5: 2.76,
+    low6: 1.83,
+    low7: 1.27,
+    low8: 0.9,
+    low9: 0.63,
+    low10: 0.44,
+    low11: 0.28,
+    low12: 0.16,
+    low13: 0.05,
+  },
+  betBoard: false,
+  accounts: {
+    local: "222257",
+    local1: "222257",
+    local2: "222257",
+    local3: "222257",
+    sit: "supertestsaba67",
+    uat: "IT56Test789",
+    prod: "supertestte120201006",
+    l2uat: "TestSep2742",
+    l2prod: "VNtest040",
+  },
+  productId: "1651",
+>>>>>>> master
 };

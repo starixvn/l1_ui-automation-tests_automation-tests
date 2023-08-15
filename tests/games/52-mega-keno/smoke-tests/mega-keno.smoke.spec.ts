@@ -15,22 +15,29 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       locators: MegaKenoLocators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
+<<<<<<< HEAD
       placeBetAmount: process.env.npm_config_project === "vg" ? 10 : 1,
+=======
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+>>>>>>> master
     };
 
     super(smokeOptions);
   }
 
   protected inGameBetChoiceTests(): void {
-    Components.test(
-      "AND bet choices should be displayed on table",
+    Components.test("AND bet choices should be displayed on table",
       async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+<<<<<<< HEAD
         await this.game.clickLocator("mnuKeno");
         await this.game.waitForTimeout(1000);
         await this.game.clickLocator("icoMegaKeno");
         await this.game.waitForTimeout(this.options.waitBetTimeout * 5);
+=======
+         await this.game.waitForTimeout(this.options.waitBetTimeout);
+>>>>>>> master
 
         // Act
         const gamename1 = await this.game.captureLocator("imgGame1");
@@ -46,6 +53,20 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       }
     );
   }
+
+  protected hedgeBetTests(): void {
+    Components.test("THEN player should get error when they hedge their bets", async () => {
+      // Arrange
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      // Act
+      await this.player.placeHedgeBet(this.options.gameConfiguration.hedgeBetGroups[0], 1);
+      await this.game.waitForTimeout(100)
+      const error = await this.game.captureErrorMessage();
+      // Assert
+      expect(error.image).toMatchSnapshot(error.name, {maxDiffPixelRatio : 0.3});
+  });
+  }
+
 }
 
 new MultiMiniSedieSmokeSpec().start();

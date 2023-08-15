@@ -5,8 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test --project=Smoke_CI",
+<<<<<<< HEAD
     "e2e": "playwright test --project=E2E_CI ",
     "guide": "playwright test --project=Guide "
+=======
+    "e2e": "playwright test --project=E2E_CI",
+    "guide": "playwright test --project=Guide ",
+    "update-snapshots": "playwright test --update-snapshots --project=E2E_CI",
+    "clonegame": "node clonegame.js",
+    "autobot": "playwright test --project=autobot",
+    "jackpot": "playwright test --project=jackpot",
+    "jackpote2e": "playwright test --project=jackpote2e"
+>>>>>>> master
 
   },
   "repository": {
@@ -16,12 +26,17 @@
   "author": "pentagon@luminet.com",
   "license": "MIT",
   "dependencies": {
+<<<<<<< HEAD
     "sc-automation-core": "1.3.2"
+=======
+    "fs-extra": "^11.1.1",
+    "sc-automation-core": "1.8.4"
+>>>>>>> master
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",
-    "tslib": "2.4.1",
     "notepack.io": "^3.0.1",
-    "tesseract.ts": "^1.1.2"
+    "tesseract.ts": "^1.1.2",
+    "tslib": "2.4.1"
   }
 }

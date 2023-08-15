@@ -5,7 +5,11 @@ docker-build-game-3:
   rules:
     - if: $TRIGGER != "true"
       changes:
+<<<<<<< HEAD
         - tests/games/3*/**/*
+=======
+        - tests/games/3-*/**/*
+>>>>>>> master
         - package.json
         - playwright.config.ts
         - Dockerfile

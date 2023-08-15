@@ -9,7 +9,7 @@ export const ThreeCardsLocators = [
     new ImageLocator("playerBalance", 192, 644, 125, 23),
     new ImageLocator("hamburgerMenu", 16, 155, 41, 41),
     new ImageLocator("historyMenu", 17, 350, 43, 43),
-    new ImageLocator("historyPopup", 560, 50, 180, 45),
+    new ImageLocator("historyPopup", 195, 92, 906, 85),
     new ImageLocator("stake1", 467, 640, 0, 0),
     new ImageLocator("stake10", 467, 640, 0, 0),
     new ImageLocator("errorMessage", 466, 504, 350, 27),

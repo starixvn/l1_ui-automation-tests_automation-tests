@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const VIPFPCConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 26,
     name: "VipFishPrawnCrab",
     durations: {
@@ -33,4 +34,48 @@ export const VIPFPCConfigs: Components.GameConfiguration = {
         vgprod: "VNtest050",
     },
     productId: "1637"
+=======
+  id: 26,
+  name: "VipFishPrawnCrab",
+  durations: {
+    wholeRound: 42 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 2 * 1000,
+  },
+  choices: [
+    "stag",
+    "gourd",
+    "rooster",
+    "fish",
+    "crab",
+    "prawn",
+    "anyTriple",
+    "mountain",
+    "ocean",
+  ],
+  hedgeBetGroups: [["mountain", "ocean"]],
+  maxTimeout: 200 * 1000, // miliseconds,
+  odds: {
+    single: 2,
+    double: 3.5,
+    triple: 6,
+    anyTriple: 31,
+    mountain: 1.96,
+    ocean: 1.96,
+  },
+  betBoard: false,
+  accounts: {
+    local: "222244",
+    local1: "222244",
+    local2: "222244",
+    local3: "222244",
+    sit: "supertestsaba69",
+    uat: "IT58Test789",
+    prod: "supertestte120201004",
+    l2uat: "TestSep2743",
+    l2prod: "VNtest050",
+  },
+  productId: "1637",
+>>>>>>> master
 };

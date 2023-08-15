@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const SedieWarConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 28,
     name: "VipSedieWar",
     durations: {
@@ -61,4 +62,66 @@ export const SedieWarConfigs: Components.GameConfiguration = {
         vgprod: "VNtest041",
     },
     productId: "1639"
+=======
+  id: 28,
+  name: "VipSedieWar",
+  durations: {
+    wholeRound: 54 * 1000,
+    placingBets: 45 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 4 * 1000,
+  },
+  choices: [
+    "player",
+    "banker",
+    "tie",
+    "odd",
+    "even",
+    "playerOdd",
+    "playerEven",
+    "playerRed3",
+    "playerRed4",
+    "playerWhite3",
+    "playerWhite4",
+    "bankerOdd",
+    "bankerEven",
+    "bankerRed3",
+    "bankerRed4",
+    "bankerWhite3",
+    "bankerWhite4",
+  ],
+  hedgeBetGroups: [["player", "banker"]],
+  maxTimeout: 120 * 1000, // miliseconds,
+  odds: {
+    player: 2.6,
+    banker: 2.6,
+    tie: 3.5,
+    even: 1.96,
+    odd: 1.96,
+    playerEven: 1.96,
+    playerOdd: 1.96,
+    playerRed3: 3.75,
+    playerWhite3: 3.75,
+    playerRed4: 14.4,
+    playerWhite4: 14.4,
+    bankerEven: 1.96,
+    bankerOdd: 1.96,
+    bankerRed3: 3.75,
+    bankerWhite3: 3.75,
+    bankerRed4: 14.4,
+    bankerWhite4: 14.4,
+  },
+  accounts: {
+    local: "222246",
+    local1: "222246",
+    local2: "222246",
+    local3: "222246",
+    sit: "supertestsaba66",
+    uat: "IT55Test789",
+    prod: "supertestte120201006",
+    l2uat: "TestSep2745",
+    l2prod: "VNtest041",
+  },
+  productId: "1639",
+>>>>>>> master
 };

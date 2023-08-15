@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 39,
     name: "CasinoHoldemPoker",
     durations: {
@@ -46,4 +47,51 @@ export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
         vgprod: "VNtest044",
     },
     productId: "1650"
+=======
+  id: 39,
+  name: "CasinoHoldemPoker",
+  durations: {
+    wholeRound: 45 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 9 * 1000,
+  },
+  choices: ["ante", "aa"],
+  maxTimeout: 200 * 1000, // miliseconds,
+  odds: {
+    CallBet_callBet: 2,
+    AnteBet_highCards: 2,
+    AnteBet_onePair: 2,
+    AnteBet_twoPairs: 2,
+    AABet_flush: 21,
+    AABet_fourKind: 41,
+    AABet_fullHouse: 31,
+    AABet_pairAces: 8,
+    AABet_royalFlush: 101,
+    AABet_straight: 8,
+    AABet_straightFlush: 51,
+    AABet_threeKind: 8,
+    AABet_twoPairs: 8,
+    AnteBet_flush: 3,
+    AnteBet_fourKind: 11,
+    AnteBet_fullHouse: 4,
+    AnteBet_royalFlush: 101,
+    AnteBet_straight: 2,
+    AnteBet_straightFlush: 21,
+    AnteBet_threeKind: 2,
+  },
+  cardgame: true,
+  accounts: {
+    local: "222252",
+    local1: "222252",
+    local2: "222252",
+    local3: "222252",
+    sit: "supertestsaba67",
+    uat: "IT56Test789",
+    prod: "supertestte120201013",
+    l2uat: "TestSep2750",
+    l2prod: "VNtest044",
+  },
+  productId: "1650",
+>>>>>>> master
 };

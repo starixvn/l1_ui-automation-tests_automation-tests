@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const KenoProMaxConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 8,
     name: "kenopromax",
     durations: {
@@ -36,4 +37,51 @@ export const KenoProMaxConfigs: Components.GameConfiguration = {
         vgprod: "VNtest041",
     },
     productId: "1619"
+=======
+  id: 8,
+  name: "kenopromax",
+  durations: {
+    wholeRound: 39 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 4 * 1000,
+  },
+  choices: [
+    "big",
+    "small",
+    "odd",
+    "even",
+    "gold",
+    "wood",
+    "water",
+    "fire",
+    "earth",
+  ],
+  hedgeBetGroups: [["big", "small"]],
+  maxTimeout: 200 * 1000, // miliseconds,
+  odds: {
+    big: 1.96,
+    small: 1.96,
+    even: 1.96,
+    odd: 1.96,
+    earth: 9.2,
+    fire: 4.6,
+    gold: 9.2,
+    water: 2.4,
+    wood: 4.6,
+  },
+  betBoard: false,
+  accounts: {
+    local: "222228",
+    local1: "222228",
+    local2: "222228",
+    local3: "222228",
+    sit: "supertestsaba68",
+    uat: "IT57Test789",
+    prod: "supertestte120201011",
+    l2uat: "TestSep2746",
+    l2prod: "VNtest041",
+  },
+  productId: "1619",
+>>>>>>> master
 };

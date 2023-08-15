@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const TexasHoldemPokerrConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 42,
     name: "TexasHoldemPoker",
     durations: {
@@ -39,4 +40,44 @@ export const TexasHoldemPokerrConfigs: Components.GameConfiguration = {
         vgprod: "VNtest046",
     },
     productId: "1652"
+=======
+  id: 42,
+  name: "TexasHoldemPoker",
+  durations: {
+    wholeRound: 45 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 9 * 1000,
+  },
+  choices: ["ante", "call", "turn", "river"],
+  maxTimeout: 200 * 1000, // miliseconds,
+  odds: {
+    call: 2,
+    turn: 2,
+    river: 2,
+    AnteBet_highCard: 1,
+    AnteBet_onePair: 1,
+    AnteBet_twoPairs: 1,
+    AnteBet_threeKind: 1,
+    AnteBet_straight: 2,
+    AnteBet_flush: 2,
+    AnteBet_fullHouse: 2,
+    AnteBet_fourKind: 2,
+    AnteBet_straightFlush: 2,
+    AnteBet_royalFlush: 2,
+  },
+  cardgame: true,
+  accounts: {
+    local: "222255",
+    local1: "222255",
+    local2: "222255",
+    local3: "222255",
+    sit: "supertestsaba70",
+    uat: "IT59Test789",
+    prod: "supertestte120201004",
+    l2uat: "TestSep2740",
+    l2prod: "VNtest046",
+  },
+  productId: "1652",
+>>>>>>> master
 };

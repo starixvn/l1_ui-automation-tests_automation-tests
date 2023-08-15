@@ -2,6 +2,7 @@ import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
 export const NightClubLocators = [
+<<<<<<< HEAD
     new ImageLocator("choiceMenu", 226, 658),
     new ImageLocator("1Choice", 261, 152),
     new ImageLocator("25Choice", 147, 569),
@@ -16,4 +17,20 @@ export const NightClubLocators = [
     new ImageLocator("spin", 1131, 625),
     new ImageLocator("submitPayline", 633, 663),
     new ImageLocator("clearChoices", 957, 575),
+=======
+  new ImageLocator("choiceMenu", 226, 658),
+  new ImageLocator("1Choice", 261, 152),
+  new ImageLocator("25Choice", 147, 569),
+  new ImageLocator("stakeMenu", 362, 654),
+  new ImageLocator("imgStakeLevell1", 250, 636, 216, 50),
+  new ImageLocator("imgStakeLevell2", 250, 636, 216, 50),
+  new ImageLocator("hamburgerMenu", 88, 611, 0, 0),
+  new ImageLocator("historyMenu", 85, 481, 0, 0),
+  new ImageLocator("historyPopup", 432, 5, 410, 60),
+  new ImageLocator("stake1", 398, 636, 70, 50),
+  new ImageLocator("stake10", 398, 636, 70, 50),
+  new ImageLocator("spin", 1131, 625),
+  new ImageLocator("submitPayline", 633, 663),
+  new ImageLocator("clearChoices", 957, 575),
+>>>>>>> master
 ];

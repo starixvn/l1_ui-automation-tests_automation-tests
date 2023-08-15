@@ -38,9 +38,16 @@ smoketest:
   stage: test
   tags:
     - auto-test-prod
+<<<<<<< HEAD
   script:
     - cd /app
     - npm run test --env=$ENV --gameid=$GAMEID --project=$PROJECT
+=======
+  script:    
+    - rm -r *
+    - cp -r /app/* ./
+    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+>>>>>>> master
   after_script:
     - du -hs /ms-playwright/*
   retry: 0
@@ -63,8 +70,14 @@ e2etest:
   tags:
     - auto-test-prod
   script:
+<<<<<<< HEAD
     - cd /app
     - npm run e2e --env=$ENV --gameid=$GAMEID
+=======
+    - rm -r *
+    - cp -r /app/* ./
+    - npm run e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+>>>>>>> master
   after_script:
     - du -hs /ms-playwright/*
   retry: 1

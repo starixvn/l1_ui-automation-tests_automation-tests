@@ -1,6 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const FanTanConfigs: Components.GameConfiguration = {
+<<<<<<< HEAD
     id: 60,
     name: "FanTan",
     durations: {
@@ -55,4 +56,60 @@ export const FanTanConfigs: Components.GameConfiguration = {
         vgprod: "VNtest046",
     },
     productId: "1667"
+=======
+  id: 60,
+  name: "FanTan",
+  durations: {
+    wholeRound: 50 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 15 * 1000,
+  },
+  choices: [
+    "odd",
+    "even",
+    "fan1",
+    "fan2",
+    "fan3",
+    "fan4",
+    "kwok12",
+    "kwok23",
+    "kwok34",
+    "kwok41",
+    "chun123",
+    "chun124",
+    "chun134",
+    "chun234",
+  ],
+  hedgeBetGroups: [["odd", "even"]],
+  maxTimeout: 100 * 1000, // miliseconds,
+  odds: {
+    even: 1.96,
+    odd: 1.96,
+    fan1: 3.85,
+    fan2: 3.85,
+    fan3: 3.85,
+    fan4: 3.85,
+    kwok12: 1.96,
+    kwok23: 1.96,
+    kwok34: 1.96,
+    kwok41: 1.96,
+    chun123: 1.31,
+    chun124: 1.31,
+    chun134: 1.31,
+    chun234: 1.31,
+  },
+  accounts: {
+    local: "222264",
+    local1: "222264",
+    local2: "222264",
+    local3: "222264",
+    sit: "supertestsaba70",
+    uat: "IT59Test789",
+    prod: "supertestte120201013",
+    l2uat: "TestSep2740",
+    l2prod: "VNtest046",
+  },
+  productId: "1667",
+>>>>>>> master
 };

@@ -3,6 +3,7 @@ import { SpecialSedieConfigs } from "../special-sedie-configs";
 import { SmokeBases } from "sc-automation-core";
 
 class SpecialSedieSmokeSpec extends SmokeBases.BalancedBettingGameBase {
+<<<<<<< HEAD
     /**
      *
      */
@@ -15,9 +16,23 @@ class SpecialSedieSmokeSpec extends SmokeBases.BalancedBettingGameBase {
             snapshotFolderPath: __filename,
             placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
+=======
+  /**
+   *
+   */
+  constructor() {
+    const smokeOptions: SmokeBases.IBaseOptions = {
+      gameConfiguration: SpecialSedieConfigs,
+      locators: SpecialSedieLocators,
+      waitBetTimeout: 6000,
+      placeBetChoices: [SpecialSedieConfigs.choices[0]],
+      snapshotFolderPath: __filename,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+    };
+>>>>>>> master
 
-        super(smokeOptions);
-    }
+    super(smokeOptions);
+  }
 }
 
 new SpecialSedieSmokeSpec().start();
