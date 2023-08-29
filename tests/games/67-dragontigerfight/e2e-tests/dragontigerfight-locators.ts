@@ -1,20 +1,45 @@
 import { Components } from "sc-automation-core";
 
-let DragonTigerFightLocators = Components.TableLocator.TableLocators;
+export const extDragonTigerFightLocators = [
+    new Components.ImageLocator("dragonChoice", 226, 368, 170, 40),
+    new Components.ImageLocator("dragonOwnbetl1", 388, 419, 30, 30),
+    new Components.ImageLocator("dragonOwnbetl2", 388, 419, 30, 30),
+    new Components.ImageLocator("tigerChoice", 650, 354, 120, 60),
+    new Components.ImageLocator("tigerOwnbetl1", 844, 415, 30, 30),
+    new Components.ImageLocator("tigerOwnbetl2", 844, 415, 30, 30),
+    new Components.ImageLocator("blackDragonChoice", 208, 492, 70, 30),
+    new Components.ImageLocator("blackDragonOwnbetl1", 280, 533, 25, 25),
+    new Components.ImageLocator("blackDragonOwnbetl2", 280, 533, 25, 25),
+    new Components.ImageLocator("redDragonChoice", 379, 492, 50, 30),
+    new Components.ImageLocator("redDragonOwnbetl1", 444, 533, 25, 25),
+    new Components.ImageLocator("redDragonOwnbetl2", 444, 533, 25, 25),
+    new Components.ImageLocator("tieChoice", 552, 492, 50, 30),
+    new Components.ImageLocator("tieOwnbetl1", 620, 533, 25, 25),
+    new Components.ImageLocator("tieOwnbetl2", 620, 533, 25, 25),
+    new Components.ImageLocator("redTigerChoice", 731, 492, 50, 30),
+    new Components.ImageLocator("redTigerOwnbetl1", 798, 533, 25, 25),
+    new Components.ImageLocator("redTigerOwnbetl2", 798, 533, 25, 25),
+    new Components.ImageLocator("blackTigerChoice", 911, 492, 70, 30),
+    new Components.ImageLocator("blackTigerOwnbetl1", 967, 533, 25, 25),
+    new Components.ImageLocator("blackTigerOwnbetl2", 967, 533, 25, 25),
+    new Components.ImageLocator("msgMaxbetdragonl1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbettigerl1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetblackDragonl1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetredDragonl1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbettiel1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetblackTigerl1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetredTigerl1", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetdragonl2", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbettigerl2", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetblackDragonl2", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetredDragonl2", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbettiel2", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetblackTigerl2", 440, 548, 400, 20),
+    new Components.ImageLocator("msgMaxbetredTigerl2", 440, 548, 400, 20),
+    new Components.ImageLocator("dragonBar", 941, 567, 18, 18),
+    new Components.ImageLocator("tigerBar", 941, 567, 18, 18),
+    new Components.ImageLocator("tieBar", 941, 567, 18, 18),
+    new Components.ImageLocator("tieBar", 941, 567, 18, 18),
+];
 
-const tabGames = { x: 538, y: 85, width: 100, height: 30 };
-const icoGame = { y: 200 };
-
-DragonTigerFightLocators.forEach((item, i) => {
-  if (item.name == "tabGames") {
-    item.x = tabGames.x;
-    item.y = tabGames.y;
-    item.width = tabGames.width;
-    item.height = tabGames.height;
-  }
-  if (item.name == "icoGame") {
-    item.y = icoGame.y;
-  }
-});
-
-export const extDragonTigerFightLocators = DragonTigerFightLocators;
+export const DragonTigerFightLocators = Components.TableLocator.TableLocators.concat(extDragonTigerFightLocators,Components.GameLobbyLocator.GameLobbyLocator)

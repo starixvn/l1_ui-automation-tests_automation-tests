@@ -1,6 +1,6 @@
 import { DragonTigerLocators } from "../dragontigerfight-locators";
 import { DragonTigerConfigs } from "../dragontigerfight-configs";
-import { SmokeBases, Components } from "sc-automation-core";
+import { SmokeBases } from "sc-automation-core";
 
 class DragonTigerSmokeSpec extends SmokeBases.TableGameBase {
   /**

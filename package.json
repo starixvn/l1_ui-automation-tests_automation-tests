@@ -4,15 +4,14 @@
   "description": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test --project=Smoke_CI",
+    "test": "playwright test --project=Smoke_CI --workers=3",
     "e2e": "playwright test --project=E2E_CI",
     "guide": "playwright test --project=Guide ",
-    "update-snapshots": "playwright test --update-snapshots --project=E2E_CI",
+    "update-snapshots": "playwright test --update-snapshots --project=Smoke_CI",
     "clonegame": "node clonegame.js",
     "autobot": "playwright test --project=autobot",
     "jackpot": "playwright test --project=jackpot",
     "jackpote2e": "playwright test --project=jackpote2e"
-
   },
   "repository": {
     "type": "git",
@@ -22,12 +21,11 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^11.1.1",
-    "sc-automation-core": "1.8.4"
+    "sc-automation-core": "1.8.5"
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",
     "notepack.io": "^3.0.1",
-    "tesseract.ts": "^1.1.2",
     "tslib": "2.4.1"
   }
 }

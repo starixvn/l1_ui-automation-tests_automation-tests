@@ -3,9 +3,11 @@ import { Components } from "sc-automation-core";
 export const DragonTigerLocators = [
   new Components.ImageLocator("dealer", 574, 5, 125, 95),
   new Components.ImageLocator("dragonChoice", 436, 335, 100, 80),
-  new Components.ImageLocator("dragonOwnbet", 450, 370, 30, 30),
+  new Components.ImageLocator("dragonOwnbetl1", 450, 370, 30, 30),
+  new Components.ImageLocator("dragonOwnbetl2", 450, 370, 30, 30),
   new Components.ImageLocator("tigerChoice", 800, 328, 100, 85),
-  new Components.ImageLocator("tigerOwnbet", 790, 370, 30, 30),
+  new Components.ImageLocator("tigerOwnbetl1", 790, 370, 30, 30),
+  new Components.ImageLocator("tigerOwnbetl2", 790, 370, 30, 30),
   new Components.ImageLocator("tieChoice", 610, 447, 70, 30),
   new Components.ImageLocator("playerBalance", 192, 644, 125, 23),
   new Components.ImageLocator("hamburgerMenu", 52, 173, 20, 20),

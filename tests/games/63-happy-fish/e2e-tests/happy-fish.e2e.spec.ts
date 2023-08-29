@@ -17,8 +17,6 @@ class HappyFishE2ESpec extends E2EBases.SlotGameBase {
         super(e2eOptions);
     }
 
-    protected 
-
 }
 
 new HappyFishE2ESpec().start();
