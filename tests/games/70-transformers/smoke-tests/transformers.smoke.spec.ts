@@ -1,0 +1,22 @@
+import { transformersLocators } from "../transformers-locators";
+import { transformersConfigs } from "../transformers-configs";
+import { SmokeBases } from "sc-automation-core";
+
+class transformersSmokeSpec extends SmokeBases.SlotGameBase {
+  /**
+   *
+   */
+  constructor() {
+    const smokeOptions: SmokeBases.IBaseOptions = {
+      placeBetChoices: ["1", "25"],
+      gameConfiguration: transformersConfigs,
+      locators: transformersLocators,
+      waitBetTimeout: 1000,
+      snapshotFolderPath: __filename,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+    };
+    super(smokeOptions);
+  }
+}
+
+new transformersSmokeSpec().start();
