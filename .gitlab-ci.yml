@@ -66,7 +66,7 @@ e2etest:
   script:
     # - rm -r *
     # - cp -r /app/* ./
-    - npm i
+    - npx playwright install
     - npm run e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - du -hs /ms-playwright/*
