@@ -60,20 +60,6 @@ const config: PlaywrightTestConfig = {
         ...devices["Desktop Chrome"],
       },
     },
-    {
-      name: "jackpot",
-      testMatch: `**/${testMatch}/smoke-tests/*jackpot.smoke.spec.ts`,
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
-    {
-      name: "jackpote2e",
-      testMatch: `**/${testMatch}/e2e-tests/*jackpot.e2e.spec.ts`,
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

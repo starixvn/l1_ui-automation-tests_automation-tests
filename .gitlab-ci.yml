@@ -84,3 +84,28 @@ e2etest:
       - test-results   
     when: always
     expire_in: 1 day
+
+gameguidetest:
+  image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
+  stage: test
+  tags:
+    - auto-test-prod
+  script:    
+    - rm -r *
+    - cp -r /app/* ./
+    - npm run guide --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+  after_script:
+    - du -hs /ms-playwright/*
+  retry: 1
+  rules:
+    - if: $TRIGGER == "true" && $MODE == "GUIDE"
+      when: always
+    - when: never
+  
+  artifacts:
+    paths:
+      - playwright-report
+      - screenshots
+      - test-results   
+    when: always
+    expire_in: 1 day    
