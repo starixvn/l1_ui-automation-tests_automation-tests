@@ -48,7 +48,7 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: "Guide",
-      testMatch: `**/${testMatch}/*.gameguide.spec.ts`,
+      testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
       },
