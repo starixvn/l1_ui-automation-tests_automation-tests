@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-export const SedieLocators = [
+export const extSedieLocators = [
   new Components.ImageLocator("imgdealer", 553, 10, 150, 150),
   new Components.ImageLocator("evenChoice", 256, 274, 160, 60),
   new Components.ImageLocator("evenOwnbet", 384, 360, 30, 30),
@@ -26,14 +26,36 @@ export const SedieLocators = [
   new Components.ImageLocator("guideMenu", 35, 416, 20, 20),
   new Components.ImageLocator("stake1", 394, 593, 55, 55),
   new Components.ImageLocator("stake10", 394, 593, 55, 55),
-  new Components.ImageLocator("errorMessage", 459, 492, 380, 37),
-  new Components.ImageLocator("msgMaxbetLimit", 478, 488, 400, 30),
   new Components.ImageLocator("lblHistoryFirstRow", 92, 175, 1120, 43),
   new Components.ImageLocator("locHistoryRoundId", 249, 174, 80, 30),
-  new Components.ImageLocator("btnClosePopup", 5, 5, 10, 10),
-  new Components.ImageLocator("btnRebet", 10, 10, 10, 10),
-  new Components.ImageLocator("imgGameLobbyl1", 460, 640, 200, 60),
-  new Components.ImageLocator("imgGameLobbyl2", 460, 640, 200, 60),
-  new Components.ImageLocator("tabGames", 340, 86, 85, 30),
-  new Components.ImageLocator("icoGame", 300, 430, 150, 120)
+  new Components.ImageLocator("lblRoundIdOnTable", 353, 203, 100, 25),
+  new Components.ImageLocator("oddBar", 878, 533, 16, 16),
+  new Components.ImageLocator("evenBar", 878, 533, 16, 16),
+  new Components.ImageLocator("msgMaxbetred4l1", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetred3l1", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetred2l1", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetwhite3l1", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetwhite4l1", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetred4l2", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetred3l2", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetred2l2", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetwhite3l2", 478, 488, 400, 30),
+  new Components.ImageLocator("msgMaxbetwhite4l2", 478, 488, 400, 30),
+  new Components.ImageLocator("outside", 10, 10, 10, 10),
+  new Components.ImageLocator("btnRightArrow", 911, 580, 40, 40),
+  new Components.ImageLocator("btnLeftArrow", 360, 580, 40, 40),
 ];
+
+export const SedieLocators = extSedieLocators.concat(Components.GameLobbyLocator.GameLobbyLocator)
+
+
+// export const SedieLocators = extSedieLocators.concat(Components.TableLocator.TableLocators).filter((item, index) => {
+//   return !Components.TableLocator.TableLocators.some((array1Item, array1Index) => {
+//     return array1Index === index && item === array1Item;
+//   });
+// });
+
+
+// const lblHistoryDetailRoundId = {x: 639}
+ 
+// HappyFishLocators.forEach((item, i)=>{ if (item.name == "lblHistoryDetailRoundId") item.x = lblHistoryDetailRoundId.x } )
