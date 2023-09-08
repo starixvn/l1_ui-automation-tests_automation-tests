@@ -1,5 +1,5 @@
 import { SedieConfigs } from "../sedie-configs";
-import { E2EBases, Components, CustomExpect } from "sc-automation-core";
+import { E2EBases, Components } from "sc-automation-core";
 import { SedieLocators } from "./sedie-locators";
 
 class SedieE2ESpec extends E2EBases.TableGameBase {

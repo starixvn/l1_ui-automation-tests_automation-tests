@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-export const SedieWarLocators = [
+export const extSedieWarLocators = [
   new Components.ImageLocator("imgdealer", 472, 10, 340, 40),
   new Components.ImageLocator("playerChoice", 133, 204, 185, 60),
   new Components.ImageLocator("bankerChoice", 900, 204, 185, 60),
@@ -30,12 +30,24 @@ export const SedieWarLocators = [
   new Components.ImageLocator("stake1", 394, 606, 55, 55),
   new Components.ImageLocator("stake10", 394, 606, 55, 55),
   new Components.ImageLocator("historyPopup", 562, 92, 170, 50),
-  new Components.ImageLocator("errorMessage", 410, 506, 450, 20),
   new Components.ImageLocator("lblHistoryFirstRow", 233, 190, 810, 40),
   new Components.ImageLocator("locHistoryRoundId", 400, 196, 86, 30),
   new Components.ImageLocator("btnClosePopup", 5, 5, 10, 10),
-  new Components.ImageLocator("imgGameLobbyl1", 460, 640, 200, 60),
-  new Components.ImageLocator("imgGameLobbyl2", 460, 640, 200, 60),
-  new Components.ImageLocator("tabGames", 340, 86, 85, 30),
-  new Components.ImageLocator("icoGame", 524, 206, 150, 120)
+  new Components.ImageLocator("lblRoundIdOnTable", 597, 140, 100, 25),
+  new Components.ImageLocator("msgMaxbetevenl1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbettiel1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetplayerEvenl1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetplayerRed3l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetplayerRed4l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetplayerWhite3l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetplayerWhite4l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetbankerEvenl1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetbankerRed3l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetbankerRed4l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetbankerWhite3l1", 410, 506, 450, 20),
+  new Components.ImageLocator("msgMaxbetbankerWhite4l1", 410, 506, 450, 20),
+  new Components.ImageLocator("btnRightArrow", 924, 611, 40, 40),
+  new Components.ImageLocator("btnLeftArrow", 316, 611, 40, 40),
 ];
+
+export const SedieWarLocators = extSedieWarLocators.concat(Components.GameLobbyLocator.GameLobbyLocator)

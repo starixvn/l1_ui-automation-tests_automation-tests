@@ -62,12 +62,10 @@ e2etest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
-    - e2e-test 
+    - auto-test-prod
   script:
-    # - rm -r *
-    # - cp -r /app/* ./
-    # - npx playwright install
-    - npx i
+    - rm -r *
+    - cp -r /app/* ./
     - npm run e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - du -hs /ms-playwright/*
