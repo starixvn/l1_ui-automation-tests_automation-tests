@@ -1,7 +1,6 @@
 import { DragonTigerConfigs } from "../dragontigerfight-configs";
 import { E2EBases, Components } from "sc-automation-core";
 import { DragonTigerFightLocators } from "./dragontigerfight-locators";
-import { expect, request } from '@playwright/test';
 
 class DragonTigerFightE2ESpec extends E2EBases.TableGameBase {
   /**

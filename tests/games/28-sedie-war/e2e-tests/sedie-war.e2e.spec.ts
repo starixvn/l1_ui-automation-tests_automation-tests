@@ -1,7 +1,7 @@
 import { SedieWarConfigs } from "../sedie-war-configs";
 import { E2EBases, Components } from "sc-automation-core";
 import { SedieWarLocators } from "./sedie-war-locators";
-const avoidHedgebets = ["banker", "odd", "bankerOdd", "playerOdd", "player"]
+const avoidHedgebets = ["banker", "odd", "bankerOdd", "playerOdd", "player", "tie"]
 const multiPlaceBetChoices =  SedieWarConfigs.choices.filter(value => !avoidHedgebets.includes(value));
 
 class SedieWarE2ESpec extends E2EBases.TableGameBase {
@@ -17,7 +17,7 @@ class SedieWarE2ESpec extends E2EBases.TableGameBase {
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       multiPlaceBetChoices: multiPlaceBetChoices,
-      indexTicketHistory: { totalbet: -1, isIdLink: false },
+      indexTicketHistory: { totalbet: -2, isIdLink: false },
       gameLobbyNavigaion: [
         Components.GameLobbyLocator.GameLobbyLocatorNames.tabSedie,
         Components.GameLobbyLocator.GameLobbyLocatorNames.icoGame3,

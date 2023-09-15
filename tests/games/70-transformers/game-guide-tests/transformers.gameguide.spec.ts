@@ -157,10 +157,10 @@ const gameId = 70;
 const gameName = {
   vi: "Đại Chiến Robot",
   en: "Transformers",
-  zh_tw: "Transformers",
+  zh_tw: "变形金刚",
   id: "Transformers",
   th: "Transformers",
-  zh_cn: "Transformers",
+  zh_cn: "变形金刚",
 };
 
 const gameguideBase =

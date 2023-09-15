@@ -1,8 +1,8 @@
 import { VipSedieConfigs } from "../vip-sedie-configs";
-import { E2EBases, Components, CustomExpect } from "sc-automation-core";
+import { E2EBases, Components } from "sc-automation-core";
 import { VipSedieLocators } from "./vip-sedie-locators";
 
-class SedieE2ESpec extends E2EBases.TableGameBase {
+class VipSedieE2ESpec extends E2EBases.TableGameBase {
   /**
    *
    */
@@ -14,38 +14,18 @@ class SedieE2ESpec extends E2EBases.TableGameBase {
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 10,
+      multiPlaceBetChoices: VipSedieConfigs.choices.slice(2),
+      indexTicketHistory: { totalbet: -8, isIdLink: false },
+      gameLobbyNavigaion: [
+        Components.GameLobbyLocator.GameLobbyLocatorNames.tabSedie,
+        Components.GameLobbyLocator.GameLobbyLocatorNames.icoGame2,
+      ],
+      barItems: ["odd","even"]
     };
     super(e2eOptions);
   }
 
-  protected ticketHistoryTests(): void {
-    Components.test("Verify history and ticket detail", async () => {
-      // Act 1
-      await this.game.clickHistory(2000);
-      const ticketdata = await getDataFistRowHistory(
-        this.game,
-        "lblHistoryFirstRow"
-      );
-
-      const winamount = ticketdata[ticketdata?.length - 1];
-      const betChoiceAmount = ticketdata[ticketdata?.length - 7];
-      const roundId = ticketdata[ticketdata?.length - 10];
-      
-      // Assert
-      CustomExpect.expect(winamount.trim()).toEqual(global.settledata.betwin);
-      CustomExpect.expect(betChoiceAmount).toEqual(global.settledata.bet);
-      CustomExpect.expect(roundId).toEqual(global.settledata.roundID);
-
-      //Post-Act
-      await this.game.clickOutSide();
-    });
-  }
-
 }
 
-new SedieE2ESpec().start();
+new VipSedieE2ESpec().start();
 
-const getDataFistRowHistory = async (game: any, elementname: string) => {
-  let tempdata = await game.getTextLocator(elementname);
-  return tempdata?.split(" ") || "";
-};
