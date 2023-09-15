@@ -1,7 +1,7 @@
-docker-build-game-23:
+docker-build-game-72:
   extends: docker-build
   variables:
-    GAMEID: 23
+    GAMEID: 72
   rules:
     - if: $TRIGGER != "true"
       changes:
