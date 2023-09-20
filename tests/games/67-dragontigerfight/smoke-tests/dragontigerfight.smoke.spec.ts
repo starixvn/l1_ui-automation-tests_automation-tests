@@ -11,7 +11,7 @@ class DragonTigerSmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [DragonTigerConfigs.choices[0]],
       gameConfiguration: DragonTigerConfigs,
       locators: DragonTigerLocators,
-      waitBetTimeout: 7000,
+      waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
