@@ -4,7 +4,7 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
   id: 67,
   name: "dragontigerfight",
   durations: {
-    wholeRound: 41 * 1000,
+    wholeRound: 45 * 1000,
     placingBets: 30 * 1000,
     lockingBet: 5 * 1000,
     shakeThePlateDuration: 5 * 1000,
