@@ -66,10 +66,11 @@ e2etest:
   script:
     - cd tests
     - ls -a
-    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME-
 
-  # after_script:
-  #   - du -hs /ms-playwright/*
+  after_script:
+    - cd games
+    - ls -a
   retry: 1
   rules:
     - if: $MODE == "E2E"
