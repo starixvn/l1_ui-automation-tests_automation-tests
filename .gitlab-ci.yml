@@ -66,6 +66,9 @@ e2etest:
   script:
     - pwd
     - ls -a
+    - cd tests
+    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+
   # after_script:
   #   - du -hs /ms-playwright/*
   retry: 1
