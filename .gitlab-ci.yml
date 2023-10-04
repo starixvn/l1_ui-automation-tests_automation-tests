@@ -64,9 +64,8 @@ e2etest:
   tags:
     - e2e-test
   script:
-    - pwd
-    - ls -a
     - cd tests
+    - ls -a
     - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   # after_script:
@@ -77,13 +76,13 @@ e2etest:
       when: always
     - when: never
   
-  # artifacts:
-  #   paths:
-  #     - playwright-report
-  #     - screenshots
-  #     - test-results   
-  #   when: always
-  #   expire_in: 1 day
+  artifacts:
+    paths:
+      - playwright-report
+      - screenshots
+      - test-results   
+    when: always
+    expire_in: 1 day
 
 gameguidetest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
