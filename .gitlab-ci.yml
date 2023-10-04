@@ -65,6 +65,7 @@ e2etest:
     - e2e-test
   script:
     - pwd
+    - ls -a
   # after_script:
   #   - du -hs /ms-playwright/*
   retry: 1
