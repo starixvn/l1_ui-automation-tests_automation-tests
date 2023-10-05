@@ -65,7 +65,7 @@ e2etest:
     - e2e-test
   script:
     - cd tests
-    - npm run test --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME
+    - npm run e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME
 
   after_script:
     # - cd games
