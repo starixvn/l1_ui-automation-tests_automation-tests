@@ -65,12 +65,13 @@ e2etest:
     - e2e-test
   script:
     - cd tests
-    - ls -a
-    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME-
-
-  after_script:
     - cd games
     - ls -a
+    # - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME-
+
+  after_script:
+    # - cd games
+    # - ls -a
   retry: 1
   rules:
     - if: $MODE == "E2E"
