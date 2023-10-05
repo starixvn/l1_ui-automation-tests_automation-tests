@@ -14,7 +14,7 @@ export const pontoonConfigs: Components.GameConfiguration = {
   odds: {
     fiveCardTrick: 3,
     regular: 2,
-    pontoon: 2.5,
+    pontoon: 3.5,
   },
   cardgame: true,
   accounts: {
