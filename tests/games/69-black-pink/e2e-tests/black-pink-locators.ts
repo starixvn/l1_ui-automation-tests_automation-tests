@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-let BlackPinkLocators =  Components.ClassicSlotLocators
+let BlackPinkLocators =  Components.BaseLocator.ClassicSlotLocators
 
 const lblHistoryDetailRoundId = {x: 650}
  
