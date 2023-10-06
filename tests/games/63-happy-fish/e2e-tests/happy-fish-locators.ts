@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-let HappyFishLocators =  Components.ClassicSlotLocators
+let HappyFishLocators =  Components.BaseLocator.ClassicSlotLocators
 
 const lblHistoryDetailRoundId = {x: 639}
  
