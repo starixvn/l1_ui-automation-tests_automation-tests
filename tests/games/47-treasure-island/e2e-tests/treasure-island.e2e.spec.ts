@@ -1,10 +1,8 @@
 import { expect } from "@playwright/test";
-import { GameEvent } from "sc-automation-core/lib/_shared";
 import { extTreasureIslandLocators } from "./treasure-island-locators";
 import { TreasureIslandConfigs } from "../treasure-island-configs";
 import { E2EBases, Components } from "sc-automation-core";
-import { CascadingSlotLocatorNames } from "sc-automation-core/lib/components";
-
+const CascadingSlotLocatorNames = Components.BaseLocator.baseLocatorNames
 class TreasureIslandE2ESpec extends E2EBases.CascadingSlotGameBase {
   /**
    *

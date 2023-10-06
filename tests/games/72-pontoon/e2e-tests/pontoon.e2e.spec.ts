@@ -13,7 +13,7 @@ class PontoonE2ESpec extends E2EBases.CardGameBase {
       locators: PontoonLocatorsLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 1,
       multiPlaceBetChoices: ["lblChoice1", "lblChoice2", "lblChoice3"],
       indexTicketHistory: { totalbet: -2, isIdLink: false },
       gameLobbyNavigaion: [
