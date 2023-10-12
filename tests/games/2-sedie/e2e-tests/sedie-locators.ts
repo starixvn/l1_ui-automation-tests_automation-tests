@@ -47,7 +47,7 @@ export const extSedieLocators = [
   new ImageLocator("btnLeftArrow", 360, 580, 40, 40),
 ];
 
-export const SedieLocators = extSedieLocators.concat(Components.GameLobbyLocator.GameLobbyLocator)
+export const SedieLocators = extSedieLocators.concat(Components.BaseLocator.GameLobbyLocator)
 
 
 // export const SedieLocators = extSedieLocators.concat(Components.TableLocator.TableLocators).filter((item, index) => {

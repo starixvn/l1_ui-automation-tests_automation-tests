@@ -17,8 +17,8 @@ class SedieE2ESpec extends E2EBases.TableGameBase {
       multiPlaceBetChoices: SedieConfigs.choices.slice(2),
       indexTicketHistory: { totalbet: -8, isIdLink: false },
       gameLobbyNavigaion: [
-        Components.GameLobbyLocator.GameLobbyLocatorNames.tabSedie,
-        Components.GameLobbyLocator.GameLobbyLocatorNames.icoGame2,
+        Components.BaseLocator.baseLocatorNames.tabSedie,
+        Components.BaseLocator.baseLocatorNames.icoGame2,
       ],
       barItems: ["odd","even"]
     };
