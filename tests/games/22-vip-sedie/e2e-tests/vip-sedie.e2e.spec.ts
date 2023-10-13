@@ -25,6 +25,9 @@ class VipSedieE2ESpec extends E2EBases.TableGameBase {
     super(e2eOptions);
   }
 
+  protected LedBarTests(): void {
+    //inappropriate for this game
+  }
 
 }
 
