@@ -17,8 +17,8 @@ class DragonTigerFightE2ESpec extends E2EBases.TableGameBase {
       multiPlaceBetChoices: DragonTigerConfigs.choices.slice(2),
       indexTicketHistory: { totalbet: -2, isIdLink: true },
       gameLobbyNavigaion: [
-        Components.GameLobbyLocator.GameLobbyLocatorNames.tabCardGames,
-        Components.GameLobbyLocator.GameLobbyLocatorNames.icoGame1,
+        Components.BaseLocator.baseLocatorNames.tabCardGames,
+        Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
       barItems: ["dragon","tiger","tie"]
     };

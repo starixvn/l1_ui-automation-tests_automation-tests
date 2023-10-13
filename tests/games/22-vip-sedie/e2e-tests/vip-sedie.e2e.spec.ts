@@ -17,13 +17,14 @@ class VipSedieE2ESpec extends E2EBases.TableGameBase {
       multiPlaceBetChoices: VipSedieConfigs.choices.slice(2),
       indexTicketHistory: { totalbet: -8, isIdLink: false },
       gameLobbyNavigaion: [
-        Components.GameLobbyLocator.GameLobbyLocatorNames.tabSedie,
-        Components.GameLobbyLocator.GameLobbyLocatorNames.icoGame2,
+        Components.BaseLocator.baseLocatorNames.tabSedie,
+        Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
       barItems: ["odd","even"]
     };
     super(e2eOptions);
   }
+
 
 }
 

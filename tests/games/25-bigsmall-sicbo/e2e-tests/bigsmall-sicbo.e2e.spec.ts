@@ -14,6 +14,12 @@ class SedieE2ESpec extends E2EBases.TableGameBase {
       waitBetTimeout: 13000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      multiPlaceBetChoices: BigSmallSicBoConfigs.choices.slice(2),
+      indexTicketHistory: { totalbet: -2, isIdLink: false },
+      gameLobbyNavigaion: [
+        Components.BaseLocator.baseLocatorNames.tabBigSmall,
+        Components.BaseLocator.baseLocatorNames.icoGame1,
+      ],
     };
     super(e2eOptions);
   }

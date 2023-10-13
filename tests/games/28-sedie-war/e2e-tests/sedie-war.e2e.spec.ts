@@ -19,8 +19,8 @@ class SedieWarE2ESpec extends E2EBases.TableGameBase {
       multiPlaceBetChoices: multiPlaceBetChoices,
       indexTicketHistory: { totalbet: -2, isIdLink: false },
       gameLobbyNavigaion: [
-        Components.GameLobbyLocator.GameLobbyLocatorNames.tabSedie,
-        Components.GameLobbyLocator.GameLobbyLocatorNames.icoGame3,
+        Components.BaseLocator.baseLocatorNames.tabSedie,
+        Components.BaseLocator.baseLocatorNames.icoGame3,
       ],
     };
     super(e2eOptions);

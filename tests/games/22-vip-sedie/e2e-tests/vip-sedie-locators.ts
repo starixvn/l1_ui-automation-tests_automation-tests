@@ -31,6 +31,8 @@ export const extVipSedieLocators = [
   new ImageLocator("lblHistoryFirstRow", 68, 185, 1148, 37),
   new ImageLocator("locHistoryRoundId", 246, 190, 80, 30),
   new ImageLocator("lblRoundIdOnTable", 330, 200, 100, 20),
+  new ImageLocator("oddBar", 888, 565, 16, 16),
+  new ImageLocator("evenBar", 888, 565, 16, 16),
   new ImageLocator("btnClosePopup", 5, 5, 10, 10),
   new ImageLocator("btnRightArrow", 911, 605, 40, 40),
   new ImageLocator("btnLeftArrow", 330, 605, 40, 40),
@@ -39,9 +41,9 @@ export const extVipSedieLocators = [
   new ImageLocator("msgMaxbetred2l1", 459, 520, 380, 37),
   new ImageLocator("msgMaxbetwhite3l1", 459, 520, 380, 37),
   new ImageLocator("msgMaxbetwhite4l1", 459, 520, 380, 37),
-  new ImageLocator("oddBar", 888, 863, 16, 16),
-  new ImageLocator("evenBar", 888, 863, 16, 16),
+  new ImageLocator("outside", 10, 10, 10, 10),
+
 ];
 
-export const VipSedieLocators = extVipSedieLocators.concat(Components.GameLobbyLocator.GameLobbyLocator)
+export const VipSedieLocators = extVipSedieLocators.concat(Components.BaseLocator.GameLobbyLocator)
 

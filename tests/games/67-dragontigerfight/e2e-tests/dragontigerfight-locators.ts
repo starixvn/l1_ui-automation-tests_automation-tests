@@ -43,4 +43,4 @@ export const extDragonTigerFightLocators = [
     new ImageLocator("tieBar", 941, 567, 18, 18),
 ];
 
-export const DragonTigerFightLocators = Components.TableLocator.TableLocators.concat(extDragonTigerFightLocators,Components.GameLobbyLocator.GameLobbyLocator)
+export const DragonTigerFightLocators = Components.BaseLocator.TableLocators.concat(extDragonTigerFightLocators,Components.BaseLocator.GameLobbyLocator)
