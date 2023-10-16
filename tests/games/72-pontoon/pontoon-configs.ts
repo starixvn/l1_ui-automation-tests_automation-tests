@@ -23,6 +23,7 @@ export const pontoonConfigs: Components.GameConfiguration = {
     local2: "222241",
     local3: "222241",
     sit: "supertestsaba66",
+    l2sit: "SIT_test_INH_017",
     uat: "IT55Test789",
     prod: "supertestte120201013",
     l2uat: "TestSep2740",

@@ -18,7 +18,7 @@ class PontoonE2ESpec extends E2EBases.CardGameBase {
       indexTicketHistory: { totalbet: -2, isIdLink: false },
       gameLobbyNavigaion: [
         Components.BaseLocator.baseLocatorNames.tabCardGames,
-        Components.BaseLocator.baseLocatorNames.icoGame1,
+        Components.BaseLocator.baseLocatorNames.icoGame7,
       ],
     };
     super(e2eOptions);
