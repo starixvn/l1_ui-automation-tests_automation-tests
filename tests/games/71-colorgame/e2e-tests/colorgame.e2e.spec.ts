@@ -16,7 +16,7 @@ class ColorGameE2ESpec extends E2EBases.TableGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       multiPlaceBetChoices: ColorGameConfigs.choices.slice(2),
       indexTicketHistory: { totalbet: -2, isIdLink: true },
-      gameLobbyNavigaion: [
+      gameLobbyNavigation: [
         Components.BaseLocator.baseLocatorNames.tabOthers,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],

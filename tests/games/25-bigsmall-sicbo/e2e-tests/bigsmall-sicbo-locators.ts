@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
 export const extBigSmallSicBoLocators = [
-  new ImageLocator("imgdealer", 484, 135, 315, 18),
+  new ImageLocator("imgdealer", 10, 590, 100, 100),
   new ImageLocator("lblgameId", 522, 10, 100, 30),
   new ImageLocator("specific1Choice", 20, 180, 65, 40),
   new ImageLocator("specific2Choice", 235, 180, 65, 40),
@@ -39,13 +39,29 @@ export const extBigSmallSicBoLocators = [
   new ImageLocator("guideMenu", 28, 547, 30, 30),
   new ImageLocator("stake1", 398, 606, 55, 55),
   new ImageLocator("stake10", 398, 606, 55, 55),
-  new ImageLocator("errorMessage",  465, 480, 340, 30),
+  new ImageLocator("stake20", 475, 606, 40, 40),
   new ImageLocator("lblHistoryFirstRow", 227, 185, 805, 37),
   new ImageLocator("locHistoryRoundId", 439, 190, 100, 30),
   new ImageLocator("btnClosePopup", 5, 5, 10, 10),
-  new ImageLocator("btnRightArrow", 911, 605, 40, 40),
-  new ImageLocator("btnLeftArrow", 330, 605, 40, 40),
-  new ImageLocator("msgMaxbetred4l1", 459, 520, 380, 37),
+  new ImageLocator("lblRoundIdOnTable", 545, 15, 100, 20),
+  new ImageLocator("btnClosePopup", 5, 5, 10, 10),
+  new ImageLocator("btnHome", 35, 276, 25, 25),
+  new ImageLocator("msgMaxbettotal11l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal12l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal13l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal14l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal15l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal16l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal17l1", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal11l2", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal12l2", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal13l2", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal14l2", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal15l2", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal16l2", 454, 480, 380, 27),
+  new ImageLocator("msgMaxbettotal17l2", 454, 480, 380, 27),
+  new ImageLocator("btnRightArrow", 926, 618, 40, 40),
+  new ImageLocator("btnLeftArrow", 324, 618, 40, 40),
 
 ];
 

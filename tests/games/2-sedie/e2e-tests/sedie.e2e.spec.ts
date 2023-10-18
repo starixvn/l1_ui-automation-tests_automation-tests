@@ -16,7 +16,7 @@ class SedieE2ESpec extends E2EBases.TableGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       multiPlaceBetChoices: SedieConfigs.choices.slice(2),
       indexTicketHistory: { totalbet: -8, isIdLink: false },
-      gameLobbyNavigaion: [
+      gameLobbyNavigation: [
         Components.BaseLocator.baseLocatorNames.tabSedie,
         Components.BaseLocator.baseLocatorNames.icoGame2,
       ],

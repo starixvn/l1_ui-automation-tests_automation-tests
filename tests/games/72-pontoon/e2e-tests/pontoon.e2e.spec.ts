@@ -16,7 +16,7 @@ class PontoonE2ESpec extends E2EBases.CardGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 1,
       multiPlaceBetChoices: ["lblChoice1", "lblChoice2", "lblChoice3"],
       indexTicketHistory: { totalbet: -2, isIdLink: false },
-      gameLobbyNavigaion: [
+      gameLobbyNavigation: [
         Components.BaseLocator.baseLocatorNames.tabCardGames,
         Components.BaseLocator.baseLocatorNames.icoGame7,
       ],

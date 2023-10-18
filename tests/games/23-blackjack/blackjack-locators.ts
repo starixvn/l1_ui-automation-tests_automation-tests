@@ -10,12 +10,12 @@ export const BlackJackLocators = [
     new Components.ImageLocator("stake1", 426, 600, 40, 40),
     new Components.ImageLocator("stake10", 426, 600, 40, 40),
     new Components.ImageLocator("submitBetBoard", 1200, 245, 60, 60),
-    new Components.ImageLocator("hitcard", 1200, 245, 60, 60),
-    new Components.ImageLocator("standcard", 1184, 448, 90, 90),
-    new Components.ImageLocator("cancelbet", 1184, 448, 90, 90),
+    new Components.ImageLocator("hitcard", 1021, 567, 40, 40),
+    new Components.ImageLocator("standcard", 1151, 517, 40, 40),
+    new Components.ImageLocator("cancelbet", 1151, 517, 40, 40),
     new Components.ImageLocator("msgMaxbetLimit", 440, 536, 400, 22),
     new Components.ImageLocator("btnRightArrow", 966, 609, 35, 35),
-    new Components.ImageLocator("btnCancelBet", 1185, 457, 35, 35),
+    new Components.ImageLocator("btnCancelBet", 1151, 517, 40, 40),
 ];
 
 
