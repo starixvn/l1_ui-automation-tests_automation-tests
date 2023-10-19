@@ -15,7 +15,7 @@ class BigSmallSicBoE2ESpec extends E2EBases.TableGameBase {
       locators: BigSmallSicBoLocators,
       waitBetTimeout: 13000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 1,
       multiPlaceBetChoices: multiPlaceBetChoices.slice(15),
       indexTicketHistory: { totalbet: -2, isIdLink: false },
       gameLobbyNavigation: [Components.BaseLocator.baseLocatorNames.tabBigSmall,Components.BaseLocator.baseLocatorNames.icoGame1],
