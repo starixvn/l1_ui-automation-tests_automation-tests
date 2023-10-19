@@ -79,10 +79,10 @@ const gameId = 67;
 const gameName = {
   vi: "Đại Chiến Rồng Hổ",
   en: "Dragon Tiger Fight",
-  zh_tw: "HAPPY FISH",
-  id: "HAPPY FISH",
-  th: "HAPPY FISH",
-  zh_cn: "HAPPY FISH",
+  zh_tw: "Dragon Tiger Fight",
+  id: "Dragon Tiger Fight",
+  th: "Dragon Tiger Fight",
+  zh_cn: "Dragon Tiger Fight",
 };
 const gameguideBase =
   process.env.npm_config_project === "l2"
