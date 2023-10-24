@@ -28,12 +28,8 @@ class LotterySmokeSpec extends SmokeBases.TableGameBase {
     Components.test("AND odds should be correct", async () => {
       await this.game.waitForTimeout(this.options.waitBetTimeout);
       // Assert
-      const configOdds =
-        process.env.npm_config_project === "l2"
-          ? this.options.gameConfiguration[
-              `${process.env.npm_config_project}odds`
-            ]
-          : this.options.gameConfiguration.odds;
+      const configOdds = process.env.npm_config_project === "l1" ? this.options.gameConfiguration.odds: this.options.gameConfiguration["l2odds"];
+      console.log(configOdds);
       expect(this.game.odds).toStrictEqual(configOdds);
     });
   }
