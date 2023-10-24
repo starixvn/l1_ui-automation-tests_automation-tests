@@ -42,7 +42,7 @@ smoketest:
   script:    
     - rm -r *
     - cp -r /app/* ./
-    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test --env=$ENV --gameId=$GAMEID --project=$STACK_NAME
     # - cd tests
     # - npm run test --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
   after_script:
@@ -68,7 +68,7 @@ e2etest:
     - e2e-test
   script:
     - cd tests
-    - npm run e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME
+    - npm run e2e --env=$ENV --gameId=$GAMEID- --project=$STACK_NAME
 
   after_script:
     # - cd games
@@ -95,7 +95,7 @@ gameguidetest:
   script:    
     - rm -r *
     - cp -r /app/* ./
-    - npm run guide --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run guide --env=$ENV --gameId=$GAMEID --project=$STACK_NAME
   after_script:
     - du -hs /ms-playwright/*
   retry: 1
