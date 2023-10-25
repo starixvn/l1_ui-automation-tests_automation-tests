@@ -12,7 +12,12 @@ class VIPFPCSmokeSpec extends SmokeBases.TableGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: [VIPFPCConfigs.choices[7]],
       gameConfiguration: VIPFPCConfigs,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 10,
+      placeBetAmount:
+        process.env.npm_config_project === "l1"
+          ? 10
+          : process.env.npm_config_project === "l2"
+          ? 50
+          : 5,
       locators: VIPFPCLocators,
       waitBetTimeout: 12000,
       snapshotFolderPath: __filename,
