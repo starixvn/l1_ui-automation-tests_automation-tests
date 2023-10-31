@@ -1,11 +1,11 @@
-docker-build-game-1:
+docker-build-game-0:
   extends: docker-build
   variables:
     GAMEID: 0
   rules:
     - if: $TRIGGER != "true"
       changes:
-        - tests/games/0*/**/*
+        - tests/games/0-*/**/*
         - package.json
         - playwright.config.ts
         - Dockerfile
