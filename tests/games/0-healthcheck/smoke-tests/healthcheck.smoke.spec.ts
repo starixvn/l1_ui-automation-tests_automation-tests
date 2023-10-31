@@ -1,63 +1,51 @@
 import { test, expect } from "@playwright/test";
-
-const domain = {
-  taiSaBaURL : "https://www.taisaba.com/"
-};
 const timeout = 3000;
-const locators = {
-  androidTab : `[id$=tab-android]`
-};
 
-const start = () =>{
+const domainList = [
+  {
+    domainName: "taisaba",
+    url: "https://www.taisaba.com/",
+    imagesCheck: [{control: "[id$=tab-ios]", imageName: "taiSabaIOS.png"},
+    {control: "[id$=tab-android]", imageName: "taiSabaAndroid.png"}]
+  }
+];
+
+const start = () => {
   test.beforeEach(async ({}, testInfo) => {
-      testInfo.snapshotPath = (name: string) => {
-          return `${__filename}-snapshots/${name}`;
-      };
+    testInfo.snapshotPath = (name: string) => {
+      return `${__filename}-snapshots/${name}`;
+    };
   });
 
-  test.describe.parallel(`Tai Saba site testing`, () => {
-      runScenario();
+  test.describe.parallel(`Health Checking`, () => {
+    runScenario();
   });
 
   test.afterAll(async ({ browser }) => {
-      await browser.close();
+    await browser.close();
   });
 };
 
-const taiSabaTests = () => {
-  test(`Verify that TaiSaba page was loaded successfully in iOS tab`, async ({ page }) =>   {
-    await page.goto(domain.taiSaBaURL);
-    await page.setViewportSize({
-      width: 1084,
-      height: 2000,
-    });
-    await page.waitForLoadState('load');
+const healthCheck = (domain: any) => {
+  test(`Verify that ${domain.domainName} page was loaded successfully`, async ({
+    page,
+  }) => {
+    await page.goto(domain.url);
+    await page.setViewportSize({width: 1084,height: 2000});
+    await page.waitForLoadState("networkidle");
     await page.waitForTimeout(timeout);
-    expect
-      (await page.screenshot({ path: `screenshots/taiSabaIOS.png`, fullPage: true }))
-      .toMatchSnapshot(`taiSabaIOS.png`, { maxDiffPixelRatio: 0.05 });
-
-  });
-
-  test(`Verify that TaiSaba page was loaded successfully in android tab`, async ({ page }) =>   {
-    await page.goto(domain.taiSaBaURL);
-    await page.setViewportSize({
-      width: 1084,
-      height: 2000,
-    });
-    await page.click(locators.androidTab);
-    await page.waitForLoadState('load');
-    await page.waitForTimeout(timeout);
-    expect
-      (await page.screenshot({ path: `screenshots/taiSabaAndroid.png`, fullPage: true }))
-      .toMatchSnapshot(`taiSabaAndroid.png`, { maxDiffPixelRatio: 0.05 });
-
+    for (const iterator of domain.imagesCheck) {
+      await page.click(iterator.control)
+      await page.waitForLoadState("domcontentloaded");
+      expect(await page.screenshot({ path: `screenshots/${iterator.imageName}`, fullPage: true })).toMatchSnapshot(iterator.imageName, { maxDiffPixelRatio: 0.05 });
+    }
   });
 };
 
 const runScenario = async () => {
-  taiSabaTests();
+  domainList.forEach((domain) => {
+    healthCheck(domain);
+  });
 };
 
 start();
-
