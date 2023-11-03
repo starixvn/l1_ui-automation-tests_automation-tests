@@ -49,9 +49,9 @@ export const FourGuardiansConfigs: IFourGuardiansConfigs = {
     local3: "222247",
     sit: "supertestsaba67",
     uat: "IT56Test789",
-    prod: "supertestte120201007",
+    prod: "supertestte120201013",
     l2uat: "TestSep2746",
-    l2prod: "VNtest046",
+    l2prod: "VNtest044",
   },
   productId: "1640",
 };

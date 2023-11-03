@@ -34,9 +34,9 @@ export const TexasHoldemPokerrConfigs: Components.GameConfiguration = {
     local3: "222255",
     sit: "supertestsaba70",
     uat: "IT59Test789",
-    prod: "supertestte120201004",
+    prod: "supertestte120201008",
     l2uat: "TestSep2740",
-    l2prod: "VNtest046",
+    l2prod: "VNtest044",
   },
   productId: "1652",
 };

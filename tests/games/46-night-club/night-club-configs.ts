@@ -32,9 +32,9 @@ export const NightClubConfigs: Components.GameConfiguration = {
     local3: "222258",
     sit: "supertestsaba68",
     uat: "IT57Test789",
-    prod: "supertestte120201007",
+    prod: "supertestte120201012",
     l2uat: "TestSep2744",
-    l2prod: "VNtest041",
+    l2prod: "VNtest040",
   },
   productId: "1653",
 };

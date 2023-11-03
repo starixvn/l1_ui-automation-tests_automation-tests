@@ -32,9 +32,9 @@ export const FortuneCatConfigs: Components.GameConfiguration = {
     local3: "222265",
     sit: "supertestsaba70",
     uat: "IT59Test789",
-    prod: "supertestte120201003",
+    prod: "supertestte120201012",
     l2uat: "TestSep2742",
-    l2prod: "VNtest040",
+    l2prod: "VNtest050",
   },
   productId: "1669",
 };

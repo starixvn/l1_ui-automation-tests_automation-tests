@@ -27,7 +27,7 @@ export const pontoonConfigs: Components.GameConfiguration = {
     uat: "IT55Test789",
     prod: "supertestte120201013",
     l2uat: "TestSep2740",
-    l2prod: "VNtest041",
+    l2prod: "VNtest050",
   },
   productId: "1679",
 };

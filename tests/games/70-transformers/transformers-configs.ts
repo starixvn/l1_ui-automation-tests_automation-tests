@@ -32,9 +32,9 @@ export const transformersConfigs: Components.GameConfiguration = {
     local3: "222275",
     sit: "supertestsaba70",
     uat: "IT59Test789",
-    prod: "supertestte120201004",
+    prod: "supertestte120201011",
     l2uat: "TestSep2743",
-    l2prod: "VNtest041",
+    l2prod: "VNtest044",
   },
   productId: "1677",
 };

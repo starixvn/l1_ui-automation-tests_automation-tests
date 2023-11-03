@@ -34,7 +34,7 @@ export const MissionImpossibleConfigs: Components.GameConfiguration = {
     uat: "IT59Test789",
     prod: "supertestte120201008",
     l2uat: "TestSep2743",
-    l2prod: "VNtest044",
+    l2prod: "VNtest040",
   },
   productId: "1673",
 };

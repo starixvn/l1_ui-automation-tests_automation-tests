@@ -32,9 +32,9 @@ export const HappyFishConfigs: Components.GameConfiguration = {
     local3: "222269",
     sit: "supertestsaba70",
     uat: "IT59Test789",
-    prod: "supertestte120201004",
+    prod: "supertestte120201013",
     l2uat: "TestSep2743",
-    l2prod: "VNtest041",
+    l2prod: "VNtest040",
   },
   productId: "1670",
 };

@@ -29,9 +29,9 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
     local3: "222227",
     sit: "supertestsaba67",
     uat: "IT56Test789",
-    prod: "supertestte120201009",
+    prod: "supertestte120201006",
     l2uat: "TestSep2745",
-    l2prod: "VNtest040",
+    l2prod: "VNtest050",
   },
   productId: "1676",
   rebet: true

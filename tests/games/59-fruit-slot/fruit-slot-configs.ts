@@ -61,9 +61,9 @@ export const FruitSlotConfigs: Components.GameConfiguration = {
     local3: "222263",
     sit: "supertestsaba70",
     uat: "IT59Test789",
-    prod: "supertestte120201004",
+    prod: "supertestte120201008",
     l2uat: "TestSep2750",
-    l2prod: "VNtest044",
+    l2prod: "VNtest041",
   },
   productId: "1666",
 };

@@ -32,9 +32,9 @@ export const HeroesSlotConfigs: Components.GameConfiguration = {
     local3: "222251",
     sit: "supertestsaba66",
     uat: "IT55Test789",
-    prod: "supertestte120201012",
+    prod: "supertestte120201004",
     l2uat: "TestSep2749",
-    l2prod: "VNtest041",
+    l2prod: "VNtest040",
   },
   productId: "1644",
 };

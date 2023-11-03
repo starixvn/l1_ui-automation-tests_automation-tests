@@ -40,9 +40,9 @@ export const winthreecardsConfigs: Components.GameConfiguration = {
     local3: "222230",
     sit: "supertestsaba70",
     uat: "IT55Test789",
-    prod: "supertestte120201002",
+    prod: "supertestte120201011",
     l2uat: "TestSep2741",
-    l2prod: "VNtest050",
+    l2prod: "VNtest046",
   },
   productId: "1668",
 };

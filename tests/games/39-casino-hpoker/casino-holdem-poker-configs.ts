@@ -41,9 +41,9 @@ export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
     local3: "222252",
     sit: "supertestsaba67",
     uat: "IT56Test789",
-    prod: "supertestte120201013",
+    prod: "supertestte120201006",
     l2uat: "TestSep2750",
-    l2prod: "VNtest044",
+    l2prod: "VNtest041",
   },
   productId: "1650",
 };

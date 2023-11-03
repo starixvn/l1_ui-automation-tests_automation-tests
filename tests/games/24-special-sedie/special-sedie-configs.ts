@@ -24,7 +24,7 @@ export const SpecialSedieConfigs: Components.GameConfiguration = {
     local3: "222242",
     sit: "supertestsaba67",
     uat: "IT56Test789",
-    prod: "supertestte120201002",
+    prod: "supertestte120201006",
     l2uat: "TestSep2741",
     l2prod: "VNtest044",
   },

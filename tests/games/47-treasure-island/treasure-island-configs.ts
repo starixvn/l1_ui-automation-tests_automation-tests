@@ -198,9 +198,9 @@ export const TreasureIslandConfigs: Components.GameConfiguration = {
     local3: "222259",
     sit: "supertestsaba69",
     uat: "IT58Test789",
-    prod: "supertestte120201008",
+    prod: "supertestte120201013",
     l2uat: "TestSep2745",
-    l2prod: "VNtest044",
+    l2prod: "VNtest041",
   },
   productId: "1654",
 };

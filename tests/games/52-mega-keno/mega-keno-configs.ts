@@ -31,9 +31,9 @@ export const generateConfig = (
       local3: "222242",
       sit: "supertestsaba68",
       uat: "IT57Test789",
-      prod: "supertestte120201001",
+      prod: "supertestte120201006",
       l2uat: "TestSep2749",
-      l2prod: "VNtest041",
+      l2prod: "VNtest040",
     },
     productId: "3848",
   };

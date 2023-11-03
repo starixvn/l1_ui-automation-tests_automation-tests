@@ -23,7 +23,7 @@ export const BlackJackConfigs: Components.GameConfiguration = {
     local3: "222241",
     sit: "supertestsaba66",
     uat: "IT55Test789",
-    prod: "supertestte120201013",
+    prod: "supertestte120201004",
     l2uat: "TestSep2740",
     l2prod: "VNtest041",
   },

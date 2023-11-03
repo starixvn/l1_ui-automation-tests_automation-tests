@@ -56,7 +56,7 @@ export const SedieWarConfigs: Components.GameConfiguration = {
     local3: "222246",
     sit: "supertestsaba66",
     uat: "IT55Test789",
-    prod: "supertestte120201006",
+    prod: "supertestte120201012",
     l2uat: "TestSep2745",
     l2prod: "VNtest041",
   },

@@ -65,7 +65,7 @@ export const BigSmallSicBoConfigs: Components.GameConfiguration = {
     local3: "222243",
     sit: "supertestsaba68",
     uat: "IT57Test789",
-    prod: "supertestte120201003",
+    prod: "supertestte120201008",
     l2uat: "TestSep2742",
     l2prod: "VNtest046",
   },

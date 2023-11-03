@@ -50,9 +50,9 @@ export const FanTanConfigs: Components.GameConfiguration = {
     local3: "222264",
     sit: "supertestsaba70",
     uat: "IT59Test789",
-    prod: "supertestte120201013",
+    prod: "supertestte120201009",
     l2uat: "TestSep2740",
-    l2prod: "VNtest046",
+    l2prod: "VNtest044",
   },
   productId: "1667",
 };

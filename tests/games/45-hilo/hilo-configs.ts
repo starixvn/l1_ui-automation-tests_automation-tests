@@ -43,9 +43,9 @@ export const HiLoConfigs: Components.GameConfiguration = {
     local3: "222257",
     sit: "supertestsaba67",
     uat: "IT56Test789",
-    prod: "supertestte120201006",
+    prod: "supertestte120201011",
     l2uat: "TestSep2742",
-    l2prod: "VNtest040",
+    l2prod: "VNtest050",
   },
   productId: "1651",
 };

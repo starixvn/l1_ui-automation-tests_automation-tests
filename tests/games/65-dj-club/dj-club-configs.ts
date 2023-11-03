@@ -32,9 +32,9 @@ export const DJClubConfigs: Components.GameConfiguration = {
     local3: "222270",
     sit: "supertestsaba70",
     uat: "IT56Test789",
-    prod: "supertestte120201002",
+    prod: "supertestte120201003",
     l2uat: "TestSep2742",
-    l2prod: "VNtest047",
+    l2prod: "VNtest044",
   },
   productId: "1672",
 };

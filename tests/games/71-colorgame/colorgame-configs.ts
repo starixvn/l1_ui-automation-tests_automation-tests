@@ -27,9 +27,9 @@ export const ColorGameConfigs: Components.GameConfiguration = {
     local3: "222276",
     sit: "supertestsaba71",
     uat: "IT55Test789",
-    prod: "supertestte120201005",
+    prod: "supertestte120201012",
     l2uat: "TestSep2744",
-    l2prod: "VNtest042",
+    l2prod: "VNtest046",
   },
   productId: "1678",
   rebet: true

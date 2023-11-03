@@ -51,9 +51,9 @@ export const LotteryConfigs: ILotteryConfigs = {
     local3: "222248",
     sit: "supertestsaba68",
     uat: "IT57Test789",
-    prod: "supertestte120201008",
+    prod: "supertestte120201002",
     l2uat: "TestSep2747",
-    l2prod: "VNtest050",
+    l2prod: "VNtest046",
   },
   productId: "1642",
 };

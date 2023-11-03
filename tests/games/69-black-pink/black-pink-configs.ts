@@ -32,9 +32,9 @@ export const BlackPinkConfigs: Components.GameConfiguration = {
     local3: "222274",
     sit: "supertestsaba69",
     uat: "IT58Test789",
-    prod: "supertestte120201003",
+    prod: "supertestte120201009",
     l2uat: "TestSep2744",
-    l2prod: "VNtest042",
+    l2prod: "VNtest041",
   },
   productId: "1674",
 };

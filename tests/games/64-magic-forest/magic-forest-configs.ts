@@ -32,9 +32,9 @@ export const MagicForestConfigs: Components.GameConfiguration = {
     local3: "222269",
     sit: "supertestsaba69",
     uat: "IT55Test789",
-    prod: "supertestte120201004",
+    prod: "supertestte120201002",
     l2uat: "TestSep2743",
-    l2prod: "VNtest046",
+    l2prod: "VNtest041",
   },
   productId: "1671",
 };

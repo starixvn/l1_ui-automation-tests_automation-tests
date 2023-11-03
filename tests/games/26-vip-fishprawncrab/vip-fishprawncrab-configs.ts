@@ -38,7 +38,7 @@ export const VIPFPCConfigs: Components.GameConfiguration = {
     local3: "222244",
     sit: "supertestsaba69",
     uat: "IT58Test789",
-    prod: "supertestte120201004",
+    prod: "supertestte120201009",
     l2uat: "TestSep2743",
     l2prod: "VNtest050",
   },
