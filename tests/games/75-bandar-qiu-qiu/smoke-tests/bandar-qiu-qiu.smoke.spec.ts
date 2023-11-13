@@ -19,6 +19,10 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
     super(smokeOptions);
   }
 
+  protected hedgeBetTests(): void {
+      //no head
+  }
+
 }
 
 new BandarQiuQiuSmokeSpec().start();
