@@ -37,7 +37,7 @@ export const BaccaratConfigs: Components.GameConfiguration = {
     local2: "222230",
     local3: "222230",
     sit: "supertestsaba70",
-    uat: "IT59Test789",
+    uat: "IT55Test789",
     prod: "supertestte120201013",
     l2uat: "TestSep2748",
     l2prod: "VNtest046",

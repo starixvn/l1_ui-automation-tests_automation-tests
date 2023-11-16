@@ -25,7 +25,7 @@ export const BitCoinMasterConfigs: Components.GameConfiguration = {
     local2: "222256",
     local3: "222256",
     sit: "supertestsaba66",
-    uat: "IT55Test789",
+    uat: "IT58Test789",
     prod: "supertestte120201009",
     l2uat: "TestSep2741",
     l2prod: "VNtest046",

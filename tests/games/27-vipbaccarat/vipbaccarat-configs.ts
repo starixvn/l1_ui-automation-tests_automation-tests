@@ -37,7 +37,7 @@ export const VipBaccaratConfigs: Components.GameConfiguration = {
     local2: "222245",
     local3: "222245",
     sit: "supertestsaba70",
-    uat: "IT59Test789",
+    uat: "IT58Test789",
     prod: "supertestte120201011",
     l2uat: "TestSep2744",
     l2prod: "VNtest040",

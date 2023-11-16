@@ -33,7 +33,7 @@ export const TexasHoldemPokerrConfigs: Components.GameConfiguration = {
     local2: "222255",
     local3: "222255",
     sit: "supertestsaba70",
-    uat: "IT59Test789",
+    uat: "IT57Test789",
     prod: "supertestte120201008",
     l2uat: "TestSep2740",
     l2prod: "VNtest044",

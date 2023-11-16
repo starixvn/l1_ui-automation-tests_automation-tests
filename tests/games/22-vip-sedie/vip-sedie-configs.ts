@@ -28,7 +28,7 @@ export const VipSedieConfigs: Components.GameConfiguration = {
     local2: "222240",
     local3: "222240",
     sit: "supertestsaba70",
-    uat: "IT59Test789",
+    uat: "IT57Test789",
     prod: "supertestte120201003",
     l2uat: "TestSep2750",
     l2prod: "VNtest040",

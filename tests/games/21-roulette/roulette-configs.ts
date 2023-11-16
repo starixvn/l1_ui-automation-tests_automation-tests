@@ -45,7 +45,7 @@ export const RouletteConfigs: Components.GameConfiguration = {
     local2: "222239",
     local3: "222239",
     sit: "supertestsaba69",
-    uat: "IT58Test789",
+    uat: "IT56Test789",
     prod: "supertestte120201002",
     l2uat: "TestSep2749",
     l2prod: "VNtest050",

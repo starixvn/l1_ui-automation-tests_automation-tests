@@ -33,7 +33,7 @@ export const WayToGoalConfigs: Components.GameConfiguration = {
     sit: "supertestsaba66",
     uat: "IT55Test789",
     prod: "supertestte120201003",
-    l2uat: "TestSep2747",
+    l2uat: "TestSep2746",
     l2prod: "VNtest046",
   },
   productId: "1656",

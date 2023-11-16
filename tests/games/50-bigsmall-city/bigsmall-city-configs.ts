@@ -25,7 +25,7 @@ export const BigSmallCity1Configs: Components.GameConfiguration = {
     sit: "supertestsaba67",
     uat: "IT56Test789",
     prod: "supertestte120201004",
-    l2uat: "TestSep2748",
+    l2uat: "TestSep2747",
     l2prod: "VNtest050",
   },
   productId: "1659",

@@ -32,7 +32,7 @@ export const generateConfig = (
       sit: "supertestsaba68",
       uat: "IT57Test789",
       prod: "supertestte120201006",
-      l2uat: "TestSep2749",
+      l2uat: "TestSep2748",
       l2prod: "VNtest040",
     },
     productId: "3848",
