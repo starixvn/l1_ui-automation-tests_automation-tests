@@ -5,6 +5,7 @@ import { SmokeBases } from "sc-automation-core";
 class pontoonSmokeSpec extends SmokeBases.CardGameBase {
   /**
    *
+   * 
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {

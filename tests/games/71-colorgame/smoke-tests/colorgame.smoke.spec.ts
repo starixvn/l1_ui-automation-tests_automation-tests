@@ -7,6 +7,7 @@ import { GameEvent } from "sc-automation-core/lib/_shared";
 class ColorGameSmokeSpec extends SmokeBases.TableGameBase {
   /**
    *
+   * 
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
