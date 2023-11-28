@@ -1,5 +1,5 @@
 import { ColorGameLocators } from "../colorgame-locators";
-import { ColorGameConfigs } from "../ColorGame-configs";
+import { ColorGameConfigs } from "../colorgame-configs";
 import { Components, SmokeBases } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
