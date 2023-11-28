@@ -3,7 +3,44 @@ const ImageLocator = Components.ImageLocator;
 
 export const extBandarQiuQiuLocators = [
     new ImageLocator("bankerChoice", 226, 368, 170, 40),
-
+    new ImageLocator("imgdealer", 565, 13, 150, 100),
+    new ImageLocator("btnRebet", 1025, 627, 40, 40),
+    new ImageLocator("defaultChipBarl1", 384, 606, 630, 100),
+    new ImageLocator("defaultChipBarl2", 384, 606, 630, 100),
+    new ImageLocator("btnHome", 70, 75, 35, 35),
+    new ImageLocator("hamburgerMenu", 72, 140, 20, 20),
+    new ImageLocator("historyMenu", 72, 334, 20, 20),
+    new ImageLocator("guideMenu", 71, 408, 20, 20),
+    new ImageLocator("stake1", 411, 611, 30, 30),
+    new ImageLocator("stake10", 411, 611, 30, 30),
+    new ImageLocator("errorMessage", 451, 540, 300, 20),
+    new ImageLocator("btnClosePopup", 5, 5, 10, 10),
+    new ImageLocator("lblHistoryFirstRow", 190, 193, 900, 30),
+    new ImageLocator("lblRoundIdOnTable", 200, 196, 100, 20),
+    new ImageLocator("locHistoryRoundId",  490, 193, 100, 30),
+    new ImageLocator("lblHistoryDetailRoundId", 207, 115, 100, 30),
+    new ImageLocator("btnRightArrow", 937, 614, 40, 40),
+    new ImageLocator("btnLeftArrow", 332, 614, 40, 40),
+    new ImageLocator("spadeChoice", 200, 290, 150, 100),
+    new ImageLocator("spadeOwnbetl1", 270, 396, 45, 32),
+    new ImageLocator("spadeOwnbetl2", 270, 396, 45, 32),
+    new ImageLocator("heartChoice", 440, 290, 150, 100),
+    new ImageLocator("clubChoice", 690, 290, 150, 100),
+    new ImageLocator("diamondChoice", 910, 290, 150, 100),
+    new ImageLocator("msgMaxbetspadel1", 451, 540, 350, 25),
+    new ImageLocator("msgMaxbetheartl1", 451, 540,  350, 25),
+    new ImageLocator("msgMaxbetclubl1", 451, 540,  350, 25),
+    new ImageLocator("msgMaxbetdiamondl1", 451, 540,  350, 25),
+    new ImageLocator("msgMaxbetspadel2", 451, 540,  350, 25),
+    new ImageLocator("msgMaxbetheartl2", 451, 540,  350, 25),
+    new ImageLocator("msgMaxbetclubl2", 451, 540,  350, 25),
+    new ImageLocator("msgMaxbetdiamondl2", 451, 540,  350, 25),
+    new ImageLocator("spadebanker", 376, 239,  8, 8),
+    new ImageLocator("spadeplayer", 376, 239,  8, 8),
+    new ImageLocator("spadetie", 376, 239,  8, 8),
+    new ImageLocator("barspadebanker", 1147, 48,  8, 8),
+    new ImageLocator("barspadeplayer", 1147, 48,  8, 8),
+    new ImageLocator("barspadetie", 1147, 48,  8, 8)
 ];
 
-export const bandarQiuQiuLocators = Components.BaseLocator.TableLocators.concat(extBandarQiuQiuLocators,Components.BaseLocator.GameLobbyLocator)
+export const bandarQiuQiuLocators = extBandarQiuQiuLocators.concat(Components.BaseLocator.GameLobbyLocator)

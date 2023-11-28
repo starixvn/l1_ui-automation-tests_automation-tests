@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const BandarQiuQiuConfigs: Components.GameConfiguration = {
   id: 75,
-  name: "bandarqiuqiu",
+  name: "BandarQiuQiu",
   durations: {
     wholeRound: 39 * 1000,
     placingBets: 25 * 1000,
