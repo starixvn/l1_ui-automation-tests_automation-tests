@@ -222,9 +222,7 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       await this.game.page.screenshot({ path: pathLobbyImg, fullPage: true })
       const gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon)
       console.log(gameicon);
-      
-      let locator = {x: gameicon.x+(gameicon.w/2), y: gameicon.y+(gameicon.h/2)}
-      await this.game.page.mouse.click(locator.x, locator.y)
+      await this.game.page.mouse.click(gameicon.x, gameicon.y)
       await this.game.waitForTimeout(timeout*2)
       const dealerSnapshot = await this.game.capture("imgdealer");
       // Assert
