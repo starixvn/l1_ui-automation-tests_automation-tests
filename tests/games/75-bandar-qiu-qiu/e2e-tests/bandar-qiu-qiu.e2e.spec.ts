@@ -190,10 +190,17 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
   protected LedBarTests(): void {
     Components.test("Verify the latest result in bar should be displayed correctly", async () => {
       // Act 1
-      console.log(global.settledata.settledResults,global.settledata.settledResults["spade"]);
+      const bet = { choice: this.options.placeBetChoices[0], amount: this.options.placeBetAmount ?? 1 };
+      this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
+
+      // Act
+      await this.player.placeBet(bet.choice, bet.amount);
+      const settledResults = await waitForSettlement(this.game);
+      await this.game.waitForTimeout(5000)
+      console.log(settledResults.settlementResult,settledResults.settlementResult["spade"]);
       
-      const resultbar = global.settledata.settledResults["spade"] === 0 ? "banker" :
-      global.settledata.settledResults["spade"] === 1 ? "player" :"tie";
+      const resultbar = settledResults.settlementResult["spade"] === 0 ? "banker" :
+      settledResults.settlementResult["spade"] === 1 ? "player" :"tie";
 
       const barLed = await this.game.capture("spade" + resultbar);
       const boardLed = await this.game.capture("barspade" + resultbar);
