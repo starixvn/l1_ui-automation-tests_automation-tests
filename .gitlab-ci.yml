@@ -112,7 +112,7 @@ gameguidetest:
 
 realtest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
-  stage: test
+  stage: smoke
   tags:
     - e2e-test    
   script:    
