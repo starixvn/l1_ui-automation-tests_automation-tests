@@ -117,7 +117,7 @@ realtest:
     - e2e-test    
   script:    
     - cd tests
-    - npm run test --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
+    - npm run smoke --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
