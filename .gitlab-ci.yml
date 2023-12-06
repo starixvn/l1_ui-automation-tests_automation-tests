@@ -120,7 +120,7 @@ realtest:
     - npm run smoke --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
   retry: 1
   rules:
-    - if: $MODE == "SMOKE"
+    - if: $MODE == "SMOKE1"
       when: always
     - when: never
   
