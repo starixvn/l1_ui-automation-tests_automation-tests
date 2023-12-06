@@ -110,7 +110,7 @@ gameguidetest:
     when: always
     expire_in: 1 day    
 
-realtest:
+smoketest1:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
@@ -120,7 +120,7 @@ realtest:
     - npm run smoke --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
   retry: 1
   rules:
-    - if: $MODE == "SMOKE1"
+    - if: $TRIGGER == "true" && $MODE == "SMOKE1"
       when: always
     - when: never
   
