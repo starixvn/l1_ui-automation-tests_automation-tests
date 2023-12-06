@@ -2,9 +2,9 @@ import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
 export const TexasHoldemPokerrLocators = [
-    new ImageLocator("anteChoice", 440, 495, 70, 30),
-    new ImageLocator("callChoice", 478, 364, 100, 60),
-    new ImageLocator("turnChoice", 693, 364, 100, 60),
+    new ImageLocator("anteChoice", 380, 500, 70, 25),
+    new ImageLocator("callChoice", 497, 390, 62, 25),
+    new ImageLocator("turnChoice", 717, 390, 62, 25),
     new ImageLocator("riverChoice", 870, 364, 100, 60),
     new ImageLocator("hamburgerMenu", 40, 190, 30, 30),
     new ImageLocator("historyMenu", 43, 454, 20, 20),

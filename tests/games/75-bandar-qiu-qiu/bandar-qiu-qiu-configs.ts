@@ -13,12 +13,12 @@ export const BandarQiuQiuConfigs: Components.GameConfiguration = {
   hedgeBetGroups: [],
   maxTimeout: 100 * 1000, // miliseconds,
   odds: {
-    "sixDevil": 7,
-    "twin": 6,
-    "small": 5,
-    "big": 4,
-    "qiuQiu": 3,
-    "ordinaryCard": 2
+    "sixDevil": 6,
+    "twin": 5,
+    "small": 3,
+    "big": 3,
+    "qiuQiu": 2.5,
+    "ordinaryCard": 1.9
 },
   betBoard: false,
   accounts: {

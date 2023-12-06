@@ -216,17 +216,31 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
   protected turnbackGame(): void {
     Components.test("Verify player able to go back game by clicking on game icon", async () => {
       // Act 1.
-      await this.game.waitForTimeout(timeout / 2);
-      const pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
+      await this.game.clickLocator("tabCardGames")
+      let pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
       const pathGameIcon = this.options.snapshotFolderPath+ "-snapshots/" +"gameIcon.png"
       await this.game.page.screenshot({ path: pathLobbyImg, fullPage: true })
-      const gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon)
+      let gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon)
       console.log(gameicon);
-      await this.game.page.mouse.click(gameicon.x, gameicon.y)
-      await this.game.waitForTimeout(timeout*2)
-      const dealerSnapshot = await this.game.capture("imgdealer");
-      // Assert
-      expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name);
+      if (!gameicon) {
+        await this.game.page.mouse.click(1258, 365)
+        await this.game.waitForTimeout(timeout / 2);
+        pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
+        gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon,40)
+        await this.game.page.mouse.click(gameicon.x, gameicon.y)
+        await this.game.waitForTimeout(timeout*2)
+        const dealerSnapshot = await this.game.capture("imgdealer");
+                // Assert
+                expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name);
+      }
+      else{
+        await this.game.page.mouse.click(gameicon.x, gameicon.y)
+        await this.game.waitForTimeout(timeout*2)
+        const dealerSnapshot = await this.game.capture("imgdealer");
+        // Assert
+        expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name);
+      }
+
   });
   }
 
