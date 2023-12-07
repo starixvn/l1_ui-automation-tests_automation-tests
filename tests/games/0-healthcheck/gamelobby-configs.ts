@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const gamelobbyConfigs: Components.GameConfiguration = {
   id: 1,
-  name: "BigSmall",
+  name: "GameLobby",
   durations: {
     wholeRound: 61 * 1000,
     placingBets: 50 * 1000,
