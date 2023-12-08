@@ -38,10 +38,8 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
   protected placeBetAndSettleTests(): void {
     Components.test("THEN player able to place a bet and settle", async () => {
       // Arrange
-      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       const bet = { choice: "spade", amount: this.options.placeBetAmount ?? 1};
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
-      console.log(bet);
 
       // Act
       const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
