@@ -11,7 +11,7 @@ export const BandarQiuQiuConfigs: Components.GameConfiguration = {
   },
   choices: ["spade","heart","club","diamond"],
   hedgeBetGroups: [],
-  maxTimeout: 100 * 1000, // miliseconds,
+  maxTimeout: 150 * 1000, // miliseconds,
   odds: {
     "sixDevil": 6,
     "twin": 5,

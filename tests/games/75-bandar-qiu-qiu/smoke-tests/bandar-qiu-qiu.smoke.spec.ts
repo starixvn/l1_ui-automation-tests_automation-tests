@@ -13,7 +13,7 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [BandarQiuQiuConfigs.choices[0]],
       gameConfiguration: BandarQiuQiuConfigs,
       locators: BandarQiuQiuLocators,
-      waitBetTimeout: 10000,
+      waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
@@ -38,6 +38,7 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
   protected placeBetAndSettleTests(): void {
     Components.test("THEN player able to place a bet and settle", async () => {
       // Arrange
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       const bet = { choice: "spade", amount: this.options.placeBetAmount ?? 1};
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
