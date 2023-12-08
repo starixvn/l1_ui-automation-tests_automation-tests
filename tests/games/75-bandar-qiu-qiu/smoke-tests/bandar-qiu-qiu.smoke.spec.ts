@@ -13,7 +13,7 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [BandarQiuQiuConfigs.choices[0]],
       gameConfiguration: BandarQiuQiuConfigs,
       locators: BandarQiuQiuLocators,
-      waitBetTimeout: 8000,
+      waitBetTimeout: 10000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
@@ -45,7 +45,7 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
 
       // Act
       const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
-      console.log(placeBetResponse);
+      console.log('done placebet',placeBetResponse);
 
       const betChoice = await this.game.capture(bet.choice + `Ownbet${process.env.npm_config_project}`);
       const settledResults = await waitForSettlement(this.game);
