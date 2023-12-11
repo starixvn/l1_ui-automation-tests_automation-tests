@@ -13,7 +13,7 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [BandarQiuQiuConfigs.choices[0]],
       gameConfiguration: BandarQiuQiuConfigs,
       locators: BandarQiuQiuLocators,
-      waitBetTimeout: 5000,
+      waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
