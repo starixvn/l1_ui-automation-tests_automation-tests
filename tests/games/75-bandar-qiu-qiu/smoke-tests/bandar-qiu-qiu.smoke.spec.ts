@@ -13,7 +13,7 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [BandarQiuQiuConfigs.choices[0]],
       gameConfiguration: BandarQiuQiuConfigs,
       locators: BandarQiuQiuLocators,
-      waitBetTimeout: 15000,
+      waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
@@ -36,25 +36,26 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
   }
 
   protected placeBetAndSettleTests(): void {
-  //   Components.test.fixme("THEN player able to place a bet and settle", async () => {
-  //     // Arrange
-  //     Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-  //     const bet = { choice: "spade", amount: this.options.placeBetAmount ?? 1};
-  //     this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
+    Components.test("THEN player able to place a bet and settle", async () => {
+      // Arrange
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      const bet = { choice: "spade", amount: this.options.placeBetAmount ?? 1};
+      this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
+      
+      // Act 
+      await this.game.waitUntilPlaceBet()
+      const placeBetResponse = await this.player.betOn(bet.choice, bet.amount);
+      console.log('done placebet',placeBetResponse);
 
-  //     // Act
-  //     const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
-  //     console.log('done placebet',placeBetResponse);
+      const betChoice = await this.game.capture(bet.choice + `Ownbet${process.env.npm_config_project}`);
+      const settledResults = await waitForSettlement(this.game);
 
-  //     const betChoice = await this.game.capture(bet.choice + `Ownbet${process.env.npm_config_project}`);
-  //     const settledResults = await waitForSettlement(this.game);
-
-  //     // Assert
-  //     await toMatchWinning(settledResults,bet,this.options.gameConfiguration.odds)
-  //     expect(betChoice.image).toMatchSnapshot(betChoice.name,{ maxDiffPixelRatio: 0.3 });
-  //     expect(placeBetResponse.endBet).toBe(bet.amount);
-  //     expect(settledResults.settlementResult).toMatchBetOptions(this.options.gameConfiguration.choices);
-  // });
+      // Assert
+      await toMatchWinning(settledResults,bet,this.options.gameConfiguration.odds)
+      expect(betChoice.image).toMatchSnapshot(betChoice.name,{ maxDiffPixelRatio: 0.3 });
+      expect(placeBetResponse.endBet).toBe(bet.amount);
+      expect(settledResults.settlementResult).toMatchBetOptions(this.options.gameConfiguration.choices);
+  });
   }
 
 }
