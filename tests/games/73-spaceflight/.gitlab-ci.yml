@@ -1,0 +1,11 @@
+docker-build-game-73:
+  extends: docker-build
+  variables:
+    GAMEID: 73
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/73-*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile
