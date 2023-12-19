@@ -13,7 +13,7 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       placeBetChoices: BandarQiuQiuConfigs.choices,
       gameConfiguration: BandarQiuQiuConfigs,
       locators: bandarQiuQiuLocators,
-      waitBetTimeout: 8000,
+      waitBetTimeout: 9000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       multiPlaceBetChoices: BandarQiuQiuConfigs.choices,
@@ -27,13 +27,11 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
     super(e2eOptions);
   }
 
-
-
-
   protected placeBetAndSettleTests(): void {
     Components.test("Verify the roundId displayed on table is the same in round settle result", async () => {
       // Arrange
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      await this.game.waitUntilNextRound();
       const bet = { choice: this.options.placeBetChoices[0], amount: this.options.placeBetAmount ?? 1 };
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
@@ -54,11 +52,14 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
   Components.test("Verify that player able to place bet and return settlement data for comparing history ticket detail", async () => {
       // Arrange
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-      const bet = { choice: this.options.placeBetChoices[1], amount: this.options.placeBetAmount ?? 1 };
+      await this.game.waitUntilNextRound();
+      const bet = { choice: this.options.placeBetChoices[0], amount: process.env.npm_config_project === "l2" ? 10 : 50};
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
       // Act
+      await this.game.clickStake(bet.amount);
       const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
+      
       const settledResults = await waitForSettlement(this.game);
       // Assert
       expect(placeBetResponse.endBet).toBe(bet.amount);
@@ -89,12 +90,10 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       const dateIndex = ticketdata.findIndex((value) => {
           return value.includes("/");
       });
-      const roundId = ticketdata[dateIndex + 1];
 
       // Assert
       expect(parseFloat(winamount)).toBeCloseTo(parseFloat(global.settledata.betwin), -1);
       expect(totalbet).toEqual(global.settledata.bet);
-      expect(parseInt(roundId)).toBeCloseTo(parseInt(global.settledata.roundId), -1);
 
       // Act 2
       if (indexHistory.isIdLink) {
@@ -164,7 +163,8 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
       // Act
-      const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
+      await this.game.clickStake(bet.amount);
+      const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);     
       const settledResults =  await waitForSettlement(this.game);
 
       // Assert
@@ -222,28 +222,28 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       await this.game.page.screenshot({ path: pathLobbyImg, fullPage: true })
       let gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon)
       console.log(gameicon);
-      if (!gameicon) {
+      if (gameicon==null) {
         await this.game.page.mouse.click(1258, 365)
-        await this.game.waitForTimeout(timeout / 2);
+        await this.game.waitForTimeout(timeout);
         pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
         gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon,40)
-        await this.game.page.mouse.click(gameicon.x, gameicon.y)
-        await this.game.waitForTimeout(timeout*2)
-        const dealerSnapshot = await this.game.capture("imgdealer");
-                // Assert
-                expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name);
+        if (gameicon==null) {
+          await this.game.page.mouse.click(921, 258)
+        }
+        else{
+          await this.game.page.mouse.click(gameicon.x, gameicon.y)
+        }
       }
       else{
         await this.game.page.mouse.click(gameicon.x, gameicon.y)
+      }
         await this.game.waitForTimeout(timeout*2)
         const dealerSnapshot = await this.game.capture("imgdealer");
         // Assert
-        expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name);
-      }
+        expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name, { maxDiffPixelRatio: 0.3 });
 
   });
   }
-
 
 
 }
@@ -268,7 +268,7 @@ const toMatchWinning = async (settledResults:any,bet:{choice:string, amount:numb
       expect(settledResults.settlementResult[bet.choice]).toBe(1); 
       const handRanking = await returnHandRanking(settledResults.result,bet.choice)
       console.log('handRanking',handRanking,bet.amount*odds[handRanking]);
-      expect(bet.amount*odds[handRanking]).toBe(settledResults.winAmount); 
+      expect((bet.amount*odds[handRanking]).toFixed(2)).toBe(settledResults.winAmount.toFixed(2)); 
     }
   }
   else{

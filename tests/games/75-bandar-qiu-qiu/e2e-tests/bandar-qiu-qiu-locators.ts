@@ -13,6 +13,7 @@ export const extBandarQiuQiuLocators = [
     new ImageLocator("guideMenu", 71, 408, 20, 20),
     new ImageLocator("stake1", 411, 611, 30, 30),
     new ImageLocator("stake10", 411, 611, 30, 30),
+    new ImageLocator("stake50", 680, 625, 15, 15),
     new ImageLocator("errorMessage", 451, 540, 300, 20),
     new ImageLocator("btnClosePopup", 5, 5, 10, 10),
     new ImageLocator("lblHistoryFirstRow", 190, 193, 900, 30),
