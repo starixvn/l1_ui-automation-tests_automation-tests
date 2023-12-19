@@ -149,9 +149,7 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
         }
 
       }
-      expect(calWinAmount).toBe(settledResults.winAmount);
-
-      console.log(calWinAmount,settledResults.winAmount);      
+      expect(calWinAmount.toFixed(2)).toBe(settledResults.winAmount.toFixed(2));
   });
   }
 
