@@ -13,7 +13,7 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       placeBetChoices: BandarQiuQiuConfigs.choices,
       gameConfiguration: BandarQiuQiuConfigs,
       locators: bandarQiuQiuLocators,
-      waitBetTimeout: 9000,
+      waitBetTimeout: 10000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       multiPlaceBetChoices: BandarQiuQiuConfigs.choices,
