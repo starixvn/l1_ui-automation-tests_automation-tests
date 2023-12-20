@@ -14,5 +14,5 @@ export const BandarQiuQiuLocators = [
   new ImageLocator("historyMenu", 72, 335, 20, 20),
   new ImageLocator("historyPopup", 568, 75, 150, 25),
   new ImageLocator("stake1", 415, 625, 30, 25),
-  new ImageLocator("stake10", 415, 625, 30, 25),
+  new ImageLocator("stake10", 415, 625, 30, 25)
 ];
