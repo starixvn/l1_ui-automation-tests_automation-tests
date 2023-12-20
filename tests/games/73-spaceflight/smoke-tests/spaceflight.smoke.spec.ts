@@ -18,8 +18,6 @@ class SpaceFlightSmokeSpec extends SmokeBases.CrashGameBase {
 
     super(smokeOptions);
   }
-
-  protected
 }
 
 new SpaceFlightSmokeSpec().start();

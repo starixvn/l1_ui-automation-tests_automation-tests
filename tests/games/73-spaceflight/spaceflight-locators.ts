@@ -8,8 +8,8 @@ export const SpaceFlightLocators = [
     new ImageLocator("historyMenu", 40, 308, 20,20),
     new ImageLocator("historyPopup", 554, 68, 150, 40),
     new ImageLocator("imgControlArea", 275, 543, 478, 135),
-    
-
+    new ImageLocator("btnPlaceBetBetAccepted", 786, 567, 179, 88),
+    new ImageLocator("btnPlaceBet", 786, 567, 179, 88),
 ];
 
 

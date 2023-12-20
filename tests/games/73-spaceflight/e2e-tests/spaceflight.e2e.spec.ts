@@ -8,12 +8,12 @@ class SpaceFlightE2ESpec extends E2EBases.CrashGameBase {
    */
   constructor() {
     const e2eOptions: E2EBases.IBaseOptions = {
-      placeBetChoices: ["lblChoice1"],
+      placeBetChoices: [],
       gameConfiguration: SpaceFlightConfigs,
       locators: SpaceFlightLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       indexTicketHistory: { totalbet: -2, isIdLink: true },
       gameLobbyNavigation: [
         Components.BaseLocator.baseLocatorNames.tabCardGames,
@@ -22,10 +22,11 @@ class SpaceFlightE2ESpec extends E2EBases.CrashGameBase {
     };
     super(e2eOptions);
   }
- 
-  // protected runScenario(): void {
-  //   super.runScenario();
-  // }
+
+  protected turnbackGame(): void {
+  }
+  protected returnGameLobby(): void {
+  }
 }
 
 new SpaceFlightE2ESpec().start();

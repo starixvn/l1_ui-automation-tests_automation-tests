@@ -25,5 +25,5 @@ export const SpaceFlightConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2740",
     l2prod: "VNtest050",
   },
-  productId: "1680",
+  productId: "1681",
 };
