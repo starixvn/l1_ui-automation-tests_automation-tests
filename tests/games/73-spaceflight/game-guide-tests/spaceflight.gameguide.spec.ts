@@ -26,7 +26,30 @@ const GameConfigsL1 = {
 };
 
 const GameConfigsL2 = {
+  "_id": "6524dc794618713ceab49b0b",
+  "groupId": "61765beed2b6510001f18bd6",
+  "minBet": 10,
+  "maxBet": 40000,
+  "maxBetPerChoices": {},
+  "chips": [
+    "1",
+    "5",
+    "10",
+    "50",
+    "100",
+    "200",
+    "500",
+    "1000",
+    "2000"
+  ],
+  "stakeLevels": [],
+  "odds": {},
+  "originalOdds": {},
+  "enableFreeBet": false,
+  "maxMultiplier": 2000,
+  "maxWinPerRound": 25
 };
+
 
 const gameId = 73;
 

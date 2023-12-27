@@ -20,7 +20,7 @@ export const SpaceFlightConfigs: Components.GameConfiguration = {
     local3: "222244",
     sit: "supertestsaba68",
     l2sit: "SIT_test_INH_017",
-    uat: "IT55Test789",
+    uat: "IT57Test789",
     prod: "supertestte120201013",
     l2uat: "TestSep2740",
     l2prod: "VNtest050",
