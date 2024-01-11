@@ -11,7 +11,7 @@ export const BandarQiuQiuConfigs: Components.GameConfiguration = {
   },
   choices: ["spade","heart","club","diamond"],
   hedgeBetGroups: [],
-  maxTimeout: 150 * 1000, // miliseconds,
+  maxTimeout: 100 * 1000, // miliseconds,
   odds: {
     "sixDevil": 6,
     "twin": 5,
@@ -33,5 +33,58 @@ export const BandarQiuQiuConfigs: Components.GameConfiguration = {
     l2prod: "VNtest040",
   },
   productId: "1680",
-  rebet: true
+  rebet: true,
 };
+
+export const AdminDataSet_local ={
+    tokenGameName: "BandarQiuQiu",
+    settleRequestType: "ws",
+    wsGameName: process.env.npm_config_project+'-services',
+    dataset:{
+      "TC1_expect": {
+        totalAmount: 0,
+        totalWin: 0,
+        validBetAmount: 0,
+        errorCode: "SB1001",
+        errorDescription: "The game round does not exist."
+      },
+      "TC2_expect": {
+        totalAmount: 0,
+        totalWin: 0,
+        validBetAmount: 0,
+        errorCode: "SB1001",
+        errorDescription: "The game round does not exist."
+      },
+      "TC3_expect": {
+        totalAmount: 1,
+        totalWin: 1.9,
+        validBetAmount: 1,
+        errorCode: "0",
+        errorDescription: null
+      },
+      "TC3_settle": `["06","66","11","26","35","13","00","04","55","12","03","36","16","14","23","25","33","44","34","15"]`,
+      "TC4_expect": {
+        totalAmount: 0,
+        totalWin: 0,
+        validBetAmount: 0,
+        errorCode: "SB1001",
+        errorDescription: "The game round does not exist."
+      },
+      "TC5_settle": `["15","03","25","16","13","66","56","45","44","55","06","22","26","01","33","00","36","46","34","35"]`,
+      "TC5_expect": {
+        totalAmount: 1,
+        totalWin: 0,
+        validBetAmount: 1,
+        errorCode: "0",
+        errorDescription: null
+      },
+      "TC6_settle": `["15","03","25","16","13","66","56","45","44","55","06","22","26","01","33","00","36","46","34","35"]`,
+      "TC6_expect": {
+        totalAmount: 2,
+        totalWin: 0,
+        validBetAmount: 2,
+        errorCode: "0",
+        errorDescription: null
+      },
+    }
+}
