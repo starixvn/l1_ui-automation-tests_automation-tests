@@ -1,9 +1,8 @@
 import { SedieLocators } from "../sedie-locators";
-import * as gameconfig  from "../sedie-configs";
-import { AdminBases} from "sc-automation-core";
+import * as gameconfig from "../sedie-configs";
+import { AdminBases } from "sc-automation-core";
 
-
-class SedieSmokeSpec extends AdminBases.RERGameBase {
+class SedieAdminSpec extends AdminBases.RERGameBase {
   /**
    *
    */
@@ -14,9 +13,10 @@ class SedieSmokeSpec extends AdminBases.RERGameBase {
       locators: SedieLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
-      multiPlaceBetChoices: ["even","red4"],
-      Adminconfiguration: gameconfig[`AdminDataSet_`+process.env.npm_config_env]
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
+      multiPlaceBetChoices: ["even", "red4"],
+      Adminconfiguration:
+        gameconfig[`AdminDataSet_` + process.env.npm_config_env],
     };
 
     super(adminOptions);
@@ -24,4 +24,5 @@ class SedieSmokeSpec extends AdminBases.RERGameBase {
 
 }
 
-new SedieSmokeSpec().start();
+new SedieAdminSpec().start();
+
