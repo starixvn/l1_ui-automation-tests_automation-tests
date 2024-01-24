@@ -4,6 +4,7 @@ const ImageLocator = Components.ImageLocator;
 export const dragonballLocators = [
   new ImageLocator("choiceMenu", 135, 620, 82, 45),
   new ImageLocator("1Choice", 240, 186, 100, 70),
+  new ImageLocator("2Choice", 546, 186, 100, 70),
   new ImageLocator("25Choice", 942, 515, 100, 70),
   new ImageLocator("stakeMenu", 300, 620, 75, 46),
   new ImageLocator("imgStakeLevell1", 180, 546, 320, 55),
@@ -21,5 +22,6 @@ export const dragonballLocators = [
   new ImageLocator("clearChoices", 860, 110, 182, 58),
   new ImageLocator("imgJackpot", 1097, 143, 130, 40),
   new ImageLocator("outside", 10, 10, 10, 10),
+  new ImageLocator("roundId", 1027, 65, 145, 20),
 
 ];

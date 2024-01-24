@@ -228,7 +228,6 @@ export const AdminDataSet_sit ={
       "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[2]/img"
     },
     "TC3_expect": {
-    "value":{},
     "snapshot":{
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "4red.png",
       "//*[@id='game-ticket']/table[1]/tbody//td[4]": "even4red.png",
