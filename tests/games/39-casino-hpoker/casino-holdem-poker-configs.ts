@@ -49,11 +49,10 @@ export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
 };
 
 export const AdminDataSet_local ={
-  tokenGameName: "",
+  accountId: 222275,
   settlePath: "SetHoldemPokerResult",
-  settleRequestType: "POST",
   wsGameName: process.env.npm_config_project+'-proxy',
-  dataset:{
+  datasetRER:{
     "TC1_expect": {
       totalAmount: 0,
       totalWin: 0,

@@ -40,7 +40,7 @@ export const dragonballConfigs: Components.GameConfiguration = {
 };
 
 export const AdminDataSet_local ={
-  settleDomain: "l1-proxy",
+  settleDomain: process.env.npm_config_project+'-proxy',
   settlePath: "SetSlotResult",
   accountId: 222275,
   datasetRER:{
