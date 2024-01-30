@@ -14,7 +14,7 @@ export const dragonballLocators = [
   new ImageLocator("jackpotMenu", 50, 510, 50, 50),
   new ImageLocator("historyPopup", 546, 40, 192, 50),
   new ImageLocator("jackpotPopup", 180, 32, 890, 130),
-  new ImageLocator("guideMenu", 55, 502, 45, 45),
+  new ImageLocator("guideMenu", 55, 591, 45, 45),
   new ImageLocator("stake1", 375, 550, 70, 50),
   new ImageLocator("stake10", 375, 550, 70, 50),
   new ImageLocator("spin", 927, 555, 120, 120),
