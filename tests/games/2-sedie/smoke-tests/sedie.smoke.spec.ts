@@ -29,7 +29,6 @@ class SedieSmokeSpec extends SmokeBases.TableGameBase {
   }
 
   protected runScenario(): void {
-    this.getFPS();
     super.runScenario();
   }
 }
