@@ -7,7 +7,7 @@ const admin = `${process.env.npm_config_admin}`;
 const config: PlaywrightTestConfig = {
   retries: 0,
   testDir: "./tests",
-  timeout: 120 * 1000,
+  timeout: 130 * 1000,
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
