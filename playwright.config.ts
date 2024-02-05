@@ -16,7 +16,9 @@ const config: PlaywrightTestConfig = {
   },
   /* Run tests in files in parallel */
   fullyParallel: false,
-  reporter: [["line"], ["html", { open: "never" }]],
+  reporter: [
+  ["line"], ["html", { open: "never" }],
+  ['json', {  outputFile: 'test-results.json' }]],
   use: {
     actionTimeout: 0,
     trace: "off",
