@@ -18,19 +18,9 @@ class MagicForestSmokeSpec extends SmokeBases.SlotGameBase {
     super(smokeOptions);
   }
 
-  protected getFPS(): void {
-    Components.test("Get FPS value", async () => {
-      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-      let cc: any;
-      await this.game.page.evaluate(() => {
-        console.log("FPS VALUE : ", 1 / cc.director.getDeltaTime());
-      });
-    });
-  }
 
   protected runScenario(): void {
     super.runScenario();
-    this.getFPS();
   }
 }
 
