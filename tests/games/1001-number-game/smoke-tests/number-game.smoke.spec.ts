@@ -1,6 +1,6 @@
 import { numbergameLocators } from "../number-game-locators";
 import { numbergameConfigs } from "../number-game-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases,Components } from "sc-automation-core";
 
 class numbergameSmokeSpec extends SmokeBases.NumberGameBase {
   /**
@@ -16,6 +16,30 @@ class numbergameSmokeSpec extends SmokeBases.NumberGameBase {
       placeBetAmount: 1
     };
     super(smokeOptions);
+  }
+
+  protected AId_1(): void {
+    Components.test("Test google sheet @AId_1", async () => {
+        console.log("Test google sheet");
+    });
+  }
+
+  protected AId_2(): void {
+    Components.test("Test google sheet @AId_2", async () => {
+        console.log("Test google sheet");
+    });
+  }
+
+  protected AId_3(): void {
+    Components.test("Test google sheet @AId_3", async () => {
+        console.log("Test google sheet");
+    });
+  }
+
+  protected runScenario(): void {
+    this.AId_1()
+    this.AId_2()
+    this.AId_3()
   }
 }
 

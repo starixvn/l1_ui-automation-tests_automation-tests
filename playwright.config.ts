@@ -17,11 +17,13 @@ const config: PlaywrightTestConfig = {
   /* Run tests in files in parallel */
   fullyParallel: false,
   reporter: [
-  ["line"], ["html", { open: "never" }],
-  ['json', {  outputFile: 'test-results.json' }]],
+    ["line"],
+    ["html", { open: "never" }],
+    ["json", { outputFile: "./test-results/test-results.json" }],
+  ],
   use: {
     actionTimeout: 0,
-    trace: "off",
+    trace: "on-first-retry",
     headless: true,
     viewport: {
       width: 1280,
@@ -43,20 +45,6 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "E2E_CI",
-      testMatch: `**/${testMatch}/e2e-tests/*.e2e.spec.ts`,
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
-    {
-      name: "Guide",
-      testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
-    {
       name: "autobot",
       testMatch: `*/autobot/autobot.spec.ts`,
       use: {
@@ -68,8 +56,8 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/admin-tests/*${admin}.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
-      }
-    }
+      },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

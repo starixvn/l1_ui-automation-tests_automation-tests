@@ -27,7 +27,7 @@ const start = () => {
 };
 
 const healthCheck = (domain: any) => {
-  test(`Verify that ${domain.domainName} page was loaded successfully`, async ({
+  test(`Verify that ${domain.domainName} page was loaded successfully @TC_01`, async ({
     page,
   }) => {
     await page.goto(domain.url);
