@@ -136,8 +136,3 @@ export const AdminDataSet_local ={
 }
 
 }
-
-export const GoogleSheet_info ={
-  "spreadsheetId": "1CuOF59QE9FdOOOdZFP3YKlDVWbaxOtqxD__69GwKA0E",
-  "sheetName": ["AutoTest","AutoTest2"]
-}

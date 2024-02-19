@@ -2,6 +2,7 @@ const { GoogleSpreadsheet} = require ("google-spreadsheet")
 const { JWT } = require("google-auth-library");
 const fs = require('fs');
 const path = require('path');
+const pid = typeof process.env.npm_config_pipelineid !== "undefined" ? process.env.npm_config_pipelineid  : 0
 
 const updateTestResutls = async (sheetId,sheetName) => {
   const jwt = new JWT({
@@ -42,48 +43,24 @@ const updateTestResutls = async (sheetId,sheetName) => {
 
   for (const iterator of rows) {
     for (let index = 0; index < tags.length; index++) {
-      if (iterator.get('AutoID').includes(tags[index])) {
-        // iterator.set('AutoResult', statuses[index])
-        iterator.assign({ AutoResult: statuses[index], AutoNote: 'link test' })
+      let tcId = iterator.get('AutoID');
+      if (typeof tcId != "undefined" &&tcId.includes(tags[index])) {
+        iterator.set('AutoResult', statuses[index])
+        iterator.assign({ AutoResult: statuses[index], AutoNote: `=HYPERLINK("https://git3.nexdev.net/l1/ui-automation-tests/automation-tests/-/jobs/${pid}", "Result")`})
         await iterator.save();
      }      
     }
    
   }
 
-  // rows.forEach(async (row) => {
-  //   if (row.get('TestID').includes("TC_01")) {
-  //     console.log(true);
-  //     row.set('Result', "Passed")
-  //   }
-  // });
-  // rows[2].assign({ TestID: 'TC_04', Result: 'sundar@google.com' }); // set multiple values
-  // await rows[0].save();
-  // await sheet.saveUpdatedCells()
 };
 
-const gameId = '1001'; // replace with your actual game ID
-
-const filePath = path.join(__dirname, `tests/games/${process.env.npm_config_gameid}-number-game/number-game-configs.ts`);
-// fs.readFile(filePath, 'utf8', (err, data) => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-
-//   console.log(data);
-// });
-
-const gameconfig = fs.readFileSync(filePath, 'utf8');
-// const b = JSON.parse(gameconfig);
-const gameconfig1 = JSON.parse(gameconfig);
-
-
-console.log(gameconfig1.GoogleSheet_info);
-
-// // const gameconfig = `*/${process.env.npm_config_gameid}*/*config.ts`
-// const gsheetInfo = gameconfig.GoogleSheet_info
+const fileMatch = `${process.env.npm_config_gameid}-*`;
+const regex = new RegExp(fileMatch);
+const filePath = path.join(__dirname,'tests/games', fs.readdirSync('tests/games').find(file => regex.test(file)), 'gsheetInfo.json');
+const cfdata = fs.readFileSync(filePath, 'utf8');
+const gsheetInfo = JSON.parse(cfdata).GoogleSheet_info;
 // console.log(gsheetInfo);
-// for (const iterator of gsheetInfo.sheetName) {
-//   updateTestResutls(gsheetInfo.spreadsheetId,iterator)
-// }
+for (const iterator of gsheetInfo.sheetName) {
+  updateTestResutls(gsheetInfo.spreadsheetId,iterator)
+}
