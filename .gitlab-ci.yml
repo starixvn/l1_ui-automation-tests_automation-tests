@@ -117,7 +117,7 @@ smoketestmac:
     - e2e-test    
   script:    
     - cd tests
-    - npm run smoke --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
+    - npm run e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
   after_script:
     - echo "$CI_JOB_ID"
     - npm run sendresult --env=$ENV --gameid=$GAMEID --pipelineid=$CI_JOB_ID
