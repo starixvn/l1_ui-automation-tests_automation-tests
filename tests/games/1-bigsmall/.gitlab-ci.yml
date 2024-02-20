@@ -5,7 +5,7 @@ docker-build-game-1:
   rules:
     - if: $TRIGGER != "true"
       changes:
-        - tests/games/1*/**/*
+        - tests/games/1-*/**/*
         - package.json
         - playwright.config.ts
         - Dockerfile
