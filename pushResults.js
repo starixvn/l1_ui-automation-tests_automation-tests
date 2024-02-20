@@ -16,7 +16,7 @@ const updateTestResutls = async (sheetId,sheetName) => {
 
   const sheet = doc.sheetsByTitle[sheetName];
   const rows = await sheet.getRows();
-  const testResultsData = fs.readFileSync('test-results.json', 'utf8');
+  const testResultsData = fs.readFileSync(__dirname+'/test-results.json', 'utf8');
   const testResults = JSON.parse(testResultsData);
   const tags = [];
   const statuses = [];
