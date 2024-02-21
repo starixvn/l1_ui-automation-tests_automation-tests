@@ -4,13 +4,13 @@
   "description": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test --project=Smoke_CI",
-    "e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
-    "guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",
+    "test:smoke": "playwright test --project=Smoke_CI",
+    "test:e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
+    "test:guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",
+    "test:admin:td": "playwright test --project=admin --admin=td", 
+    "test:admin:rer": "playwright test --project=admin --admin=rer", 
     "update-snapshots": "playwright test --update-snapshots --project=E2E_CI",
     "clonegame": "node clonegame.js",
-    "autobot": "playwright test --project=autobot",
-    "admin": "playwright test --project=admin",
     "sendresult": "node pushResults.js"
   },
   "repository": {

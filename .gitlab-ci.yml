@@ -41,7 +41,7 @@ smoketest:
   script:    
     - rm -r *
     - cp -r /app/* ./
-    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   after_script:
     - du -hs /ms-playwright/*
@@ -66,7 +66,7 @@ e2etest:
     - e2e-test
   script:
     - cd tests
-    - npm run e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME --jackpot=$jackpot
+    - npm run test:e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME --jackpot=$jackpot
 
   after_script:
     # - cd games
@@ -93,7 +93,7 @@ gameguidetest:
   script:    
     - rm -r *
     - cp -r /app/* ./
-    - npm run guide --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:guide --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - du -hs /ms-playwright/*
   retry: 1
@@ -117,7 +117,7 @@ e2etestmac:
     - e2e-test    
   script:    
     - cd tests
-    - npm run e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
+    - npm run test:e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
   after_script:
     - echo "$CI_JOB_ID"
     - npm run sendresult --env=$ENV --gameid=$GAMEID --pipelineid=$CI_JOB_ID
@@ -142,7 +142,7 @@ smoketestmac:
     - e2e-test    
   script:    
     - cd tests
-    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   retry: 1
   rules:
