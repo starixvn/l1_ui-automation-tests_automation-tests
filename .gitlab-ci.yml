@@ -110,7 +110,7 @@ gameguidetest:
     when: always
     expire_in: 1 day    
 
-smoketestmac:
+e2etestmac:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
@@ -121,6 +121,29 @@ smoketestmac:
   after_script:
     - echo "$CI_JOB_ID"
     - npm run sendresult --env=$ENV --gameid=$GAMEID --pipelineid=$CI_JOB_ID
+  retry: 1
+  rules:
+    - if: $TRIGGER == "true" && $MODE == "E2E1"
+      when: always
+    - when: never
+  
+  artifacts:
+    paths:
+      - playwright-report
+      - screenshots
+      - test-results   
+    when: always
+    expire_in: 1 day
+
+smoketestmac:
+  image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
+  stage: test
+  tags:
+    - e2e-test    
+  script:    
+    - cd tests
+    - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE1"
