@@ -47,7 +47,7 @@ smoketest:
     - du -hs /ms-playwright/*
   retry: 1
   rules:
-    - if: $TRIGGER == "true" && $MODE == "SMOKE"
+    - if: $TRIGGER == "true" && $MODE == "SMOKE1"
       when: always
     - when: never
   
@@ -146,7 +146,7 @@ smoketestmac:
 
   retry: 1
   rules:
-    - if: $TRIGGER == "true" && $MODE == "SMOKE1"
+    - if: $TRIGGER == "true" && $MODE == "SMOKE"
       when: always
     - when: never
   
