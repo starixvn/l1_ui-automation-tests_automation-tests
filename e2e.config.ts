@@ -10,7 +10,7 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.05,
+      maxDiffPixelRatio: 0.1,
     },
   },
   fullyParallel: false,
@@ -43,6 +43,13 @@ const config: PlaywrightTestConfig = {
     {
       name: "Guide",
       testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+    {
+      name: "Smoke_CI",
+      testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
       },

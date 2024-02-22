@@ -142,7 +142,7 @@ smoketestmac:
     - e2e-test    
   script:    
     - cd tests
-    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:smokeMac --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   retry: 1
   rules:
