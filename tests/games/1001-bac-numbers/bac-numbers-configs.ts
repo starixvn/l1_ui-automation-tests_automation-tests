@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-export const numbergameConfigs: Components.GameConfiguration = {
+export const BacNumbersConfigs: Components.GameConfiguration = {
   id: 1001,
   name: "numbergame",
   durations: {

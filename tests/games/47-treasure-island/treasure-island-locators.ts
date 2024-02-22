@@ -8,7 +8,7 @@ export const TreasureIslandLocators = [
   new ImageLocator("stakeMenu", 360, 666),
   new ImageLocator("hamburgerMenu", 103, 134, 0, 0),
   new ImageLocator("historyMenu", 109, 389, 0, 0),
-  new ImageLocator("historyPopup", 540, 30, 200, 55),
+  new ImageLocator("historyPopup", 187, 111, 900, 36),
   new ImageLocator("stake1", 525, 255),
   new ImageLocator("stake5", 525, 255),
   new ImageLocator("spin", 1100, 600, 30, 30),

@@ -1,16 +1,16 @@
-import { numbergameLocators } from "../number-game-locators";
-import * as gameconfig from "../number-game-configs";
+import { BacNumbersLocators } from "../bac-numbers-locators";
+import * as gameconfig from "../bac-numbers-configs";
 import { AdminBases } from "sc-automation-core";
 
-class NGAdminSpec extends AdminBases.RERGameBase {
+class NGAdminSpec extends AdminBases.TicketDetailGameBase {
   /**
    *
    */
   constructor() {
     const adminOptions: AdminBases.IBaseOptions = {
-      placeBetChoices: [gameconfig.numbergameConfigs.choices[1]],
-      gameConfiguration: gameconfig.numbergameConfigs,
-      locators: numbergameLocators,
+      placeBetChoices: [gameconfig.BacNumbersConfigs.choices[1]],
+      gameConfiguration: gameconfig.BacNumbersConfigs,
+      locators: BacNumbersLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
