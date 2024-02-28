@@ -8,8 +8,8 @@
     "test:smokeMac": "playwright test --config=e2e.config.ts --project=Smoke_CI",
     "test:e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
     "test:guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",
-    "test:admin:td": "playwright test --project=admin --admin=td", 
-    "test:admin:rer": "playwright test --project=admin --admin=rer", 
+    "test:admin:td": "playwright test --project=admin --admin=td",
+    "test:admin:rer": "playwright test --project=admin --admin=rer",
     "update-snapshots": "playwright test --update-snapshots --project=E2E_CI",
     "clonegame": "node clonegame.js",
     "sendresult": "node pushResults.js"
@@ -23,7 +23,8 @@
   "dependencies": {
     "fs-extra": "^11.1.1",
     "google-spreadsheet": "^4.1.1",
-    "sc-automation-core": "1.28.0"
+    "prettier": "^3.2.5",
+    "sc-automation-core": "1.29.0"
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",

@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const gamelobbyConfigs: Components.GameConfiguration = {
-  id: 1,
+  id: 0,
   name: "GameLobby",
   durations: {
     wholeRound: 61 * 1000,
@@ -21,12 +21,7 @@ export const gamelobbyConfigs: Components.GameConfiguration = {
     local: "222221",
     local1: "222221",
     local2: "222221",
-    local3: "222221",
-    sit: "supertestsaba66",
-    uat: "IT55Test789",
-    prod: "supertestte120201014",
-    l2uat: "TestSep2740",
-    l2prod: "VNtest051",
+    local3: "222221"
   },
-  productId: "1612"
+  productId: "0"
 };
