@@ -62,12 +62,12 @@ class healthSmokeSpec extends SmokeBases.TableGameBase {
 
 new healthSmokeSpec().start();
 
-const navigateDownloadPage = async (context: any, page: any) => {
-  const [newtab] = await Promise.all([
-    context.waitForEvent("page"),
-    await page.locator("id=GameCanvas").click({ position: { x: 943, y: 650 } }),
-  ]);
-  await newtab.waitForLoadState();
-  await newtab.waitForTimeout(10000);
-  return newtab;
-};
+// const navigateDownloadPage = async (context: any, page: any) => {
+//   const [newtab] = await Promise.all([
+//     context.waitForEvent("page"),
+//     await page.locator("id=GameCanvas").click({ position: { x: 943, y: 650 } }),
+//   ]);
+//   await newtab.waitForLoadState();
+//   await newtab.waitForTimeout(10000);
+//   return newtab;
+// };
