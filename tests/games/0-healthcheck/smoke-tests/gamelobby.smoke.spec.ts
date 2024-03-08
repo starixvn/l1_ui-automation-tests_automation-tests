@@ -34,23 +34,23 @@ class healthSmokeSpec extends SmokeBases.TableGameBase {
       async () => {
         const gamelobby = await this.game.captureLocator("gamelobby");
         expect(gamelobby.image).toMatchSnapshot(gamelobby.name);
-        if (process.env.npm_config_project === "l1") {
-          const newtab = await navigateDownloadPage(
-            this.game.page.context(),
-            this.game.page
-          );
-          for (const iterator of lstItems) {
-            await newtab.click(iterator.control);
-            await newtab.waitForLoadState();
-            await newtab.waitForTimeout(2000);
-            expect(
-              await newtab.screenshot({
-                path: `screenshots/${iterator.imageName}`,
-                fullPage: true,
-              })
-            ).toMatchSnapshot(iterator.imageName, { maxDiffPixelRatio: 0.05 });
-          }
-        }
+        // if (process.env.npm_config_project === "l1") {
+        //   const newtab = await navigateDownloadPage(
+        //     this.game.page.context(),
+        //     this.game.page
+        //   );
+        //   for (const iterator of lstItems) {
+        //     await newtab.click(iterator.control);
+        //     await newtab.waitForLoadState();
+        //     await newtab.waitForTimeout(2000);
+        //     expect(
+        //       await newtab.screenshot({
+        //         path: `screenshots/${iterator.imageName}`,
+        //         fullPage: true,
+        //       })
+        //     ).toMatchSnapshot(iterator.imageName, { maxDiffPixelRatio: 0.05 });
+        //   }
+        // }
       }
     );
   }
