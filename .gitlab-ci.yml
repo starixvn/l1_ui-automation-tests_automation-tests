@@ -33,32 +33,6 @@ docker-build:
 
 include: '**/.gitlab-ci.yml'
 
-smoketest:
-  image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
-  stage: test
-  tags:
-    - auto-test-prod
-  script:    
-    - rm -r *
-    - cp -r /app/* ./
-    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
-
-  after_script:
-    - du -hs /ms-playwright/*
-  retry: 1
-  rules:
-    - if: $TRIGGER == "true" && $MODE == "SMOKE1"
-      when: always
-    - when: never
-  
-  artifacts:
-    paths:
-      - playwright-report
-      - screenshots
-      - test-results   
-    when: always
-    expire_in: 1 day
-
 e2etest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
@@ -132,14 +106,14 @@ e2etestmac:
     when: always
     expire_in: 1 day
 
-smoketestmac:
+smoketest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
     - e2e-test    
   script:    
     - cd tests
-    - npm run test:smokeMac --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   retry: 1
   rules:

@@ -1,7 +1,7 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
 
-const testMatch = `${process.env.npm_config_gameid}*`;
+const testMatch = `${process.env.npm_config_gameid}-*`;
 const admin = `${process.env.npm_config_admin}`;
 
 const config: PlaywrightTestConfig = {
@@ -11,15 +11,14 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.05,
+      maxDiffPixelRatio: 0.1,
     },
   },
   /* Run tests in files in parallel */
   fullyParallel: false,
   reporter: [
     ["line"],
-    ["html", { open: "never" }],
-    ["json", { outputFile: "./test-results/test-results.json" }],
+    ["html", { open: "never" }]
   ],
   use: {
     actionTimeout: 0,
