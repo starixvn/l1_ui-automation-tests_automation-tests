@@ -1,6 +1,7 @@
 import { BlackJackLocators } from "../blackjack-locators";
 import { BlackJackConfigs } from "../blackjack-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases,Components } from "sc-automation-core";
+import { expect } from "@playwright/test";
 
 class BlackJackSmokeSpec extends SmokeBases.CardGameBase {
   /**
@@ -21,6 +22,23 @@ class BlackJackSmokeSpec extends SmokeBases.CardGameBase {
     };
 
     super(smokeOptions);
+  }
+
+  protected inGameBetChoiceTests(): void {
+    Components.test("AND bet choices should be displayed on table", async () => {
+      // Arrange
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      await this.game.waitForTimeout(this.options.waitBetTimeout);
+      await this.game.clickLocator("cancelbet",5000)
+      await this.game.clickLocator("cancelbet",5000)
+      for (const placeBetChoice of this.options.placeBetChoices) {
+          // Act
+          const betChoice = await this.game.captureChoice(placeBetChoice);
+
+          // Assert
+          expect(betChoice.image).toMatchSnapshot(betChoice.name);
+      }
+  });
   }
 }
 
