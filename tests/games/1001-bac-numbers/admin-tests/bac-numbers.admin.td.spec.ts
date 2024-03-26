@@ -2,7 +2,7 @@ import { BacNumbersLocators } from "../bac-numbers-locators";
 import * as gameconfig from "../bac-numbers-configs";
 import { AdminBases } from "sc-automation-core";
 
-class NGAdminSpec extends AdminBases.TicketDetailGameBase {
+class NGAdminSpec extends AdminBases.NumberTicketDetailGameBase {
   /**
    *
    */
