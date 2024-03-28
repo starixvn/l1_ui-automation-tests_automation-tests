@@ -4,7 +4,7 @@
   "description": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:smoke": "playwright test --project=Smoke_CI",
+    "test:smoke": "playwright test --project=Smoke_CI --workers=3",
     "test:e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
     "test:guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",
     "test:admin": "playwright test --project=admin",
@@ -22,7 +22,7 @@
     "fs-extra": "^11.1.1",
     "google-spreadsheet": "^4.1.1",
     "prettier": "^3.2.5",
-    "sc-automation-core": "1.32.2"
+    "sc-automation-core": "1.32.3"
   },
   "devDependencies": {
     "@playwright/test": "1.42.0",
