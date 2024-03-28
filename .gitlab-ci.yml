@@ -20,18 +20,17 @@ docker-build:
   tags:
     - docker
   stage: build
-  services:
-    - docker:dind
+
   before_script:
     - export CI_REGISTRY_IMAGE=$DOCKER_REG_LOCAL_URL/pentagon-base/automation-tests-game-$GAMEID
     - docker login -u $DOCKER_REG_LOCAL_USERNAME -p $DOCKER_REG_LOCAL_PASSWORD $DOCKER_REG_LOCAL_URL
-  script:   
-     - docker build --build-arg gameId=$GAMEID --pull -t $CI_REGISTRY_IMAGE:latest .
-     - docker push $CI_REGISTRY_IMAGE:latest
+  script:
+    - docker build --build-arg gameId=$GAMEID --pull -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
   rules:
     - when: never
 
-include: '**/.gitlab-ci.yml'
+include: "**/.gitlab-ci.yml"
 
 e2etest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
@@ -47,12 +46,12 @@ e2etest:
     - if: $MODE == "E2E"
       when: always
     - when: never
-  
+
   artifacts:
     paths:
       - playwright-report
       - screenshots
-      - test-results   
+      - test-results
     when: always
     expire_in: 1 day
 
@@ -61,7 +60,7 @@ gameguidetest:
   stage: test
   tags:
     - auto-test-prod
-  script:    
+  script:
     - rm -r *
     - cp -r /app/* ./
     - npm run test:guide --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
@@ -72,23 +71,23 @@ gameguidetest:
     - if: $TRIGGER == "true" && $MODE == "GUIDE"
       when: always
     - when: never
-  
+
   artifacts:
     paths:
       - playwright-report
       - screenshots
-      - test-results   
+      - test-results
     when: always
-    expire_in: 1 day    
+    expire_in: 1 day
 
 e2etestmac:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
-    - e2e-test    
-  script:    
+    - e2e-test
+  script:
     - cd tests
-    - npm run test:e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME    
+    - npm run test:e2e --env=$ENV --gameid=$GAMEID- --project=$STACK_NAME
   after_script:
     - echo "$CI_JOB_ID"
     - npm run sendresult --env=$ENV --gameid=$GAMEID --pipelineid=$CI_JOB_ID
@@ -97,12 +96,12 @@ e2etestmac:
     - if: $TRIGGER == "true" && $MODE == "E2E1"
       when: always
     - when: never
-  
+
   artifacts:
     paths:
       - playwright-report
       - screenshots
-      - test-results   
+      - test-results
     when: always
     expire_in: 1 day
 
@@ -110,8 +109,8 @@ smoketest:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
-    - e2e-test    
-  script:    
+    - e2e-test
+  script:
     - cd tests
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
@@ -120,11 +119,11 @@ smoketest:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
       when: always
     - when: never
-  
+
   artifacts:
     paths:
       - playwright-report
       - screenshots
-      - test-results   
+      - test-results
     when: always
     expire_in: 1 day
