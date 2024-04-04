@@ -36,5 +36,6 @@ export const WayToGoalConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2746",
     l2prod: "VNtest046",
   },
-  productId: "1656",
+  productId: { l1: "1656", l2: 3854 },
+
 };

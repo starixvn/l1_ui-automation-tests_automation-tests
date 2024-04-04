@@ -45,7 +45,8 @@ export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2750",
     l2prod: "VNtest041",
   },
-  productId: "1650",
+  productId: { l1: "1650", l2: 3836 },
+
 };
 
 export const AdminDataSet_local ={

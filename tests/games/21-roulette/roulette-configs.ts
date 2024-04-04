@@ -50,5 +50,6 @@ export const RouletteConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2749",
     l2prod: "VNtest050",
   },
-  productId: "1632",
+  productId: { l1: "1632", l2: 3819 },
+
 };

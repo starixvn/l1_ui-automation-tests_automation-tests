@@ -36,5 +36,6 @@ export const FortuneCatConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2741",
     l2prod: "VNtest050",
   },
-  productId: "1669",
+  productId: { l1: "1669", l2: 3861 },
+
 };

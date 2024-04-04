@@ -33,5 +33,6 @@ export const VipSedieConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2750",
     l2prod: "VNtest040",
   },
-  productId: "1633",
+  productId: { l1: "1633", l2: 3824 },
+
 };

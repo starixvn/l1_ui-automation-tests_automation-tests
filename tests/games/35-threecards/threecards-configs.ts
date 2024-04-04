@@ -32,5 +32,5 @@ export const ThreeCardsConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2749",
     l2prod: "VNtest050",
   },
-  productId: "1643",
+  productId: { l1: "1643", l2: 3831 },
 };

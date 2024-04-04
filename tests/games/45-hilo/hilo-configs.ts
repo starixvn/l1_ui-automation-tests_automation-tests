@@ -47,5 +47,6 @@ export const HiLoConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2742",
     l2prod: "VNtest050",
   },
-  productId: "1651",
+  productId: { l1: "1651", l2: 3844 },
+
 };

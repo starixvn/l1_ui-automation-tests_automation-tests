@@ -44,5 +44,6 @@ export const winthreecardsConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2740",
     l2prod: "VNtest046",
   },
-  productId: "1668",
+  productId: { l1: "1668", l2: 3860 },
+
 };

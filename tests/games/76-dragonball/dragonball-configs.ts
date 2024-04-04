@@ -36,7 +36,7 @@ export const dragonballConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2745",
     l2prod: "VNtest050",
   },
-  productId: "1683",
+  productId: { l1: "1683", l2: 3875 },
 };
 
 export const AdminDataSet_local ={

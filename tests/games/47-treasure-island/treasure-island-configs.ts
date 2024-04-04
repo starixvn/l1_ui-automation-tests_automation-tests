@@ -202,5 +202,6 @@ export const TreasureIslandConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2744",
     l2prod: "VNtest041",
   },
-  productId: "1654",
+  productId: { l1: "1654", l2: 3846 },
+
 };

@@ -36,5 +36,5 @@ export const HappyFishConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2742",
     l2prod: "VNtest040",
   },
-  productId: "1670",
+  productId: { l1: "1670", l2: 3862 },
 };

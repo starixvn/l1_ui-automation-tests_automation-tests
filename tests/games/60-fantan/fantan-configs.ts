@@ -54,5 +54,6 @@ export const FanTanConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2750",
     l2prod: "VNtest044",
   },
-  productId: "1667",
+  productId: { l1: "1667", l2: 3859 },
+
 };

@@ -65,5 +65,6 @@ export const FruitSlotConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2749",
     l2prod: "VNtest041",
   },
-  productId: "1666",
+  productId: { l1: "1666", l2: 3858 },
+
 };

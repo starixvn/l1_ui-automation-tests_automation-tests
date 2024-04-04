@@ -60,5 +60,5 @@ export const SedieWarConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2745",
     l2prod: "VNtest041",
   },
-  productId: "1639",
+  productId: { l1: "1639", l2: 3828 },
 };

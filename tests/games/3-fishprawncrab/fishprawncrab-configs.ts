@@ -23,11 +23,6 @@ export const FPCConfigs: Components.GameConfiguration = {
     local1: "222223",
     local2: "222223",
     local3: "222223",
-    sit: "supertestsaba68",
-    uat: "IT57Test789",
-    prod: "supertestte120201004",
-    l2uat: "TestSep2742",
-    l2prod: "VNtest044",
   },
-  productId: "1614",
+  productId: { l1: "1614", l2: 3804 },
 };

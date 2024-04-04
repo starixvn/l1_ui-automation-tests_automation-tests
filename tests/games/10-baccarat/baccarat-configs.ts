@@ -42,5 +42,5 @@ export const BaccaratConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2748",
     l2prod: "VNtest046",
   },
-  productId: "1621",
+  productId: { l1: "1621", l2: 3810 },
 };

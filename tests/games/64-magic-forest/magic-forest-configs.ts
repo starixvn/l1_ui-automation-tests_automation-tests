@@ -36,5 +36,5 @@ export const MagicForestConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2743",
     l2prod: "VNtest041",
   },
-  productId: "1671",
+  productId: { l1: "1671", l2: 3863 },
 };

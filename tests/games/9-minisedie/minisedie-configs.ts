@@ -32,7 +32,7 @@ export const MiniSedie1Configs: Components.GameConfiguration = {
     l2uat: "TestSep2747",
     l2prod: "VNtest044",
   },
-  productId: "1620",
+  productId: { l1: "1620", l2: 3823 },
 };
 
 export const MiniSedie2Configs: Components.GameConfiguration = {
@@ -64,7 +64,7 @@ export const MiniSedie2Configs: Components.GameConfiguration = {
     uat: "IT58Test789",
     prod: "supertestte120201012",
   },
-  productId: "1620",
+  productId: { l1: "1620", l2: 3823 },
 };
 
 export const MiniSedie3Configs: Components.GameConfiguration = {
@@ -96,7 +96,7 @@ export const MiniSedie3Configs: Components.GameConfiguration = {
     uat: "IT58Test789",
     prod: "supertestte120201012",
   },
-  productId: "1620",
+  productId: { l1: "1620", l2: 3823 },
 };
 
 export const MiniSedie4Configs: Components.GameConfiguration = {
@@ -128,5 +128,5 @@ export const MiniSedie4Configs: Components.GameConfiguration = {
     uat: "IT58Test789",
     prod: "supertestte120201012",
   },
-  productId: "1620",
+  productId: { l1: "1620", l2: 3823 },
 };

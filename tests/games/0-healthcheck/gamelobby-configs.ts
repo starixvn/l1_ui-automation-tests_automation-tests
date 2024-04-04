@@ -23,5 +23,5 @@ export const gamelobbyConfigs: Components.GameConfiguration = {
     local2: "222221",
     local3: "222221"
   },
-  productId: "0"
+  productId: { l1: 0, l2: 0 },
 };

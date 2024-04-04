@@ -36,5 +36,5 @@ export const BlackPinkConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2748",
     l2prod: "VNtest041",
   },
-  productId: "1674",
+  productId: { l1: "1674", l2: 3866 },
 };

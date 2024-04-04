@@ -29,5 +29,6 @@ export const TurboBigSmallConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2743",
     l2prod: "VNtest046",
   },
-  productId: "1615",
+  productId: { l1: "1615", l2: 3805 },
+
 };

@@ -36,5 +36,5 @@ export const DJClubConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2744",
     l2prod: "VNtest044",
   },
-  productId: "1672",
+  productId: { l1: "1672", l2: 3864 },
 };

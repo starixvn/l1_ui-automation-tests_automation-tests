@@ -29,5 +29,5 @@ export const TurboOddEvenConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2744",
     l2prod: "VNtest050",
   },
-  productId: "1617",
+  productId: { l1: "1617", l2: 3807 },
 };

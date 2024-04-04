@@ -42,5 +42,6 @@ export const VipBaccaratConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2744",
     l2prod: "VNtest040",
   },
-  productId: "1638",
+  productId: { l1: "1638", l2: 3827 },
+
 };

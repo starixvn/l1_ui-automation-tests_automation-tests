@@ -30,5 +30,6 @@ export const BitCoinMasterConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2741",
     l2prod: "VNtest046",
   },
-  productId: "1649",
+  productId: { l1: "1649", l2: 3843 },
+
 };

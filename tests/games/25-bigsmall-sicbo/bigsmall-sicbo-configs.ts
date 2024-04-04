@@ -69,5 +69,5 @@ export const BigSmallSicBoConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2742",
     l2prod: "VNtest046",
   },
-  productId: "1636",
+  productId: { l1: "1636", l2: 3821 },
 };

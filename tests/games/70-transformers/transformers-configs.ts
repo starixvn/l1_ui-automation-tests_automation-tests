@@ -36,5 +36,5 @@ export const transformersConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2749",
     l2prod: "VNtest044",
   },
-  productId: "1677",
+  productId: { l1: "1677", l2: 3869 },
 };

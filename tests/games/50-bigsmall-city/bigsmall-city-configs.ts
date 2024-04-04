@@ -28,7 +28,8 @@ export const BigSmallCity1Configs: Components.GameConfiguration = {
     l2uat: "TestSep2747",
     l2prod: "VNtest050",
   },
-  productId: "1659",
+  productId: { l1: "1659", l2: 3850 },
+
 };
 
 export const BigSmallCity2Configs: Components.GameConfiguration = {
@@ -56,7 +57,7 @@ export const BigSmallCity2Configs: Components.GameConfiguration = {
     uat: "IT56Test789",
     prod: "supertestte120201012",
   },
-  productId: "1659",
+  productId: { l1: "1659", l2: 3850 },
 };
 
 export const BigSmallCity3Configs: Components.GameConfiguration = {
@@ -84,7 +85,7 @@ export const BigSmallCity3Configs: Components.GameConfiguration = {
     uat: "IT56Test789",
     prod: "supertestte120201012",
   },
-  productId: "1659",
+  productId: { l1: "1659", l2: 3850 },
 };
 
 export const BigSmallCity4Configs: Components.GameConfiguration = {
@@ -112,5 +113,5 @@ export const BigSmallCity4Configs: Components.GameConfiguration = {
     uat: "IT56Test789",
     prod: "supertestte120201012",
   },
-  productId: "1659",
+  productId: { l1: "1659", l2: 3850 },
 };

@@ -28,5 +28,5 @@ export const SpecialSedieConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2742",
     l2prod: "VNtest044",
   },
-  productId: "1635",
+  productId: { l1: "1635", l2: 3825 },
 };

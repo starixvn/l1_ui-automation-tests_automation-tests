@@ -31,6 +31,6 @@ export const ColorGameConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2750",
     l2prod: "VNtest046",
   },
-  productId: "1678",
+  productId: { l1: "1678", l2: 3870 },
   rebet: true
 };

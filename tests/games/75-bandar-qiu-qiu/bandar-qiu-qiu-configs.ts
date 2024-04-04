@@ -32,7 +32,7 @@ export const BandarQiuQiuConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2741",
     l2prod: "VNtest040",
   },
-  productId: "1680",
+  productId: { l1: "1680", l2: 3872 },
   rebet: true,
 };
 

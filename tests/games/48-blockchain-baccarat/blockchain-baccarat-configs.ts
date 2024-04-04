@@ -42,5 +42,6 @@ export const BlockchainBaccaratConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2745",
     l2prod: "VNtest044",
   },
-  productId: "1655",
+  productId: { l1: "1655", l2: 3847 },
+
 };

@@ -8,12 +8,12 @@ class NGAdminSpec extends AdminBases.NumberTicketDetailGameBase {
    */
   constructor() {
     const adminOptions: AdminBases.IBaseOptions = {
-      placeBetChoices: [gameconfig.BacNumbersConfigs.choices[1]],
+      placeBetChoices: ["player","banker","tie"],
       gameConfiguration: gameconfig.BacNumbersConfigs,
       locators: BacNumbersLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
+      placeBetAmount: 10, 
       multiPlaceBetChoices: ["even", "red4"],
       Adminconfiguration:
         gameconfig[`AdminDataSet_` + process.env.npm_config_env],

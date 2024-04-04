@@ -33,6 +33,6 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2746",
     l2prod: "VNtest050",
   },
-  productId: "1676",
+  productId: { l1: "1676", l2: 3868 },
   rebet: true
 };

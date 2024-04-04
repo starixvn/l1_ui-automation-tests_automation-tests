@@ -36,5 +36,5 @@ export const NightClubConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2743",
     l2prod: "VNtest040",
   },
-  productId: "1653",
+  productId: { l1: "1653", l2: 3845 },
 };

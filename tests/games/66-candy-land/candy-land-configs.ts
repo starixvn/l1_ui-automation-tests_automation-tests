@@ -203,5 +203,5 @@ export const CandyLandConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2745",
     l2prod: "VNtest046",
   },
-  productId: "1675",
+  productId: { l1: "1675", l2: 3867 },
 };

@@ -36,5 +36,5 @@ export const HeroesSlotConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2749",
     l2prod: "VNtest040",
   },
-  productId: "1644",
+  productId: { l1: "1644", l2: 3835 },
 };

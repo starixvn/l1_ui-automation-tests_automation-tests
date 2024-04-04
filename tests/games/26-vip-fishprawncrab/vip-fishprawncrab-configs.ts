@@ -42,5 +42,6 @@ export const VIPFPCConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2743",
     l2prod: "VNtest050",
   },
-  productId: "1637",
+  productId: { l1: "1637", l2: 3826 },
+
 };

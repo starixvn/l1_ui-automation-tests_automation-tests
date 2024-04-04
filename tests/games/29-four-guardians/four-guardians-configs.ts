@@ -53,5 +53,5 @@ export const FourGuardiansConfigs: IFourGuardiansConfigs = {
     l2uat: "TestSep2746",
     l2prod: "VNtest044",
   },
-  productId: "1640",
+  productId: { l1: "1640", l2: 3829 },
 };

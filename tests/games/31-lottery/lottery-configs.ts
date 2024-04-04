@@ -55,5 +55,5 @@ export const LotteryConfigs: ILotteryConfigs = {
     l2uat: "TestSep2747",
     l2prod: "VNtest046",
   },
-  productId: "1642",
+  productId: { l1: "1642", l2: 3830 },
 };

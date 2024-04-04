@@ -45,5 +45,5 @@ export const KenoProMaxConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2746",
     l2prod: "VNtest041",
   },
-  productId: "1619",
+  productId: { l1: "1619", l2: 3809 },
 };

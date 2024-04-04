@@ -35,7 +35,8 @@ export const generateConfig = (
       l2uat: "TestSep2748",
       l2prod: "VNtest040",
     },
-    productId: "3848",
+    productId: { l1: "3848", l2: 3848 },
+
   };
 };
 

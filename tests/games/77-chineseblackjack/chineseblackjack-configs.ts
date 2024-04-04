@@ -30,7 +30,7 @@ export const ChineseBlackjackConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2744",
     l2prod: "VNtest046",
   },
-  productId: "1684",
+  productId: { l1: "1684", l2: 3876 },
   isDoubleFunction:false,
   
 };

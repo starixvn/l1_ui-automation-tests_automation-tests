@@ -33,7 +33,7 @@ export const SedieConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2741",
     l2prod: "VNtest041",
   },
-  productId: "1613",
+  productId: { l1: "1613", l2: 3803 },
 };
 
 export const AdminDataSet_local ={

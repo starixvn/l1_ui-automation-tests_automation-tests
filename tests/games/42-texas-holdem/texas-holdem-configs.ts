@@ -38,5 +38,5 @@ export const TexasHoldemPokerrConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2740",
     l2prod: "VNtest044",
   },
-  productId: "1652",
+  productId: { l1: "1652", l2: 3837 },
 };

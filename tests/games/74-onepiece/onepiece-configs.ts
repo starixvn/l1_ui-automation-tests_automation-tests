@@ -36,5 +36,5 @@ export const OnePieceConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2743",
     l2prod: "VNtest044",
   },
-  productId: "1682",
+  productId: { l1: "1682", l2: 3874 },
 };

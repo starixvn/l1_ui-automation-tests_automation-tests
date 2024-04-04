@@ -27,5 +27,5 @@ export const BlackJackConfigs: Components.GameConfiguration = {
     l2uat: "TestSep2740",
     l2prod: "VNtest041",
   },
-  productId: "1634",
+  productId: { l1: "1634", l2: 3820 },
 };
