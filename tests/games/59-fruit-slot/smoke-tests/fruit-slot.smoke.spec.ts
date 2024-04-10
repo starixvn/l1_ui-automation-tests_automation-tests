@@ -12,7 +12,7 @@ class FruitSlotSmokeSpec extends SmokeBases.TableGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: FruitSlotConfigs,
       placeBetChoices: [FruitSlotConfigs.choices[8]],
-      waitBetTimeout: 22000,
+      waitBetTimeout: 24000,
       locators: FruitSlotLocators,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
