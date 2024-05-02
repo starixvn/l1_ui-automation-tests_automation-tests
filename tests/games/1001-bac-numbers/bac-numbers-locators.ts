@@ -7,15 +7,16 @@ export const BacNumbersLocators = {
     "#icon-pf": "icopf.png",
     "#icon-home": "icohome.png",
     "#icon-menu": "icomenu.png",
-    "//div[contains(@class,'game-container bet-setting_container')]": "default-chip.png"
+  },
+  inGameUIAndroid: {
+    "#img-game-name": "android_gamename.png",
+    "#icon-pf": "android_icopf.png",
+    "#icon-home": "android_icohome.png",
+    "#icon-menu": "android_icomenu.png",
   },
   quickBetState: ["quickBetOff.png", "quickBetOn.png"],
-  inGameUIE2E: {
-    "#img-game-name": "gamename.png",
-    "#icon-pf": "icopf.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
+  suggestionBets:{player: "Tiền cược khả dụng: 19,990Cược số tiền này?", banker: "Tiền cược khả dụng: 19,990Cược số tiền này?", tie: "Tiền cược khả dụng: 1,990Cược số tiền này?"},
+  slideGameList: ["BAC BALL 1", "BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
     "//*[@class='text-center copyright']":
       "© 2024 Bản quyền thuộc về SABA xD",
@@ -26,7 +27,7 @@ export const BacNumbersLocators = {
     orb: "Công bố kết quả",
   },
   menuItems: [
-    "#icon-sound-off",
+    "#music-settings",
     "#sound-settings",
     "#icon-history",
     "#icon-guide",
@@ -40,7 +41,6 @@ export const BacNumbersLocators = {
   ],
   chip:  {
     "#chip-10": "chip-10.png",
-    "#chip-20": "chip-20.png",
     "#chip-50": "chip-50.png",
     "#chip-100": "chip-100.png",
     "#chip-200": "chip-200.png",
@@ -56,6 +56,18 @@ export const BacNumbersLocators = {
     // "#chip-100000": "chip-100k.png",
     // "#chip-200000": "chip-200k.png",
   },
+  chipAndroid:  {
+    "#chip-10": "android_chip-10.png",
+    "#chip-50": "android_chip-50.png",
+    "#chip-100": "android_chip-100.png",
+    "#chip-200": "android_chip-200.png",
+    "#chip-500": "android_chip-500.png",
+    "#chip-1000": "android_chip-1k.png",
+    "#chip-2000": "android_chip-2k.png",
+    "#chip-4000": "android_chip-4k.png",
+    "#chip-5000": "android_chip-5k.png",
+    "#chip-10000": "android_chip-10k.png",
+  },
   controlsE2E: [
     "#round-id",
     "#user-info_user-name",
@@ -69,8 +81,11 @@ export const BacNumbersLocators = {
     player: "#BacBall-choice-player",
     banker: "#BacBall-choice-banker",
     tie: "#BacBall-choice-tie",
+    playerOwnBet: "#BacBall-player-own-bet",
+    bankerOwnBet: "#BacBall-banker-own-bet",
+    tieOwnBet: "#BacBall-tie-own-bet",
+
   },
-  betchip: { Chip1: "", Chip10: "" },
   hedgeBetError: {
     ".modal-center": "Chỉ có thể đặt cược trên Người Chơi hoặc Nhà Cái.",
   },
@@ -81,6 +96,16 @@ export const BacNumbersLocators = {
     '//*[@id="bar-statistic"]/div[1]/span[1]': "p.png",
     '//*[@id="bar-statistic"]/div[2]/span[1]': "b.png",
     '//*[@id="bar-statistic"]/div[3]/span[1]': "t.png",
+  },
+  statisticbarAndroid: {
+    '//*[@id="bar-statistic"]/div[1]/span[1]': "android_p.png",
+    '//*[@id="bar-statistic"]/div[2]/span[1]': "android_b.png",
+    '//*[@id="bar-statistic"]/div[3]/span[1]': "android_t.png",
+  },
+  statisticItems:{
+    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_player')]":"//div[@id='bar-statistic']/div[1]/span[2]",
+    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_banker')]": "//div[@id='bar-statistic']/div[2]/span[2]",
+    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_tie')]": "//div[@id='bar-statistic']/div[3]/span[2]",
   },
   historyHeader: {
     "//thead//th[1]": "Thời Gian",
@@ -98,16 +123,16 @@ export const BacNumbersLocators = {
   },
   ticketDetail: {
     drawId: "//div[@id='bet-detail']/div[2]/div[1]/div[1]/span",
-    player: "//div[@id='bet-detail']/div[2]/div[1]/div[2]/span[2]",
-    banker: "//div[@id='bet-detail']/div[2]/div[1]/div[3]/span[2]",
+    player: "//div[@id='bet-detail']/div[2]/div[1]/div[2]/div",
+    banker: "//div[@id='bet-detail']/div[2]/div[1]/div[3]/div",
     choice: "//div[@id='bet-detail']//tbody/tr[1]/td[2]",
     odds: "//div[@id='bet-detail']//tbody/tr[1]/td[3]",
     amount: "//div[@id='bet-detail']//tbody/tr[1]/td[4]",
     winAmount: "//div[@id='bet-detail']//tbody/tr[1]/td[5]",
   },
-  guideContent: `GiớiThiệuBacBalllàtròchơigồmhaibộbóng`,
+  guideContent: `GiớiThiệuBacBall1làtròchơigồmhaibộbóng`,
   vnguide1: `Giới Thiệu
-  Bac Ball là trò chơi gồm hai bộ bóng, mỗi bộ 30 bóng, một cho Người Chơi và một cho Nhà Cái. Với bốn lượt rút bóng, người chơi có cơ hội dự đoán và đặt cược vào cửa thắng trong từng lượt rút. Các quả bóng đã được rút sẽ không xuất hiện trong các lượt rút tiếp theo, dẫn đến sự thay đổi tỷ lệ cược trong mỗi lượt, đồng thời mang lại tính hấp dẫn cho trò chơi.
+  Bac Ball1 là trò chơi gồm hai bộ bóng, mỗi bộ 30 bóng, một cho Người Chơi và một cho Nhà Cái. Với bốn lượt rút bóng, người chơi có cơ hội dự đoán và đặt cược vào cửa thắng trong từng lượt rút. Các quả bóng đã được rút sẽ không xuất hiện trong các lượt rút tiếp theo, dẫn đến sự thay đổi tỷ lệ cược trong mỗi lượt, đồng thời mang lại tính hấp dẫn cho trò chơi.
   Cách Chơi
   Trong mỗi lượt rút, một quả bóng sẽ được rút ngẫu nhiên cho Người Chơi và Nhà Cái. Kết quả của lượt rút được xác định dựa trên giá trị các quả bóng đã được rút.
   Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một lượt rút là 20,000. Lưu ý, người chơi không được đặt cược trên cả hai cửa Người Chơi và Nhà Cái.
@@ -119,7 +144,7 @@ export const BacNumbersLocators = {
   Trả Thưởng
   Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay khi kết quả được công bố.
   Tiền thắng được tính toán dựa trên tỷ lệ cược.
-  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 1,000,000.
+  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 500,000.
   Tỷ lệ cược sẽ thay đổi và được cập nhật sau mỗi lượt rút bóng. Tỷ lệ cược và giới hạn cược tương ứng với các lựa chọn cược có giá trị trong khoảng như sau:
   Lựa Chọn	Tỷ Lệ Cược
   (Min - Max)	Giới Hạn Cược

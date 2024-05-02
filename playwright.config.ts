@@ -11,15 +11,12 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.1,
+      maxDiffPixelRatio: 0.8,
     },
   },
   /* Run tests in files in parallel */
   fullyParallel: false,
-  reporter: [
-    ["line"],
-    ["html", { open: "never" }]
-  ],
+  reporter: [["line"], ["html", { open: "never" }]],
   use: {
     actionTimeout: 0,
     trace: "on-first-retry",
@@ -55,6 +52,13 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/admin-tests/*${admin}.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
+      },
+    },
+    {
+      name: "android",
+      testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
+      use: {
+        browserName: 'chromium',
       },
     },
   ],

@@ -19,4 +19,6 @@ export const FourGuardiansLocators = [
   new ImageLocator("spin", 1180, 632),
   new ImageLocator("submitPayline", 542, 623, 200, 40),
   new ImageLocator("clearChoices", 866, 580, 135, 35),
+  new ImageLocator("icoGuide", 30, 405, 35, 35),
+
 ];

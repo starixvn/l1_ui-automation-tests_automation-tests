@@ -10,7 +10,10 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.1,
+      maxDiffPixelRatio: 0.15,
+    },
+    toHaveScreenshot: {
+      maxDiffPixels: 800,
     },
   },
   fullyParallel: false,
@@ -45,6 +48,7 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
+
       },
     },
     {

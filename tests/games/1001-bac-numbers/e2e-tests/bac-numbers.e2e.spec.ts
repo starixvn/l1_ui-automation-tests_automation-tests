@@ -13,7 +13,7 @@ class BacNumbersE2ESpec extends E2EBases.NumberGameBase {
       locators: BacNumbersLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: 20
+      placeBetAmount: 10
     };
     super(e2eOptions);
   }

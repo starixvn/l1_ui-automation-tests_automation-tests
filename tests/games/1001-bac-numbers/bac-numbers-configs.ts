@@ -5,7 +5,7 @@ export const BacNumbersConfigs: Components.GameConfiguration = {
   name: "bacball1",
   durations: {
     wholeRound: 30,
-    placingBets: 18,
+    placingBets: 17,
     lockingBet: 3,
     shakeThePlateDuration: 10,
   },
@@ -23,7 +23,7 @@ export const BacNumbersConfigs: Components.GameConfiguration = {
     local2: "222275",
     local3: "222275"
   },
-  productId: { gn:1001 },
+  productId: { gn:10802 },
 };
 
 export const AdminDataSet_local ={

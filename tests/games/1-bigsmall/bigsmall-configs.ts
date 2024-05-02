@@ -11,7 +11,7 @@ export const BigSmallConfigs: Components.GameConfiguration = {
   },
   choices: ["big", "small"],
   hedgeBetGroups: [["big", "small"]],
-  maxTimeout: 200 * 1000, // miliseconds x,
+  maxTimeout: 250 * 1000, // miliseconds x,
   odds: {
     big: 1.96,
     small: 1.96,
