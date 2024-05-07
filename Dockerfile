@@ -7,6 +7,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 RUN mkdir -p /app/tests/games/$gameId
 COPY tests/games/$gameId-* /app/tests/games/$gameId
 COPY playwright.config.ts .
+COPY e2e.config.ts .
 COPY package.json .
 COPY .npmrc .
 
