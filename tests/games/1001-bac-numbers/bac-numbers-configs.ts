@@ -4,8 +4,8 @@ export const BacNumbersConfigs: Components.GameConfiguration = {
   id: 1001,
   name: "bacball1",
   durations: {
-    wholeRound: 30,
-    placingBets: 17,
+    wholeRound: 25,
+    placingBets: 12,
     lockingBet: 3,
     shakeThePlateDuration: 10,
   },
