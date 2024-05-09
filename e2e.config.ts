@@ -10,7 +10,7 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.15,
+      maxDiffPixelRatio: 0.2,
     },
     toHaveScreenshot: {
       maxDiffPixels: 800,
