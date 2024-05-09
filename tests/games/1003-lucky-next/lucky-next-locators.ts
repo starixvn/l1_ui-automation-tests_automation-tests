@@ -1,7 +1,7 @@
 export const LuckyNextLocators = {
   lobbyGameIcon: "#icon-luckynext1",
-  lobbyTimmer: "//*[@id='icon-luckynext1']/div[2]/div[1]",
-  lobbyStatistic: "//*[@id='icon-luckynext1']/div[2]/div[2]",
+  lobbyTimmer: "//*[@id='icon-luckynext1']/div/div[2]/div[1]",
+  lobbyStatistic: "//*[@id='icon-luckynext1']/div/div[2]/div[2]",
   inGameUI: {
     "#img-game-name": "gamename.png",
     "#icon-pf": "icopf.png",
@@ -14,7 +14,7 @@ export const LuckyNextLocators = {
     "#icon-home": "icohome.png",
     "#icon-menu": "icomenu.png",
   },
-  suggestionBets:{odd: "Tiền cược khả dụng: 9,990Cược số tiền này?", even: "Tiền cược khả dụng: 9,990Cược số tiền này?", over: "Tiền cược khả dụng: 9,990Cược số tiền này?", under: "Tiền cược khả dụng: 9,990Cược số tiền này?"},
+  suggestionBets:{odd: "Tiền cược khả dụng: 1,990Cược số tiền này?", even: "Tiền cược khả dụng: 1,990Cược số tiền này?", over: "Tiền cược khả dụng: 1,990Cược số tiền này?", under: "Tiền cược khả dụng: 1,990Cược số tiền này?"},
   slideGameList: ["LUCKY NEXT 1","LUCKY NEXT 2","BAC BALL 1","BAC BALL 2"],
   footerValues: {
     "//*[@class='text-center copyright']":
@@ -39,8 +39,10 @@ export const LuckyNextLocators = {
     "//div[@id='pf-setting']/div[1]/span"
   ],
   chip:  {
+    "#chip-1": "chip-1.png",
+    "#chip-5": "chip-5.png",
     "#chip-10": "chip-10.png",
-    "#chip-20": "chip-20.png",
+    // "#chip-20": "chip-20.png",
     "#chip-50": "chip-50.png",
     "#chip-100": "chip-100.png",
     "#chip-200": "chip-200.png",
@@ -116,7 +118,7 @@ export const LuckyNextLocators = {
   Lucky Next 1 là trò chơi gồm 75 quả bóng được đánh số. Với tám lượt rút bóng, người chơi có cơ hội dự đoán và đặt cược vào cửa thắng trong từng lượt rút. Các quả bóng đã được rút sẽ không xuất hiện trong các lượt rút tiếp theo, dẫn đến sự thay đổi tỷ lệ cược trong mỗi lượt, đồng thời mang lại tính hấp dẫn cho trò chơi.
   Cách Chơi
   Giá trị của quả bóng trong mỗi lượt rút sẽ xác định kết quả của lượt rút đó.
-  Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một lượt rút là 10,000.
+  Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một lượt rút là 2,000.
   Người chơi không được đặt cược trên cả hai cửa Tài và Xỉu, hay cả hai cửa Chẵn và Lẻ.
   Người chơi hoàn thành đặt cược trước khi thời gian đặt cược kết thúc và không thể hủy cược sau khi đặt.
   Lựa Chọn	Điều Kiện Thắng
@@ -127,7 +129,7 @@ export const LuckyNextLocators = {
   Trả Thưởng
   Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay khi kết quả được công bố.
   Tiền thắng được tính toán dựa trên tỷ lệ cược.
-  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 250,000.
+  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 50,000.
   Tỷ lệ cược sẽ thay đổi và được cập nhật sau mỗi lượt rút bóng. Tỷ lệ cược và giới hạn cược tương ứng với các lựa chọn cược có giá trị trong khoảng như sau:
   Lựa Chọn	Tỷ Lệ Cược
   (Min - Max)	Giới Hạn Cược

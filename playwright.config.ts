@@ -64,6 +64,21 @@ const config: PlaywrightTestConfig = {
         browserName: 'chromium',
       },
     },
+    {
+      name: "E2E_CI",
+      testMatch: `**/${testMatch}/e2e-tests/*.e2e.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+    {
+      name: "Guide",
+      testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+
+      },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

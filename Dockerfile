@@ -13,5 +13,5 @@ COPY .npmrc .
 
 RUN test -n "$gameId" || (echo "gameId not set" && false)
 
-RUN npm install \
- && npx playwright@1.42 install chromium
+RUN npm install
+RUN npx playwright@1.44 install chromium
