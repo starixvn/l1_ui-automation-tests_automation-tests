@@ -44,6 +44,17 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
+      name: "Smoke_XD",
+      testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+        "viewport": {
+          "width": 600,
+          "height": 930
+        }
+      },
+    },
+    {
       name: "autobot",
       testMatch: `*/autobot/autobot.spec.ts`,
       use: {
