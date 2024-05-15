@@ -122,8 +122,8 @@ export const LuckyNextLocators = {
   Người chơi không được đặt cược trên cả hai cửa Tài và Xỉu, hay cả hai cửa Chẵn và Lẻ.
   Người chơi hoàn thành đặt cược trước khi thời gian đặt cược kết thúc và không thể hủy cược sau khi đặt.
   Lựa Chọn	Điều Kiện Thắng
-  Tài	Giá trị trên quả bóng lớn hơn hoặc bằng 38.
-  Xỉu	Giá trị trên quả bóng nhỏ hơn 38.
+  Tài	Giá trị trên quả bóng nằm trong khoảng 38-75.
+  Xỉu	Giá trị trên quả bóng nằm trong khoảng 1-37.
   Lẻ	Giá trị trên quả bóng là số lẻ.
   Chẵn	Giá trị trên quả bóng là số chẵn.
   Trả Thưởng
