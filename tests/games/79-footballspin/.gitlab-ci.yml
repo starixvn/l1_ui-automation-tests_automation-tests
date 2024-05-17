@@ -1,0 +1,11 @@
+docker-build-game-79:
+  extends: docker-build
+  variables:
+    GAMEID: 79
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/79-*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile
