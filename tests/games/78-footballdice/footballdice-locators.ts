@@ -1,0 +1,18 @@
+import { Components } from "sc-automation-core";
+
+export const FootballDiceLocators = [
+    new Components.ImageLocator("dealer", 579, 44, 140, 156),
+    new Components.ImageLocator("homeChoice", 237, 388, 205, 32),
+    new Components.ImageLocator("homeOwnbet", 350, 356, 97, 28),
+    new Components.ImageLocator("awayChoice", 776, 388, 269, 35),
+    new Components.ImageLocator("awayOwnbet", 866, 356, 97, 28),
+    new Components.ImageLocator("drawChoice", 588, 438, 111, 35),
+    new Components.ImageLocator("playerBalance", 192, 644, 125, 23),
+    new Components.ImageLocator("hamburgerMenu", 24, 146, 51, 56),
+    new Components.ImageLocator("historyMenu", 21, 346, 52, 42),
+    new Components.ImageLocator("historyPopup", 120, 90, 1040, 90),
+    new Components.ImageLocator("errorMessage", 421, 542, 420, 35),
+    new Components.ImageLocator("msgMaxbetLimit", 478, 488, 400, 30),
+    new Components.ImageLocator("btnRightArrow", 926, 613, 30, 48),
+    new Components.ImageLocator("roundId", 598, 286, 106, 23),
+];
