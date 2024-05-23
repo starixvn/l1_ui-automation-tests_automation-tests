@@ -24,6 +24,7 @@ export const LuckyNextConfigs: Components.GameConfiguration = {
     local3: "222279"
   },
   productId: { gn:10805 },
+  isDraw: true
 };
 
 export const AdminDataSet_local ={

@@ -24,6 +24,7 @@ export const BacNumbersConfigs: Components.GameConfiguration = {
     local3: "222276"
   },
   productId: { gn:10803 },
+  isDraw: true
 };
 
 export const AdminDataSet_local ={
