@@ -15,13 +15,13 @@ export const seballLocators = {
     "#icon-menu": "icomenu.png",
   },
   suggestionBets: {
-    odd: "Tiền cược khả dụng: 19,990Cược số tiền này?",
-    even: "Tiền cược khả dụng: 19,990Cược số tiền này?",
-    red2: "Tiền cược khả dụng: 19,990Cược số tiền này?",
-    red3: "Tiền cược khả dụng: 19,990Cược số tiền này?",
-    red4: "Tiền cược khả dụng: 4,990Cược số tiền này?",
-    blue3: "Tiền cược khả dụng: 19,990Cược số tiền này?",
-    blue4: "Tiền cược khả dụng: 19,990Cược số tiền này?",
+    odd: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    even: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    red2: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    red3: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    red4: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    blue3: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    blue4: "Tiền cược khả dụng: 1,990Cược số tiền này?",
   },
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
@@ -46,8 +46,8 @@ export const seballLocators = {
     "//div[@id='pf-setting']/div[1]/span",
   ],
   chip: {
-    // "#chip-1": "chip-1.png",
-    // "#chip-5": "chip-5.png",
+    "#chip-1": "chip-1.png",
+    "#chip-5": "chip-5.png",
     "#chip-10": "chip-10.png",
     "#chip-20": "chip-20.png",
     "#chip-50": "chip-50.png",
@@ -125,9 +125,9 @@ export const seballLocators = {
     amount: "//div[@id='bet-detail']//tbody/tr[1]/td[4]",
     winAmount: "//div[@id='bet-detail']//tbody/tr[1]/td[5]",
   },
-  guideContent: `GiớiThiệuSeBalllàtròchơithuộcthểloạiNumberGamekếthợpcácyếutốcủaSeDicenhằmđemđến1trảinghiệmhoàntoànmới.Trongmỗiphiên,4quảbóngsẽđượcrútngẫunhiên,ngườichơiđặtcượcvàocáctùychọnyêuthíchtrướckhibóngđượcrút.Kếtquảcủamỗiphiênđượcxácđịnhtrêntổngđiểmcủa4quảbóngđượcrútvàmàusắctươngứngtrêntừngbóng.CáchChơi4bóngđượcrútngẫunhiêntrongbộ60bóng,đượcđánhsốtừ01đến60.Ngườichơicóthểđặtcượcvàonhiềulựachọncùnglúcvàkhôngbịgiớihạnsốlầnđặtcược.Tổngtiềncượctốiđachomộtphiênlà`,
+  guideContent: `GiớiThiệuSeBalllàtròchơithuộcthểloạiNumberGamekếthợpcácyếutốcủagameXócĐĩanhằmđemđến1trảinghiệmhoàntoànmới.Trongmỗiphiên,4quảbóngsẽđượcrútngẫunhiên,ngườichơiđặtcượcvàocáctùychọnyêuthíchtrướckhibóngđượcrút.Kếtquảcủamỗiphiênđượcxácđịnhtrêntổngđiểmcủa4quảbóngđượcrútvàmàusắctươngứngtrêntừngbóng.CáchChơi4bóngđượcrútngẫunhiêntrongbộ60bóng,đượcđánhsốtừ01đến60.Ngườichơicóthểđặtcượcvàonhiềulựachọncùnglúcvàkhôngbịgiớihạnsốlầnđặtcược.Tổngtiềncượctốiđachomộtphiênlà`,
   vnguide1: `Giới Thiệu
-  Se Ball là trò chơi thuộc thể loại Number Game kết hợp các yếu tố của Se Dice nhằm đem đến 1 trải nghiệm hoàn toàn mới. Trong mỗi phiên, 4 quả bóng sẽ được rút ngẫu nhiên, người chơi đặt cược vào các tùy chọn yêu thích trước khi bóng được rút. Kết quả của mỗi phiên được xác định trên tổng điểm của 4 quả bóng được rút và màu sắc tương ứng trên từng bóng.
+  Se Ball là trò chơi thuộc thể loại Number Game kết hợp các yếu tố của game Xóc Đĩa nhằm đem đến 1 trải nghiệm hoàn toàn mới. Trong mỗi phiên, 4 quả bóng sẽ được rút ngẫu nhiên, người chơi đặt cược vào các tùy chọn yêu thích trước khi bóng được rút. Kết quả của mỗi phiên được xác định trên tổng điểm của 4 quả bóng được rút và màu sắc tương ứng trên từng bóng.
   Cách Chơi
   4 bóng được rút ngẫu nhiên trong bộ 60 bóng, được đánh số từ 01 đến 60.
   Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một phiên là 20,000.

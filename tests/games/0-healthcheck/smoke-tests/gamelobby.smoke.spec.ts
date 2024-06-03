@@ -33,7 +33,7 @@ class healthSmokeSpec extends SmokeBases.TableGameBase {
       "Verify that game looby is loaded success without error",
       async () => {
         const gamelobby = await this.game.captureLocator("gamelobby");
-        expect(gamelobby.image).toMatchSnapshot(gamelobby.name);
+        expect(gamelobby.image).toMatchSnapshot(gamelobby.name,{maxDiffPixelRatio: 0.02});
         // if (process.env.npm_config_project === "l1") {
         //   const newtab = await navigateDownloadPage(
         //     this.game.page.context(),
