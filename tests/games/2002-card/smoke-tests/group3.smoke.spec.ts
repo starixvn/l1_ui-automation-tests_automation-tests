@@ -5,7 +5,7 @@ import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
 const listGames = [  23  ,77,72];
-//  23  ,77,72,39,42,45
+//  23  ,77,72,39,42
 
 class Group1SmokeSpec extends SmokeBases.CardGameBase {
   constructor() {

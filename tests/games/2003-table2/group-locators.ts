@@ -1,10 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export const GroupLocators = {
-  2: [new Components.ImageLocator("oddChoice", 741, 277, 150, 53)],
-  3: [new Components.ImageLocator("fishChoice", 595, 399, 55, 60)],
   22: [new Components.ImageLocator("oddChoice", 741, 277, 292, 53)],
-  9: [new Components.ImageLocator("oddChoice", 572, 291, 100, 40)],
   24: [
     new Components.ImageLocator("evenChoice", 442, 280, 85, 30),
     new Components.ImageLocator("evenChoiceBetBoard", 391, 396, 123, 27),
@@ -13,29 +10,6 @@ export const GroupLocators = {
     new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
   ],
   28: [new Components.ImageLocator("playerChoice", 140, 210, 180, 40)],
-  1: [
-    new Components.ImageLocator("bigChoice", 415, 270, 90, 50),
-    new Components.ImageLocator("bigChoiceBetBoard", 391, 369, 157, 42),
-    new Components.ImageLocator("stake1", 436, 489, 97, 36),
-    new Components.ImageLocator("stake10", 436, 489, 97, 36),
-    new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
-  ],
-  4: [
-    new Components.ImageLocator("bigChoice", 415, 270, 90, 50),
-    new Components.ImageLocator("bigChoiceBetBoard", 391, 369, 157, 42),
-    new Components.ImageLocator("smallChoiceBetBoard", 742, 369, 157, 42),
-    new Components.ImageLocator("stake1", 436, 489, 97, 36),
-    new Components.ImageLocator("stake10", 436, 489, 97, 36),
-    new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
-  ],
-  6: [
-    new Components.ImageLocator("oddChoice", 406, 268, 119, 50),
-    new Components.ImageLocator("oddChoiceBetBoard", 391, 369, 157, 42),
-    new Components.ImageLocator("evenChoiceBetBoard", 742, 369, 157, 42),
-    new Components.ImageLocator("stake1", 436, 489, 97, 36),
-    new Components.ImageLocator("stake10", 436, 489, 97, 36),
-    new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
-  ],
   25: [new Components.ImageLocator("bigChoice", 176, 416, 130, 65)],
   50: [new Components.ImageLocator("bigChoice", 274, 329, 63, 39)],
   59: [
@@ -107,5 +81,13 @@ export const GroupLocators = {
     new Components.ImageLocator("bigChoice", 600, 260, 80, 40),
     new Components.ImageLocator("stake1", 421, 613, 30, 30),
     new Components.ImageLocator("stake10", 421, 613, 30, 30),
+  ],
+  45: [
+    new Components.ImageLocator("hiChoice", 750, 240, 110, 75),
+    new Components.ImageLocator("loChoice", 750, 337, 110, 75),
+    new Components.ImageLocator("stake1", 448, 465, 50, 30),
+    new Components.ImageLocator("stake10", 448, 465, 50, 30),
+    new Components.ImageLocator("startbet", 440, 311, 100, 30),
+    new Components.ImageLocator("collect", 600, 350, 110, 30),
   ],
 };

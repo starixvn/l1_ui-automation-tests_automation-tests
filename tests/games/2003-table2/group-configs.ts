@@ -36,4 +36,7 @@ export const gameConfigs = {
   61: { name: "winthreecards", betchoice: "dragon", betBoard: false },
   71: { name: "colorgame", betchoice: "cold", betBoard: false },
   79: { name: "FootballSlot", betchoice: "big", betBoard: false },
+  43: { name: "bitcoinmaster", betchoice: "up", betBoard: true },
+  45: { name: "hilo", betchoice: "hi", betBoard: false },
+
 };

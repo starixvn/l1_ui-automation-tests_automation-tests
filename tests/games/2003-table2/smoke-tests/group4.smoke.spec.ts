@@ -4,7 +4,8 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [21, 26, 27, 28, 35, 48, 50, 59, 61, 71, 79];
+const listGames = [21, 26, 27, 28, 35, 45, 48, 50, 61, 71, 79, 59];
+// 21, 26, 27, 28, 35, 45, 48, 50, 59, 61, 71, 79
 class Group4SmokeSpec extends SmokeBases.TableGameBase {
   constructor() {
     let smokeOptions: SmokeBases.IBaseOptions = {
@@ -53,7 +54,7 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
             gameConfigs[gameId].betBoard;
 
           if (gameId == 48) {
-            await this.game.waitForTimeout(5000);
+            await this.game.waitForTimeout(10000);
             await this.clickLocator("closeguide");
           }
         }
@@ -80,16 +81,21 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
           // Act
-          const placeBetResponse = await this.placeBet(
-            this.options.gameConfiguration,
-            bet.choice,
-            bet.amount
-          );
+          let placeBetResponse, settledResults;
 
-          const settledResults = await this.game.waitForSettlement();
+          if (gameId != 45) {
+            placeBetResponse = await this.placeBet(
+              this.options.gameConfiguration,
+              bet.choice,
+              bet.amount
+            );
+            expect(placeBetResponse.endBet).toBe(bet.amount);
+            settledResults = await this.game.waitForSettlement();
+          } else {
+            settledResults = await this.placeBethilo(bet.choice, bet.amount);
+          }
+
           // Assert
-
-          expect(placeBetResponse.endBet).toBe(bet.amount);
           expect(settledResults.winAmount).not.toBe("undefined");
           await this.game.waitForTimeout(2000);
         }
@@ -145,6 +151,23 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
     for (const iterator of listGames) {
       this.smokeTests(iterator);
     }
+  }
+
+  async placeBethilo(choice: string, amount: number) {
+    this.game.attachSocketAndCaptureEvent(GameEvent.EndDeal);
+    await this.clickLocator("stake" + amount);
+    await this.clickLocator("startbet", 2000);
+    await this.clickLocator(choice + "Choice", 1000);
+    await this.clickLocator("lo" + "Choice", 2000); // click multiple choices aim to handle case first card is A
+    await this.clickLocator("collect");
+    let message = await this.game.latestCaptureEvent(GameEvent.EndDeal);
+
+    let settledResults = {
+      settlementResult: message?.result?.settlementResult,
+      endBet: message?.result?.amount,
+      winAmount: message?.result?.betwin,
+    };
+    return settledResults;
   }
 }
 
