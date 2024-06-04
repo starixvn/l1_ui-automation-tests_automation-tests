@@ -4,7 +4,7 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [1,2,4,6,7,10,22,24,25,27,28,35,48,50,59,61];
+const listGames = [1, 2, 3, 4, 6, 7, 9, 10, 22, 24, 25];
 
 class Group1SmokeSpec extends SmokeBases.TableGameBase {
   constructor() {
@@ -24,15 +24,26 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const ssoLink = global.ssoLink.split("gameId");
+          const tagGame = process.env.npm_config_project === "l2"? "GameID" :"gameId";
+          const ssoLink = global.ssoLink.split(tagGame);
+          console.log(ssoLink);
+          
           await this.game.page.goto(
-            ssoLink[0] + "gameId=" + gameId + "&partnerId=ONEworks1&op=SG"
+            ssoLink[0] + tagGame + "="+ gameId
           );
+          // + "&partnerId=ONEworks1&op=SG"
           if (!process.env.npm_config_env?.includes("local")) {
-            await this.game.click('//input[@value="Submit"]');
+            const frameExists = await this.game.page.$("#frmGame");
+            if (frameExists) {
+                await this.game.page.frameLocator("#frmGame").locator('text=Submit').click();
+            } else {
+              await this.game.page.locator('text=Submit').click();
+            }
           }
           await this.game.waitUntilGameUiLoad();
-
+          // this.game.gameSocket = 
+          global.wsName == gameConfigs[gameId].name
+          
           this.options.locators = GroupLocators[gameId];
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
           this.options.gameConfiguration.id = gameId;
@@ -43,6 +54,7 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
             await this.game.waitForTimeout(5000);
             await this.clickLocator("closeguide");
           }
+          
         }
       );
 
@@ -51,13 +63,15 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
         async () => {
           Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
 
-          const bet = {
+          let bet = {
             choice: gameConfigs[gameId].betchoice,
-            amount:
-              gameId == 22 || gameId == 27
-                ? 10
-                : this.options.placeBetAmount ?? 1,
+            amount:gameId == 22 || gameId == 27 ? 10 : this.options.placeBetAmount ?? 1,
           };
+
+          if (gameId==26) {
+            bet.amount= process.env.npm_config_project === "l2" ? 50 : 10
+          }  
+
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
@@ -67,7 +81,7 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
             bet.choice,
             bet.amount
           );
-
+         
           const settledResults = await this.game.waitForSettlement();
           // Assert
 
@@ -83,13 +97,13 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
     await this.game.waitForTimeout(5000);
 
     let placeBetResponse = await this.betOn(gameConfigs, choice, amount);
-    console.log(placeBetResponse);
 
-    if (placeBetResponse.endBet == -1 || placeBetResponse === "undefined") {
+    if (!placeBetResponse || placeBetResponse.endBet ==-1) {
       console.log("retry place bet");
       await this.game.waitUntilPlaceBet();
       placeBetResponse = await this.betOn(gameConfigs, choice, amount);
     }
+
     return placeBetResponse;
   }
 
@@ -119,7 +133,7 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
     }
   }
 
-  locator(name: string) {
+  locator(name: string) {   
     return this.options.locators.find((x: any) => x.name === name);
   }
 

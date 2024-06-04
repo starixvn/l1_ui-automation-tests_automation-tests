@@ -33,7 +33,7 @@ class FruitSlotSmokeSpec extends SmokeBases.TableGameBase {
       await this.game.waitUntilNextRound()
       await this.game.waitForTimeout(this.options.gameConfiguration.durations.wholeRound - this.options.gameConfiguration.durations.placingBets )
       await this.game.waitForTimeout(2000)
-      const placeBetResponse = await this.player.betOn(bet.choice, bet.amount);
+      const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
       const settledResults = await this.game.waitForSettlement();
 
       // Assert

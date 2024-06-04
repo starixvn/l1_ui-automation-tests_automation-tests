@@ -4,7 +4,7 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [ 39,42 ];
+const listGames = [  23  ,77,72];
 //  23  ,77,72,39,42,45
 
 class Group1SmokeSpec extends SmokeBases.CardGameBase {
@@ -30,7 +30,12 @@ class Group1SmokeSpec extends SmokeBases.CardGameBase {
             ssoLink[0] + "gameId=" + gameId + "&partnerId=ONEworks1&op=SG"
           );
           if (!process.env.npm_config_env?.includes("local")) {
-            await this.game.click('//input[@value="Submit"]');
+            const frameExists = await this.game.page.$("#frmGame");
+            if (frameExists) {
+                await this.game.page.frameLocator("#frmGame").locator('text=Submit').click();
+            } else {
+              await this.game.page.locator('text=Submit').click();
+            }
           }
           await this.game.waitUntilGameUiLoad();
           this.options.locators = GroupLocators[gameId];
