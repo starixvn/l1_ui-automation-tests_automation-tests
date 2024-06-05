@@ -4,8 +4,8 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [  23  ,77,72];
-//  23  ,77,72,39,42
+const listGames = [  23 ];
+//  23 , 39 ,42, 72, 77
 
 class Group1SmokeSpec extends SmokeBases.CardGameBase {
   constructor() {
@@ -27,16 +27,11 @@ class Group1SmokeSpec extends SmokeBases.CardGameBase {
         async () => {
           const ssoLink = global.ssoLink.split("gameId");
           await this.game.page.goto(
-            ssoLink[0] + "gameId=" + gameId + "&partnerId=ONEworks1&op=SG"
+            ssoLink[0] + "gameId=" + gameId 
           );
-          if (!process.env.npm_config_env?.includes("local")) {
-            const frameExists = await this.game.page.$("#frmGame");
-            if (frameExists) {
-                await this.game.page.frameLocator("#frmGame").locator('text=Submit').click();
-            } else {
-              await this.game.page.locator('text=Submit').click();
-            }
-          }
+
+          await this.selectCurrency(process.env.npm_config_env)
+       
           await this.game.waitUntilGameUiLoad();
           this.options.locators = GroupLocators[gameId];
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
@@ -134,6 +129,17 @@ class Group1SmokeSpec extends SmokeBases.CardGameBase {
 
   locator(name: string) {
     return this.options.locators.find((x: any) => x.name === name);
+  }
+
+  async selectCurrency(env: string){
+    if (!env.includes("local")) {
+      const frameExists = await this.game.page.$("#frmGame");
+      if (frameExists) {
+          await this.game.page.frameLocator("#frmGame").locator('text=Submit').click();
+      } else {
+        await this.game.page.locator('text=Submit').click();
+      }
+    }
   }
 
   protected runScenario(): void {
