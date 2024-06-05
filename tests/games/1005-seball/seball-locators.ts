@@ -18,10 +18,10 @@ export const seballLocators = {
     odd: "Tiền cược khả dụng: 1,990Cược số tiền này?",
     even: "Tiền cược khả dụng: 1,990Cược số tiền này?",
     red2: "Tiền cược khả dụng: 1,990Cược số tiền này?",
-    red3: "Tiền cược khả dụng: 1,990Cược số tiền này?",
-    red4: "Tiền cược khả dụng: 1,990Cược số tiền này?",
-    blue3: "Tiền cược khả dụng: 1,990Cược số tiền này?",
-    blue4: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    red3: "Tiền cược khả dụng: 990Cược số tiền này?",
+    red4: "Tiền cược khả dụng: 190Cược số tiền này?",
+    blue3: "Tiền cược khả dụng: 990Cược số tiền này?",
+    blue4: "Tiền cược khả dụng: 190Cược số tiền này?",
   },
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
@@ -130,7 +130,7 @@ export const seballLocators = {
   Se Ball là trò chơi thuộc thể loại Number Game kết hợp các yếu tố của game Xóc Đĩa nhằm đem đến 1 trải nghiệm hoàn toàn mới. Trong mỗi phiên, 4 quả bóng sẽ được rút ngẫu nhiên, người chơi đặt cược vào các tùy chọn yêu thích trước khi bóng được rút. Kết quả của mỗi phiên được xác định trên tổng điểm của 4 quả bóng được rút và màu sắc tương ứng trên từng bóng.
   Cách Chơi
   4 bóng được rút ngẫu nhiên trong bộ 60 bóng, được đánh số từ 01 đến 60.
-  Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một phiên là 20,000.
+  Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một phiên là 2,000.
   Trong một phiên, người chơi chỉ có thể đặt cược vào Chẵn hoặc Lẻ.
   Người chơi hoàn thành đặt cược trước khi thời gian đặt cược kết thúc và không thể hủy cược sau khi đặt.
   Lựa Chọn	Điều Kiện Thắng
@@ -143,9 +143,9 @@ export const seballLocators = {
     2 bóng đỏ và 2 bóng xanh
   Trả Thưởng
   Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay khi kết quả được công bố.
-  Tiền thắng được tính toán dựa trên tỷ lệ trả thưởng.
-  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 40,000.
-  Lựa Chọn	Tỷ Lệ Trả Thưởng	Giới Hạn Cược
+  Tiền thắng được tính toán dựa trên tỷ lệ cược.
+  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 50,000.
+  Lựa Chọn	Tỷ Lệ Cược	Giới Hạn Cược
   (Min - Max)`,
   vnguide2: `Các Quy Định Trong Game
   Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.

@@ -11,7 +11,7 @@ export const seballConfigs: Components.GameConfiguration = {
   },
   choices: ["odd", "even", "red2", "red3", "red4", "blue3", "blue4","drawId"],
   hedgeBetGroups: ["odd", "even"],
-  maxTimeout: 150 * 1000, // miliseconds,
+  maxTimeout: 250 * 1000, // miliseconds,
   odds: {
     odd: 1.96,
     even: 1.96,
