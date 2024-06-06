@@ -49,6 +49,11 @@ export const GroupLocators = {
     new Components.ImageLocator("stake1", 467, 497, 0, 0),
     new Components.ImageLocator("stake10", 467, 497, 0, 0),
   ],
+  8: [
+    new Components.ImageLocator("bigChoice", 228, 330, 60, 50),
+    new Components.ImageLocator("stake1", 441, 616, 0, 0),
+    new Components.ImageLocator("stake10", 441, 616, 0, 0),
+  ],
   61: [new Components.ImageLocator("dragonChoice", 147, 357, 150, 50)],
   48: [
     new Components.ImageLocator("playerChoice", 62, 406, 170, 50),
@@ -74,6 +79,12 @@ export const GroupLocators = {
     new Components.ImageLocator("blackChoice", 776, 260, 120, 85),
     new Components.ImageLocator("stake1", 467, 640, 0, 0),
     new Components.ImageLocator("stake10", 467, 640, 0, 0),
+  ],
+  31: [
+    new Components.ImageLocator("othersChoice", 1050, 121, 170, 40),
+    new Components.ImageLocator("bigChoice", 132, 310, 130, 130),
+    new Components.ImageLocator("stake1", 386, 611, 50, 50),
+    new Components.ImageLocator("stake10", 386, 611, 50, 50),
   ],
   26: [
     new Components.ImageLocator("mountainChoice", 215, 260, 120, 85),
@@ -107,5 +118,10 @@ export const GroupLocators = {
     new Components.ImageLocator("bigChoice", 600, 260, 80, 40),
     new Components.ImageLocator("stake1", 421, 613, 30, 30),
     new Components.ImageLocator("stake10", 421, 613, 30, 30),
+  ],
+  52: [
+    new Components.ImageLocator("bigChoice", 181, 384, 90, 60),
+    new Components.ImageLocator("stake1", 5, 5, 5, 5),
+    new Components.ImageLocator("stake10", 5, 5, 5, 5),
   ],
 };

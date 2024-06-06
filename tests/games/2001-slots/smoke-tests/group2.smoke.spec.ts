@@ -24,10 +24,33 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const ssoLink = global.ssoLink.split("gameId");
+          const tagGame = process.env.npm_config_project === "l2"? "GameID" :"gameId";
+          const ssoLink = global.ssoLink.split(tagGame);
+          const IdMap = new Map([
+            [29, 3829],
+            [38, 3835],
+            [46, 3845],
+            [47, 3846],
+            [49, 3854],
+            [62, 3861],
+            [63, 3862],
+            [64, 3863],
+            [65, 3864],
+            [66, 3867],
+            [68, 3865],
+            [69, 3866],
+            [70, 3869],
+            [74, 3874],
+            [76, 3875],
+
+          ]);
+          const _gameId = process.env.npm_config_project === "l2"? IdMap.get(gameId) :gameId; 
+
           await this.game.page.goto(
-            ssoLink[0] + "gameId=" + gameId + "&partnerId=ONEworks1&op=SG"
+            ssoLink[0] + tagGame + "="+ _gameId
           );
+
+
           if (!process.env.npm_config_env?.includes("local")) {
             const frameExists = await this.game.page.$("#frmGame");
             if (frameExists) {

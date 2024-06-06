@@ -12,7 +12,7 @@ export let GroupConfigs: Components.GameConfiguration = {
   maxTimeout: 150 * 1000, // miliseconds,
   odds: {
   },
-  slotsgame: true,
+  cardgame: true,
   accounts: {
     local: "222241",
     local1: "222241",
@@ -28,7 +28,6 @@ export const gameConfigs = {
   23: {name: "blackjack", betchoice: "1"},
   77: {name: "chineseblackjack", betchoice: "1"},
   72: {name: "pontoon", betchoice: "1"},
-  39: {name: "casinoholdempoker", betchoice: "aa"},
-  42: {name: "texasholdempoker", betchoice: "aa"},
-  45: {name: "hilo", betchoice: "hi"},
+  39: {name: "casinoholdempoker", betchoice: "ante"},
+  42: {name: "texasholdempoker", betchoice: "ante"},
 };

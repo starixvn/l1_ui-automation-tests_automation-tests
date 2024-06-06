@@ -1,0 +1,11 @@
+docker-build-game-2004:
+  extends: docker-build
+  variables:
+    GAMEID: 2004
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/2004-*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile

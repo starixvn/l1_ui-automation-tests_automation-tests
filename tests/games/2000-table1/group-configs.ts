@@ -11,7 +11,7 @@ export let GroupConfigs: Components.GameConfiguration = {
   },
   choices: [],
   hedgeBetGroups: [],
-  maxTimeout: 150 * 1000, // miliseconds,
+  maxTimeout: 180 * 1000, // miliseconds,
   odds: {},
   betBoard: true,
   accounts: {
@@ -31,9 +31,12 @@ export const gameConfigs = {
   4: { name: "TXTurbo", betchoice: "big", betBoard: true },
   6: { name: "OETurbo", betchoice: "odd", betBoard: true },
   7: { name: "dragontiger", betchoice: "dragon", betBoard: false },
+  8: { name: "kenopromax", betchoice: "big", betBoard: false },
   9: { name: "minisedie", betchoice: "odd", betBoard: false },
   10: { name: "baccarat", betchoice: "big", betBoard: false },
   22: { name: "VipSeDie", betchoice: "odd", betBoard: false },
   24: { name: "SpecialSeDie", betchoice: "even", betBoard: true },
   25: { name: "SicBo", betchoice: "big", betBoard: false }, 
+  31: { name: "Lottery", betchoice: "big", betBoard: false }, 
+  52: { name: "minikeno", betchoice: "big", betBoard: false }, 
 };

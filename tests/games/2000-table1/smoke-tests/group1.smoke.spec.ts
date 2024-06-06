@@ -4,8 +4,8 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [1, 2, 3, 4, 6, 7, 9, 10, 22, 24, 25];
-
+const listGames = [ 1, 2, 3, 4, 6, 7, 8, 9, 10, 22, 24, 25, 31];
+//1, 2, 3, 4, 6, 7, 8, 9, 10, 22, 24, 25, 31, 52
 class Group1SmokeSpec extends SmokeBases.TableGameBase {
   constructor() {
     let smokeOptions: SmokeBases.IBaseOptions = {
@@ -24,26 +24,47 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const tagGame = process.env.npm_config_project === "l2"? "GameID" :"gameId";
+          const tagGame =
+            process.env.npm_config_project === "l2" ? "GameID" : "gameId";
           const ssoLink = global.ssoLink.split(tagGame);
-          console.log(ssoLink);
-          
-          await this.game.page.goto(
-            ssoLink[0] + tagGame + "="+ gameId
-          );
-          // + "&partnerId=ONEworks1&op=SG"
+          const IdMap = new Map([
+            [1, 3802],
+            [2, 3803],
+            [3, 3804],
+            [4, 3805],
+            [6, 3807],
+            [7, 3808],
+            [9, 3823],
+            [10, 3810],
+            [22, 3824],
+            [24, 3825],
+            [25, 3821],
+            [8, 3809],
+            [31, 3830],
+            [52, 3848],
+          ]);
+          const _gameId =
+            process.env.npm_config_project === "l2"
+              ? IdMap.get(gameId)
+              : gameId;
+
+          await this.game.page.goto(ssoLink[0] + tagGame + "=" + _gameId);
+
           if (!process.env.npm_config_env?.includes("local")) {
             const frameExists = await this.game.page.$("#frmGame");
             if (frameExists) {
-                await this.game.page.frameLocator("#frmGame").locator('text=Submit').click();
+              await this.game.page
+                .frameLocator("#frmGame")
+                .locator("text=Submit")
+                .click();
             } else {
-              await this.game.page.locator('text=Submit').click();
+              await this.game.page.locator("text=Submit").click();
             }
           }
           await this.game.waitUntilGameUiLoad();
-          // this.game.gameSocket = 
-          global.wsName == gameConfigs[gameId].name
-          
+          // this.game.gameSocket =
+          global.wsName == gameConfigs[gameId].name;
+
           this.options.locators = GroupLocators[gameId];
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
           this.options.gameConfiguration.id = gameId;
@@ -54,7 +75,6 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
             await this.game.waitForTimeout(5000);
             await this.clickLocator("closeguide");
           }
-          
         }
       );
 
@@ -65,12 +85,16 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
 
           let bet = {
             choice: gameConfigs[gameId].betchoice,
-            amount:gameId == 22 || gameId == 27 ? 10 : this.options.placeBetAmount ?? 1,
+            amount: this.options.placeBetAmount ?? 1,
           };
 
-          if (gameId==26) {
-            bet.amount= process.env.npm_config_project === "l2" ? 50 : 10
-          }  
+          if (gameId == 26 || gameId == 22 || gameId == 27) {
+            bet.amount = process.env.npm_config_project === "l2" ? 50 : 10;
+          }
+
+          if (gameId == 31) {
+            await this.clickLocator("othersChoice", 2000);
+          }
 
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
@@ -81,7 +105,7 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
             bet.choice,
             bet.amount
           );
-         
+
           const settledResults = await this.game.waitForSettlement();
           // Assert
 
@@ -97,8 +121,9 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
     await this.game.waitForTimeout(5000);
 
     let placeBetResponse = await this.betOn(gameConfigs, choice, amount);
-
-    if (!placeBetResponse || placeBetResponse.endBet ==-1) {
+    console.log(placeBetResponse);
+    
+    if (!placeBetResponse || placeBetResponse.endBet == -1) {
       console.log("retry place bet");
       await this.game.waitUntilPlaceBet();
       placeBetResponse = await this.betOn(gameConfigs, choice, amount);
@@ -133,7 +158,7 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
     }
   }
 
-  locator(name: string) {   
+  locator(name: string) {
     return this.options.locators.find((x: any) => x.name === name);
   }
 
