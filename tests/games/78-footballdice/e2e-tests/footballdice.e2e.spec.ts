@@ -76,7 +76,12 @@ protected LedBarTests(): void {
 });
 }
 
+protected turnbackGame(): void {
+}
 
+protected returnGameLobby(): void {
+  
+}
 
 }
 
