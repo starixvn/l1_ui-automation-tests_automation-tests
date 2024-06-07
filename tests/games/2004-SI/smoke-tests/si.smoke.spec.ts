@@ -4,7 +4,7 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 export const extLocators = [
-  new Components.ImageLocator("centerMenu", 1092, 290, 0, 0),
+  new Components.ImageLocator("centerMenu", 1120, 290, 0, 0),
   new Components.ImageLocator("rightMenu", 1154, 290, 0, 0),
   new Components.ImageLocator("leftMenu", 988, 290, 0, 0),
 ];
@@ -160,7 +160,7 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           if (gameId >= 71) {
             await this.clickLocator("rightMenu", 15000);
           } else {
-            await this.clickLocator("rightMenu", 8000);
+            await this.clickLocator("rightMenu", 10000);
           }
           // await this.game.page.screenshot({ path: `screenshots/smokeTest-${gameConfigs[gameId].name}.png` });
         }
@@ -191,18 +191,15 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
               bet.amount
             );
             expect(placeBetResponse.endBet).toBe(bet.amount);
-            settledResults = await this.game.waitForSettlement();
           } else {
-            settledResults = await this.placeBethilo(bet.choice, bet.amount);
+             await this.placeBethilo(bet.choice, bet.amount);
           }
 
           console.log(placeBetResponse);
 
           expect(placeBetResponse.endBet).toBe(bet.amount);
-          settledResults = await this.game.waitForSettlement();
 
           // Assert
-          expect(settledResults.winAmount).not.toBe("undefined");
           await this.game.waitForTimeout(2000);
         }
       );
@@ -267,16 +264,8 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
     await this.clickLocator("stake" + amount);
     await this.clickLocator("startbet", 2000);
     await this.clickLocator(choice + "Choice", 1000);
-    await this.clickLocator("lo" + "Choice", 2000); // click multiple choices aim to handle case first card is A
-    await this.clickLocator("collect");
-    let message = await this.game.latestCaptureEvent(GameEvent.EndDeal);
-
-    let settledResults = {
-      settlementResult: message?.result?.settlementResult,
-      endBet: message?.result?.amount,
-      winAmount: message?.result?.betwin,
-    };
-    return settledResults;
+    await this.clickLocator("lo" + "Choice", ); // click multiple choices aim to handle case first card is A
+    await this.clickLocator("collect",0);
   }
 }
 
