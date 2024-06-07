@@ -33,7 +33,7 @@ export const GroupLocators = {
     new Components.ImageLocator("startbet", 1054, 424, 0, 0),
     new Components.ImageLocator("collect", 1110, 515, 0, 0),
   ],
-  25: [new Components.ImageLocator("bigChoice", 1030, 418, 0, 0),
+  25: [new Components.ImageLocator("playerChoice", 1044, 506, 0, 0),
     new Components.ImageLocator("stake1",1035, 609, 0, 0),
     new Components.ImageLocator("stake10", 1035, 609, 0, 0),
   ],

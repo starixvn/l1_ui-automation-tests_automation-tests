@@ -31,9 +31,12 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
         `Verify that game mini Sedie can be opened.`,
         async () => {
           await this.game.page.goto(global.authLink);
+          const isPopup = await this.game.page.locator('#TW_Close_Btn');
+          if (isPopup) {
+            await isPopup.click();
+          }
           await this.game.page.focus(MemberSiteLocators.rightCollapseMenu);
           await this.game.click(MemberSiteLocators.MiniGamesbtn);
-          console.log(`MemberSiteLocators.instantPlayIcon`);
           await this.game.click(MemberSiteLocators.instantPlayIcon);
           await this.game.click("text=→", 1000);
           await this.game.click("text=→", 1000);
@@ -69,7 +72,6 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
             amount: this.options.placeBetAmount ?? 1,
           };
 
-          console.log(bet);
 
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
@@ -191,15 +193,12 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
               bet.amount
             );
             expect(placeBetResponse.endBet).toBe(bet.amount);
+            expect(placeBetResponse.endBet).toBe(bet.amount);
+
           } else {
              await this.placeBethilo(bet.choice, bet.amount);
           }
 
-          console.log(placeBetResponse);
-
-          expect(placeBetResponse.endBet).toBe(bet.amount);
-
-          // Assert
           await this.game.waitForTimeout(2000);
         }
       );
