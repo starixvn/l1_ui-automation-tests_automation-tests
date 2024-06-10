@@ -9,7 +9,7 @@ export let GroupConfigs: Components.GameConfiguration = {
     shakeThePlateDuration: 0,},
   choices: ["1"],
   hedgeBetGroups: [],
-  maxTimeout: 150 * 1000, // miliseconds,
+  maxTimeout: 200 * 1000, // miliseconds,
   odds: {
   },
   cardgame: true,

@@ -5,8 +5,8 @@ import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 export const extLocators = [
   new Components.ImageLocator("centerMenu", 1120, 290, 0, 0),
-  new Components.ImageLocator("rightMenu", 1154, 290, 0, 0),
-  new Components.ImageLocator("leftMenu", 988, 290, 0, 0),
+  new Components.ImageLocator("rightMenu", 1165, 290, 0, 0),
+  new Components.ImageLocator("leftMenu", 905, 290, 0, 0),
 ];
 
 const lstOtherGames = [7, 3, 45, 10, 25, 71, 80];
@@ -30,14 +30,14 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
       await Components.test.step(
         `Verify that game mini Sedie can be opened.`,
         async () => {
-          await this.game.page.goto(global.authLink);
+          await this.game.page.goto(global.authUrl);
           const isPopup = await this.game.page.locator('#TW_Close_Btn');
           if (isPopup) {
             await isPopup.click();
           }
           await this.game.page.focus(MemberSiteLocators.rightCollapseMenu);
-          await this.game.click(MemberSiteLocators.MiniGamesbtn);
-          await this.game.click(MemberSiteLocators.instantPlayIcon);
+          await this.game.click(MemberSiteLocators.MiniGamesbtn,1000);
+          await this.game.click(MemberSiteLocators.instantPlayIcon,1000);
           await this.game.click("text=→", 1000);
           await this.game.click("text=→", 1000);
           await this.game.click(MemberSiteLocators.MiniSeDiegame, 1000);
@@ -121,8 +121,6 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
             amount: this.options.placeBetAmount ?? 1,
           };
 
-          console.log(bet);
-
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
@@ -159,11 +157,8 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           this.options.gameConfiguration.id = gameId;
           this.options.gameConfiguration.betBoard =
             gameConfigs[gameId].betBoard;
-          if (gameId >= 71) {
             await this.clickLocator("rightMenu", 15000);
-          } else {
-            await this.clickLocator("rightMenu", 10000);
-          }
+          
           // await this.game.page.screenshot({ path: `screenshots/smokeTest-${gameConfigs[gameId].name}.png` });
         }
       );
@@ -178,13 +173,12 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
             amount: this.options.placeBetAmount ?? 1,
           };
 
-          console.log(bet);
 
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
           // Act
-          let placeBetResponse, settledResults;
+          let placeBetResponse;
 
           if (gameId != 45) {
             placeBetResponse = await this.placeBet(
@@ -205,11 +199,13 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
     });
   }
 
+
   async placeBet(gameConfigs: any, choice: string, amount: number) {
-    await this.game.waitForTimeout(2000);
-
+    console.log('start place bet',choice);
+    
     let placeBetResponse = await this.betOn(gameConfigs, choice, amount);
-
+    console.log(`placebet response`,placeBetResponse);
+    
     if (!placeBetResponse || placeBetResponse.endBet == -1) {
       console.log("retry place bet");
       await this.game.waitUntilPlaceBet();

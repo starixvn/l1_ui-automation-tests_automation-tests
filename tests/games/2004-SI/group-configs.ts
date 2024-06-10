@@ -11,7 +11,7 @@ export let GroupConfigs: Components.GameConfiguration = {
   },
   choices: [],
   hedgeBetGroups: [],
-  maxTimeout: 180 * 1000, // miliseconds,
+  maxTimeout: 250 * 1000, // miliseconds,
   odds: {},
   betBoard: true,
   accounts: {

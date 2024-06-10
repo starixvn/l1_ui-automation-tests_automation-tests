@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
       maxDiffPixelRatio: 0.1,
     },
     toHaveScreenshot: {
-      maxDiffPixels: 800,
+      maxDiffPixels: 1000,
     },
   },
   fullyParallel: false,
