@@ -5,7 +5,7 @@ import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 export const extLocators = [
   new Components.ImageLocator("centerMenu", 1120, 290, 0, 0),
-  new Components.ImageLocator("rightMenu", 1200, 290, 0, 0),
+  new Components.ImageLocator("rightMenu", 1180, 290, 0, 0),
 ];
 
 const lstOtherGames = [7, 3, 45, 10, 25, 71, 80];
