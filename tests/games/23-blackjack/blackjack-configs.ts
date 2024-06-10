@@ -16,6 +16,7 @@ export const BlackJackConfigs: Components.GameConfiguration = {
     blackjack: 2.5,
   },
   cardgame: true,
+  isDoubleFunction: false,
   accounts: {
     local: "222241",
     local1: "222241",
