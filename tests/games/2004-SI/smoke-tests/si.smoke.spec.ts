@@ -5,8 +5,7 @@ import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 export const extLocators = [
   new Components.ImageLocator("centerMenu", 1120, 290, 0, 0),
-  new Components.ImageLocator("rightMenu", 1165, 290, 0, 0),
-  new Components.ImageLocator("leftMenu", 905, 290, 0, 0),
+  new Components.ImageLocator("rightMenu", 1200, 290, 0, 0),
 ];
 
 const lstOtherGames = [7, 3, 45, 10, 25, 71, 80];
@@ -157,8 +156,13 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           this.options.gameConfiguration.id = gameId;
           this.options.gameConfiguration.betBoard =
             gameConfigs[gameId].betBoard;
-            await this.clickLocator("rightMenu", 15000);
-          
+
+          if (gameId >=71) {
+            await this.clickLocator("rightMenu", 18000);
+          }
+          else{
+            await this.clickLocator("rightMenu", 8000);
+          }
           // await this.game.page.screenshot({ path: `screenshots/smokeTest-${gameConfigs[gameId].name}.png` });
         }
       );
@@ -202,7 +206,7 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
 
   async placeBet(gameConfigs: any, choice: string, amount: number) {
     console.log('start place bet',choice);
-    
+
     let placeBetResponse = await this.betOn(gameConfigs, choice, amount);
     console.log(`placebet response`,placeBetResponse);
     
