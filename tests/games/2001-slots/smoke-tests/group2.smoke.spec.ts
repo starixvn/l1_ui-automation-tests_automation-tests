@@ -81,10 +81,14 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
         async () => {
           Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
 
-          const bet = {
+          let bet = {
             choice: this.options.placeBetChoices,
             amount: this.options.placeBetAmount ?? 1,
           };
+
+          if (gameId==66) {bet.amount = process.env.npm_config_project === "l2" ? 5 : 1} 
+
+
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
