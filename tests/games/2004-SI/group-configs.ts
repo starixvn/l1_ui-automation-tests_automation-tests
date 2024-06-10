@@ -31,7 +31,7 @@ export const gameConfigs = {
   9: { name: "minisedie", betchoice: "odd", betBoard: false },
   10: { name: "baccarat", betchoice: "player", betBoard: false },
   45: { name: "hilo", betchoice: "hi", betBoard: false },
-  25: { name: "sicbo", betchoice: "player", betBoard: false },
+  25: { name: "sicbo", betchoice: "big", betBoard: false },
   71: { name: "colorgame", betchoice: "yellow", betBoard: false },
   80: { name: "cointoss", betchoice: "trump", betBoard: false },
 

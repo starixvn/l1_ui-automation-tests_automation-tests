@@ -34,7 +34,7 @@ export const GroupLocators = {
     new Components.ImageLocator("collect", 1110, 515, 0, 0),
   ],
   25: [
-    new Components.ImageLocator("playerChoice", 1040, 500, 0, 0),
+    new Components.ImageLocator("bigChoice", 1040, 418, 0, 0),
     new Components.ImageLocator("stake1",1035, 609, 0, 0),
     new Components.ImageLocator("stake10", 1035, 609, 0, 0),
   ],
