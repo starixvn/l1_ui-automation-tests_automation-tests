@@ -30,9 +30,8 @@ class FootballSpinSmokeSpec extends SmokeBases.TableGameBase {
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
            
       // Act 
-      await this.game.waitUntilNextRound()
+      await this.game.waitUntilPlaceBet()
       await this.game.waitForTimeout(this.options.gameConfiguration.durations.wholeRound - this.options.gameConfiguration.durations.placingBets )
-      await this.game.waitForTimeout(2000)
       const placeBetResponse = await this.player.betOn(bet.choice, bet.amount);
       const settledResults = await this.game.waitForSettlement();
 

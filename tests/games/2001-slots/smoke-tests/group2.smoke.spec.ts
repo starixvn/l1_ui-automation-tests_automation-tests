@@ -73,6 +73,9 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
           this.options.locators = locatorMap.get(gameId) || defaultLocator;
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
           this.options.gameConfiguration.id = gameId;
+          if (gameId==47) {
+            await this.game.waitForTimeout(5000);
+          }
         }
       );
 
@@ -110,7 +113,7 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
     await this.clickLocator("choiceMenu", 2000);
     await this.clickLocator("clearChoices", 2000);
     await this.clickLocator(`${choice}Choice`, 2000);
-    await this.clickLocator("submitPayline");
+    await this.clickLocator("submitPayline",2000);
     await this.clickLocator("stakeMenu");
     await this.clickLocator(`stake${amount}`);
     await this.clickLocator(`spin`, 0);
