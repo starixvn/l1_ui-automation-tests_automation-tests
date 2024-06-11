@@ -4,8 +4,8 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [  47];
-// 29, 38, 46, 49, 62, 63, 64, 65, 66, 68, 69, 70, 74,76,
+const listGames = [29, 38, 46, 49, 62, 63, 64, 65, 66, 68, 69, 70, 74, 76, 47];
+
 class Group1SmokeSpec extends SmokeBases.SlotGameBase {
   constructor() {
     let smokeOptions: SmokeBases.IBaseOptions = {
@@ -24,7 +24,8 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const tagGame = process.env.npm_config_project === "l2"? "GameID" :"gameId";
+          const tagGame =
+            process.env.npm_config_project === "l2" ? "GameID" : "gameId";
           const ssoLink = global.ssoLink.split(tagGame);
           const IdMap = new Map([
             [29, 3829],
@@ -42,21 +43,23 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
             [70, 3869],
             [74, 3874],
             [76, 3875],
-
           ]);
-          const _gameId = process.env.npm_config_project === "l2"? IdMap.get(gameId) :gameId; 
+          const _gameId =
+            process.env.npm_config_project === "l2"
+              ? IdMap.get(gameId)
+              : gameId;
 
-          await this.game.page.goto(
-            ssoLink[0] + tagGame + "="+ _gameId
-          );
-
+          await this.game.page.goto(ssoLink[0] + tagGame + "=" + _gameId);
 
           if (!process.env.npm_config_env?.includes("local")) {
             const frameExists = await this.game.page.$("#frmGame");
             if (frameExists) {
-                await this.game.page.frameLocator("#frmGame").locator('text=Submit').click();
+              await this.game.page
+                .frameLocator("#frmGame")
+                .locator("text=Submit")
+                .click();
             } else {
-              await this.game.page.locator('text=Submit').click();
+              await this.game.page.locator("text=Submit").click();
             }
           }
           await this.game.waitUntilGameUiLoad();
@@ -86,8 +89,9 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
             amount: this.options.placeBetAmount ?? 1,
           };
 
-          if (gameId==66) {bet.amount = process.env.npm_config_project === "l2" ? 5 : 1} 
-
+          if (gameId == 66) {
+            bet.amount = process.env.npm_config_project === "l2" ? 5 : 1;
+          }
 
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
@@ -110,9 +114,9 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
     await this.clickLocator("choiceMenu", 2000);
     await this.clickLocator("clearChoices", 2000);
     await this.clickLocator(`${choice}Choice`, 2000);
-    await this.clickLocator("submitPayline",2000);
+    await this.clickLocator("submitPayline", 2000);
     await this.clickLocator("stakeMenu");
-    await this.clickLocator(`stake${amount}`,2000);
+    await this.clickLocator(`stake${amount}`, 2000);
     await this.clickLocator(`spin`, 0);
     return this.game.waitForEndBet();
   }
