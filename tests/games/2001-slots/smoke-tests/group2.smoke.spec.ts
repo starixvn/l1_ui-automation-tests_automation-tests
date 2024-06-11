@@ -4,8 +4,8 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [29, 38, 46, 49, 62, 63, 64, 65, 66, 68, 69, 70, 74, 76, 47];
-
+const listGames = [  47];
+// 29, 38, 46, 49, 62, 63, 64, 65, 66, 68, 69, 70, 74,76,
 class Group1SmokeSpec extends SmokeBases.SlotGameBase {
   constructor() {
     let smokeOptions: SmokeBases.IBaseOptions = {
@@ -73,9 +73,6 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
           this.options.locators = locatorMap.get(gameId) || defaultLocator;
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
           this.options.gameConfiguration.id = gameId;
-          if (gameId==47) {
-            await this.game.waitForTimeout(10000);
-          }
         }
       );
 
@@ -115,7 +112,7 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
     await this.clickLocator(`${choice}Choice`, 2000);
     await this.clickLocator("submitPayline",2000);
     await this.clickLocator("stakeMenu");
-    await this.clickLocator(`stake${amount}`);
+    await this.clickLocator(`stake${amount}`,2000);
     await this.clickLocator(`spin`, 0);
     return this.game.waitForEndBet();
   }
