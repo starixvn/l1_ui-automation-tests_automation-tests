@@ -74,7 +74,7 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
           this.options.gameConfiguration.id = gameId;
           if (gameId==47) {
-            await this.game.waitForTimeout(5000);
+            await this.game.waitForTimeout(10000);
           }
         }
       );
