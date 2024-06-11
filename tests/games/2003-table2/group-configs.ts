@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export let GroupConfigs: Components.GameConfiguration = {
-  id: 21,
+  id: 45,
   name: "QuickSmokeTests",
   durations: {
     wholeRound: 0,
@@ -21,7 +21,7 @@ export let GroupConfigs: Components.GameConfiguration = {
     l2local2: "222222",
     local3: "222222",
   },
-  productId: { l1: "1638", l2: 3827 },
+  productId: { l1: "1651", l2: 3844 },
 };
 
 export const gameConfigs = {

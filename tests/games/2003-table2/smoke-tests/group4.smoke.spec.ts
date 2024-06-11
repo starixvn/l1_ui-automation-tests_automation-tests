@@ -10,7 +10,7 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
   constructor() {
     let smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: GroupConfigs,
-      locators: GroupLocators[1],
+      locators: GroupLocators[45],
       waitBetTimeout: 8000,
       placeBetChoices: [GroupConfigs.choices[0]],
       snapshotFolderPath: __filename,
