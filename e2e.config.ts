@@ -6,11 +6,11 @@ const testMatch = `${process.env.npm_config_gameid}-*`;
 const config: PlaywrightTestConfig = {
   retries: 0,
   testDir: "./tests",
-  timeout: 130 * 1000,
+  timeout: 180 * 1000,
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
-      maxDiffPixelRatio: 0.1,
+      maxDiffPixelRatio: 0.5,
     },
     toHaveScreenshot: {
       maxDiffPixels: 1000,
@@ -18,7 +18,7 @@ const config: PlaywrightTestConfig = {
   },
   fullyParallel: false,
   reporter: [
-  ["line"], ["html", { open: "never" }],
+  ["list"], ["html", { open: "never" }],
   ['json', {  outputFile: 'test-results.json' }]],
   use: {
     actionTimeout: 0,

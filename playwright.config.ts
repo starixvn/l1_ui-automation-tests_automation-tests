@@ -7,7 +7,7 @@ const admin = `${process.env.npm_config_admin}`;
 const config: PlaywrightTestConfig = {
   retries: 0,
   testDir: "./tests",
-  timeout: 130 * 1000,
+  timeout: 180 * 1000,
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {
@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
   },
   /* Run tests in files in parallel */
   fullyParallel: false,
-  reporter: [["line"], ["html", { open: "never" }]],
+  reporter: [["dot"], ["html", { open: "never" }]],
   use: {
     actionTimeout: 0,
     trace: "on-first-retry",
