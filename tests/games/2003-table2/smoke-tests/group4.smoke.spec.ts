@@ -83,12 +83,12 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           let bet = {
             choice: gameConfigs[gameId].betchoice,
             amount:
-              gameId == 22 || gameId == 27
+              gameId == 22
                 ? 10
                 : this.options.placeBetAmount ?? 1,
           };
 
-          if (gameId == 26) {
+          if (gameId == 26 || gameId == 27) {
             bet.amount = process.env.npm_config_project === "l2" ? 50 : 10;
           }
 

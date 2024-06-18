@@ -29,9 +29,10 @@ export const GroupLocators = {
     new ImageLocator("stakeMenu", 360, 666),
     new ImageLocator("stake1", 525, 255),
     new ImageLocator("stake5", 525, 255),
-    new ImageLocator("spin", 1100, 600, 30, 30),
+    new ImageLocator("spin", 1100, 630, 30, 30),
     new ImageLocator("submitPayline", 525, 255),
     new ImageLocator("clearChoices", 481, 331),
+    new ImageLocator("25Choice", 147, 569),
   ],
   46:[
     new ImageLocator("choiceMenu", 226, 658),
