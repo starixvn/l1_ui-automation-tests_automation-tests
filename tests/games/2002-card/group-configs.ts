@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 
 export let GroupConfigs: Components.GameConfiguration = {
-  id: 23,
+  id: 42,
   name: "QuickSmokeTestsCards",
   durations:{ wholeRound: 0,
     placingBets: 0,
@@ -20,7 +20,7 @@ export let GroupConfigs: Components.GameConfiguration = {
     l2local2: "222241",
     local3: "222241",
   },
-  productId: { l1: "1634", l2: 3820 },
+  productId: { l1: "1652", l2: 3837 },
 };
 
 

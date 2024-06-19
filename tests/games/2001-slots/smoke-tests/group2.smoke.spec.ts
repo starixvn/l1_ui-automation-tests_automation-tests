@@ -89,12 +89,8 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
             amount: this.options.placeBetAmount ?? 1,
           };
 
-          if (gameId == 66) {
+          if (gameId == 66 || gameId == 47) {
             bet.amount = process.env.npm_config_project === "l2" ? 5 : 1;
-          }
-
-          if (gameId == 47) {
-            bet.amount = process.env.npm_config_project === "l2" ? 10 : 1;
           }
 
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
