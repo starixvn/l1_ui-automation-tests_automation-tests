@@ -93,6 +93,10 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
             bet.amount = process.env.npm_config_project === "l2" ? 5 : 1;
           }
 
+          if (gameId == 47) {
+            bet.amount = process.env.npm_config_project === "l2" ? 10 : 1;
+          }
+
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
