@@ -31,7 +31,6 @@ class FootballSpinSmokeSpec extends SmokeBases.TableGameBase {
            
       // Act 
       await this.game.waitUntilPlaceBet()
-      await this.game.waitForTimeout(this.options.gameConfiguration.durations.wholeRound - this.options.gameConfiguration.durations.placingBets )
       const placeBetResponse = await this.player.betOn(bet.choice, bet.amount);
       const settledResults = await this.game.waitForSettlement();
 
@@ -50,9 +49,7 @@ class FootballSpinSmokeSpec extends SmokeBases.TableGameBase {
       Components.test.setTimeout(maxTimeout);
 
       // Act
-      await this.game.waitUntilNextRound()
-      await this.game.waitForTimeout(durations.wholeRound - durations.placingBets )
-      await this.game.waitForTimeout(3000)
+      await this.game.waitUntilPlaceBet()
 
       await this.player.betOn(hedgeBetGroups[0][0], this.options.placeBetAmount ?? 1);
       await this.player.betOn(hedgeBetGroups[0][1], this.options.placeBetAmount ?? 1);
