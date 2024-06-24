@@ -22,13 +22,13 @@ const config: PlaywrightTestConfig = {
   reporter: [["dot"], ["html", { open: "never" }]],
   use: {
     actionTimeout: 0,
-    trace: "on-first-retry",
+    trace: "retain-on-first-failure",
+    screenshot: "only-on-failure",
     headless: true,
     viewport: {
       width: 1280,
       height: 720,
     },
-    screenshot: "only-on-failure",
     launchOptions: {
       args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu"],
     },

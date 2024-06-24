@@ -27,7 +27,7 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
       locators: BigSmallCityLocators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
-      placeBetAmount: 10,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
 
     super(smokeOptions);
