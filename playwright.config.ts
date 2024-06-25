@@ -22,7 +22,7 @@ const config: PlaywrightTestConfig = {
   reporter: [["dot"], ["html", { open: "never" }]],
   use: {
     actionTimeout: 0,
-    trace: "retain-on-first-failure",
+    trace: "off",
     screenshot: "only-on-failure",
     headless: true,
     viewport: {

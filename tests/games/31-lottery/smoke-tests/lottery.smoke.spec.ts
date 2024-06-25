@@ -57,6 +57,15 @@ class LotterySmokeSpec extends SmokeBases.TableGameBase {
     });
   }
 
+  protected hedgeBetTests(): void {
+    Components.test("THEN player should get error when they hedge their bets", async () => {
+      // Act
+      const endBetMsg = await this.player.placeHedgeBet(LotteryConfigs.hedgeBetGroups[0], this.options.placeBetAmount);
+      // Assert
+      expect(endBetMsg).toMatchObject({ endBet: -1, notice: { errorCode: 'SB1939', hedgeBetGroup: [ 'big', 'small' ] }});
+  });
+  }
+
 }
 
 new LotterySmokeSpec().start();
