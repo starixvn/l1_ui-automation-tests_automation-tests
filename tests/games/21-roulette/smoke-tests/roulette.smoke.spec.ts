@@ -61,34 +61,16 @@ class RouletteSmokeSpec extends SmokeBases.MiniGameBase {
     });
   }
 
-  protected maxBetTests(): void {
-    Components.test(
-      "THEN player should get error when they reach max bet",
-      async () => {
-        // Arrange
-        Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-        await this.game.waitUntilPlaceBet();
-        const bet = {
-          choice: this.options.placeBetChoices[0],
-          amount: [this.options.placeBetAmount ?? 1, 1000],
-        };
+   protected inGameOddsTests(): void {
+    Components.test("AND odds should be correct", async () => {
+      // Assert
+      await this.game.waitForTimeout(3000);
+      expect(this.game.odds).toStrictEqual(this.options.gameConfiguration.odds);
+  });
+  }
 
-        // Act
-        await this.game.clickToChoice(bet.choice);
-        await this.game.waitForTimeout(1000);
-        await this.game.clickSubmitBet();
-        for (let index = 0; index < 10; index++) {
-          await this.game.clickLocator(`btnRightArrow`);
-          await this.game.waitForTimeout(100);
-        }
-        await this.game.clickToChoice(bet.choice);
-        await this.game.clickSubmitBet();
-        const error = await this.game.captureErrorBetLimit();
-
-        // Assert
-        expect(error.image).toMatchSnapshot(error.name, {maxDiffPixelRatio : 0.3});
-      }
-    );
+  protected runScenario(): void {
+    super.runScenario();
   }
 }
 

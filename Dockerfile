@@ -1,4 +1,4 @@
-FROM hub.lumigame.com/base/playwright:v1.24.0-focal
+FROM hub.lumigame.com/base/playwright:v1.44.0-focal
 ARG gameId
 
 WORKDIR /app
