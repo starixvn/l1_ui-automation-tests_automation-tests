@@ -13,14 +13,6 @@ export const luckythreeLocators = {
     "#icon-home": "icohome.png",
     "#icon-menu": "icomenu.png",
   },
-  suggestionBets: {
-    over: "Tiền cược khả dụng: 990Cược số tiền này?",
-    under: "Tiền cược khả dụng: 990Cược số tiền này?",
-    red2: "Tiền cược khả dụng: 990Cược số tiền này?",
-    red3: "Tiền cược khả dụng: 990Cược số tiền này?",
-    blue3: "Tiền cược khả dụng: 990Cược số tiền này?",
-    blue2: "Tiền cược khả dụng: 240Cược số tiền này?",
-  },
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
     "//*[@class='text-center copyright']": "© 2024 Bản quyền thuộc về SABA xD",
