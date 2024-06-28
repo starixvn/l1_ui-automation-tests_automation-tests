@@ -71,9 +71,9 @@ export const seballLocators = {
     '//*[@id="bar-statistic"]/div[2]/div[5]/span[1]': "blue4.png",
   },
   statisticItems: {
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_odd')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-odd')]":
       "//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_even')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-even')]":
       "//*[@id='bar-statistic']/div[1]/div[2]/span[2]",
   },
   historyHeader: {
@@ -119,13 +119,13 @@ Tiền thắng được tính toán dựa trên tỷ lệ cược.
 Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá @MAXWINPERROUND.
 Lựa Chọn	Tỷ Lệ Cược	Giới Hạn Cược
 (Min - Max)
-Lẻ	0.96:1	@MM0
-Chẵn	0.96:1	@MM1
-	13.4:1	@MM6
-	13.4:1	@MM4
-	2.75:1	@MM2
-	2.75:1	@MM3
-	1.4:1	@MM5
+Lẻ	1.96:1	@MM0
+Chẵn	1.96:1	@MM1
+	14.4:1	@MM6
+	14.4:1	@MM4
+	3.75:1	@MM2
+	3.75:1	@MM3
+	2.4:1	@MM5
 Các Quy Định Trong Game
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược khi nghi ngờ khách hàng có những hoạt động gian lận, tham gia lừa đảo, câu kết, rửa tiền hay các hoạt động bất hợp pháp khác.

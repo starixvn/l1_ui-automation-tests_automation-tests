@@ -6,12 +6,12 @@ export const luckythreeLocators = {
     "#img-game-name": "gamename.png",
     "#icon-home": "icohome.png",
     "#icon-menu": "icomenu.png",
-    "//button[contains(@class,'setting_button-setting')]/span": "iconsetting.png",
+    // "//button[contains(@class,'setting_button-setting')]/span": "iconsetting.png",
   },
   inGameUIE2E: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
+    // "#img-game-name": "gamename.png",
+    // "#icon-home": "icohome.png",
+    // "#icon-menu": "icomenu.png",
   },
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
@@ -34,18 +34,6 @@ export const luckythreeLocators = {
     "#random-client-seed",
     "//div[@id='pf-setting']/div[1]/span",
   ],
-  chip: {
-    // "#chip-1": "chip-1.png",
-    // "#chip-5": "chip-5.png",
-    "#chip-10": "chip-10.png",
-    "#chip-20": "chip-20.png",
-    "#chip-50": "chip-50.png",
-    "#chip-100": "chip-100.png",
-    "#chip-200": "chip-200.png",
-    "#chip-500": "chip-500.png",
-    "#chip-1000": "chip-1k.png",
-    // "#chip-2000": "chip-2k.png",
-  },
   controlsE2E: [
     "#round-id",
     "#user-info_user-name",
@@ -84,9 +72,9 @@ export const luckythreeLocators = {
     '//*[@id="bar-statistic"]/div[2]/div[4]/span[1]': "red3.png",
   },
   statisticItems: {
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_over')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-over')]":
       "//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_under')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-under')]":
       "//*[@id='bar-statistic']/div[1]/div[2]/span[2]",
   },
   historyHeader: {
@@ -111,30 +99,33 @@ export const luckythreeLocators = {
     winAmount: "//div[@id='bet-detail']//tbody/tr[1]/td[5]",
   },
   guideContent: `GiớiThiệuLuckyThreelàtròchơigồm60quảbóngđượcđánhsố.Vớibalượtrútbóng,ngườichơicócơhộidựđoánvàđặtcượcvàolựachọnyêuthíchtrongtừnglượtrút.Cácquảbóngđãđượcrútsẽkhôngxuấthiệntrongcáclượtrúttiếptheodẫnđếnsựthayđổitỷlệcượctrongmỗilượt,đồngthờimanglạitínhhấpdẫnchotròchơi.CáchChơiTổngđiểmvàmàusắccủabaquảbóngtrongmỗilượtrútsẽxácđịnhkếtquảcủalượtrútđó.Ngườichơicóthểđặtcượcvàonhiềulựachọncùnglúcvàkhôngbịgiớihạnsốlầnđặtcược.Tổngtiềncượctốiđachomộtlượtrútlà`,
-  vnguide1: `Giới Thiệu
-  Lucky Three là trò chơi thuộc thể loại Number Game kết hợp các yếu tố của game Xóc Đĩa nhằm đem đến 1 trải nghiệm hoàn toàn mới. Trong mỗi phiên, 4 quả bóng sẽ được rút ngẫu nhiên, người chơi đặt cược vào các tùy chọn yêu thích trước khi bóng được rút. Kết quả của mỗi phiên được xác định trên tổng điểm của 4 quả bóng được rút và màu sắc tương ứng trên từng bóng.
-  Cách Chơi
-  4 bóng được rút ngẫu nhiên trong bộ 60 bóng, được đánh số từ 01 đến 60.
-  Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một phiên là 1,000.
-  Trong một phiên, người chơi chỉ có thể đặt cược vào Chẵn hoặc Lẻ.
-  Người chơi hoàn thành đặt cược trước khi thời gian đặt cược kết thúc và không thể hủy cược sau khi đặt.
-  Lựa Chọn	Điều Kiện Thắng
-  Lẻ	Tổng điểm 4 bóng là số lẻ.
-  Chẵn	Tổng điểm 4 bóng là số chẵn.
-    4 bóng đỏ
-    4 bóng xanh
-    3 bóng đỏ và 1 bóng xanh
-    1 bóng đỏ và 3 bóng xanh
-    2 bóng đỏ và 2 bóng xanh
-  Trả Thưởng
-  Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay khi kết quả được công bố.
-  Tiền thắng được tính toán dựa trên tỷ lệ cược.
-  Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá 25,000.
-  Lựa Chọn	Tỷ Lệ Cược	Giới Hạn Cược
-  (Min - Max)`,
-  vnguide2: `Các Quy Định Trong Game
-  Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
-  Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược khi nghi ngờ khách hàng có những hoạt động gian lận, tham gia lừa đảo, câu kết, rửa tiền hay các hoạt động bất hợp pháp khác.
-  Công ty có quyền hủy hoặc làm mất hiệu lực mọi lượt cược khi có lỗi (thuộc về con người hay yếu tố khác) hoặc sự cố hệ thống dẫn đến việc sử dụng sai tỷ lệ trả thưởng.
-  Tất cả các lượt cược vào các phiên cược đã được chấp nhận vẫn sẽ có hiệu lực ngay cả khi sau đó thành viên đăng xuất hoặc bị ngắt kết nối khỏi hệ thống game vì bất kỳ lý do gì.`,
+  vnguide: `Giới Thiệu
+Lucky Three là trò chơi gồm 75 quả bóng được đánh số. Với tám lượt rút bóng, người chơi có cơ hội dự đoán và đặt cược vào cửa thắng trong từng lượt rút. Các quả bóng đã được rút sẽ không xuất hiện trong các lượt rút tiếp theo, dẫn đến sự thay đổi tỷ lệ cược trong mỗi lượt, đồng thời mang lại tính hấp dẫn cho trò chơi.
+Cách Chơi
+Giá trị của quả bóng trong mỗi lượt rút sẽ xác định kết quả của lượt rút đó.
+Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một lượt rút là @MAXBET.
+Người chơi không được đặt cược trên cả hai cửa Tài và Xỉu, hay cả hai cửa Chẵn và Lẻ.
+Người chơi hoàn thành đặt cược trước khi thời gian đặt cược kết thúc và không thể hủy cược sau khi đặt.
+Lựa Chọn	Điều Kiện Thắng
+Tài	Giá trị trên quả bóng nằm trong khoảng 38-75.
+Xỉu	Giá trị trên quả bóng nằm trong khoảng 1-37.
+Lẻ	Giá trị trên quả bóng là số lẻ.
+Chẵn	Giá trị trên quả bóng là số chẵn.
+Trả Thưởng
+Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay khi kết quả được công bố.
+Tiền thắng được tính toán dựa trên tỷ lệ cược.
+Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá @MAXWINPERROUND.
+Tỷ lệ cược sẽ thay đổi và được cập nhật sau mỗi lượt rút bóng. Tỷ lệ cược và giới hạn cược tương ứng với các lựa chọn cược có giá trị trong khoảng như sau:
+Lựa Chọn	Tỷ Lệ Cược
+(Min - Max)	Giới Hạn Cược
+(Min - Max)
+Tài	1.75-2.14	@MM0
+Xỉu	1.8-2.22	@MM1
+Lẻ	1.75-2.14	@MM2
+Chẵn	1.8-2.22	@MM3
+Các Quy Định Trong Game
+Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
+Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược khi nghi ngờ khách hàng có những hoạt động gian lận, tham gia lừa đảo, câu kết, rửa tiền hay các hoạt động bất hợp pháp khác.
+Công ty có quyền hủy hoặc làm mất hiệu lực mọi lượt cược khi có lỗi (thuộc về con người hay yếu tố khác) hoặc sự cố hệ thống dẫn đến việc sử dụng sai tỷ lệ trả thưởng.
+Tất cả các lượt cược vào các phiên cược đã được chấp nhận vẫn sẽ có hiệu lực ngay cả khi sau đó thành viên đăng xuất hoặc bị ngắt kết nối khỏi hệ thống game vì bất kỳ lý do gì.`,
 };
