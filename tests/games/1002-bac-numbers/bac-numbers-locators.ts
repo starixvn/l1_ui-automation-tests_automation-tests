@@ -4,7 +4,6 @@ export const BacNumbersLocators = {
   lobbyStatistic: "//*[@id='icon-bacball2']/div/div[2]/div[2]",
   inGameUI: {
     "#img-game-name": "gamename.png",
-    "#icon-pf": "icopf.png",
     "#icon-home": "icohome.png",
     "#icon-menu": "icomenu.png",
   },
@@ -25,12 +24,7 @@ export const BacNumbersLocators = {
     epb: "Dừng nhận cược",
     orb: "Công bố kết quả",
   },
-  menuItems: [
-    "#music-settings",
-    "#sound-settings",
-    "#icon-history",
-    "#icon-guide",
-  ],
+  menuItems: ["#icon-pf", "#icon-history", "#icon-guide"],
   pfSettingControls:[
     "//*[@id='manual-seed']/parent::div",
     "#manual-client-seed",

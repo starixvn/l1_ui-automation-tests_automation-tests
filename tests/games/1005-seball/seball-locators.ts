@@ -21,12 +21,7 @@ export const seballLocators = {
     epb: "Dừng nhận cược",
     orb: "Công bố kết quả",
   },
-  menuItems: [
-    "#music-settings",
-    "#sound-settings",
-    "#icon-history",
-    "#icon-guide",
-  ],
+  menuItems: ["#icon-pf", "#icon-history", "#icon-guide"],
   pfSettingControls: [
     "//*[@id='manual-seed']/parent::div",
     "#manual-client-seed",
