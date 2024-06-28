@@ -70,11 +70,11 @@ export const BacNumbersLocators = {
     '//*[@id="bar-statistic"]/div[3]/span[1]': "android_t.png",
   },
   statisticItems: {
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_player')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-player')]":
       "//div[@id='bar-statistic']/div[1]/span[2]",
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_banker')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-banker')]":
       "//div[@id='bar-statistic']/div[2]/span[2]",
-    "//div[@id='bead-road']//span[contains(@class,'scoreboard-elements_tie')]":
+    "//div[@id='bead-road']//span[contains(@class,'icon-tie')]":
       "//div[@id='bar-statistic']/div[3]/span[2]",
   },
   historyHeader: {
@@ -119,9 +119,9 @@ Tỷ lệ cược sẽ thay đổi và được cập nhật sau mỗi lượt r
 Lựa Chọn	Tỷ Lệ Cược
 (Min - Max)	Giới Hạn Cược
 (Min - Max)
-Người Chơi	0.61-1.5	@MM0
-Nhà Cái	0.61-1.5	@MM1
-Hòa	20-23	@MM2
+Người Chơi	1.61-2.5	@MM0
+Nhà Cái	1.61-2.5	@MM1
+Hòa	21-24	@MM2
 Trong trường hợp kết quả Hòa, người chơi sẽ được hoàn lại toàn bộ số tiền cược đặt vào hai cửa Người Chơi, Nhà Cái.
 Các Quy Định Trong Game
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
