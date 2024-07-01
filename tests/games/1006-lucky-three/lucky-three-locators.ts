@@ -2,12 +2,12 @@ export const luckythreeLocators = {
   lobbyGameIcon: "#icon-luckythree",
   lobbyTimmer: "//*[@id='icon-luckythree']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckythree']/div/div[2]/div[2]",
-  inGameUI: [
-    "#img-game-name",
-    "#icon-home",
-    "#icon-menu",
-],
-  slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
+  inGameUI: ["#img-game-name", "#icon-home", "#icon-menu"],
+  slideGameList: [
+    "LUCKY THREE",
+    "SE BALL",
+    "BAC BALL 1",
+  ],
   footerValues: {
     "//*[@class='text-center copyright']": "© 2024 Bản quyền thuộc về SABA xD",
   },
@@ -16,11 +16,7 @@ export const luckythreeLocators = {
     epb: "Dừng nhận cược",
     orb: "Công bố kết quả",
   },
-  menuItems: [
-    "#icon-pf",
-    "#icon-history",
-    "#icon-guide",
-  ],
+  menuItems: ["#icon-pf", "#icon-history", "#icon-guide"],
   pfSettingControls: [
     "//*[@id='manual-seed']/parent::div",
     "#manual-client-seed",
@@ -57,18 +53,20 @@ export const luckythreeLocators = {
   hedgeBetError: {
     ".modal-center": "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
   },
-  statisticbar: {
-    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]': "over.png",
-    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]': "under.png",
-    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]': "blue3.png",
-    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]': "blue2.png",
-    '//*[@id="bar-statistic"]/div[2]/div[3]/span[1]': "red2.png",
-    '//*[@id="bar-statistic"]/div[2]/div[4]/span[1]': "red3.png",
+  statisticbar: [
+    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[3]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[4]/span[1]',
+  ],
+  statisticItems: {
+    "//div[@id='bead-road']//span[contains(@class,'icon-over')]":
+      "//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
+    "//div[@id='bead-road']//span[contains(@class,'icon-under')]":
+      "//*[@id='bar-statistic']/div[1]/div[2]/span[2]",
   },
-  statisticItems: [
-    "//div[@id='bead-road']//span[contains(@class,'icon-over')]",
-    "//div[@id='bead-road']//span[contains(@class,'icon-under')]"
-],
   historyHeader: {
     "//thead//th[1]": "Thời Gian",
     "//thead//th[2]": "Phiên",
@@ -92,17 +90,19 @@ export const luckythreeLocators = {
   },
   guideContent: `GiớiThiệuLuckyThreelàtròchơigồm60quảbóngđượcđánhsố.Vớibalượtrútbóng,ngườichơicócơhộidựđoánvàđặtcượcvàolựachọnyêuthíchtrongtừnglượtrút.Cácquảbóngđãđượcrútsẽkhôngxuấthiệntrongcáclượtrúttiếptheodẫnđếnsựthayđổitỷlệcượctrongmỗilượt,đồngthờimanglạitínhhấpdẫnchotròchơi.CáchChơiTổngđiểmvàmàusắccủabaquảbóngtrongmỗilượtrútsẽxácđịnhkếtquảcủalượtrútđó.Ngườichơicóthểđặtcượcvàonhiềulựachọncùnglúcvàkhôngbịgiớihạnsốlầnđặtcược.Tổngtiềncượctốiđachomộtlượtrútlà`,
   vnguide: `Giới Thiệu
-Lucky Three là trò chơi gồm 75 quả bóng được đánh số. Với tám lượt rút bóng, người chơi có cơ hội dự đoán và đặt cược vào cửa thắng trong từng lượt rút. Các quả bóng đã được rút sẽ không xuất hiện trong các lượt rút tiếp theo, dẫn đến sự thay đổi tỷ lệ cược trong mỗi lượt, đồng thời mang lại tính hấp dẫn cho trò chơi.
+Lucky Three là trò chơi gồm 60 quả bóng được đánh số. Với ba lượt rút bóng, người chơi có cơ hội dự đoán và đặt cược vào lựa chọn yêu thích trong từng lượt rút. Các quả bóng đã được rút sẽ không xuất hiện trong các lượt rút tiếp theo dẫn đến sự thay đổi tỷ lệ cược trong mỗi lượt, đồng thời mang lại tính hấp dẫn cho trò chơi.
 Cách Chơi
-Giá trị của quả bóng trong mỗi lượt rút sẽ xác định kết quả của lượt rút đó.
+Tổng điểm và màu sắc của ba quả bóng trong mỗi lượt rút sẽ xác định kết quả của lượt rút đó.
 Người chơi có thể đặt cược vào nhiều lựa chọn cùng lúc và không bị giới hạn số lần đặt cược. Tổng tiền cược tối đa cho một lượt rút là @MAXBET.
-Người chơi không được đặt cược trên cả hai cửa Tài và Xỉu, hay cả hai cửa Chẵn và Lẻ.
+Người chơi chỉ có thể đặt cược vào Tài hoặc Xỉu.
 Người chơi hoàn thành đặt cược trước khi thời gian đặt cược kết thúc và không thể hủy cược sau khi đặt.
 Lựa Chọn	Điều Kiện Thắng
-Tài	Giá trị trên quả bóng nằm trong khoảng 38-75.
-Xỉu	Giá trị trên quả bóng nằm trong khoảng 1-37.
-Lẻ	Giá trị trên quả bóng là số lẻ.
-Chẵn	Giá trị trên quả bóng là số chẵn.
+Tài	Tổng điểm 3 bóng nằm trong khoảng 92-177.
+Xỉu	Tổng điểm 3 bóng nằm trong khoảng 6-91.
+	3 bóng xanh.
+	2 bóng xanh và 1 bóng đỏ.
+	1 bóng xanh và 2 bóng đỏ.
+	3 bóng đỏ.
 Trả Thưởng
 Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay khi kết quả được công bố.
 Tiền thắng được tính toán dựa trên tỷ lệ cược.
@@ -111,10 +111,12 @@ Tỷ lệ cược sẽ thay đổi và được cập nhật sau mỗi lượt r
 Lựa Chọn	Tỷ Lệ Cược
 (Min - Max)	Giới Hạn Cược
 (Min - Max)
-Tài	1.75-2.14	@MM0
-Xỉu	1.8-2.22	@MM1
-Lẻ	1.75-2.14	@MM2
-Chẵn	1.8-2.22	@MM3
+Tài	1.56-2.61	@MM0
+Xỉu	1.56-2.61	@MM1
+	5.74-11.51	@MM3
+	2.23-2.81	@MM2
+	2.23-2.81	@MM4
+	5.74-11.51	@MM5
 Các Quy Định Trong Game
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược khi nghi ngờ khách hàng có những hoạt động gian lận, tham gia lừa đảo, câu kết, rửa tiền hay các hoạt động bất hợp pháp khác.

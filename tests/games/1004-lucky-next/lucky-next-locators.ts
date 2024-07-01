@@ -2,21 +2,21 @@ export const LuckyNextLocators = {
   lobbyGameIcon: "#icon-luckynext2",
   lobbyTimmer: "//*[@id='icon-luckynext2']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckynext2']/div/div[2]/div[2]",
-  inGameUI: [
-    "#img-game-name",
-    "#icon-home",
-    "#icon-menu",
-],
+  inGameUI: ["#img-game-name", "#icon-home", "#icon-menu"],
   inGameUIE2E: {
     "#img-game-name": "gamename.png",
     "#icon-home": "icohome.png",
     "#icon-menu": "icomenu.png",
   },
-  suggestionBets:{odd: "Tiền cược khả dụng: 1,990Cược số tiền này?", even: "Tiền cược khả dụng: 1,990Cược số tiền này?", over: "Tiền cược khả dụng: 1,990Cược số tiền này?", under: "Tiền cược khả dụng: 1,990Cược số tiền này?"},
-  slideGameList: ["LUCKY NEXT 2","LUCKY THREE","SE BALL"],
+  suggestionBets: {
+    odd: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    even: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    over: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+    under: "Tiền cược khả dụng: 1,990Cược số tiền này?",
+  },
+  slideGameList: ["LUCKY NEXT 2", "LUCKY THREE", "SE BALL"],
   footerValues: {
-    "//*[@class='text-center copyright']":
-      "© 2024 Bản quyền thuộc về SABA xD",
+    "//*[@class='text-center copyright']": "© 2024 Bản quyền thuộc về SABA xD",
   },
   placeBetMsg: {
     spb: "Bắt đầu cược",
@@ -24,12 +24,12 @@ export const LuckyNextLocators = {
     orb: "Công bố kết quả",
   },
   menuItems: ["#icon-pf", "#icon-history", "#icon-guide"],
-  pfSettingControls:[
+  pfSettingControls: [
     "//*[@id='manual-seed']/parent::div",
     "#manual-client-seed",
     "//input[@id='random-seed']/parent::div",
     "#random-client-seed",
-    "//div[@id='pf-setting']/div[1]/span"
+    "//div[@id='pf-setting']/div[1]/span",
   ],
   controlsE2E: [
     "#round-id",
@@ -50,21 +50,22 @@ export const LuckyNextLocators = {
     evenOwnBet: "#NextBall-even-own-bet",
     underOwnBet: "#NextBall-under-own-bet",
     overOwnBet: "#NextBall-over-own-bet",
-
   },
   hedgeBetError: {
     ".modal-center": "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
   },
-  statisticbar: {
-    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]': "over.png",
-    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]': "under.png",
-    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]': "odd.png",
-    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]': "even.png",
-  },
-  statisticItems:[
-    "//div[@id='bead-road']//span[contains(@class,'icon-over')]",
-    "//div[@id='bead-road']//span[contains(@class,'icon-under')]"
+  statisticbar: [
+    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]',
   ],
+  statisticItems: {
+    "//div[@id='bead-road']//span[contains(@class,'icon-over')]":
+      "//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
+    "//div[@id='bead-road']//span[contains(@class,'icon-under')]":
+      "//*[@id='bar-statistic']/div[1]/div[2]/span[2]",
+  },
   historyHeader: {
     "//thead//th[1]": "Thời Gian",
     "//thead//th[2]": "Phiên",

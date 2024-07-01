@@ -114,13 +114,13 @@ Tiền thắng được tính toán dựa trên tỷ lệ cược.
 Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá @MAXWINPERROUND.
 Lựa Chọn	Tỷ Lệ Cược	Giới Hạn Cược
 (Min - Max)
-Lẻ	1.96:1	@MM0
-Chẵn	1.96:1	@MM1
-	14.4:1	@MM6
-	14.4:1	@MM4
-	3.75:1	@MM2
-	3.75:1	@MM3
-	2.4:1	@MM5
+Lẻ	1:1.96	@MM0
+Chẵn	1:1.96	@MM1
+	1:14.4	@MM6
+	1:14.4	@MM4
+	1:3.75	@MM2
+	1:3.75	@MM3
+	1:2.4	@MM5
 Các Quy Định Trong Game
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược khi nghi ngờ khách hàng có những hoạt động gian lận, tham gia lừa đảo, câu kết, rửa tiền hay các hoạt động bất hợp pháp khác.
