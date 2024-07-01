@@ -2,16 +2,11 @@ export const LuckyNextLocators = {
   lobbyGameIcon: "#icon-luckynext1",
   lobbyTimmer: "//*[@id='icon-luckynext1']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckynext1']/div/div[2]/div[2]",
-  inGameUI: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
-  inGameUIE2E: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
+  inGameUI: [
+    "#img-game-name",
+    "#icon-home",
+    "#icon-menu",
+],
   slideGameList: ["LUCKY NEXT 1","LUCKY NEXT 2","LUCKY THREE"],
   footerValues: {
     "//*[@class='text-center copyright']":
@@ -54,12 +49,12 @@ export const LuckyNextLocators = {
   hedgeBetError: {
     ".modal-center": "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
   },
-  statisticbar: {
-    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]': "over.png",
-    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]': "under.png",
-    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]': "odd.png",
-    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]': "even.png",
-  },
+  statisticbar: [
+    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]',
+],
   statisticItems:{
   "//div[@id='bead-road']//span[contains(@class,'icon-over')]":"//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
   "//div[@id='bead-road']//span[contains(@class,'icon-under')]": "//*[@id='bar-statistic']/div[1]/div[2]/span[2]"

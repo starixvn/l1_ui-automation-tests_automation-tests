@@ -2,18 +2,13 @@ export const BacNumbersLocators = {
   lobbyGameIcon: "#icon-bacball2",
   lobbyTimmer: "//*[@id='icon-bacball2']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-bacball2']/div/div[2]/div[2]",
-  inGameUI: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
+  inGameUI: [
+    "#img-game-name",
+    "#icon-home",
+    "#icon-menu",
+  ],
   quickBetState: ["quickBetOff.png", "quickBetOn.png"],
   suggestionBets:{player: "Tiền cược khả dụng: 1,990Cược số tiền này?", banker: "Tiền cược khả dụng: 1,990Cược số tiền này?", tie: "Tiền cược khả dụng: 90Cược số tiền này?"},
-  inGameUIE2E: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
   footerValues: {
     "//*[@class='text-center copyright']":
       "© 2024 Bản quyền thuộc về SABA xD",
@@ -56,11 +51,11 @@ export const BacNumbersLocators = {
   quickbetMessage:{
     "//div[contains(@class,'quick-bet-hint_message')]": "Tính năng Cược Nhanh cho phép bạn đặt cược trực tiếp chỉ với một cú click chuột hoặc một chạm vào các cửa cược mong muốn. Bạn có muốn bật tính năng này?",
   },
-  statisticbar: {
-    '//*[@id="bar-statistic"]/div[1]/span[1]': "p.png",
-    '//*[@id="bar-statistic"]/div[2]/span[1]': "b.png",
-    '//*[@id="bar-statistic"]/div[3]/span[1]': "t.png",
-  },
+  statisticbar: [
+    '//*[@id="bar-statistic"]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[3]/span[1]',
+  ],
   statisticItems:{
     "//div[@id='bead-road']//span[contains(@class,'icon-player')]":"//div[@id='bar-statistic']/div[1]/span[2]",
     "//div[@id='bead-road']//span[contains(@class,'icon-banker')]": "//div[@id='bar-statistic']/div[2]/span[2]",

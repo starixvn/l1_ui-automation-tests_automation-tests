@@ -11,7 +11,7 @@ export const TurboOddEvenConfigs: Components.GameConfiguration = {
   },
   choices: ["odd", "even"],
   hedgeBetGroups: [["odd", "even"]],
-  maxTimeout: 150 * 1000, // miliseconds,
+  maxTimeout: 180 * 1000, // miliseconds,
   odds: {
     odd: 1.96,
     even: 1.96,

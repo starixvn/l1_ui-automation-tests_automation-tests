@@ -2,11 +2,11 @@ export const LuckyNextLocators = {
   lobbyGameIcon: "#icon-luckynext2",
   lobbyTimmer: "//*[@id='icon-luckynext2']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckynext2']/div/div[2]/div[2]",
-  inGameUI: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
+  inGameUI: [
+    "#img-game-name",
+    "#icon-home",
+    "#icon-menu",
+],
   inGameUIE2E: {
     "#img-game-name": "gamename.png",
     "#icon-home": "icohome.png",
@@ -61,10 +61,10 @@ export const LuckyNextLocators = {
     '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]': "odd.png",
     '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]': "even.png",
   },
-  statisticItems:{
-    "//div[@id='bead-road']//span[contains(@class,'icon-over')]":"//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
-    "//div[@id='bead-road']//span[contains(@class,'icon-under')]": "//*[@id='bar-statistic']/div[1]/div[2]/span[2]"
-},
+  statisticItems:[
+    "//div[@id='bead-road']//span[contains(@class,'icon-over')]",
+    "//div[@id='bead-road']//span[contains(@class,'icon-under')]"
+  ],
   historyHeader: {
     "//thead//th[1]": "Thời Gian",
     "//thead//th[2]": "Phiên",

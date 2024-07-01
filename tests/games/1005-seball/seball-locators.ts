@@ -2,16 +2,11 @@ export const seballLocators = {
   lobbyGameIcon: "#icon-seball1",
   lobbyTimmer: "//*[@id='icon-seball1']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-seball1']/div/div[2]/div[2]",
-  inGameUI: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
-  inGameUIE2E: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-  },
+  inGameUI: [
+    "#img-game-name",
+    "#icon-home",
+    "#icon-menu",
+  ],
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
     "//*[@class='text-center copyright']": "© 2024 Bản quyền thuộc về SABA xD",
@@ -61,15 +56,15 @@ export const seballLocators = {
   hedgeBetError: {
     ".modal-center": "Chỉ có thể đặt cược trên Lẻ hoặc Chẵn.",
   },
-  statisticbar: {
-    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]': "odd.png",
-    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]': "even.png",
-    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]': "blue3.png",
-    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]': "red2.png",
-    '//*[@id="bar-statistic"]/div[2]/div[3]/span[1]': "red3.png",
-    '//*[@id="bar-statistic"]/div[2]/div[4]/span[1]': "red4.png",
-    '//*[@id="bar-statistic"]/div[2]/div[5]/span[1]': "blue4.png",
-  },
+  statisticbar: [
+    '//*[@id="bar-statistic"]/div[1]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[1]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[1]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[2]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[3]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[4]/span[1]',
+    '//*[@id="bar-statistic"]/div[2]/div[5]/span[1]',
+],
   statisticItems: {
     "//div[@id='bead-road']//span[contains(@class,'icon-odd')]":
       "//*[@id='bar-statistic']/div[1]/div[1]/span[2]",

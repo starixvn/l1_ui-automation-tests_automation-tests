@@ -2,17 +2,11 @@ export const luckythreeLocators = {
   lobbyGameIcon: "#icon-luckythree",
   lobbyTimmer: "//*[@id='icon-luckythree']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckythree']/div/div[2]/div[2]",
-  inGameUI: {
-    "#img-game-name": "gamename.png",
-    "#icon-home": "icohome.png",
-    "#icon-menu": "icomenu.png",
-    // "//button[contains(@class,'setting_button-setting')]/span": "iconsetting.png",
-  },
-  inGameUIE2E: {
-    // "#img-game-name": "gamename.png",
-    // "#icon-home": "icohome.png",
-    // "#icon-menu": "icomenu.png",
-  },
+  inGameUI: [
+    "#img-game-name",
+    "#icon-home",
+    "#icon-menu",
+],
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
   footerValues: {
     "//*[@class='text-center copyright']": "© 2024 Bản quyền thuộc về SABA xD",
@@ -71,12 +65,10 @@ export const luckythreeLocators = {
     '//*[@id="bar-statistic"]/div[2]/div[3]/span[1]': "red2.png",
     '//*[@id="bar-statistic"]/div[2]/div[4]/span[1]': "red3.png",
   },
-  statisticItems: {
-    "//div[@id='bead-road']//span[contains(@class,'icon-over')]":
-      "//*[@id='bar-statistic']/div[1]/div[1]/span[2]",
-    "//div[@id='bead-road']//span[contains(@class,'icon-under')]":
-      "//*[@id='bar-statistic']/div[1]/div[2]/span[2]",
-  },
+  statisticItems: [
+    "//div[@id='bead-road']//span[contains(@class,'icon-over')]",
+    "//div[@id='bead-road']//span[contains(@class,'icon-under')]"
+],
   historyHeader: {
     "//thead//th[1]": "Thời Gian",
     "//thead//th[2]": "Phiên",

@@ -41,7 +41,6 @@ class BandarQiuQiuSmokeSpec extends SmokeBases.TableGameBase {
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       const bet = { choice: "spade", amount: this.options.placeBetAmount ?? 1};
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
-      await this.game.waitForTimeout(5000)
       // Act 
       const placeBetResponse = await this.player.placeBet(bet.choice, bet.amount);
 
