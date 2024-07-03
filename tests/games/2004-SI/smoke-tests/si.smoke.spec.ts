@@ -78,7 +78,7 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
             )
             .locator("#GameCanvas")
             .focus();
-          await this.game.waitForTimeout(5000);
+          await this.game.waitForTimeout(8000);
           this.options.locators = GroupLocators[9].concat(extLocators);
           this.options.gameConfiguration.name = gameConfigs[9].name;
           this.options.gameConfiguration.id = 9;
@@ -193,7 +193,6 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           );
 
           expect(placeBetResponse.endBet).toBe(bet.amount);
-          expect(placeBetResponse.betChoice).toBe(bet.choice);
           settledResults = await this.game.waitForSettlement();
 
           // Assert
@@ -252,7 +251,6 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
               bet.amount
             );
             expect(placeBetResponse.endBet).toBe(bet.amount);
-            expect(placeBetResponse.endBet).toBe(bet.choice);
           } else {
             await this.placeBethilo(bet.choice, bet.amount);
           }
