@@ -34,5 +34,5 @@ export const gameConfigs = {
   25: { name: "sicbo", betchoice: "big", betBoard: false },
   71: { name: "colorgame", betchoice: "yellow", betBoard: false },
   80: { name: "cointoss", betchoice: "trump", betBoard: false },
-
+  99: { name: "footballcointoss", betchoice: "home", betBoard: false },
 };

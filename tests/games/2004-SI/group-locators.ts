@@ -46,18 +46,18 @@ export const GroupLocators = {
     new Components.ImageLocator("stake1",1035, 609, 0, 0),
     new Components.ImageLocator("stake10", 1035, 609, 0, 0),
   ],
+  99: [
+    new Components.ImageLocator("homeChoice", 1047, 475, 0, 0),
+    new Components.ImageLocator("awayChoice", 1154, 475, 0, 0),
+    new Components.ImageLocator("stake1", 1035, 609, 0, 0),
+    new Components.ImageLocator("stake10", 1035, 609, 0, 0),
+  ],
 
 };
 
 export const MemberSiteLocators = {
   rightCollapseMenu: '#right-bar-collapse-buttonIcon',
   instantPlayIcon: "//div[@id='rightBar']//div[@title='Instant Play'][@class='c-widget__icon-collapse']",
-  MiniGamesbtn: "//*[text()='Mini Games']",
+  MiniGamesbtn: "//div[contains(@class,'mini-casino')]/div[2]/span",
   MiniSeDiegame: "//div[contains(@style,'SBC_SeDie')]",
-  FPCgame: "//div[contains(@style,'SBC_FishPrawnCrab')]",
-  BigSmallgame: "//div[contains(@style,'SBC_BigSmall')]",
-  Baccaratgame: "//div[contains(@style,'SBC_Baccarat')]",
-  DragonTigergame: "//div[contains(@style,'SBC_DragonTiger')]",
-  SicBogame: "//div[contains(@style,'SBC_SicBo')]",
-  Colorgamegame: "//div[contains(@style,'SBC_Colorgame')]",
 }
