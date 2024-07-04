@@ -7,3 +7,5 @@
 /playwright/.cache/
 /screenshots/
 test-results.json
+guidecontent.txt
+imgcapcha.png

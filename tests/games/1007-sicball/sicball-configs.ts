@@ -9,7 +9,7 @@ export const sicballConfigs: Components.GameConfiguration = {
     lockingBet: 3,
     shakeThePlateDuration: 10,
   },
-  choices: ["big", "specific1", "small", "specific2", "specific3", "specific4", "specific5", "specific6","drawId"],
+  choices: ["specific1", "big", "small", "specific2", "specific3", "specific4", "specific5", "specific6","drawId"],
   hedgeBetGroups: ["big", "small"],
   maxTimeout: 250 * 1000, // miliseconds,
   odds: {

@@ -30,7 +30,7 @@ const config: PlaywrightTestConfig = {
     },
     screenshot: "only-on-failure",
     launchOptions: {
-      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu"],
+      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu", '--disable-web-security'],
     },
   },
 

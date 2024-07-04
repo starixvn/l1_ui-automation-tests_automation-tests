@@ -4,7 +4,7 @@ export const luckythreeConfigs: Components.GameConfiguration = {
   id: 1006,
   name: "luckythree",
   durations: {
-    wholeRound: 25,
+    wholeRound: 30,
     placingBets: 12,
     lockingBet: 3,
     shakeThePlateDuration: 10,

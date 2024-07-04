@@ -30,7 +30,7 @@ const config: PlaywrightTestConfig = {
       height: 720,
     },
     launchOptions: {
-      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu"],
+      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu", '--disable-web-security'],
     },
   },
 

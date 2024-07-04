@@ -4,7 +4,7 @@ export const seballConfigs: Components.GameConfiguration = {
   id: 1005,
   name: "seball1",
   durations: {
-    wholeRound: 25,
+    wholeRound: 30,
     placingBets: 12,
     lockingBet: 3,
     shakeThePlateDuration: 10,
