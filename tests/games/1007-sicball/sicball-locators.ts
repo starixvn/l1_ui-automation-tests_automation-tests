@@ -109,11 +109,11 @@ Tiền thắng sẽ được cộng vào tài khoản của người chơi ngay 
 Tiền thắng được tính toán dựa trên tỷ lệ cược.
 Tiền thắng đã bao gồm tiền cược. Lưu ý, tổng tiền thắng không vượt quá @MAXWINPERROUND.
 Lựa Chọn	Điều Kiện Thắng	Tỷ Lệ Trả Thưởng
-Tài	Tổng điểm ba quả bóng nằm trong khoảng 11-18.	1:1.98
-Xỉu	Tổng điểm ba quả bóng nằm trong khoảng 3-10.	1:1.97
-Bóng từ 1 đến 6	Bóng được chọn xuất hiện 1 lần.	1:3
-Bóng được chọn xuất hiện 2 lần.	1:4
-Bóng được chọn xuất hiện 3 lần.	1:7
+Tài	Tổng điểm ba quả bóng nằm trong khoảng 11-18.	1:1.96
+Xỉu	Tổng điểm ba quả bóng nằm trong khoảng 3-10.	1:1.96
+Bóng từ 1 đến 6	Bóng được chọn xuất hiện 1 lần.	1:2
+Bóng được chọn xuất hiện 2 lần.	1:3.5
+Bóng được chọn xuất hiện 3 lần.	1:6
 Các Quy Định Trong Game
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược trong trường hợp hệ thống xảy ra bất kỳ lỗi kỹ thuật nào, bao gồm nhưng không hạn chế bởi các lỗi về phần mềm, phần cứng hoặc mạng kết nối.
 Công ty có quyền hủy hoặc làm mất hiệu lực đối với mọi lượt cược khi nghi ngờ khách hàng có những hoạt động gian lận, tham gia lừa đảo, câu kết, rửa tiền hay các hoạt động bất hợp pháp khác.

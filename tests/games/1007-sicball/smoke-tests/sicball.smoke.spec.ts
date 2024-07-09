@@ -8,7 +8,7 @@ export class sicballSmokeSpec extends SmokeBases.NumberGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: sicballConfigs.choices,
+      placeBetChoices: [ "big", "small","specific1", "specific2", "specific3", "specific4", "specific5", "specific6","drawId"],
       gameConfiguration: sicballConfigs,
       locators: sicballLocators,
       waitBetTimeout: 1000,

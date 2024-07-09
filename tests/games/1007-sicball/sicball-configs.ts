@@ -11,7 +11,7 @@ export const sicballConfigs: Components.GameConfiguration = {
   },
   choices: ["specific1", "big", "small", "specific2", "specific3", "specific4", "specific5", "specific6","drawId"],
   hedgeBetGroups: ["big", "small"],
-  maxTimeout: 250 * 1000, // miliseconds,
+  maxTimeout: 300 * 1000, // miliseconds,
   odds: {
   },
   accounts: {
