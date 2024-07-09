@@ -1,0 +1,98 @@
+import { Components } from "sc-automation-core";
+const ImageLocator = Components.ImageLocator;
+
+export const extCoinTossLocators = [
+  new Components.ImageLocator("dealer", 610, 230, 60, 30),
+  new Components.ImageLocator("headChoice", 453, 305, 65, 93),
+  new Components.ImageLocator("headOwnbetl1", 470, 417, 33, 23),
+  new Components.ImageLocator("tailChoice", 762, 312, 77, 90),
+  new Components.ImageLocator("tailOwnbetl1", 786, 416, 34, 25),
+  new Components.ImageLocator("icoStatistic", 355, 247, 36, 35),
+  new Components.ImageLocator("txtBiden", 481, 110, 61, 20),
+  new Components.ImageLocator("txtTrump", 481, 172, 66, 20),
+  new Components.ImageLocator("imgDealerHand", 561, 242, 167, 110),
+  new Components.ImageLocator("imgChipBarl1", 438, 500, 417, 48),
+  new Components.ImageLocator("imgChipBarl2", 438, 500, 417, 48),
+  new Components.ImageLocator("icoCloseGame", 873, 220, 32, 28),
+  // new Components.ImageLocator("", ),
+  // new Components.ImageLocator("", ),
+  new Components.ImageLocator("historyMenu", 306, 326, 52, 42),
+  new Components.ImageLocator("historyPopup", 465, 70, 300, 70),
+  new Components.ImageLocator("errorMessage", 546, 370, 193, 30),
+  new Components.ImageLocator("stake1", 436, 489, 97, 36),
+  new Components.ImageLocator("stake10", 436, 489, 97, 36),
+  new Components.ImageLocator("stake1000", 774, 552, 60, 20),
+  new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
+  new Components.ImageLocator("msgMaxbetLimitl1", 488, 368, 350, 30),
+  new Components.ImageLocator("msgMaxbetLimitl2", 488, 368, 350, 30),
+  new Components.ImageLocator("icoHistory", 328, 347, 37, 30),
+  new Components.ImageLocator("icoGuide", 890, 442, 32, 34),
+  new Components.ImageLocator("btnFirstChip", 453, 501, 64, 24),
+  new Components.ImageLocator("lblRoundIdOnTable", 605, 426, 79, 20),
+  new Components.ImageLocator("locHistoryBetDate", 225, 195, 104, 29),
+  new Components.ImageLocator("locHistoryRoundId", 347, 197, 110, 31),
+  new Components.ImageLocator("locHistoryTotalStake", 757, 189, 61, 33),
+  new Components.ImageLocator("locHistoryBetWin", 868, 191, 82, 34),
+  new Components.ImageLocator("popPFSettings", 242, 111, 814, 232),
+  new Components.ImageLocator("imgClientSeedRandomChecked", 297, 348, 210, 45),
+  new Components.ImageLocator("imgClientSeedManualModeDefault", 296, 405, 193, 56),
+  new Components.ImageLocator("icoPF", 918, 343, 32, 30),
+  new Components.ImageLocator("icoPFTooltip", 762, 125, 14, 14),
+  new Components.ImageLocator("checkboxManual", 314, 425, 13, 13),
+  new Components.ImageLocator("btnChangeClienSeed", 844, 413, 109, 34),
+  new Components.ImageLocator("popNewClientSeed", 416, 148, 444, 57),
+  new Components.ImageLocator("btnClientSeedClear", 702, 237, 89, 34),
+  new Components.ImageLocator("btnClientSeed1", 307, 366, 47, 37),
+  new Components.ImageLocator("btnClientSeed2", 427, 366, 47, 37),
+  new Components.ImageLocator("btnClientSeed3", 549, 366, 47, 37),
+  new Components.ImageLocator("btnClientSeed4", 671, 366, 47, 37),
+  new Components.ImageLocator("btnClientSeed5", 787, 366, 47, 37),
+  new Components.ImageLocator("btnClientSeedBackspace", 910, 366, 47, 37),
+  new Components.ImageLocator("btnClientSeedSave", 906, 467, 57,  34),
+  new Components.ImageLocator("imgManualClientSeed1234", 300, 400, 692, 60),
+  new Components.ImageLocator("imgManualClientSeed123", 300, 400, 692, 60),
+  new Components.ImageLocator("imgPFSettingInactive", 285, 291, 649, 49),
+  new Components.ImageLocator("imgPFPopupHeader", 485, 68, 287, 47),
+  new Components.ImageLocator("imgPFPopupRoundId", 178, 123, 74, 30),
+  new Components.ImageLocator("imgPFPopupCrashPoint", 945, 125, 93, 26),
+  new Components.ImageLocator("imgPFPopupServerSeedSHA256", 171, 172, 212, 36),
+  new Components.ImageLocator("imgPFPopupServerSeed", 170, 222, 148, 33),
+  new Components.ImageLocator("imgPFPopupClientSeed", 156, 288, 199, 37),
+  new Components.ImageLocator("imgPFPopupPlayer123",172, 326, 114, 95),
+  new Components.ImageLocator("imgPFPopupPlayer45", 768, 317, 120, 65),
+  new Components.ImageLocator("imgPFPopupMergeClientSeed", 166, 435, 222, 33),
+  new Components.ImageLocator("imgPFPopupCombinedHash", 173, 493, 232, 39),
+  new Components.ImageLocator("imgPFPopupMessage", 161, 535, 959, 55),
+  new Components.ImageLocator("btnPFPopupVerify", 585, 593, 103, 39),
+  new Components.ImageLocator("popNewClientSeed1234", 240, 147, 814, 397),
+  new Components.ImageLocator("popNewClientSeed123", 240, 147, 814, 397),
+  new Components.ImageLocator("popNewClientSeedCleared", 240, 147, 814, 397),
+  new Components.ImageLocator("btnHistoryVerify", 1017, 201, 40, 11),
+  new Components.ImageLocator("imgGameGuidePF", 170, 82, 959, 564),
+  new Components.ImageLocator("imgVerificationHeader", 510, 70, 282, 46),
+  new Components.ImageLocator("imgVerificationServerSeed", 158, 128, 179, 42),
+  new Components.ImageLocator("imgVerificationMergeClientSeed", 146, 171, 237, 40),
+  new Components.ImageLocator("imgVerificationCombinedHash", 163, 217, 210, 43),
+  new Components.ImageLocator("imgVerificationFinalResult", 166, 277, 161, 20),
+  new Components.ImageLocator("btnPFPopupTooltip", 723, 82, 13, 13),
+  new Components.ImageLocator("btnClientSeedTooltip", 307, 298, 12, 12),
+  new Components.ImageLocator("btnCombinedHashTooltip", 373, 506, 13, 13),
+  new Components.ImageLocator("imgClientSeedTooltip", 270, 161, 525, 112),
+  new Components.ImageLocator("imgCombinedHashTooltip", 340, 398, 525, 80),
+  new Components.ImageLocator("imgPFPopupRunning", 166, 210, 965, 437),
+];
+
+export const CoinTossLocators = extCoinTossLocators.concat(Components.BaseLocator.GameLobbyLocator)
+
+
+// export const SedieLocators = extSedieLocators.concat(Components.TableLocator.TableLocators).filter((item, index) => {
+//   return !Components.TableLocator.TableLocators.some((array1Item, array1Index) => {
+//     return array1Index === index && item === array1Item;
+//   });
+// });
+
+
+// const lblHistoryDetailRoundId = {x: 639}
+ 
+// HappyFishLocators.forEach((item, i)=>{ if (item.name == "lblHistoryDetailRoundId") item.x = lblHistoryDetailRoundId.x } )
