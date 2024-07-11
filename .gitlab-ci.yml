@@ -111,9 +111,8 @@ smoketest:
   tags:
     - e2e-test
   script:
-    - cd /app/tests
+    - cd tests
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
-    - cp -r .. $CI_PROJECT_DIR
   after_script:
     - sleep 5
     - |
@@ -145,9 +144,8 @@ smoketestxd:
   tags:
     - e2e-test
   script:
-    - cd /app/tests
+    - cd tests
     - npm run test:smoke:xd --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
-    - cp -r .. $CI_PROJECT_DIR
 
   retry: 1
   rules:
