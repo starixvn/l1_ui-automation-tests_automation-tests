@@ -119,15 +119,18 @@ smoketest:
       if [ -f "test-results/Warning.txt" ]; then
         echo "Warning found"
         # Set the job status to 'warning'
-        export CI_JOB_STATUS="warning"
+        export WARNING=true
       else
-        echo "Warning.txt not found"
+        echo "No Warning"
+        export WARNING=false
       fi
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
       when: always
     - when: never
+  after_script:
+    - echo "WARNING=$WARNING" >> $CI_ENV_FILE
 
   artifacts:
     paths:
