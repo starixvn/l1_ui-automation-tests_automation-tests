@@ -119,18 +119,16 @@ smoketest:
       if [ -f "test-results/Warning.txt" ]; then
         echo "Warning found"
         # Set the job status to 'warning'
-        export WARNING=true
+        export WARNING=true >> $GITHUB_ENV
       else
         echo "No Warning"
-        export WARNING=false
+        export WARNING=false >> $GITHUB_ENV
       fi
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
       when: always
     - when: never
-  after_script:
-    - echo "WARNING=$WARNING" >> $CI_ENV_FILE
 
   artifacts:
     paths:
