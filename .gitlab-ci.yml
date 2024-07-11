@@ -113,6 +113,7 @@ smoketest:
   script:
     - cd tests
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+  after_script:
     - sleep 5
     - |
       if [ -f "test-results/Warning.txt" ]; then
