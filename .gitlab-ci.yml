@@ -113,18 +113,19 @@ smoketest:
   script:
     - cd tests
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - if [ -f "test-results/Warning.txt" ]; then
+        touch test-results/WarningFlag.txt
+      fi
   after_script:
     - sleep 5
     - |
-      if [ -f "test-results/Warning.txt" ]; then
-        echo "Warning.txt found"
-        export WARNING=true
-        exit 2
+      if [ -f "test-results/WarningFlag.txt" ]; then
+        echo "Warning found"
+        # Set the job status to 'warning'
+        echo "CI_JOB_STATUS=warning" >> $CI_ENV_FILE
       else
         echo "Warning.txt not found"
-        export WARNING=false
       fi
-    - echo $WARNING
   allow_failure:
       exit_codes: 2   
   retry: 1
