@@ -113,17 +113,19 @@ smoketest:
   script:
     - cd tests
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
-  after_script:
     - sleep 5
     - |
       if [ -f "test-results/Warning.txt" ]; then
         echo "Warning.txt found"
         export WARNING=true
+        exit 2
       else
         echo "Warning.txt not found"
         export WARNING=false
       fi
-    - echo $WARNING    
+    - echo $WARNING
+  allow_failure:
+      exit_codes: 2   
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
