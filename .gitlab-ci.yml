@@ -2,7 +2,6 @@ variables:
   GIT_CLEAN_FLAGS: none
 
 stages:
-  - build
   - test
 
 cache:
@@ -119,10 +118,10 @@ smoketest:
       if [ -f "test-results/Warning.txt" ]; then
         echo "Warning found"
         # Set the job status to 'warning'
-        export WARNING=true >> $GITHUB_ENV
+        export WARNING=true
       else
         echo "No Warning"
-        export WARNING=false >> $GITHUB_ENV
+        export WARNING=false
       fi
   retry: 1
   rules:
