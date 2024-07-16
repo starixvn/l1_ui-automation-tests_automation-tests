@@ -15,7 +15,7 @@ class CandyLandSmokeSpec extends SmokeBases.SlotGameBase {
       locators: CandyLandLocators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.2,
     };
     super(smokeOptions);
   }

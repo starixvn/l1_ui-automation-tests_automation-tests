@@ -15,7 +15,7 @@ class TreasureIslandSmokeSpec extends SmokeBases.SlotGameBase {
       locators: TreasureIslandLocators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.2,
     };
     super(smokeOptions);
   }
@@ -33,6 +33,7 @@ class TreasureIslandSmokeSpec extends SmokeBases.SlotGameBase {
         choice: TreasureIslandConfigs.choices[0],
         amount: this.options.placeBetAmount ?? 1,
       };
+
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
       // Act
