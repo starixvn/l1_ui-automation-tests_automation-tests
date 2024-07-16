@@ -2,7 +2,7 @@ export const luckythreeLocators = {
   lobbyGameIcon: "#icon-luckythree",
   lobbyTimmer: "//*[@id='icon-luckythree']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckythree']/div/div[2]/div[2]",
-  inGameUI: ["#img-game-name", "#icon-home", "#icon-menu"],
+  inGameUI: ["#img-game-name", "#icon-list-game", "#icon-menu"],
   slideGameList: [
     "LUCKY THREE",
     "SE BALL",

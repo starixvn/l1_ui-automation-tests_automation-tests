@@ -4,12 +4,12 @@ export const BacNumbersLocators = {
   lobbyStatistic: "//*[@id='icon-bacball1']/div/div[2]/div[2]",
   inGameUI: [
     "#img-game-name",
-    "#icon-home",
+    "#icon-list-game",
     "#icon-menu",
   ],
   inGameUIAndroid: {
     "#img-game-name": "android_gamename.png",
-    "#icon-home": "android_icohome.png",
+    "#icon-list-game": "android_icohome.png",
     "#icon-menu": "android_icomenu.png",
   },
   quickBetState: ["quickBetOff.png", "quickBetOn.png"],

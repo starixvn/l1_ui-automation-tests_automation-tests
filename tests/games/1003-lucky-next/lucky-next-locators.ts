@@ -4,7 +4,7 @@ export const LuckyNextLocators = {
   lobbyStatistic: "//*[@id='icon-luckynext1']/div/div[2]/div[2]",
   inGameUI: [
     "#img-game-name",
-    "#icon-home",
+    "#icon-list-game",
     "#icon-menu",
 ],
   slideGameList: ["LUCKY NEXT 1","LUCKY NEXT 2","LUCKY THREE"],

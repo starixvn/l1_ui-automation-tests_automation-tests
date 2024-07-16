@@ -4,7 +4,7 @@ export const seballLocators = {
   lobbyStatistic: "//*[@id='icon-seball1']/div/div[2]/div[2]",
   inGameUI: [
     "#img-game-name",
-    "#icon-home",
+    "#icon-list-game",
     "#icon-menu",
   ],
   slideGameList: ["SE BALL","BAC BALL 1","BAC BALL 2","LUCKY NEXT 1","LUCKY NEXT 2"],
