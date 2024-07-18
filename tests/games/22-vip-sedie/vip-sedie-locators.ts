@@ -14,3 +14,16 @@ export const VipSedieLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 488, 527, 350, 22),
     new Components.ImageLocator("btnRightArrow", 910, 600, 35, 35),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Xóc Đĩa VIP']",
+    ],
+    betchoices: {
+      even: "//div[contains(@class,'game-container_game-container')][2]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,' bet-options_even')]",
+      odd: "//div[contains(@class,'game-container_game-container')][2]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,' bet-options_odd')]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
+    },
+  };

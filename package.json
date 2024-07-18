@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test:smoke": "playwright test --project=Smoke_CI --workers=2",
+    "test:smoke:mobi": "playwright test --project=Smoke_Mobi --workers=2",
+    "test:smoke:keno": "playwright test --project=Smoke_Keno --workers=2",
     "test:smoke:xd": "playwright test --project=Smoke_XD --workers=1",
     "test:e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
     "test:guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",

@@ -24,3 +24,17 @@ export const MiniSedieLocators = [
     new Components.ImageLocator("btnRightArrow", 712, 503, 35, 35),
 
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Xóc Đĩa Mini']",
+    ],
+    betchoices: {
+      even: "//div[contains(@class,'game-container_game-container')][3]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,' bet-options_even')]",
+      odd: "//div[contains(@class,'game-container_game-container')][3]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,' bet-options_odd')]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
+    },
+  };
+  

@@ -20,3 +20,17 @@ export const BigSmallLocators = [
     new Components.ImageLocator("outside", 5, 5, 5, 5),
     new Components.ImageLocator("msgMaxbetLimit", 488, 378, 350, 30),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Tài Xỉu']",
+    ],
+    betchoices: {
+      big: "//div[contains(@class,'game-container_game-container')][4]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'big')]",
+      small: "//div[contains(@class,'game-container_game-container')][4]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'small')]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ được cược 1 bên.",
+    }
+  };
+  

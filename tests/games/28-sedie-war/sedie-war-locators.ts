@@ -12,3 +12,4 @@ export const SedieWarLocators = [
     new ImageLocator("btnRightArrow", 923, 615, 35, 35),
 
 ];
+

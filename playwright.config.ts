@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
   },
   /* Run tests in files in parallel */
   fullyParallel: false,
-  reporter: [["dot"], ["html", { open: "never" }]],
+  reporter: [["list"], ["html", { open: "never" }]],
   use: {
     actionTimeout: 0,
     trace: "off",
@@ -55,8 +55,15 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "autobot",
-      testMatch: `*/autobot/autobot.spec.ts`,
+      name: "Smoke_Mobi",
+      testMatch: `**/${testMatch}/smoke-tests/*.mobismoke.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+    {
+      name: "Smoke_Keno",
+      testMatch: `**/${testMatch}/smoke-tests/*.kenosmoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
       },

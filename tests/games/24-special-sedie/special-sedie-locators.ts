@@ -17,3 +17,17 @@ export const SpecialSedieLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 492, 393, 350, 25),
     new Components.ImageLocator("stake1000", 770, 542, 60, 20),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Xóc Đĩa Cân Cửa']",
+    ],
+    betchoices: {
+      even: "//div[contains(@class,'game-container_game-container')][6]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'bet-options_even')]",
+      odd: "//div[contains(@class,'game-container_game-container')][6]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'bet-options_odd')]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
+    },
+  };
+  
