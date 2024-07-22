@@ -26,8 +26,8 @@ export const MobiLocators = {
       "//div[contains(@class,'game-header_title')][text()='Tài Xỉu']",
     ],
     betchoices: {
-      big: "//div[contains(@class,'game-container_game-container')][4]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'big')]",
-      small: "//div[contains(@class,'game-container_game-container')][4]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'small')]",
+      big: "//div[contains(@class,'game-container_game-container')][4]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'bet-options_big')]",
+      small: "//div[contains(@class,'game-container_game-container')][4]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'bet-options_small')]",
     },
     hedgeBetError: {
       "#__next": "Chỉ được cược 1 bên.",

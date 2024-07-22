@@ -16,3 +16,16 @@ export const ThreeCardsLocators = [
     new ImageLocator("msgMaxbetLimit", 473, 505, 350, 30),
     new ImageLocator("btnRightArrow", 920, 615, 35, 35),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='3 Lá Đỏ Đen']",
+    ],
+    betchoices: {
+      red: "(//div[contains(@class,'bet-options_red')])[1]",
+      black: "(//div[contains(@class,'bet-options_black')])[1]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Đỏ hoặc Đen.",
+    },
+  };

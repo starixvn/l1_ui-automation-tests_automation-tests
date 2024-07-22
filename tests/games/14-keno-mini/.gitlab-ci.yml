@@ -1,0 +1,11 @@
+docker-build-game-14:
+  extends: docker-build
+  variables:
+    GAMEID: 14
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/14-*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile

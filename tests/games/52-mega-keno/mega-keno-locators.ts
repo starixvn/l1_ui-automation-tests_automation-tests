@@ -27,3 +27,16 @@ export const MegaKenoLocators = [
   new Components.ImageLocator("mnuKeno", 740, 88, 90, 30),
   new Components.ImageLocator("icoMegaKeno", 380, 400, 10, 10),
 ];
+
+export const KenoLocators = {
+  inGameUI: [
+    "//div[contains(@class,'game-header_title')][text()='Mega Keno']",
+  ],
+  betchoices: {
+    big: "(//div[contains(@class,'bet-options_big')][contains(text(),'Tài')])[1]",
+    small: "(//div[contains(@class,'bet-options_small')][contains(text(),'Xỉu')])[1]",
+  },
+  hedgeBetError: {
+    "#__next": "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
+  },
+};

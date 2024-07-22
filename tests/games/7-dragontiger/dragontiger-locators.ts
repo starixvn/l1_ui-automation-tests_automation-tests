@@ -17,3 +17,16 @@ export const DragonTigerLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 512, 422, 350, 25),
     new Components.ImageLocator("btnRightArrow", 864, 480, 35, 35),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Rồng Hổ']",
+    ],
+    betchoices: {
+      dragon: "(//img[@alt='dragon'])[1]",
+      tiger: "(//img[contains(@alt,'dragon')])[2]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Rồng hoặc Hổ.",
+    },
+  };

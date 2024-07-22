@@ -15,3 +15,16 @@ export const BaccaratLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 481, 565, 350, 22),
     new Components.ImageLocator("btnRightArrow", 921, 616, 35, 35),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Cào Baccarat']",
+    ],
+    betchoices: {
+      player: "(//div[contains(@class,'bet-options_bet-choice-name')][normalize-space()='Nhà Con'])[2]",
+      banker: "(//div[contains(@class,'bet-options_bet-choice-name')][normalize-space()='Nhà Cái'])[2]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Nhà Con hoặc Nhà Cái.",
+    },
+  };

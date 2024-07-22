@@ -16,3 +16,16 @@ export const VipBaccaratLocators = [
     new ImageLocator("msgMaxbetLimit", 478, 520, 350, 22),
     new ImageLocator("btnRightArrow", 924, 600, 35, 35),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Cào Baccarat VIP']",
+    ],
+    betchoices: {
+      player: "(//div[contains(@class,'bet-options_bet-choice-name')][normalize-space()='Nhà Con'])[1]",
+      banker: "(//div[contains(@class,'bet-options_bet-choice-name')][normalize-space()='Nhà Cái'])[1]",
+    },
+    hedgeBetError: {
+      "#__next": "Chỉ có thể đặt cược trên Nhà Con hoặc Nhà Cái.",
+    },
+  };

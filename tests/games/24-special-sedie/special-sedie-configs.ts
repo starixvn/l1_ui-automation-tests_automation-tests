@@ -11,7 +11,7 @@ export const SpecialSedieConfigs: Components.GameConfiguration = {
   },
   choices: ["even", "odd"],
   hedgeBetGroups: [["even", "odd"]],
-  maxTimeout: 180 * 1000, // miliseconds,
+  maxTimeout: 280 * 1000, // miliseconds,
   odds: {
     even: 1.96,
     odd: 1.96,

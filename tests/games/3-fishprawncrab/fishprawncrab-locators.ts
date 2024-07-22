@@ -17,3 +17,13 @@ export const FPCLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 512, 457, 350, 30),
     new Components.ImageLocator("btnRightArrow", 864, 509, 35, 35),
 ];
+
+export const MobiLocators = {
+    inGameUI: [
+      "//div[contains(@class,'game-header_title')][text()='Bầu Cua']",
+    ],
+    betchoices: {
+      stag: "//div[contains(@class,'game-container_game-container')][9]//div[contains(@class,'bet-options')]/div[1]//img",
+      gourd: "//div[contains(@class,'game-container_game-container')][9]//div[contains(@class,'bet-options')]/div[2]//img",
+    },
+  };
