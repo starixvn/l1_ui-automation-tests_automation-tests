@@ -6,7 +6,7 @@ export const generateConfig = (
   choices: any
 ): Components.GameConfiguration => {
   return {
-    id: 52,
+    id: 53,
     name: gamename,
     durations: durations,
     choices: choices,
@@ -23,7 +23,7 @@ export const generateConfig = (
       water: 2.4,
       wood: 4.6,
     },
-    socketName: "minikeno",
+    socketName: "megakeno2",
     accounts: {
       local: "222242",
       local1: "222242",
