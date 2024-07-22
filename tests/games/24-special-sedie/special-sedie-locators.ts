@@ -27,7 +27,7 @@ export const MobiLocators = {
       odd: "//div[contains(@class,'game-container_game-container')][6]//div[contains(@class,'bet-container_bet-container')]//div[contains(@class,'bet-options_odd')]",
     },
     hedgeBetError: {
-      "#__next": "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
+      "#__next": "Chỉ được cược 1 bên.",
     },
   };
   

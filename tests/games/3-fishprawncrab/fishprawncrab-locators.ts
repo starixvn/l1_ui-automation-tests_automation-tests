@@ -23,7 +23,7 @@ export const MobiLocators = {
       "//div[contains(@class,'game-header_title')][text()='Bầu Cua']",
     ],
     betchoices: {
-      stag: "//div[contains(@class,'game-container_game-container')][9]//div[contains(@class,'bet-options')]/div[1]//img",
-      gourd: "//div[contains(@class,'game-container_game-container')][9]//div[contains(@class,'bet-options')]/div[2]//img",
+      stag: "//div[contains(@class,'bet-options_layout-FPC')]//div[1]//div[1]//div[1]//div[2]//img[1]",
+      gourd: "//div[contains(@class,'bet-options_layout-FPC')]//div[2]//div[1]//div[1]//div[2]//img[1]",
     },
   };
