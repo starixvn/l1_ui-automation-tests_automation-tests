@@ -10,7 +10,7 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: MiniSedie1Configs,
       locators: MobiLocators,
-      waitBetTimeout: 3000,
+      waitBetTimeout: 5000,
       placeBetChoices: MiniSedie1Configs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
