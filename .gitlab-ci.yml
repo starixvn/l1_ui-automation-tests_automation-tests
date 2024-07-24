@@ -206,3 +206,26 @@ smoketestkeno:
       - test-results
     when: always
     expire_in: 1 day
+
+smoketestis:
+  image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
+  stage: test
+  tags:
+    - e2e-test
+  script:
+    - cd tests
+    - npm run test:smoke:is --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+
+  retry: 1
+  rules:
+    - if: $MODE == "SMOKEIS"
+      when: always
+    - when: never
+
+  artifacts:
+    paths:
+      - playwright-report
+      - screenshots
+      - test-results
+    when: always
+    expire_in: 1 day

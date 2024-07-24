@@ -130,3 +130,8 @@ export const MiniSedie4Configs: Components.GameConfiguration = {
   },
   productId: { l1: "1620", l2: 3823 },
 };
+
+export const Isconfigs = {
+  gameIndex: 1,
+  clickCount: 0,
+};
