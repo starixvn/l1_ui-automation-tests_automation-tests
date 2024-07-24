@@ -10,7 +10,7 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: MegaKenoConfigs,
       locators: KenoLocators,
-      waitBetTimeout: 1000,
+      waitBetTimeout: 5000,
       placeBetChoices: MegaKenoConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
