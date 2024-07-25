@@ -44,3 +44,8 @@ export const BaccaratConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1621", l2: 3810 },
 };
+
+export const Isconfigs = {
+  gameIndex: 7,
+  clickCount: 7,
+};

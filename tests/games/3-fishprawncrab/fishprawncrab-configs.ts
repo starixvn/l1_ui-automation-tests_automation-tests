@@ -26,3 +26,9 @@ export const FPCConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1614", l2: 3804 },
 };
+
+
+export const Isconfigs = {
+  gameIndex: 5,
+  clickCount: 5,
+};

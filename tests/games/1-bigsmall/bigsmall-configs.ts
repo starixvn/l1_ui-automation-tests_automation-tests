@@ -30,3 +30,8 @@ export const BigSmallConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1612", l2: 3802 },
 };
+
+export const Isconfigs = {
+  gameIndex: 3,
+  clickCount: 3,
+};

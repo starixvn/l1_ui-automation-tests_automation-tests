@@ -111,3 +111,8 @@ export const AdminDataSet_local3 ={
     },
   }
 }}
+
+export const Isconfigs = {
+  gameIndex: 10,
+  clickCount: 10,
+};

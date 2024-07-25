@@ -28,3 +28,9 @@ export const MobiLocators = {
       "#__next": "Chỉ có thể đặt cược trên Nhà Con hoặc Nhà Cái.",
     },
   };
+
+  export const IsLocators = [
+    new Components.ImageLocator("playerChoice",  1030, 497, 0, 0),
+    new Components.ImageLocator("stake1", 1035, 609, 0, 0),
+    new Components.ImageLocator("stake10", 1035, 609, 0, 0),
+  ];

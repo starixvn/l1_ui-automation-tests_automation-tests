@@ -18,6 +18,10 @@ export const DragonTigerLocators = [
     new Components.ImageLocator("btnRightArrow", 864, 480, 35, 35),
 ];
 
+export const IsLocators = [
+  new Components.ImageLocator("dragonChoice", 1030, 460, 0, 0),
+];
+
 export const MobiLocators = {
     inGameUI: [
       "//div[contains(@class,'game-header_title')][text()='Rồng Hổ']",

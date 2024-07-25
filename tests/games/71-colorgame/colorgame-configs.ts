@@ -34,3 +34,8 @@ export const ColorGameConfigs: Components.GameConfiguration = {
   productId: { l1: "1678", l2: 3870 },
   rebet: true
 };
+
+export const Isconfigs = {
+  gameIndex: 9,
+  clickCount: 9,
+};

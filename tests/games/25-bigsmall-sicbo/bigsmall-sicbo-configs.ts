@@ -71,3 +71,8 @@ export const BigSmallSicBoConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1636", l2: 3821 },
 };
+
+export const Isconfigs = {
+  gameIndex: 8,
+  clickCount: 8,
+};

@@ -31,3 +31,8 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1618", l2: 3808 },
 };
+
+export const Isconfigs = {
+  gameIndex: 4,
+  clickCount: 4,
+};

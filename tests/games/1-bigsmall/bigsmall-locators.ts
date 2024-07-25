@@ -34,3 +34,6 @@ export const MobiLocators = {
     }
   };
   
+  export const IsLocators = [
+    new Components.ImageLocator("bigChoice", 1037, 478, 0, 0),
+  ];

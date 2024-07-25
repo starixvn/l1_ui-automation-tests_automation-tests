@@ -20,3 +20,9 @@ export const ColorGameLocators = [
   new Components.ImageLocator("msgMaxbetLimit", 512, 422, 350, 25),
   new Components.ImageLocator("btnRightArrow", 864, 480, 35, 35),
 ];
+
+export const IsLocators = [
+  new Components.ImageLocator("yellowChoice", 1015, 492, 0, 0),
+  new Components.ImageLocator("stake1", 1035, 609, 0, 0),
+  new Components.ImageLocator("stake10", 1035, 609, 0, 0),
+];

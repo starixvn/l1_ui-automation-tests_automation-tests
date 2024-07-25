@@ -24,7 +24,7 @@ export const MiniSedieLocators = [
   new Components.ImageLocator("btnRightArrow", 712, 503, 35, 35),
 ];
 
-export const IsMiniSedieLocators = [
+export const IsLocators = [
   new Components.ImageLocator("oddChoice", 1027, 418, 0, 0),
   new Components.ImageLocator("stake1", 1035, 609, 0, 0),
   new Components.ImageLocator("stake10", 1035, 609, 0, 0),

@@ -27,3 +27,8 @@ export const MobiLocators = {
       gourd: "//div[contains(@class,'bet-options_layout-FPC')]//div[2]//div[1]//div[1]//div[2]//img[1]",
     },
   };
+
+
+  export const IsLocators = [
+    new Components.ImageLocator("fishChoice",  1015, 512, 0, 0),
+  ];
