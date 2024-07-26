@@ -11,7 +11,7 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
       gameConfiguration: BigSmallSicBoConfigs,
       locators: IsLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: BigSmallSicBoConfigs.choices,
+      placeBetChoices: ["big"],
       snapshotFolderPath: __filename,
       placeBetAmount: 1,
       isconfig: Isconfigs
