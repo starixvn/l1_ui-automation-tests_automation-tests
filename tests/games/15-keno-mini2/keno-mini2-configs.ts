@@ -23,7 +23,7 @@ export const generateConfig = (
       water: 2.4,
       wood: 4.6,
     },
-    socketName: "kenomini2",
+    socketName: "KenoMini2",
     accounts: {
       local: "222242",
       local1: "222242",
@@ -41,7 +41,7 @@ export const generateConfig = (
 };
 
 export const KenoConfigs: Components.GameConfiguration = generateConfig(
-  "kenomini2",
+  "KenoMini2",
   {
     wholeRound: 58 * 1000,
     placingBets: 45 * 1000,

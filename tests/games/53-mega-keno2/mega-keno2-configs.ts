@@ -7,7 +7,7 @@ export const generateConfig = (
 ): Components.GameConfiguration => {
   return {
     id: 53,
-    name: gamename,
+    name: "megakeno2",
     durations: durations,
     choices: choices,
     hedgeBetGroups: [["big", "small"]],
