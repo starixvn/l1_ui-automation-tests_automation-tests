@@ -33,8 +33,8 @@ export const KenoLocators = {
     "//div[contains(@class,'game-header_title')][text()='Mega Keno 2']",
   ],
   betchoices: {
-    big: "(//div[contains(@class,'bet-options_big')][contains(text(),'Tài')])[2]",
-    small: "(//div[contains(@class,'bet-options_small')][contains(text(),'Xỉu')])[2]",
+    big: "//div[contains(@class,'base_bet-options-kenomini2')]//div[contains(@class,'bet-options_big')]",
+    small: "//div[contains(@class,'base_bet-options-kenomini2')]//div[contains(@class,'bet-options_small')]",
   },
   hedgeBetError: {
     "#__next": "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
