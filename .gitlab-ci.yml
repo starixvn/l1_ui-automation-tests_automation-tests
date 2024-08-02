@@ -153,6 +153,7 @@ smoketestxd:
     - brew update
     - brew install zip curl
     - zip -r allure-results.zip allure-results
+    - if [ -f "allure-results.zip" ]; then echo "allure-results.zip exists" > zip_exists.log; fi
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureReportArchive=@allure-results.zip;type=application/x-zip-compressed'
 
   retry: 0
@@ -167,6 +168,7 @@ smoketestxd:
       - screenshots
       - test-results
       - allure-results
+      - allure-results.zip
     when: always
     expire_in: 1 day
 
