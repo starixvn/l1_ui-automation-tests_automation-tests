@@ -167,7 +167,6 @@ smoketestxd:
       - screenshots
       - test-results
       - allure-results
-      - allure.zip
     when: always
     expire_in: 1 day
 
