@@ -116,16 +116,9 @@ smoketest:
     - cd tests
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
-    - sleep 5
-    - |
-      if [ -f "test-results/Warning.txt" ]; then
-        echo "Warning found"
-        # Set the job status to 'warning'
-        export WARNING=true
-      else
-        echo "No Warning"
-        export WARNING=false
-      fi
+    - zip -r allure-results.zip allure-results
+    - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
+
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
@@ -149,10 +142,7 @@ smoketestxd:
     - cd tests
     - npm run test:smoke:xd --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
-    # - brew update
-    # - brew install zip curl
     - zip -r allure-results.zip allure-results
-    - if [ -f "allure-results.zip" ]; then echo "success zip file" > zip_exists.log; fi
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
 
   retry: 0
@@ -166,7 +156,6 @@ smoketestxd:
       - playwright-report
       - screenshots
       - test-results
-      - allure-results
     when: always
     expire_in: 1 day
 
@@ -178,6 +167,9 @@ smoketestmobi:
   script:
     - cd tests
     - npm run test:smoke:mobi --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+  after_script:
+    - zip -r allure-results.zip allure-results
+    - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
 
   retry: 1
   rules:
@@ -201,6 +193,9 @@ smoketestkeno:
   script:
     - cd tests
     - npm run test:smoke:keno --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+  after_script:
+    - zip -r allure-results.zip allure-results
+    - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
 
   retry: 1
   rules:
@@ -224,7 +219,10 @@ smoketestis:
   script:
     - cd tests
     - npm run test:smoke:is --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
-
+  after_script:
+    - zip -r allure-results.zip allure-results
+    - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
+    
   retry: 1
   rules:
     - if: $MODE == "SMOKEIS"
