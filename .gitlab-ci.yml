@@ -145,6 +145,7 @@ smoketestxd:
     - e2e-test
   script:
     - cd tests
+    - curl -X GET "http://10.70.70.120:8080/api/result/72d84060-8dac-4e79-a09f-f941290f471c"
     - npm run test:smoke:xd --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   retry: 1
