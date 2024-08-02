@@ -1,7 +1,7 @@
 variables:
   GIT_CLEAN_FLAGS: none
   ALLURE_URL: 'http://10.70.70.120:8080/api/result' 
-  HEADER: 'Content-Type: multipart/form-data'
+  HEADER: 'Content-Type: multipart/form-data;accept: */*'
 
 stages:
   - build
@@ -155,7 +155,7 @@ smoketestxd:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureReportArchive=@allure-results.zip;type=application/x-zip-compressed'
 
-  retry: 1
+  retry: 0
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKEXD"
       when: always
