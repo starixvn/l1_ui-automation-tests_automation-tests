@@ -16,6 +16,8 @@ cache:
 
 before_script:
   - npm ci --cache .npm
+  - rm -rf allure-results    
+  - rm -f allure-results.zip   
 
 docker-build:
   image: hub.lumigame.com/base/docker:20.10.7
@@ -118,9 +120,7 @@ smoketest:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
-    - rm -rf allure-results    
-    - rm -f allure-results.zip 
-    
+
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
@@ -146,8 +146,6 @@ smoketestxd:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
-    - rm -rf allure-results    
-    - rm -f allure-results.zip 
 
   retry: 1
   rules:
@@ -174,8 +172,6 @@ smoketestmobi:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
-    - rm -rf allure-results    
-    - rm -f allure-results.zip 
 
   retry: 1
   rules:
@@ -196,14 +192,13 @@ smoketestkeno:
   stage: test
   tags:
     - e2e-test
+
   script:
     - cd tests
     - npm run test:smoke:keno --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
-    - rm -rf allure-results    
-    - rm -f allure-results.zip 
 
   retry: 1
   rules:
@@ -230,8 +225,6 @@ smoketestis:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
-    - rm -rf allure-results    
-    - rm -f allure-results.zip  
 
   retry: 1
   rules:
