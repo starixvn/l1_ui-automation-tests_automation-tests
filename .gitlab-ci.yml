@@ -118,7 +118,9 @@ smoketest:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
-
+    - rm -rf allure-results    
+    - rm -f allure-results.zip 
+    
   retry: 1
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
@@ -144,6 +146,8 @@ smoketestxd:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
+    - rm -rf allure-results    
+    - rm -f allure-results.zip 
 
   retry: 1
   rules:
@@ -170,6 +174,8 @@ smoketestmobi:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
+    - rm -rf allure-results    
+    - rm -f allure-results.zip 
 
   retry: 1
   rules:
@@ -196,6 +202,8 @@ smoketestkeno:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
+    - rm -rf allure-results    
+    - rm -f allure-results.zip 
 
   retry: 1
   rules:
@@ -222,6 +230,8 @@ smoketestis:
   after_script:
     - zip -r allure-results.zip allure-results
     - curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed'
+    - rm -rf allure-results    
+    - rm -f allure-results.zip  
 
   retry: 1
   rules:
