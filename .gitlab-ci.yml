@@ -252,4 +252,3 @@ generate-allure-report:
   rules:
     - if: $MODE == "ALLURE"
       when: always
-    - when: never
