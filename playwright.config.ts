@@ -20,7 +20,19 @@ const config: PlaywrightTestConfig = {
   /* Run tests in files in parallel */
   fullyParallel: false,
   // reporter: [["list"], ["html", { open: "never" }]],
-  reporter: [["line"], ["allure-playwright"]],
+  reporter: [["line"], [
+    "allure-playwright",
+    {
+      detail: true,
+      resultsDir: "allure-results",
+      suiteTitle: false,
+      environmentInfo: {
+        Browser: "Chromium",
+        Env: "Prodution",
+        OS: "Mac OS",
+      },
+    },
+  ]],
   use: {
     actionTimeout: 0,
     trace: "off",

@@ -1,7 +1,7 @@
 {
   "name": "automation-tests",
   "version": "1.0.0",
-  "description": "1.0.0",
+  "description": "End-to-end and smoke tests for automation",
   "main": "index.js",
   "scripts": {
     "test:smoke": "playwright test --project=Smoke_CI --workers=2",
@@ -14,7 +14,8 @@
     "test:admin": "playwright test --project=admin",
     "update-snapshots": "playwright test --update-snapshots  --project=E2E_CI",
     "clonegame": "node clonegame.js",
-    "sendresult": "node pushResults.js"
+    "sendresult": "node pushResults.js",
+    "allure:report": "node allureReport.js"
   },
   "repository": {
     "type": "git",
