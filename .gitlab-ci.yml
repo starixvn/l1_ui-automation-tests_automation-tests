@@ -6,6 +6,7 @@ variables:
 stages:
   - build
   - test
+  - generate-allure-report
 
 cache:
   key:
@@ -242,13 +243,10 @@ smoketestis:
 
 generate-allure-report:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-0
-  stage: test
+  stage: generate-allure-report
   tags:
     - e2e-test
   script:
     - npm run allure:report
-
-  retry: 0
   rules:
     - if: $MODE == "ALLURE"
-      when: always
