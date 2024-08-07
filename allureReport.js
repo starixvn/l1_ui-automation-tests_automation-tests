@@ -59,7 +59,6 @@ async function generateReport(reportData) {
         "executorInfo": {
           "name": "CICD",
           "type": "GitLab",
-          "url": "string",
           "buildName": "https://git3.nexdev.net/l1/ui-automation-tests/automation-tests/-/pipelines",
           "buildUrl": "https://git3.nexdev.net/l1/ui-automation-tests/automation-tests/-/pipelines",
           "reportName": "DailySmokeTests",
