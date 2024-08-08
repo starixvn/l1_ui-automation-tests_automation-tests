@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { allure }  from "allure-playwright";
 
 const lstSlotGames = [
  "3810_VGaming_Baccarat",
@@ -43,7 +44,9 @@ const lobbyUrl = "https://www.sabaplay.game/vn/game";
 test.describe.configure({ mode: "parallel" });
 
 for (const gameName of lstSlotGames) {
-  test(`Check game load: ${gameName}`, async ({ page }) => {
+
+  test(`Check game load: ${gameName.split('_').pop()}`, async ({ page }) => {
+    await allure.suite("Saba Play");
     // 1. Navigate to the URL
     await page.setViewportSize({
       width: 1280,

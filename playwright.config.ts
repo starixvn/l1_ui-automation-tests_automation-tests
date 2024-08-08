@@ -1,5 +1,6 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
+import * as os from "os";
 
 const testMatch = `${process.env.npm_config_gameid}-*`;
 const admin = `${process.env.npm_config_admin}`;
@@ -28,8 +29,8 @@ const config: PlaywrightTestConfig = {
       suiteTitle: false,
       environmentInfo: {
         Browser: "Chromium",
-        Env: "Prodution",
-        OS: "Mac OS",
+        Env: process.env.npm_config_env,
+        OS: os.platform() + ' - ' + os.version()
       },
     },
   ]],
@@ -82,7 +83,7 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "Smoke_IS",
+      name: "Smoke_Instant_Play",
       testMatch: `**/${testMatch}/smoke-tests/*.issmoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
