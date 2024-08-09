@@ -149,7 +149,7 @@ smoketestOther:
 
   retry: 1
   rules:
-    - if: $TRIGGER == "true"
+    - if: $TRIGGER == "true" && $MODE != "SMOKE"
       when: always
     - when: never
 
