@@ -4,7 +4,8 @@
   "description": "End-to-end and smoke tests for automation",
   "main": "index.js",
   "scripts": {
-    "test:smoke": "playwright test --project=Smoke_CI --workers=2",
+    "test:smoke": "playwright test --project=Smoke_Club --workers=2",
+    "test:smoke:sbp": "playwright test --project=Smoke_Saba_Play --workers=2",
     "test:smoke:is": "playwright test --project=Smoke_Instant_Play --workers=2",
     "test:smoke:mobi": "playwright test --project=Smoke_Mobi --workers=2",
     "test:smoke:keno": "playwright test --project=Smoke_Keno --workers=2",
