@@ -21,8 +21,8 @@ export const BaccaratXConfigs: Components.GameConfiguration = {
   odds: {
     player: 2,
     banker: 1.95,
-    playerPair: 12,
-    bankerPair: 12,
+    playerPair: 11,
+    bankerPair: 11,
     tie: 6
   },
   accounts: {
