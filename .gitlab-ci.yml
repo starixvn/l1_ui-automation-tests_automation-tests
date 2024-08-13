@@ -119,7 +119,7 @@ smoketest:
     - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - if [ "$UPLOAD_ALLURE_RP" = "true" ]; then
-      zip -r allure-results.zip allure-results
+      zip -r allure-results.zip allure-results &&
       curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed';
       fi
 
@@ -147,7 +147,7 @@ smoketestOther:
     - npm run test:smoke:$MODE --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
     - if [ "$UPLOAD_ALLURE_RP" = "true" ]; then
-      zip -r allure-results.zip allure-results
+      zip -r allure-results.zip allure-results &&
       curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed';
       fi
   retry: 1
