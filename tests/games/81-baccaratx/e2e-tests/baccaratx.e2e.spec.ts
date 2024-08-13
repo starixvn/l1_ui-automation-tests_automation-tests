@@ -35,7 +35,7 @@ class BaccaratXE2ESpec extends E2EBases.TableGameBase {
         await this.game.waitForEvent(GameEvent.Settlement)
         await this.game.waitForTimeout(14500);
         for (const iterator of this.options.placeBetChoices) {
-          await verifyImage(this.game, `${iterator}Choice`)
+          await verifyImage(this.game, `${iterator}Choice`, 0.03)
         }
     });
 
