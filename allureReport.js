@@ -50,7 +50,8 @@ async function generateReport(reportData) {
 (async () => {
   try {
     const data = await fetchData();
-    const udid = data.map(element => element.uuid);   
+    const uuid = data.map(element => element.uuid);  
+    let generatedReport = null; 
     const reportData = {
       reportSpec: { 
         "path": [
@@ -65,17 +66,17 @@ async function generateReport(reportData) {
           "reportUrl": "reportUrl"
         }
       },
-      results: udid,
-      deleteResults: true
+      results: uuid,
+      deleteResults: false
     };
-    if (udid.length >0) {
-      const report = await generateReport(reportData);
-      console.log("Report generated:", report); 
+    if (uuid.length >0) {
+      generatedReport = await generateReport(reportData);
     }
     else {
       console.log("No Allure Result Found"); 
-
     }
+    console.log(`Daily Smoke Tests Report: http://10.70.70.120:8080/allure/reports/${generatedReport?.uuid}/)`);
+    
   } catch (error) {
     console.error("Error in the main flow:", error);
   }

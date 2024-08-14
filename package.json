@@ -15,8 +15,7 @@
     "test:admin": "playwright test --project=admin",
     "update-snapshots": "playwright test --update-snapshots  --project=E2E_CI",
     "clonegame": "node clonegame.js",
-    "sendresult": "node pushResults.js",
-    "allure:report": "node allureReport.js"
+    "sendresult": "node pushResults.js"
   },
   "repository": {
     "type": "git",
