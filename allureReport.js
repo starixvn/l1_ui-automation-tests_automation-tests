@@ -84,7 +84,7 @@ async function deleteHistoryAllureReport() {
         }
       },
       results: uuid,
-      deleteResults: false
+      deleteResults: true
     };
     if (uuid.length >0) {
       generatedReport = await generateReport(reportData);
