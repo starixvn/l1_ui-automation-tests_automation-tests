@@ -1,7 +1,7 @@
 variables:
   GIT_CLEAN_FLAGS: none
-  ALLURE_URL: 'http://10.70.70.120:8080/api/result' 
-  HEADER: 'Content-Type: multipart/form-data;accept: */*'
+  ALLURE_URL: "http://10.70.70.120:8080/api/result"
+  HEADER: "Content-Type: multipart/form-data;accept: */*"
 
 stages:
   - build
@@ -16,8 +16,8 @@ cache:
 
 before_script:
   - npm ci --cache .npm
-  - rm -rf allure-results    
-  - rm -f allure-results.zip   
+  - rm -rf allure-results
+  - rm -f allure-results.zip
 
 docker-build:
   image: hub.lumigame.com/base/docker:20.10.7
@@ -162,4 +162,18 @@ smoketestOther:
       - screenshots
       - test-results
     when: always
-    expire_in: 1 day    
+    expire_in: 1 day
+
+generate-allure-report:
+  image: hub.lumigame.com/pentagon-base/automation-tests-game-0
+  stage: test
+  tags:
+    - e2e-test
+  script:
+    - cd tests
+    - npm run allure
+  retry: 0
+  rules:
+    - if: $TEST == "ALLURE"
+      when: always
+    - when: never
