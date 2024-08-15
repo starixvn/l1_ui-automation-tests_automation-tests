@@ -174,5 +174,5 @@ generate-allure-report:
     - npm run allure
   retry: 0
   rules:
-    - if: $TEST == "ALLURE"
+    - if: $TRIGGER == "true" && $TEST == "ALLURE"
     - when: never
