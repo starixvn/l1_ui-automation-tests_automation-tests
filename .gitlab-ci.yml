@@ -152,7 +152,7 @@ smoketestOther:
       fi
   retry: 1
   rules:
-    - if: $TRIGGER == "true" && $MODE != "SMOKE" &&  $MODE != "E2E"
+    - if: $TRIGGER == "true" && $MODE != "SMOKE" &&  $MODE != "E2E" &&  $TEST != "ALLURE"
       when: always
     - when: never
 
