@@ -1,5 +1,5 @@
 
-async function fetchData() { // Use "async function" instead of arrow function
+async function fetchData() { 
   try {
     const response = await fetch(`http://10.70.70.120:8080/api/result`, {
       method: 'GET',
@@ -46,9 +46,26 @@ async function generateReport(reportData) {
   }
 }
 
-// Example usage in your IIFE:
+async function deleteHistoryAllureReport() {
+  try {
+      const response = await fetch(`http://10.70.70.120:8080/api/report/history`, {
+          method: "DELETE",
+          headers: {
+              Accept: "*/*",
+          },
+      });
+
+      if (!response.ok) {
+          throw new Error(`Request failed with status: ${response.status}`);
+      }
+  } catch (error) {
+      console.error("Error fetching data:", error);
+  }
+}
+
 (async () => {
   try {
+    
     const data = await fetchData();
     const uuid = data.map(element => element.uuid);  
     let generatedReport = null; 
@@ -67,7 +84,7 @@ async function generateReport(reportData) {
         }
       },
       results: uuid,
-      deleteResults: false
+      deleteResults: true
     };
     if (uuid.length >0) {
       generatedReport = await generateReport(reportData);
@@ -75,8 +92,9 @@ async function generateReport(reportData) {
     else {
       console.log("No Allure Result Found"); 
     }
-    console.log(`Daily Smoke Tests Report: http://10.70.70.120:8080/allure/reports/${generatedReport?.uuid}/)`);
-    
+
+    console.log(generatedReport.uuid);
+    await deleteHistoryAllureReport()
   } catch (error) {
     console.error("Error in the main flow:", error);
   }

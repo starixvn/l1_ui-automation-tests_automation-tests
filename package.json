@@ -15,7 +15,8 @@
     "test:admin": "playwright test --project=admin",
     "update-snapshots": "playwright test --update-snapshots  --project=E2E_CI",
     "clonegame": "node clonegame.js",
-    "sendresult": "node pushResults.js"
+    "sendresult": "node pushResults.js",
+    "allure": "node allureReport.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,7 @@
     "fs-extra": "^11.1.1",
     "google-spreadsheet": "^4.1.1",
     "prettier": "^3.2.5",
-    "sc-automation-core": "1.51.1"
+    "sc-automation-core": "1.51.2"
   },
   "devDependencies": {
     "@playwright/test": "1.44.0",
