@@ -6,7 +6,7 @@ export const generateConfig = (
   choices: any
 ): Components.GameConfiguration => {
   return {
-    id: 14,
+    id: 15,
     name: gamename,
     durations: durations,
     choices: choices,
