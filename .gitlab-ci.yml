@@ -54,7 +54,6 @@ e2etest:
   artifacts:
     paths:
       - playwright-report
-      - screenshots
       - test-results
     when: always
     expire_in: 1 day
@@ -79,7 +78,6 @@ gameguidetest:
   artifacts:
     paths:
       - playwright-report
-      - screenshots
       - test-results
     when: always
     expire_in: 1 day
@@ -104,7 +102,6 @@ e2etestmac:
   artifacts:
     paths:
       - playwright-report
-      - screenshots
       - test-results
     when: always
     expire_in: 1 day
@@ -132,7 +129,6 @@ smoketest:
   artifacts:
     paths:
       - playwright-report
-      - screenshots
       - test-results
     when: always
     expire_in: 1 day
@@ -159,7 +155,6 @@ smoketestOther:
   artifacts:
     paths:
       - playwright-report
-      - screenshots
       - test-results
     when: always
     expire_in: 1 day
