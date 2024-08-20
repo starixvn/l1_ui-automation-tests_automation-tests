@@ -65,10 +65,6 @@ class BaccaratXE2ESpec extends E2EBases.TableGameBase {
         await verifyImage(this.game, `imgCard56`);
       });
       
-      // await Components.test.step("Verify UI of card deck", async () => {
-      //   await verifyImage(this.game, `imgCardDeck`);
-      // });
-
       await Components.test.step("Verify UI percentage icons", async () => {
         await verifyImage(this.game, `icoPercentagePlayer`);
         await verifyImage(this.game, `icoPercentageBanker`);
