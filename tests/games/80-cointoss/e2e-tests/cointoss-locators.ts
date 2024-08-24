@@ -2,20 +2,17 @@ import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
 export const extCoinTossLocators = [
-  new Components.ImageLocator("dealer", 610, 230, 60, 30),
-  new Components.ImageLocator("headChoice", 453, 305, 65, 93),
-  new Components.ImageLocator("headOwnbetl1", 470, 417, 33, 23),
-  new Components.ImageLocator("tailChoice", 762, 312, 77, 90),
-  new Components.ImageLocator("tailOwnbetl1", 786, 416, 34, 25),
+  new Components.ImageLocator("headChoice", 456, 298, 51, 89),
+  new Components.ImageLocator("headOwnbetl1", 470, 407, 31, 26),
+  new Components.ImageLocator("tailChoice", 767, 303, 65, 87),
+  new Components.ImageLocator("tailOwnbetl1", 786, 406, 30, 27),
   new Components.ImageLocator("icoStatistic", 355, 247, 36, 35),
   new Components.ImageLocator("txtBiden", 481, 110, 61, 20),
   new Components.ImageLocator("txtTrump", 481, 172, 66, 20),
   new Components.ImageLocator("imgDealerHand", 561, 242, 167, 110),
   new Components.ImageLocator("imgChipBarl1", 438, 500, 417, 48),
   new Components.ImageLocator("imgChipBarl2", 438, 500, 417, 48),
-  new Components.ImageLocator("icoCloseGame", 873, 220, 32, 28),
-  // new Components.ImageLocator("", ),
-  // new Components.ImageLocator("", ),
+  new Components.ImageLocator("icoCloseGame", 872, 242, 29, 29),
   new Components.ImageLocator("historyMenu", 306, 326, 52, 42),
   new Components.ImageLocator("historyPopup", 465, 70, 300, 70),
   new Components.ImageLocator("errorMessage", 546, 370, 193, 30),
@@ -59,8 +56,8 @@ export const extCoinTossLocators = [
   new Components.ImageLocator("imgPFPopupServerSeedSHA256", 171, 172, 212, 36),
   new Components.ImageLocator("imgPFPopupServerSeed", 170, 222, 148, 33),
   new Components.ImageLocator("imgPFPopupClientSeed", 156, 288, 199, 37),
-  new Components.ImageLocator("imgPFPopupPlayer123",172, 326, 114, 95),
-  new Components.ImageLocator("imgPFPopupPlayer45", 768, 317, 120, 65),
+  new Components.ImageLocator("imgPFPopupPlayer123", 175, 312, 105, 101),
+  new Components.ImageLocator("imgPFPopupPlayer45", 726, 301, 107, 81),
   new Components.ImageLocator("imgPFPopupMergeClientSeed", 166, 435, 222, 33),
   new Components.ImageLocator("imgPFPopupCombinedHash", 173, 493, 232, 39),
   new Components.ImageLocator("imgPFPopupMessage", 161, 535, 959, 55),
@@ -74,25 +71,16 @@ export const extCoinTossLocators = [
   new Components.ImageLocator("imgVerificationServerSeed", 158, 128, 179, 42),
   new Components.ImageLocator("imgVerificationMergeClientSeed", 146, 171, 237, 40),
   new Components.ImageLocator("imgVerificationCombinedHash", 163, 217, 210, 43),
-  new Components.ImageLocator("imgVerificationFinalResult", 166, 277, 161, 20),
+  new Components.ImageLocator("imgVerificationFinalResult", 166, 270, 161, 20),
   new Components.ImageLocator("btnPFPopupTooltip", 723, 82, 13, 13),
   new Components.ImageLocator("btnClientSeedTooltip", 307, 298, 12, 12),
   new Components.ImageLocator("btnCombinedHashTooltip", 373, 506, 13, 13),
   new Components.ImageLocator("imgClientSeedTooltip", 270, 161, 525, 112),
   new Components.ImageLocator("imgCombinedHashTooltip", 340, 398, 525, 80),
   new Components.ImageLocator("imgPFPopupRunning", 166, 210, 965, 437),
+  new Components.ImageLocator("btnRightArrow", 868, 511, 28, 40),
+  new Components.ImageLocator("btnLeftArrow", 387, 508, 26, 42),
 ];
 
 export const CoinTossLocators = extCoinTossLocators.concat(Components.BaseLocator.GameLobbyLocator)
 
-
-// export const SedieLocators = extSedieLocators.concat(Components.TableLocator.TableLocators).filter((item, index) => {
-//   return !Components.TableLocator.TableLocators.some((array1Item, array1Index) => {
-//     return array1Index === index && item === array1Item;
-//   });
-// });
-
-
-// const lblHistoryDetailRoundId = {x: 639}
- 
-// HappyFishLocators.forEach((item, i)=>{ if (item.name == "lblHistoryDetailRoundId") item.x = lblHistoryDetailRoundId.x } )
