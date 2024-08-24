@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
   /* Run tests in files in parallel */
   fullyParallel: false,
   // reporter: [["list"], ["html", { open: "never" }]],
-  reporter: [["line"], [
+  reporter: [["html",{ open: "never" }],["line"], [
     "allure-playwright",
     {
       detail: true,
