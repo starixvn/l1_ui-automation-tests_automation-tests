@@ -1,0 +1,21 @@
+import { Components } from "sc-automation-core";
+
+export const SeDie3Locators = [
+    new Components.ImageLocator("dealer", 579, 44, 140, 156),
+    new Components.ImageLocator("redChoice", 213, 280, 70, 45),
+    new Components.ImageLocator("redOwnbet", 346, 356, 35, 25),
+    new Components.ImageLocator("whiteChoice", 753, 277, 167, 45),
+    new Components.ImageLocator("whiteOwnbet", 866, 356, 97, 28),
+    new Components.ImageLocator("red3Choice", 206, 410, 34, 106),
+    new Components.ImageLocator("red2Choice", 437, 415, 29, 98),
+    new Components.ImageLocator("red1Choice", 666, 416, 27, 99),
+    new Components.ImageLocator("white3Choice", 896, 416, 27, 96),
+    new Components.ImageLocator("playerBalance", 192, 644, 125, 23),
+    new Components.ImageLocator("hamburgerMenu", 37, 167, 21, 21),
+    new Components.ImageLocator("historyMenu", 37, 357, 21, 21),
+    new Components.ImageLocator("historyPopup", 120, 90, 1040, 120),
+    new Components.ImageLocator("errorMessage", 459, 492, 380, 37),
+    new Components.ImageLocator("msgMaxbetLimit", 478, 488, 400, 30),
+    new Components.ImageLocator("btnRightArrow", 911, 588, 35, 35),
+    new Components.ImageLocator("roundId", 312, 190, 128, 23),
+];
