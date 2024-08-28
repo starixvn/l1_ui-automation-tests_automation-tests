@@ -29,6 +29,12 @@ class ChineseBlackjackE2ESpec extends E2EBases.CardGameBase {
     super.runScenario();
   }
   
+  protected returnGameLobby(): void {
+  }
+
+  protected turnbackGame(): void {
+  }
+
   protected async verifySetlementResults(settledResults: any, betdata: any) {
     var _a;
 

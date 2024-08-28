@@ -1,0 +1,63 @@
+import { Components } from "sc-automation-core";
+const ImageLocator = Components.ImageLocator;
+
+export const extTurboOddEvenLocators = [
+  new Components.ImageLocator("dealer", 610, 230, 60, 30),
+  new Components.ImageLocator("evenChoice", 415, 260, 90, 50),
+  new Components.ImageLocator("evenOwnbetl1", 442, 396, 45, 35),
+  new Components.ImageLocator("oddChoice", 774, 260, 89, 59),
+  new Components.ImageLocator("oddOwnbetl1", 780, 405, 45, 35),
+  new Components.ImageLocator("playerBalance", 192, 644, 125, 23),
+  new Components.ImageLocator("historyMenu", 306, 326, 52, 42),
+  new Components.ImageLocator("historyPopup", 465, 70, 300, 70),
+  new Components.ImageLocator("errorMessage", 546, 370, 193, 30),
+  new Components.ImageLocator("evenChoiceBetBoard", 391, 369, 157, 42),
+  new Components.ImageLocator("oddChoiceBetBoard", 742, 369, 157, 42),
+  new Components.ImageLocator("stake1", 436, 489, 97, 36),
+  new Components.ImageLocator("stake10", 436, 489, 97, 36),
+  new Components.ImageLocator("stake1000", 774, 552, 60, 20),
+  new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
+  new Components.ImageLocator("msgMaxbetLimitl1", 488, 368, 350, 30),
+  new Components.ImageLocator("msgMaxbetLimitl2", 488, 368, 350, 30),
+  new Components.ImageLocator("icoHistory", 323, 307, 36, 34),
+  new Components.ImageLocator("icoGuide", 919, 310, 36, 35),
+  new Components.ImageLocator("btnPlaceBetChoice", 400, 371, 122, 29),
+  new Components.ImageLocator("btnFirstChip", 453, 501, 64, 24),
+  new Components.ImageLocator("imgChipBoardDefaultl1", 428, 477, 437, 155),
+  new Components.ImageLocator("imgChipBoardDefaultl2", 428, 477, 437, 155),
+  new Components.ImageLocator("imgBetAmountFirstChipl1", 430, 372, 66, 25),
+  new Components.ImageLocator("imgBetAmountFirstChipl2", 430, 372, 66, 25),
+  new Components.ImageLocator("btnConfirmEnable", 740, 593, 98, 27),
+  new Components.ImageLocator("btnChipBoardClear", 600, 609, 93, 19),
+  new Components.ImageLocator("btnConfirmDisable", 740, 593, 98, 27),
+  new Components.ImageLocator("imgBetAmountCleared", 430, 372, 66, 25),
+  new Components.ImageLocator("btnChipBoardClose", 460, 602, 83, 25),
+  new Components.ImageLocator("btnPresetStake", 335, 395, 36, 29),
+  new Components.ImageLocator("imgPresetStakeDefaultl1", 419, 215, 451, 274),
+  new Components.ImageLocator("imgPresetStakeDefaultl2", 419, 215, 451, 274),
+  new Components.ImageLocator("btnPresetStakeFirstValue", 455, 337, 61, 32),
+  new Components.ImageLocator("imgPresetStakeFirstValuel1", 802, 274, 53, 36),
+  new Components.ImageLocator("imgPresetStakeFirstValuel2", 802, 274, 53, 36),
+  new Components.ImageLocator("btnPresetStakeClear", 608, 452, 76, 28),
+  new Components.ImageLocator("btnPresetStakeComfirm", 747, 451, 91, 30),
+  new Components.ImageLocator("lblRoundIdOnTable", 443, 235, 96, 22),
+  new Components.ImageLocator("locHistoryBetDate", 246, 191, 90, 22),
+  new Components.ImageLocator("locHistoryRoundId", 340, 189, 106, 26),
+  new Components.ImageLocator("locHistoryTotalStake", 782, 189, 57, 26),
+  new Components.ImageLocator("locHistoryBetWin", 1000, 190, 55, 26),
+];
+
+export const TurboOddEvenLocators = extTurboOddEvenLocators.concat(Components.BaseLocator.GameLobbyLocator)
+
+
+// export const SedieLocators = extSedieLocators.concat(Components.TableLocator.TableLocators).filter((item, index) => {
+//   return !Components.TableLocator.TableLocators.some((array1Item, array1Index) => {
+//     return array1Index === index && item === array1Item;
+//   });
+// });
+
+
+// const lblHistoryDetailRoundId = {x: 639}
+ 
+// HappyFishLocators.forEach((item, i)=>{ if (item.name == "lblHistoryDetailRoundId") item.x = lblHistoryDetailRoundId.x } )
