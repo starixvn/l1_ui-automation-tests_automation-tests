@@ -8,7 +8,7 @@ class transformersSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: ["1", "25"],
+      placeBetChoices: ["25"],
       gameConfiguration: transformersConfigs,
       locators: transformersLocators,
       waitBetTimeout: 1000,

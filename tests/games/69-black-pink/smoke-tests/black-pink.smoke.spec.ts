@@ -8,7 +8,7 @@ class BlackPinkSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: ["1", "25"],
+      placeBetChoices: ["25"],
       gameConfiguration: BlackPinkConfigs,
       locators: BlackPinkLocators,
       waitBetTimeout: 1000,

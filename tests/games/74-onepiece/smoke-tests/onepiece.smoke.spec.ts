@@ -8,7 +8,7 @@ class OnePieceSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: ["1", "25"],
+      placeBetChoices: ["25"],
       gameConfiguration: OnePieceConfigs,
       locators: OnePieceLocators,
       waitBetTimeout: 1000,

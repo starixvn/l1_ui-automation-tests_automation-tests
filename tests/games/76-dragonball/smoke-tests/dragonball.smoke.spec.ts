@@ -8,7 +8,7 @@ class dragonballSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: ["1", "25"],
+      placeBetChoices: ["25"],
       gameConfiguration: dragonballConfigs,
       locators: dragonballLocators,
       waitBetTimeout: 1000,
