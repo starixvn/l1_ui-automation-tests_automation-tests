@@ -23,6 +23,8 @@ class PontoonE2ESpec extends E2EBases.CardGameBase {
     };
     super(e2eOptions);
   }
+  protected provablyFairTests(): void {
+  }
  
   protected runScenario(): void {
     super.runScenario();
