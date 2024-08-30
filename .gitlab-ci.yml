@@ -113,7 +113,7 @@ smoketest:
     - e2e-test
   script:
     - cd tests
-    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME --trackDownload=$PERFORMANCE
   after_script:
     - if [ "$UPLOAD_ALLURE_RP" = "true" ]; then
       zip -r allure-results.zip allure-results &&
@@ -140,7 +140,7 @@ smoketestOther:
     - e2e-test
   script:
     - cd tests
-    - npm run test:smoke:$MODE --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
+    - npm run test:smoke:$MODE --env=$ENV --gameid=$GAMEID --project=$STACK_NAME --trackDownload=$PERFORMANCE
   after_script:
     - if [ "$UPLOAD_ALLURE_RP" = "true" ]; then
       zip -r allure-results.zip allure-results &&
