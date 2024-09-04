@@ -20,7 +20,12 @@ class VipSedieE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.tabSedie,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
-      barItems: ["odd","even"]
+      barItems: ["odd","even"],       
+      historyItems : {
+        roundid: "phien",
+        betamount: "even",
+        betwin: "betwin"
+    },
     };
     super(e2eOptions);
   }

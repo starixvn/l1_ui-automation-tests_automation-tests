@@ -12,11 +12,15 @@ class CoinTossE2ESpec extends E2EBases.MiniGameBase {
             snapshotFolderPath: __filename,
             uiChecklist : ['icoHistory', 'icoGuide', 'icoStatistic', 'icoGuide',], //`imgChipBar${process.env.npm_config_project}` 'icoCloseGame'
             isBalanceBettingGame : false,
+            historyItems : {
+                roundid: "phien",
+                betamount: "totalAmount",
+                betwin: "betwin"
+            },
         };
 
         super(E2EOptions);
     }
-
     protected chipBoardTests(): void {
     }
     protected presetStakeTests(): void {

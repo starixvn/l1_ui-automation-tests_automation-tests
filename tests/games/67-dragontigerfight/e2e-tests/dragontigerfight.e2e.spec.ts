@@ -20,9 +20,18 @@ class DragonTigerFightE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.tabCardGames,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
-      barItems: ["dragon","tiger","tie"]
+      barItems: ["dragon","tiger","tie"],          
+      historyItems : {
+        roundid: "phien",
+        betamount: "totalAmount",
+        betwin: "betwin"
+    },
     };
     super(e2eOptions);
+  }
+  protected returnGameLobby(): void {
+  }
+  protected turnbackGame(): void {
   }
 
 }

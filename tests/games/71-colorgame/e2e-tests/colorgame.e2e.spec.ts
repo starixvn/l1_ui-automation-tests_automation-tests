@@ -20,16 +20,22 @@ class ColorGameE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.tabOthers,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
+      historyItems : {
+        roundid: "phien",
+        betamount: "totalAmount",
+        betwin: "betwin"
+    },
     };
     super(e2eOptions);
   }
   
   protected multipleBetChoices() {
-    Components.test("Player able to placebet multiple choices in 1 round", async () => {
+    Components.test("Player able to placebet multiple choices in 1 round @Settlement03", async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
         this.game.attachSocketAndCaptureEvent(GameEvent.OwnBets);
         this.game.attachSocketAndCaptureEvent(GameEvent.Settlement);
+        this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
         let betChoices: any = this.options.multiPlaceBetChoices;
         const amount = this.options.placeBetAmount ?? 1;
         await this.game.waitUntilPlaceBet();
@@ -66,6 +72,12 @@ class ColorGameE2ESpec extends E2EBases.TableGameBase {
 }
 
   protected LedBarTests(): void {
+    
+  }
+  protected returnGameLobby(): void {
+    
+  }
+  protected turnbackGame(): void {
     
   }
 }

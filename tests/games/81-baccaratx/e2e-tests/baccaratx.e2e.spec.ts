@@ -26,6 +26,11 @@ class BaccaratXE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.tabOthers,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
+      historyItems : {
+        roundid: "phien",
+        betamount: "amount",
+        betwin: "betwin"
+    },
     };
     super(e2eOptions);
   }

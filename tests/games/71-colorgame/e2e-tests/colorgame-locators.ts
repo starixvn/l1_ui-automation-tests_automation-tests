@@ -17,7 +17,7 @@ export const extColorGameLocators = [
     new Components.ImageLocator("lblHistoryFirstRow", 244, 195, 857, 30),
     new Components.ImageLocator("lblRoundIdOnTable", 116, 170, 138, 24),
     new Components.ImageLocator("locHistoryBetDate", 245, 197, 103, 25),
-    new Components.ImageLocator("locHistoryRoundID", 430, 205,10, 10),
+    new Components.ImageLocator("locHistoryRoundId", 430, 205,10, 10),
     new Components.ImageLocator("locHistoryTotalStake", 823, 193, 106, 33),
     new Components.ImageLocator("locHistoryBetWin", 995, 194, 117, 29),
     new Components.ImageLocator("locOpenBetDetails", 422, 203, 45, 13),

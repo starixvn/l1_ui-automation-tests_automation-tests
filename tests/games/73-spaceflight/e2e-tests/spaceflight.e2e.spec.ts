@@ -16,16 +16,11 @@ class SpaceFlightE2ESpec extends E2EBases.CrashGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       indexTicketHistory: { totalbet: -2, isIdLink: true },
       gameLobbyNavigation: [
-        Components.BaseLocator.baseLocatorNames.tabCardGames,
-        Components.BaseLocator.baseLocatorNames.icoGame7,
+        Components.BaseLocator.baseLocatorNames.tabOthers,
+        Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
     };
     super(e2eOptions);
-  }
-
-  protected turnbackGame(): void {
-  }
-  protected returnGameLobby(): void {
   }
 }
 

@@ -19,7 +19,12 @@ class FantanE2ESpec extends E2EBases.CardGameBase {
       gameLobbyNavigation: [
         Components.BaseLocator.baseLocatorNames.tabCardGames,
         Components.BaseLocator.baseLocatorNames.icoGame7,
-      ],
+      ],          
+      historyItems : {
+        roundid: "phien",
+        betamount: "totalAmount",
+        betwin: "betwin"
+    },
     };
     super(e2eOptions);
   }

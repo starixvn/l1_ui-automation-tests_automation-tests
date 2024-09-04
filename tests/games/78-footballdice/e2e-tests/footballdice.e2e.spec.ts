@@ -24,13 +24,18 @@ class FootballDiceE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
       barItems: ["home","away","draw"],
+      historyItems : {
+        roundid: "phien",
+        betamount: "totalAmount",
+        betwin: "betwin"
+    },
       probvalyFair: false
     };
     super(e2eOptions);
   }
 
   protected inGameUiTests(): void {
-    Components.test("Verify all bet choices display correctly", async () => {
+    Components.test("Verify all bet choices display correctly @UI01", async () => {
         await this.game.waitForEvent(GameEvent.StartPlaceBet)
         await this.game.waitForTimeout(2500)
         for (const iterator of this.options.placeBetChoices) {
@@ -41,20 +46,20 @@ class FootballDiceE2ESpec extends E2EBases.TableGameBase {
         }
     });
     
-    Components.test("Verify the EU cup image appears", async () => {
+    Components.test("Verify the EU cup image appears @UI02", async () => {
       // Act
       const dealerSnapshot = await this.game.capture(baseLocatorNames.imgdealer);
       // Assert
       expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name, { maxDiffPixelRatio: 0.3 });
   });
 
-    Components.test("Verify default state of chip bar", async () => {
+    Components.test("Verify default state of chip bar @UI03", async () => {
         const chipbar = await this.game.capture(`defaultChipBar${process.env.npm_config_project}`);
         // Assert
         expect(chipbar.image).toMatchSnapshot(chipbar.name);
     });
     if (this.options.gameConfiguration.rebet) {
-      Components.test("Verify Rebet button is disabled", async () => {
+      Components.test("Verify Rebet button is disabled @UI04", async () => {
             const btnrebet = await this.game.capture(baseLocatorNames.btnRebet);
             // Assert
             expect(btnrebet.image).toMatchSnapshot(btnrebet.name);

@@ -1,16 +1,16 @@
-import { FootballDiceLocators } from "../footballspin-locators";
+import { FootballSpinLocators } from "../footballspin-locators";
 import * as gameconfig from "../footballspin-configs";
 import { AdminBases } from "sc-automation-core";
 
-class FootballDiceAdminSpec extends AdminBases.TableTicketDetailGameBase {
+class FootballSpinAdminSpec extends AdminBases.TableTicketDetailGameBase {
   /**
    *
    */
   constructor() {
     const adminOptions: AdminBases.IBaseOptions = {
-      placeBetChoices: [gameconfig.FootballDiceConfigs.choices[1],gameconfig.FootballDiceConfigs.choices[0]],
-      gameConfiguration: gameconfig.FootballDiceConfigs,
-      locators: FootballDiceLocators,
+      placeBetChoices: [gameconfig.FootballSpinConfigs.choices[1],gameconfig.FootballSpinConfigs.choices[0]],
+      gameConfiguration: gameconfig.FootballSpinConfigs,
+      locators: FootballSpinLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
@@ -24,5 +24,7 @@ class FootballDiceAdminSpec extends AdminBases.TableTicketDetailGameBase {
 
 }
 
-new FootballDiceAdminSpec().start();
+new FootballSpinAdminSpec().start();
+
+
 

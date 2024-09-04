@@ -68,24 +68,24 @@ export const FootballSpinConfigs: Components.GameConfiguration = {
   productId:  { l1: "1686", l2: "3878" },
 };
 
-export const AdminDataSet_local3 ={
+export const AdminDataSet_local ={
   accountId: 222263,
   l1datasetRER:{
-    "TC1_expect": {
+    "expect_running": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist."
     },
-    "TC2_expect": {
+    "expect_archive": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist."
     },
-    "TC3_expect": {
+    "expect_win": {
       totalAmount: 1,
       totalWin: 1.96,
       validBetAmount: 1,
@@ -96,38 +96,28 @@ export const AdminDataSet_local3 ={
       dropDown: {
       "//*[@id='__next']/div/div[4]/div/select": "10"},
       button: "//*[@id='__next']/div/div[7]/div/img[1]"
-    
     },
     "settle_lose": {
-      "#Result_home_0_": "5",
-      "#Result_home_1_": "5",
-      "#Result_away_0_": "6",
-      "#Result_away_1_": "6"
+      dropDown: {
+      "//*[@id='__next']/div/div[4]/div/select": "10"},
+      button: "//*[@id='__next']/div/div[7]/div/img[1]"
     },
-    "settle_draw": {
-      "#Result_home_0_": "1",
-      "//*[@id='__next']/div/div[7]/div/img[1]'": "1",
-      "#Result_away_0_": "1",
-      "#Result_away_1_": "1"
+    "settle_lose_multiple_choices": {
+      dropDown: {
+        "//*[@id='__next']/div/div[4]/div/select": "10"},
+        button: "//*[@id='__next']/div/div[7]/div/img[1]"
     },
-    "TC4_expect": {
+    "expect_lose": {
       totalAmount: 1,
       totalWin: 0,
       validBetAmount: 1,
       errorCode: "0",
       errorDescription: null
     },
-    "TC5_expect": {
+    "expect_multiple_choices": {
       totalAmount: 2,
       totalWin: 0,
       validBetAmount: 2,
-      errorCode: "0",
-      errorDescription: null
-    },
-    "TC6_expect": {
-      totalAmount: 1,
-      totalWin: 1,
-      validBetAmount: 1,
       errorCode: "0",
       errorDescription: null
     },

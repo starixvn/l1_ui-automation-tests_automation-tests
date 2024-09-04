@@ -23,6 +23,11 @@ class FootballSpinE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.tabOthers,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
+      historyItems : {
+        roundid: "phien",
+        betamount: "totalAmount",
+        betwin: "betwin"
+    },
       probvalyFair: false
     };
     super(e2eOptions);
