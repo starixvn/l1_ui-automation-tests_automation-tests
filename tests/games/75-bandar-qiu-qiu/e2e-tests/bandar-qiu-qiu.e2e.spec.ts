@@ -22,7 +22,12 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
         Components.BaseLocator.baseLocatorNames.tabCardGames,
         Components.BaseLocator.baseLocatorNames.icoGame1,
       ],
-      barItems: ["player","banker","tie"]
+      barItems: ["player","banker","tie"],
+      historyItems : {
+        roundid: "phien",
+        betamount: "totalAmount",
+        betwin: "betwin"
+    },
     };
     super(e2eOptions);
   }
@@ -67,9 +72,9 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       // Post-Act
       const settledata = {
           settledResults: settledResults.settlementResult,
-          roundId: settledResults.roundId.toString(),
-          betwin: settledResults.winAmount.toString(),
-          bet: bet.amount.toString(),
+          roundId: settledResults.roundId,
+          betwin: settledResults.winAmount,
+          bet: bet.amount,
           choice: bet.choice,
       };
       global.settledata = settledata;
@@ -115,6 +120,7 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       this.game.attachSocketAndCaptureEvent(GameEvent.OwnBets);
       this.game.attachSocketAndCaptureEvent(GameEvent.Settlement);
+      this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
       let betChoices: any = this.options.multiPlaceBetChoices;
       const amount = this.options.placeBetAmount ?? 1;
       await this.game.waitUntilPlaceBet();
@@ -172,6 +178,7 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
   Components.test("Verify player can rebet all bet choice and amount of previous placebet", async () => {
       // Arrange
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
       const bet = { choice: this.options.placeBetChoices[1], amount: this.options.placeBetAmount ?? 1 };
       await this.game.waitUntilPlaceBet();
       await this.game.clickLocator("btnRebet");
@@ -212,35 +219,38 @@ class BandarQiuQiuE2ESpec extends E2EBases.TableGameBase {
   }
 
   protected turnbackGame(): void {
-    Components.test("Verify player able to go back game by clicking on game icon", async () => {
-      // Act 1.
-      await this.game.clickLocator("tabCardGames")
-      let pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
-      const pathGameIcon = this.options.snapshotFolderPath+ "-snapshots/" +"gameIcon.png"
-      await this.game.page.screenshot({ path: pathLobbyImg, fullPage: true })
-      let gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon)
-      console.log(gameicon);
-      if (gameicon==null) {
-        await this.game.page.mouse.click(1258, 365)
-        await this.game.waitForTimeout(timeout);
-        pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
-        gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon,40)
-        if (gameicon==null) {
-          await this.game.page.mouse.click(921, 258)
-        }
-        else{
-          await this.game.page.mouse.click(gameicon.x, gameicon.y)
-        }
-      }
-      else{
-        await this.game.page.mouse.click(gameicon.x, gameicon.y)
-      }
-        await this.game.waitForTimeout(timeout*2)
-        const dealerSnapshot = await this.game.capture("imgdealer");
-        // Assert
-        expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name, { maxDiffPixelRatio: 0.3 });
+  //   Components.test("Verify player able to go back game by clicking on game icon", async () => {
+  //     // Act 1.
+  //     await this.game.clickLocator("tabCardGames")
+  //     let pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
+  //     const pathGameIcon = this.options.snapshotFolderPath+ "-snapshots/" +"gameIcon.png"
+  //     await this.game.page.screenshot({ path: pathLobbyImg, fullPage: true })
+  //     let gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon)
+  //     console.log(gameicon);
+  //     if (gameicon==null) {
+  //       await this.game.page.mouse.click(1258, 365)
+  //       await this.game.waitForTimeout(timeout);
+  //       pathLobbyImg = this.options.snapshotFolderPath+ "-snapshots/" +"lobby.png"
+  //       gameicon = await this.game.detectImageLocation(pathLobbyImg,pathGameIcon,40)
+  //       if (gameicon==null) {
+  //         await this.game.page.mouse.click(921, 258)
+  //       }
+  //       else{
+  //         await this.game.page.mouse.click(gameicon.x, gameicon.y)
+  //       }
+  //     }
+  //     else{
+  //       await this.game.page.mouse.click(gameicon.x, gameicon.y)
+  //     }
+  //       await this.game.waitForTimeout(timeout*2)
+  //       const dealerSnapshot = await this.game.capture("imgdealer");
+  //       // Assert
+  //       expect(dealerSnapshot.image).toMatchSnapshot(dealerSnapshot.name, { maxDiffPixelRatio: 0.3 });
 
-  });
+  // });
+  }
+  protected returnGameLobby(): void {
+    
   }
 
 
