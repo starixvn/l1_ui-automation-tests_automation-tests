@@ -84,12 +84,12 @@ const GameConfigsL2 = {
 const gameId = 3;
 
 const gameName = {
-  vi: "",
-  en: "",
-  zh_tw: "",
-  id: "",
-  th: "",
-  zh_cn: "",
+  vi: "Fish Prawn Crab",
+  en: "Fish Prawn Crab",
+  zh_tw: "Fish Prawn Crab",
+  id: "Fish Prawn Crab",
+  th: "Fish Prawn Crab",
+  zh_cn: "Fish Prawn Crab",
 };
 
 const gameguideBase =
