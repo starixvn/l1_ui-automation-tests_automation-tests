@@ -1,0 +1,35 @@
+import { Components } from "sc-automation-core";
+
+export const MiniSedieLocators = [
+  new Components.ImageLocator("evenChoice", 256, 298, 86, 23),
+  new Components.ImageLocator("evenOwnbetl1", 317, 341, 18, 15),
+  new Components.ImageLocator("evenOwnbetl2", 317, 341, 18, 15),
+  new Components.ImageLocator("oddChoice", 571, 296, 35, 31),
+  new Components.ImageLocator("oddOwnbetl1", 637, 341, 19, 16),
+  new Components.ImageLocator("oddOwnbetl2", 637, 341, 19, 16),
+  new Components.ImageLocator("historyMenu", 177, 347, 25, 25),
+  new Components.ImageLocator("historyPopup", 465, 70, 300, 70),
+  new Components.ImageLocator("stake1", 293, 507, 40, 40),
+  new Components.ImageLocator("stake10", 293, 507, 40, 40),
+  new Components.ImageLocator("icoGuide",736, 447, 27, 25),
+  new Components.ImageLocator("icoHistory", 177, 347, 25, 25),
+  new Components.ImageLocator("icoStatistic", 197, 253, 36, 23),
+  new Components.ImageLocator("icoColapse", 768, 347, 29, 29),
+  new Components.ImageLocator("imgStatistic", 308, 77, 73, 119),
+  new Components.ImageLocator("imgSeDieMini2", 901, 77, 120, 18),
+  new Components.ImageLocator("imgSeDieMini3", 898, 262, 125, 24),
+  new Components.ImageLocator("imgSeDieMini4", 898, 452, 123, 20),
+  new Components.ImageLocator("imgSeDieMini", 433, 228, 117, 27),
+  new Components.ImageLocator("icoSwitch1", 1053, 72, 42, 35),
+  new Components.ImageLocator("icoSwitch2", 1060, 261, 32, 35),
+  new Components.ImageLocator("icoSwitch3", 1058, 448, 37, 34),
+  new Components.ImageLocator("imgIntroduction", 823, 78, 270, 1093),
+  new Components.ImageLocator("lblDontShow", 916, 558, 100, 22),
+  new Components.ImageLocator("lblRoundIdOnTable", 300, 236, 78, 17),
+  new Components.ImageLocator("btnRightArrow", 717, 512, 20, 34),
+  new Components.ImageLocator("btnLeftArrow", 233, 513, 27, 29),
+
+
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
+];
+
