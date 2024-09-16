@@ -9,7 +9,7 @@ export const FortuneCatConfigs: Components.GameConfiguration = {
     lockingBet: 0,
     shakeThePlateDuration: 0,
   },
-  choices: ["1", "25"],
+  choices: ["25"],
   maxTimeout: 100 * 1000, // miliseconds,
   odds: {
     "0": { "2": 0, "3": 2, "4": 5, "5": 10 },
