@@ -17,4 +17,5 @@ export const BlackPinkLocators = [
   new ImageLocator("spin", 927, 555, 120, 120),
   new ImageLocator("submitPayline", 532, 612, 210, 55),
   new ImageLocator("clearChoices", 860, 110, 182, 58),
+  new ImageLocator("outside", 5, 5, 5, 5),
 ];

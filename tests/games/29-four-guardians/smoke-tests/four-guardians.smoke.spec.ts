@@ -32,6 +32,7 @@ class FourGuardiansSmokeSpec extends SmokeBases.SlotGameBase {
       expect(this.game.odds).toStrictEqual(configOdds);
     });
   }
+
 }
 
 new FourGuardiansSmokeSpec().start();

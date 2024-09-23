@@ -14,7 +14,7 @@ export const dragonballLocators = [
   new ImageLocator("jackpotMenu", 50, 510, 50, 50),
   new ImageLocator("historyPopup", 546, 40, 192, 50),
   new ImageLocator("jackpotPopup", 180, 32, 890, 130),
-  new ImageLocator("guideMenu", 55, 591, 45, 45),
+  new ImageLocator("guideMenu", 55, 502, 45, 45),
   new ImageLocator("stake1", 306, 494, 78, 42),
   new ImageLocator("stake10", 303, 556, 78, 46),
   new ImageLocator("spin", 927, 555, 120, 120),
@@ -25,3 +25,6 @@ export const dragonballLocators = [
   new ImageLocator("roundId", 1027, 65, 145, 20),
 
 ];
+const guideMenu = {y: 588}
+ 
+dragonballLocators.forEach((item, i)=>{ if (item.name == "guideMenu" && process.env.npm_config_project == "l2") item.y = guideMenu.y } )

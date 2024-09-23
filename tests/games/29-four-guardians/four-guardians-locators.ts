@@ -1,6 +1,5 @@
 import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
-
 export const FourGuardiansLocators = [
   new ImageLocator("choiceMenu", 64, 615, 120, 60),
   new ImageLocator("1Choice", 194, 125, 115, 67),
@@ -20,5 +19,10 @@ export const FourGuardiansLocators = [
   new ImageLocator("submitPayline", 542, 623, 200, 40),
   new ImageLocator("clearChoices", 866, 580, 135, 35),
   new ImageLocator("icoGuide", 30, 405, 35, 35),
+  new ImageLocator("outside", 5, 5, 5, 5),
+  new ImageLocator("guideMenu", 40, 412, 17, 16),
 
 ];
+const guideMenu = {y: 470}
+ 
+FourGuardiansLocators.forEach((item, i)=>{ if (item.name == "guideMenu" && process.env.npm_config_project == "l2") item.y = guideMenu.y } )

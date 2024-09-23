@@ -14,4 +14,6 @@ export const CandyLandLocators = [
   new ImageLocator("spin", 940, 575, 106, 88),
   new ImageLocator("submitPayline", 1, 1, 0, 0),
   new ImageLocator("clearChoices", 1, 1, 0, 0),
+  new ImageLocator("outside", 5, 5, 5, 5),
+  new ImageLocator("guideMenu", 62, 495, 29, 29),
 ];

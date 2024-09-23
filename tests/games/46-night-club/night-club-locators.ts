@@ -16,4 +16,6 @@ export const NightClubLocators = [
   new ImageLocator("spin", 1131, 625),
   new ImageLocator("submitPayline", 633, 663),
   new ImageLocator("clearChoices", 957, 575),
+  new ImageLocator("outside", 5, 5, 5, 5),
+  new ImageLocator("guideMenu", 75, 531, 20, 25),
 ];

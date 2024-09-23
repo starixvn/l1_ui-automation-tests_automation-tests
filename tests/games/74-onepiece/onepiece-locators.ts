@@ -23,3 +23,7 @@ export const OnePieceLocators = [
   new ImageLocator("outside", 10, 10, 10, 10),
 
 ];
+
+const guideMenu = {y: 588}
+ 
+OnePieceLocators.forEach((item, i)=>{ if (item.name == "guideMenu" && process.env.npm_config_project == "l2") item.y = guideMenu.y } )

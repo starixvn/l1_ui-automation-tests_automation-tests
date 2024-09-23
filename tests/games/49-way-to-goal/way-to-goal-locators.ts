@@ -16,4 +16,6 @@ export const WayToGoalLocators = [
   new ImageLocator("spin", 1011, 596, 60, 60),
   new ImageLocator("submitPayline", 559, 567, 160, 40),
   new ImageLocator("clearChoices", 890, 506, 150, 30),
+  new ImageLocator("outside", 5, 5, 5, 5),
+  new ImageLocator("guideMenu", 48, 400, 20, 22),
 ];

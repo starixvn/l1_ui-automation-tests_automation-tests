@@ -23,3 +23,6 @@ export const transformersLocators = [
   new ImageLocator("outside", 10, 10, 10, 10),
 
 ];
+const guideMenu = {y: 588}
+ 
+transformersLocators.forEach((item, i)=>{ if (item.name == "guideMenu" && process.env.npm_config_project == "l2") item.y = guideMenu.y } )
