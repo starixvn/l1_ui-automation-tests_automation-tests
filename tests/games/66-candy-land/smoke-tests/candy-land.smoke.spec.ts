@@ -49,25 +49,6 @@ class CandyLandSmokeSpec extends SmokeBases.SlotGameBase {
       expect(placeBetResponse.endBet).toBe(bet.amount * parseFloat(bet.choice));
     });
   }
-
-  protected ticketHistoryTests(): void {
-    Components.test("AND player could open history popup", async () => {
-      // Arrange
-      const historyPayload = await this.player.openHistory();
-
-      // Act
-      const historySnapshot = await this.game.captureHistory();
-
-      // Assert
-      expect(historyPayload.history.betLogs.length).toBeGreaterThan(0);
-      expect(historySnapshot.image).toMatchSnapshot(historySnapshot.name);
-      //Close history
-      await this.game.clickOutSide();
-      await this.game.clickGuide(10000);
-      await this.game.clickOutSide();
-
-  });
-  }
 }
 
 new CandyLandSmokeSpec().start();
