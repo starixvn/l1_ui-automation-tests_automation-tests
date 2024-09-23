@@ -63,7 +63,7 @@ class CandyLandSmokeSpec extends SmokeBases.SlotGameBase {
       expect(historySnapshot.image).toMatchSnapshot(historySnapshot.name);
       //Close history
       await this.game.clickOutSide();
-      await this.game.clickGuide();
+      await this.game.clickGuide(10000);
       await this.game.clickOutSide();
 
   });
