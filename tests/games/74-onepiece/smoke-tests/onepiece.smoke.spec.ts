@@ -1,6 +1,7 @@
 import { OnePieceLocators } from "../onepiece-locators";
 import { OnePieceConfigs } from "../onepiece-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
+import { expect } from "@playwright/test";
 
 class OnePieceSmokeSpec extends SmokeBases.SlotGameBase {
   /**
@@ -17,6 +18,25 @@ class OnePieceSmokeSpec extends SmokeBases.SlotGameBase {
     };
     super(smokeOptions);
   }
+  protected ticketHistoryTests(): void {
+    Components.test("AND player could open history popup", async () => {
+      // Arrange
+      const historyPayload = await this.player.openHistory();
+
+      // Act
+      const historySnapshot = await this.game.captureHistory();
+
+      // Assert
+      expect(historyPayload.history.betLogs.length).toBeGreaterThan(0);
+      expect(historySnapshot.image).toMatchSnapshot(historySnapshot.name);
+      //Close history
+      await this.game.clickOutSide();
+      await this.game.clickGuide();
+      await this.game.clickOutSide();
+
+  });
+  }
 }
+
 
 new OnePieceSmokeSpec().start();
