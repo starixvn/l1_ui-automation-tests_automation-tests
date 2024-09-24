@@ -15,6 +15,8 @@ export const SedieLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 478, 488, 400, 30),
     new Components.ImageLocator("btnRightArrow", 911, 588, 35, 35),
     new Components.ImageLocator("roundId", 350, 205, 110, 20),
+    new Components.ImageLocator("guideMenu", 35, 416, 20, 20),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const MobiLocators = {

@@ -16,6 +16,8 @@ export const DragonTigerLocators = [
     new Components.ImageLocator("errorMessage", 500, 423, 300, 18),
     new Components.ImageLocator("msgMaxbetLimit", 512, 422, 350, 25),
     new Components.ImageLocator("btnRightArrow", 864, 480, 35, 35),
+    new Components.ImageLocator("guideMenu", 925, 308, 30, 27),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const IsLocators = [

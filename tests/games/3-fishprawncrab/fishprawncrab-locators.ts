@@ -16,6 +16,8 @@ export const FPCLocators = [
     new Components.ImageLocator("stake10", 467, 525, 0, 0),
     new Components.ImageLocator("msgMaxbetLimit", 512, 457, 350, 30),
     new Components.ImageLocator("btnRightArrow", 864, 509, 35, 35),
+    new Components.ImageLocator("guideMenu", 931, 345, 26, 32),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const MobiLocators = {

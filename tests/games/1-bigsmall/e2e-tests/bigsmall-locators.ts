@@ -5,6 +5,7 @@ export const extBigSmallLocators = [
   new Components.ImageLocator("dealer", 610, 230, 60, 30),
   new Components.ImageLocator("bigChoice", 415, 270, 90, 50),
   new Components.ImageLocator("bigOwnbetl1", 442, 406, 45, 35),
+  new Components.ImageLocator("bigOwnbetl2", 442, 406, 45, 35),
   new Components.ImageLocator("smallChoice", 774, 270, 89, 59),
   new Components.ImageLocator("smallOwnbetl1", 405, 790, 45, 35),
   new Components.ImageLocator("playerBalance", 192, 644, 125, 23),

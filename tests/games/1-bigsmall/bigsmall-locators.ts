@@ -19,6 +19,8 @@ export const BigSmallLocators = [
     new Components.ImageLocator("submitBetBoard", 730, 595, 119, 31),
     new Components.ImageLocator("outside", 5, 5, 5, 5),
     new Components.ImageLocator("msgMaxbetLimit", 488, 378, 350, 30),
+    new Components.ImageLocator("guideMenu", 919, 310, 36, 35),
+
 ];
 
 export const MobiLocators = {

@@ -14,6 +14,8 @@ export const BaccaratLocators = [
     new Components.ImageLocator("errorMessage", 500, 562, 300, 25),
     new Components.ImageLocator("msgMaxbetLimit", 481, 565, 350, 22),
     new Components.ImageLocator("btnRightArrow", 921, 616, 35, 35),
+    new Components.ImageLocator("guideMenu", 47, 420, 15, 15),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const MobiLocators = {

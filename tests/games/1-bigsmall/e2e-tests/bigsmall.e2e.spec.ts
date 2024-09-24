@@ -16,6 +16,7 @@ class BigSmallE2ESpec extends E2EBases.MiniGameBase {
                 betamount: "totalAmount",
                 betwin: "baseBetWin"
             },
+            placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
             isBalanceBettingGame : true,
         };
         super(E2EOptions);

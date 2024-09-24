@@ -17,6 +17,7 @@ export const TurboBigSmallLocators = [
   new Components.ImageLocator("outside", 5, 5, 5, 5),
   new Components.ImageLocator("msgMaxbetLimit", 492, 372, 350, 25),
   new Components.ImageLocator("stake1000", 770, 552, 60, 20),
+  new Components.ImageLocator("guideMenu", 919, 310, 36, 35),
 ];
 
 export const MobiLocators = {

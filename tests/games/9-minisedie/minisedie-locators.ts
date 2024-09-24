@@ -22,6 +22,8 @@ export const MiniSedieLocators = [
   new Components.ImageLocator("errorMessage4", 839, 520, 200, 35),
   new Components.ImageLocator("msgMaxbetLimit", 350, 392, 300, 22),
   new Components.ImageLocator("btnRightArrow", 712, 503, 35, 35),
+  new Components.ImageLocator("guideMenu",736, 447, 27, 25),
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const IsLocators = [
