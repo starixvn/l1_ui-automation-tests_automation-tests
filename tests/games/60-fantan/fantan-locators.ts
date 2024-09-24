@@ -13,4 +13,6 @@ export const FanTanLocators = [
     new ImageLocator("errorMessage", 470, 508, 357, 27),
     new ImageLocator("msgMaxbetLimit", 480, 516, 350, 30),
     new ImageLocator("btnRightArrow", 905, 610, 35, 35),
+    new ImageLocator("guideMenu", 71, 530, 21, 21),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];

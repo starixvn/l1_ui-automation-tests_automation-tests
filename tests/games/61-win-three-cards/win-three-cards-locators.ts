@@ -14,4 +14,6 @@ export const winthreecardsLocators = [
     new ImageLocator("errorMessage", 440, 517, 409, 35),
     new ImageLocator("msgMaxbetLimit", 440, 517, 350, 30),
     new ImageLocator("btnRightArrow", 900, 610, 35, 35),
+    new ImageLocator("guideMenu", 35, 372, 16, 19),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];

@@ -10,6 +10,7 @@ class MiniSedieE2ESpec extends E2EBases.MiniGameBase {
             gameConfiguration: MiniSedie1Configs,
             locators: MiniSedieLocators,
             waitBetTimeout: 10000,
+            placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
             snapshotFolderPath: __filename,
             uiChecklist : ['icoHistory', 'icoGuide', 'icoHistory', 'icoStatistic', 'icoColapse', 'imgStatistic', 'imgSeDieMini2', 'imgSeDieMini3', 'imgSeDieMini4', 'imgSeDieMini', 'icoSwitch1', 'icoSwitch2', 'icoSwitch3'],
             historyItems : {

@@ -19,6 +19,8 @@ export const ColorGameLocators = [
   new Components.ImageLocator("errorMessage", 440, 548, 300, 20),
   new Components.ImageLocator("msgMaxbetLimit", 512, 422, 350, 25),
   new Components.ImageLocator("btnRightArrow", 864, 480, 35, 35),
+  new Components.ImageLocator("guideMenu", 54, 408, 20, 20),
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const IsLocators = [

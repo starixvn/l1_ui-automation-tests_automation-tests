@@ -15,5 +15,7 @@ export const FootballSpinLocators = [
     new ImageLocator("msgMaxbetLimit", 476, 558, 300, 25),
     new ImageLocator("btnRightArrow", 890, 600, 35, 35),
     new ImageLocator("roundId", 173, 26, 130, 26),
+    new ImageLocator("guideMenu", 53, 536, 20, 20),
+    new ImageLocator("outside", 5, 5, 5, 5),
 
 ];

@@ -20,6 +20,8 @@ export const CoinTossLocators = [
     new Components.ImageLocator("outside", 5, 5, 5, 5),
     new Components.ImageLocator("msgMaxbetLimit", 488, 378, 350, 30),
     new Components.ImageLocator("roundId", 605, 426, 79, 20),
+    new Components.ImageLocator("guideMenu", 895, 446, 23, 29),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 
 ];
 

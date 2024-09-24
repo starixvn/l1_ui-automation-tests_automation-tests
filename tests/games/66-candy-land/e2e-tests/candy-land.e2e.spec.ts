@@ -15,7 +15,7 @@ class CandyLandE2ESpec extends E2EBases.CascadingSlotGameBase {
       locators: extCandyLandLocators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 0.2,
     };
     super(smokeOptions);
   }

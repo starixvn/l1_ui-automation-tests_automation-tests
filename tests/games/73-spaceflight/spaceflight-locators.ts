@@ -11,6 +11,8 @@ export const SpaceFlightLocators = [
     new ImageLocator("imgControlAreal2", 275, 543, 478, 135),
     new ImageLocator("btnPlaceBetBetAccepted", 786, 567, 179, 88),
     new ImageLocator("btnPlaceBet", 786, 567, 179, 88),
+    new ImageLocator("guideMenu", 35, 371, 20, 22),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 

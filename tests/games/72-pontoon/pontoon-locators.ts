@@ -13,6 +13,8 @@ export const pontoonLocators = [
     new ImageLocator("submitBetBoard", 1063, 590, 60, 60),
     new ImageLocator("hitcard", 1063, 590, 60, 60),
     new ImageLocator("standcard", 1180, 530, 90, 90),
+    new ImageLocator("guideMenu", 68, 500, 20, 20),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 

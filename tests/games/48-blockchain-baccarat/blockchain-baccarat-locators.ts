@@ -15,4 +15,6 @@ export const BlockchainBaccaratLocators = [
     new ImageLocator("btnRightArrow", 920, 605, 35, 35),
     new ImageLocator("msgMaxbetLimit", 484, 509, 350, 30),
     new ImageLocator("btnRightArrow", 925, 625, 35, 35),
+    new ImageLocator("guideMenu", 52, 535, 21, 22),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];

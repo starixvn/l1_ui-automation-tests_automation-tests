@@ -10,5 +10,7 @@ export const HiLoLocators = [
     new ImageLocator("stake10", 448, 465, 50, 30),
     new ImageLocator("startbet", 440, 311, 100, 30),
     new ImageLocator("collect", 600, 350, 110, 30),
+    new ImageLocator("guideMenu", 931, 288, 25, 27),
+    new ImageLocator("outside", 5, 5, 5, 5),
 
 ];

@@ -16,4 +16,6 @@ export const ChineseBlackjackLocators = [
   new ImageLocator("roundId", 913, 482, 104, 30),
   new ImageLocator("cancelbet", 1180, 530, 90, 90),
   new ImageLocator("btnConfirmStand", 546, 418, 0, 0),
+  new ImageLocator("guideMenu", 68, 500, 20, 20),
+  new ImageLocator("outside", 5, 5, 5, 5),
 ];

@@ -15,4 +15,6 @@ export const FootballDiceLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 478, 488, 400, 30),
     new Components.ImageLocator("btnRightArrow", 926, 613, 30, 48),
     new Components.ImageLocator("roundId", 598, 286, 106, 23),
+    new Components.ImageLocator("guideMenu", 35, 416, 20, 20),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];

@@ -13,4 +13,6 @@ export const FruitSlotLocators = [
     new ImageLocator("errorMessage", 435, 553, 400, 30),
     new ImageLocator("msgMaxbetLimit", 476, 558, 300, 25),
     new ImageLocator("btnRightArrow", 890, 600, 35, 35),
+    new ImageLocator("guideMenu", 50, 522, 21, 21),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];

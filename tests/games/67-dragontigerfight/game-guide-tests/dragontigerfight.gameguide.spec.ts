@@ -8,7 +8,7 @@ const GameConfigsL1 = {
   maxBetPerChoices: {
     dragon: 2000,
     tiger: 2000,
-    tie: 500,
+    tie: 600,
     redDragon: 1000,
     blackDragon: 1000,
     redTiger: 1000,
@@ -20,7 +20,7 @@ const GameConfigsL1 = {
     dragon: 1.95,
     tiger: 1.95,
     tie: 1.9,
-    redDragon: 1.65,
+    redDragon: 1.66,
     blackDragon: 1.65,
     redTiger: 1.65,
     blackTiger: 1.65,

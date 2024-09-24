@@ -18,4 +18,6 @@ export const SeDie3Locators = [
     new Components.ImageLocator("msgMaxbetLimit", 478, 488, 400, 30),
     new Components.ImageLocator("btnRightArrow", 911, 588, 35, 35),
     new Components.ImageLocator("roundId", 312, 190, 128, 23),
+    new Components.ImageLocator("guideMenu", 35, 416, 20, 20),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];

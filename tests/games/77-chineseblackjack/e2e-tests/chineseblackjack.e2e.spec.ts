@@ -37,8 +37,6 @@ class ChineseBlackjackE2ESpec extends E2EBases.CardGameBase {
 
   protected async verifySetlementResults(settledResults: any, betdata: any) {
     var _a;
-
-    console.log(settledResults.playerTotal + "player-dealer" + settledResults.dealerTotal);
         expect(settledResults.totalAmount).toBe(betdata.amount);
         const playerWins = settledResults.playerTotal <= 21 && settledResults.playerTotal >= 16 &&
             (settledResults.dealerTotal > 21 || settledResults.playerTotal >= settledResults.dealerTotal);

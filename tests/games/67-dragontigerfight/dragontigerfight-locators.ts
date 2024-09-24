@@ -20,4 +20,6 @@ export const DragonTigerLocators = [
   new ImageLocator("errorMessage", 440, 548, 300, 20),
   new ImageLocator("msgMaxbetLimit", 512, 422, 350, 25),
   new ImageLocator("btnRightArrow", 864, 480, 35, 35),
+  new ImageLocator("guideMenu", 61, 408, 21, 27),
+  new ImageLocator("outside", 5, 5, 5, 5),
 ];

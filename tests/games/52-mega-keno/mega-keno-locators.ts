@@ -26,6 +26,8 @@ export const MegaKenoLocators = [
   new Components.ImageLocator("imgGame4", 1081, 448, 115, 25),
   new Components.ImageLocator("mnuKeno", 740, 88, 90, 30),
   new Components.ImageLocator("icoMegaKeno", 380, 400, 10, 10),
+  new Components.ImageLocator("guideMenu", 56, 576, 25, 22 ),
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const KenoLocators = {
