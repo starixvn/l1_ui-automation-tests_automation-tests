@@ -15,6 +15,8 @@ export const ThreeCardsLocators = [
     new ImageLocator("errorMessage", 466, 504, 350, 27),
     new ImageLocator("msgMaxbetLimit", 473, 505, 350, 30),
     new ImageLocator("btnRightArrow", 920, 615, 35, 35),
+    new ImageLocator("guideMenu", 22, 418, 25, 25),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const MobiLocators = {

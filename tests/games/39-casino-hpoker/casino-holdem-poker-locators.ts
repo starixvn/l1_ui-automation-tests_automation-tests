@@ -16,6 +16,8 @@ export const CasinoHoldemPokerLocators = [
     new ImageLocator("btnRightArrow", 925, 610, 35, 35),
     new ImageLocator("btnCancelBet", 1190, 506, 35, 35),
     new ImageLocator("roundId", 309, 73, 91, 30),
+    new ImageLocator("guideMenu", 46, 523, 19, 24),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 

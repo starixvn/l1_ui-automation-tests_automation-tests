@@ -13,6 +13,8 @@ export const VipSedieLocators = [
     new Components.ImageLocator("errorMessage", 459, 520, 380, 37),
     new Components.ImageLocator("msgMaxbetLimit", 488, 527, 350, 22),
     new Components.ImageLocator("btnRightArrow", 910, 600, 35, 35),
+    new Components.ImageLocator("guideMenu", 52, 400, 20, 20),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const MobiLocators = {

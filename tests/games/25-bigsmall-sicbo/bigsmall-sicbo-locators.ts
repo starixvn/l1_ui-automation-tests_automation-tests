@@ -11,6 +11,8 @@ export const BigSmallSicBoLocators = [
   new Components.ImageLocator("stake10", 424, 632, 0, 0),
   new Components.ImageLocator("msgMaxbetLimit", 468, 482, 350, 22),
   new Components.ImageLocator("btnRightArrow", 924, 610, 35, 35),
+  new Components.ImageLocator("guideMenu", 28, 547, 30, 30),
+  new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 

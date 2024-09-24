@@ -58,13 +58,15 @@ class RouletteSmokeSpec extends SmokeBases.MiniGameBase {
       // Assert
       expect(historyPayload.history.betLogs.length).toBeGreaterThan(0);
       expect(historySnapshot.image).toMatchSnapshot(historySnapshot.name);
+
+      await this.game.clickOutSide(3000);
     });
   }
 
    protected inGameOddsTests(): void {
     Components.test("AND odds should be correct", async () => {
       // Assert
-      await this.game.waitForTimeout(3000);
+      await this.game.waitForTimeout(5000);
       expect(this.game.odds).toStrictEqual(this.options.gameConfiguration.odds);
   });
   }

@@ -16,6 +16,8 @@ export const BlackJackLocators = [
     new Components.ImageLocator("msgMaxbetLimit", 440, 536, 400, 22),
     new Components.ImageLocator("btnRightArrow", 966, 609, 35, 35),
     new Components.ImageLocator("btnCancelBet", 1151, 517, 40, 40),
+    new Components.ImageLocator("guideMenu", 68, 500, 20, 20),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 

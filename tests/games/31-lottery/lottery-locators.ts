@@ -15,5 +15,7 @@ export const LotteryLocators = [
     new ImageLocator("errorMessage", 453, 576, 400, 25),
     new ImageLocator("msgMaxbetLimit", 943, 576, 350, 30),
     new ImageLocator("btnRightArrow", 920, 615, 35, 35),
+    new ImageLocator("guideMenu", 55, 556, 27, 26),
+    new ImageLocator("outside", 5, 5, 5, 5),
 
 ];

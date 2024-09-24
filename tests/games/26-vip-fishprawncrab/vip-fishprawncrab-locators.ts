@@ -13,4 +13,6 @@ export const VIPFPCLocators = [
     new Components.ImageLocator("errorMessage", 410, 532, 450, 30),
     new Components.ImageLocator("msgMaxbetLimit", 472, 530, 350, 22),
     new Components.ImageLocator("btnRightArrow", 960, 600, 35, 35),
+    new Components.ImageLocator("guideMenu", 41, 421, 14, 19),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];

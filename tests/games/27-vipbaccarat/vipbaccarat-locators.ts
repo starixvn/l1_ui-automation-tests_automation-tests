@@ -15,6 +15,8 @@ export const VipBaccaratLocators = [
     new ImageLocator("errorMessage", 460, 518, 350, 25),
     new ImageLocator("msgMaxbetLimit", 478, 520, 350, 22),
     new ImageLocator("btnRightArrow", 924, 600, 35, 35),
+    new ImageLocator("guideMenu", 35, 380, 16, 18),
+    new ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const MobiLocators = {

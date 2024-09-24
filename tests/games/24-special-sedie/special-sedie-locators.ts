@@ -16,6 +16,7 @@ export const SpecialSedieLocators = [
     new Components.ImageLocator("outside", 5, 5, 5, 5),
     new Components.ImageLocator("msgMaxbetLimit", 492, 393, 350, 25),
     new Components.ImageLocator("stake1000", 770, 542, 60, 20),
+    new Components.ImageLocator("guideMenu", 917, 321, 29, 24),
 ];
 
 export const MobiLocators = {

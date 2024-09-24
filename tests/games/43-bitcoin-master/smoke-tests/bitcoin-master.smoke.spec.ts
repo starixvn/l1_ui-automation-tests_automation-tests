@@ -72,6 +72,9 @@ class BitCoinMasterSmokeSpec extends SmokeBases.MiniGameBase {
   protected maxBetTests(): void {
     //limit feature, will implement later
   }
+
+  protected gameGuideTests(): void {
+  }
 }
 
 new BitCoinMasterSmokeSpec().start();

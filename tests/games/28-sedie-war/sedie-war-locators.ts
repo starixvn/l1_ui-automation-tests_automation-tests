@@ -10,6 +10,8 @@ export const SedieWarLocators = [
     new ImageLocator("errorMessage", 410, 506, 450, 20),
     new ImageLocator("msgMaxbetLimit", 453, 497, 350, 30),
     new ImageLocator("btnRightArrow", 923, 615, 35, 35),
+    new ImageLocator("guideMenu", 52, 540, 20, 20),
+    new ImageLocator("outside", 5, 5, 5, 5),
 
 ];
 

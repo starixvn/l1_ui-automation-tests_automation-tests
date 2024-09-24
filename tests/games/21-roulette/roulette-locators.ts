@@ -15,6 +15,8 @@ export const RouletteLocators = [
     new Components.ImageLocator("submitBetBoard", 619, 648, 100, 50),
     new Components.ImageLocator("msgMaxbetLimit", 478, 510, 300, 30),
     new Components.ImageLocator("btnRightArrow", 485, 630, 35, 35),
+    new Components.ImageLocator("guideMenu", 51, 502, 19, 23),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 

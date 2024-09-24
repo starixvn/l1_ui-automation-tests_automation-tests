@@ -20,5 +20,7 @@ export const TexasHoldemPokerrLocators = [
     new ImageLocator("msgMaxbetLimit", 478, 348, 350, 30),
     new ImageLocator("btnRightArrow", 900, 620, 35, 35),
     new ImageLocator("btnCancelBet", 1136, 542, 35, 35),
+    new ImageLocator("guideMenu", 46, 515, 19, 24),
+    new ImageLocator("outside", 5, 5, 5, 5),
 
 ];
