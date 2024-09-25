@@ -27,6 +27,8 @@ class CoinTossSmokeSpec extends SmokeBases.MiniGameBase {
 
       // Assert
       expect(historySnapshot.image).toMatchSnapshot(historySnapshot.name);
+
+      await this.game.clickOutSide(2000);
   });
   }
 
