@@ -24,7 +24,13 @@ class VipBaccaratE2ESpec extends E2EBases.TableGameBase {
       waitBetTimeout: 10000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 10,
-      multiPlaceBetChoices: VipBaccaratConfigs.choices.slice(2),
+      multiPlaceBetChoices:[
+        "big",
+        "player",
+        "tie",
+        "playerPair",
+        "bankerPair",
+      ],
       indexTicketHistory: { totalbet: -8, isIdLink: false },
       gameLobbyNavigation: [
         Components.BaseLocator.baseLocatorNames.tabSedie,
@@ -43,6 +49,11 @@ class VipBaccaratE2ESpec extends E2EBases.TableGameBase {
     //inappropriate for this game
   }
 
+  protected returnGameLobby(): void {
+  }
+
+  protected turnbackGame(): void {
+  }
   
   protected inGameUiTests() {
     Components.test("Verify the dealer image appears @UI01", async () => {
