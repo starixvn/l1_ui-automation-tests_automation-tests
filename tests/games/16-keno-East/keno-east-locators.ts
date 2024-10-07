@@ -9,4 +9,9 @@ export const KenoLocators = {
   hedgeBetError: {
     "#__next": "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
   },
+  disconectError :
+    `//div[contains(@class,'error-message-container')]//div//strong[(text() = "Keno Đông")]`,
+  
+  reconnectButton:
+    `//div[contains(@class,'error-message-container')]//div//strong[(text() = "Keno Đông")]/parent::div//following-sibling::div//button`,
 };

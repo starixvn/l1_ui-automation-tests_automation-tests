@@ -26,8 +26,15 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
       await this.game.waitForTimeout(this.options.waitBetTimeout);
       const isFrame = await this.game.page.$("#frmGame")
       if (isFrame) {
-          await this.game.page.frameLocator("#frmGame").locator("//div[contains(@class,'game-category_category')][text()='Mega Keno']").click()
+          const iframe = await this.game.page.frameLocator("#frmGame");
+          await iframe.locator("//div[contains(@class,'game-category_category')][text()='Mega Keno']").click()
           await this.game.waitForTimeout(3000)
+          const disconnect = await iframe.locator(this.options.locators.disconectError).isVisible();
+          if  (disconnect) {
+            await iframe.locator(this.options.locators.reconnectButton).click();
+            console.log("Reconnect");
+            await this.game.waitForTimeout(3000)
+          }
           await this.game.verifyFrameLocatorsVisible("#frmGame",this.options.locators.inGameUI);
       }else{
           await this.game.verifyLocatorsVisible(this.options.locators.inGameUI);
