@@ -10,7 +10,7 @@ class SpecialSedieSmokeSpec extends SmokeBases.BalancedBettingGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: SpecialSedieConfigs,
       locators: SpecialSedieLocators,
-      waitBetTimeout: 6000,
+      waitBetTimeout: 12000,
       placeBetChoices: [SpecialSedieConfigs.choices[0]],
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,

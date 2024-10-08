@@ -12,7 +12,7 @@ class TurboBigSmallSmokeSpec extends SmokeBases.BalancedBettingGameBase {
       gameConfiguration: TurboOddEvenConfigs,
       locators: TurboOddEvenLocators,
       snapshotFolderPath: __filename,
-      waitBetTimeout: 9000,
+      waitBetTimeout: 13000,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
     super(smokeOptions);

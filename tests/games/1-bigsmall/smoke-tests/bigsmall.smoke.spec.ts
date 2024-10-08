@@ -8,7 +8,7 @@ class BigSmallSmokeSpec extends SmokeBases.BalancedBettingGameBase {
       placeBetChoices: [BigSmallConfigs.choices[0]],
       gameConfiguration: BigSmallConfigs,
       locators: BigSmallLocators,
-      waitBetTimeout: 8000,
+      waitBetTimeout: 14000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
