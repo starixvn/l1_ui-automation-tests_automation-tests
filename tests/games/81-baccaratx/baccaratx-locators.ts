@@ -11,14 +11,14 @@ export const BaccaratXLocators = [
     new ImageLocator("playerPairChoice", 463, 365, 37, 26),
     new ImageLocator("bankerPairChoice", 704, 367, 89, 24),
     new ImageLocator("playerBalance", 192, 644, 125, 23),
-    new ImageLocator("hamburgerMenu", 33, 118, 28, 22),
-    new ImageLocator("historyMenu", 35, 306, 26, 26),
+    new ImageLocator("hamburgerMenu", 33, 153, 28, 22),
+    new ImageLocator("historyMenu", 35, 341, 26, 26),
     new ImageLocator("historyPopup", 151, 76, 999, 126),
     new ImageLocator("errorMessage", 435, 553, 400, 30),
     new ImageLocator("msgMaxbetLimit", 476, 558, 300, 25),
     new ImageLocator("btnRightArrow", 890, 600, 35, 35),
     new ImageLocator("roundId", 288, 305, 98, 27),
-    new ImageLocator("guideMenu", 36, 371, 17, 21),
+    new ImageLocator("guideMenu", 36, 403, 17, 21),
     new ImageLocator("outside", 5, 5, 5, 5),
 
 ];
