@@ -23,6 +23,13 @@ class BaccaratXSmokeSpec extends SmokeBases.TableGameBase {
   }
 
   protected inGameDealerTests(): void {
+  }  
+  protected inGameOddsTests(): void {
+    Components.test("AND odds should be correct", async () => {
+      // Assert
+      await this.game.waitUntilGameUiLoad(1);
+      expect(this.game.odds).toStrictEqual(this.options.gameConfiguration.odds);
+  });
   }
   protected placeBetAndSettleTests(): void {
     Components.test("THEN player able to place a bet and settle", async () => {
