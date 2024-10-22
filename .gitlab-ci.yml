@@ -45,7 +45,7 @@ e2etest:
     - cd tests
     - npm run test:e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME --jackpot=$jackpot
 
-  retry: 1
+  retry: 2
   rules:
     - if: $MODE == "E2E"
       when: always

@@ -13,7 +13,7 @@
     "test:e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
     "test:guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",
     "test:admin": "playwright test --project=admin",
-    "update-snapshots": "playwright test --update-snapshots  --project=E2E_CI",
+    "update-snapshots": "playwright test --update-snapshots  --project=Smoke_Club",
     "clonegame": "node clonegame.js",
     "sendresult": "node pushResults.js",
     "allure": "node allureReport.js"
@@ -28,13 +28,14 @@
     "allure-playwright": "^3.0.0-beta.9",
     "fs-extra": "^11.1.1",
     "google-spreadsheet": "^4.1.1",
+    "node-fetch": "^3.3.2",
     "prettier": "^3.2.5",
-    "sc-automation-core": "1.54.2",
-    "prom-client": "^15.1.3"
+    "prom-client": "^15.1.3",
+    "sc-automation-core": "1.55.0"
   },
   "devDependencies": {
-    "csv-stringify": "^6.5.0",
     "@playwright/test": "1.44.0",
+    "csv-stringify": "^6.5.0",
     "notepack.io": "^3.0.1",
     "tslib": "2.4.1"
   }
