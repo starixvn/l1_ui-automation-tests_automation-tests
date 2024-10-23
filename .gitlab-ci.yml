@@ -120,7 +120,7 @@ smoketest:
       curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed';
       fi
 
-  retry: 1
+  retry: 2
   rules:
     - if: $TRIGGER == "true" && $MODE == "SMOKE"
       when: always

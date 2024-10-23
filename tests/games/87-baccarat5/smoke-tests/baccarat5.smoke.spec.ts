@@ -17,7 +17,7 @@ class Baccarat5SmokeSpec extends SmokeBases.TableGameBase {
       locators: Baccarat5Locators,
       waitBetTimeout: 14000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 10,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
     super(smokeOptions);
   }
