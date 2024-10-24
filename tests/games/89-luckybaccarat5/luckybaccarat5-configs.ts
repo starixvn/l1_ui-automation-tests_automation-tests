@@ -1,8 +1,8 @@
 import { Components } from "sc-automation-core";
 
 export const LuckyBaccarat5Configs: Components.GameConfiguration = {
-  id: 82,
-  name: "bac82",
+  id: 89,
+  name: "bac89",
   durations: {
     wholeRound: 50 * 1000,
     placingBets: 30 * 1000,
