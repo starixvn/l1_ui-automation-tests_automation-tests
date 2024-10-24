@@ -11,7 +11,7 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
   },
   choices: ["dragon", "tiger", "tie"],
   hedgeBetGroups: [["dragon", "tiger"]],
-  maxTimeout: 200 * 1000, // miliseconds,
+  maxTimeout: 300 * 1000, // miliseconds,
   odds: {
     dragon: 2,
     tiger: 2,

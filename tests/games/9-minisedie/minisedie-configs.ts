@@ -11,7 +11,7 @@ export const MiniSedie1Configs: Components.GameConfiguration = {
   },
   choices: ["odd", "even", "red3", "red4", "white3", "white4"],
   hedgeBetGroups: [["even", "odd"]],
-  maxTimeout: 100 * 1000, // miliseconds,
+  maxTimeout: 300 * 1000, // miliseconds,
   odds: {
     even: 1.96,
     odd: 1.96,
