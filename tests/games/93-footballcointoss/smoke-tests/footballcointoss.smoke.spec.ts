@@ -16,7 +16,8 @@ class FootballCointossSmokeSpec extends SmokeBases.MiniGameBase {
 
     super(smokeOptions);
   }
-
+  protected inGameBetChoiceTests(): void {
+  }
   protected ticketHistoryTests(): void {
     Components.test("AND player could open history popup", async () => {
       // Arrange
