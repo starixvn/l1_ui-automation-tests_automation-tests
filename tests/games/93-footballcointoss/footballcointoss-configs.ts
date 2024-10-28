@@ -9,12 +9,12 @@ export const FootballCointossConfigs: Components.GameConfiguration = {
     lockingBet: 5 * 1000,
     shakeThePlateDuration: 5 * 1000,
   },
-  choices: ["home", "away"], // head = biden, tail = trump
+  choices: ["home", "away"], // 
   hedgeBetGroups: [["home", "away"]],
   maxTimeout: 250 * 1000, // miliseconds x,
   odds: {
-    home: 1.96,
-    away: 1.96,
+    home: 1.98,
+    away: 1.98,
   },
   betBoard: false,
   accounts: {
