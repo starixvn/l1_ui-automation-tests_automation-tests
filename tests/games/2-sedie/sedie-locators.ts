@@ -17,6 +17,12 @@ export const SedieLocators = [
     new Components.ImageLocator("roundId", 350, 205, 110, 20),
     new Components.ImageLocator("guideMenu", 35, 416, 20, 20),
     new Components.ImageLocator("outside", 5, 5, 5, 5),
+    new Components.ImageLocator("guidel1-1", 150, 72, 976, 580),
+    new Components.ImageLocator("guidel1-2", 150, 72, 976, 580),
+    new Components.ImageLocator("guidel1-3", 150, 72, 976, 580),
+    new Components.ImageLocator("guidel1-4", 150, 72, 976, 580),
+    new Components.ImageLocator("guidel1-5", 150, 72, 976, 580),
+    new Components.ImageLocator("guidel1-6", 150, 72, 976, 580),
 ];
 
 export const MobiLocators = {
