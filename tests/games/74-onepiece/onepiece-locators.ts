@@ -21,6 +21,23 @@ export const OnePieceLocators = [
   new ImageLocator("clearChoices", 860, 110, 182, 58),
   new ImageLocator("imgJackpot", 1097, 143, 130, 40),
   new ImageLocator("outside", 10, 10, 10, 10),
+  new ImageLocator("icoGuideJP", 63, 592, 27, 36),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-1", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-2", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-3", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-4", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-5", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-6", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-7", 150, 72, 976, 580),
+  new ImageLocator("guide-JP-8", 150, 72, 976, 580),
 
 ];
 

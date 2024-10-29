@@ -15,6 +15,14 @@ export const KenoProMaxLocators = [
     new Components.ImageLocator("btnRightArrow", 931, 600, 35, 35),
     new Components.ImageLocator("guideMenu", 35, 420, 23, 21),
     new Components.ImageLocator("outside", 5, 5, 5, 5),
+    new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-7", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const MobiLocators = {

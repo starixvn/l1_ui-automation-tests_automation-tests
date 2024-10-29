@@ -18,4 +18,12 @@ export const NightClubLocators = [
   new ImageLocator("clearChoices", 957, 575),
   new ImageLocator("outside", 5, 5, 5, 5),
   new ImageLocator("guideMenu", 75, 531, 20, 25),
+  new ImageLocator("guide-1", 160, 100, 976, 580),
+  new ImageLocator("guide-2", 160, 100, 976, 580),
+  new ImageLocator("guide-3", 160, 100, 976, 580),
+  new ImageLocator("guide-4", 160, 100, 976, 580),
+  new ImageLocator("guide-5", 160, 100, 976, 580),
+  new ImageLocator("guide-6", 160, 100, 976, 580),
+  new ImageLocator("guide-7", 160, 100, 976, 580),
+  new ImageLocator("guide-8", 160, 100, 976, 580),
 ];

@@ -24,6 +24,14 @@ export const extVipBaccaratLocators = [
   new ImageLocator("btnRightArrow", 925, 607, 31, 49),
   new ImageLocator("btnLeftArrow", 327, 607, 30, 49),
   new ImageLocator("imgStatistic", 786, 11, 76, 119),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const VipBaccaratLocators = extVipBaccaratLocators.concat(Components.BaseLocator.GameLobbyLocator)

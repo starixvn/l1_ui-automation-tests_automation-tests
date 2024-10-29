@@ -18,4 +18,12 @@ export const HeroesSlotLocators = [
   new ImageLocator("clearChoices", 916, 575),
   new ImageLocator("outside", 5, 5, 2, 2),
   new ImageLocator("guideMenu", 36, 411, 19, 21),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
 ];

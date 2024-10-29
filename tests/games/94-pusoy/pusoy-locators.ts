@@ -11,4 +11,12 @@ export const PusoyLocators = [
     new Components.ImageLocator("btnOK", 597, 425, 81, 38),
     new Components.ImageLocator("popIntroduce", 392, 228, 495, 257),
     new Components.ImageLocator("btnOkAndDontShowAgain", 462, 428, 356, 42),
+    new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-7", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];

@@ -16,4 +16,12 @@ export const TreasureIslandLocators = [
   new ImageLocator("clearChoices", 481, 331),
   new ImageLocator("outside", 5, 5, 5, 5),
   new ImageLocator("guideMenu", 93, 442, 19, 23),
+  new ImageLocator("guide-1", 150, 92, 976, 540),
+  new ImageLocator("guide-2", 150, 92, 976, 540),
+  new ImageLocator("guide-3", 150, 92, 976, 540),
+  new ImageLocator("guide-4", 150, 92, 976, 540),
+  new ImageLocator("guide-5", 150, 92, 976, 540),
+  new ImageLocator("guide-6", 150, 92, 976, 540),
+  new ImageLocator("guide-7", 150, 92, 976, 540),
+  new ImageLocator("guide-8", 150, 92, 976, 540),
 ];

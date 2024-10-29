@@ -16,4 +16,12 @@ export const CandyLandLocators = [
   new ImageLocator("clearChoices", 1, 1, 0, 0),
   new ImageLocator("outside", 5, 5, 5, 5),
   new ImageLocator("guideMenu", 62, 495, 29, 29),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
 ];

@@ -17,5 +17,13 @@ export const LotteryLocators = [
     new ImageLocator("btnRightArrow", 920, 615, 35, 35),
     new ImageLocator("guideMenu", 55, 556, 27, 26),
     new ImageLocator("outside", 5, 5, 5, 5),
+    new ImageLocator("guide-1", 150, 72, 976, 580),
+    new ImageLocator("guide-2", 150, 72, 976, 580),
+    new ImageLocator("guide-3", 150, 72, 976, 580),
+    new ImageLocator("guide-4", 150, 72, 976, 580),
+    new ImageLocator("guide-5", 150, 72, 976, 580),
+    new ImageLocator("guide-6", 150, 72, 976, 580),
+    new ImageLocator("guide-7", 150, 72, 976, 580),
+    new ImageLocator("guide-8", 150, 72, 976, 580),
 
 ];

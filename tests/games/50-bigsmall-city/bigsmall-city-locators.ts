@@ -27,4 +27,12 @@ export const BigSmallCityLocators = [
     new Components.ImageLocator("imgGame4", 895, 466, 120, 25),
     new Components.ImageLocator("guideMenu", 737, 440, 14, 23),
     new Components.ImageLocator("outside", 5, 5, 5, 5),
+    new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-7", 150, 72, 976, 580),
+    new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
