@@ -25,23 +25,9 @@ class Group1SmokeSpec extends SmokeBases.CardGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const tagGame =
-            process.env.npm_config_project === "l2" ? "GameID" : "gameId";
-          const ssoLink = global.ssoLink.split(tagGame);
-
-          const IdMap = new Map([
-            [23, 3820],
-            [39, 3836],
-            [42, 3837],
-            [72, 3871],
-            [77, 3876],
-          ]);
-          const _gameId =
-            process.env.npm_config_project === "l2"
-              ? IdMap.get(gameId)
-              : gameId;
-
-          await this.game.page.goto(ssoLink[0] + tagGame + "=" + _gameId);
+          const tagGame = "gameId"
+          const ssoLink = global.ssoLink.split(tagGame);    
+          await this.game.page.goto(ssoLink[0] + tagGame + "=" + gameId);
 
           await this.selectCurrency(process.env.npm_config_env);
 

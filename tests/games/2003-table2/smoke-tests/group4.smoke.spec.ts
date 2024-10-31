@@ -24,27 +24,9 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const tagGame = process.env.npm_config_project === "l2"? "GameID" :"gameId";
-          const ssoLink = global.ssoLink.split(tagGame);
-          const IdMap = new Map([
-            [21, 3819],
-            [26, 3826],
-            [27, 3827],
-            [28, 3828],
-            [35, 3831],
-            [45, 3844],
-            [48, 3847],
-            [50, 3850],
-            [61, 3860],
-            [71, 3870],
-            [79, 3878],
-            [59, 3858],
-          ]);
-          const _gameId = process.env.npm_config_project === "l2"? IdMap.get(gameId) :gameId; 
-
-          await this.game.page.goto(
-            ssoLink[0] + tagGame + "="+ _gameId
-          );
+          const tagGame = "gameId"
+          const ssoLink = global.ssoLink.split(tagGame);    
+          await this.game.page.goto(ssoLink[0] + tagGame + "=" + gameId);
 
           if (!process.env.npm_config_env?.includes("local")) {
             const frameExists = await this.game.page.$("#frmGame");
@@ -60,7 +42,6 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           await this.game.waitUntilGameUiLoad();
           // this.game.gameSocket =
           global.wsName == gameConfigs[gameId].name;
-          console.log(global.wsName);
 
           this.options.locators = GroupLocators[gameId];
           this.options.gameConfiguration.name = gameConfigs[gameId].name;
