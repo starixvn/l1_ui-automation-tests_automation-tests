@@ -8,7 +8,7 @@ class WayToGoalSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [WayToGoalConfigs.choices[0]],
+      placeBetChoices: ['25'],
       gameConfiguration: WayToGoalConfigs,
       locators: WayToGoalLocators,
       waitBetTimeout: 8000,
