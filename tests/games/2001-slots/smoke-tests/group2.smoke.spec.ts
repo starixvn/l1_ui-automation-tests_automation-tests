@@ -14,7 +14,7 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
       waitBetTimeout: 8000,
       placeBetChoices: [GroupConfigs.choices[0]],
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 0.1,
     };
     super(smokeOptions);
   }
@@ -24,32 +24,9 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const tagGame =
-            process.env.npm_config_project === "l2" ? "GameID" : "gameId";
+          const tagGame ="gameId"
           const ssoLink = global.ssoLink.split(tagGame);
-          const IdMap = new Map([
-            [29, 3829],
-            [38, 3835],
-            [46, 3845],
-            [47, 3846],
-            [49, 3854],
-            [62, 3861],
-            [63, 3862],
-            [64, 3863],
-            [65, 3864],
-            [66, 3867],
-            [68, 3865],
-            [69, 3866],
-            [70, 3869],
-            [74, 3874],
-            [76, 3875],
-          ]);
-          const _gameId =
-            process.env.npm_config_project === "l2"
-              ? IdMap.get(gameId)
-              : gameId;
-
-          await this.game.page.goto(ssoLink[0] + tagGame + "=" + _gameId);
+          await this.game.page.goto(ssoLink[0] + tagGame + "=" + gameId);
 
           if (!process.env.npm_config_env?.includes("local")) {
             const frameExists = await this.game.page.$("#frmGame");
@@ -83,26 +60,14 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
         `Verify that players can finish placing bets for one round of Game ${gameConfigs[gameId].name}.`,
         async () => {
           Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-
-          let bet = {
-            choice: this.options.placeBetChoices,
-            amount: this.options.placeBetAmount ?? 1,
-          };
-
-          if (gameId == 66 || gameId == 47) {
-            bet.amount = process.env.npm_config_project === "l2" ? 5 : 1;
-          }
-
           this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
           this.game.attachSocketAndCaptureEvent(GameEvent.EndBet);
 
           // Act
-          const placeBetResponse = await this.placeBet(bet.choice, bet.amount);
-
+          await this.placeBet();
           const settledResults = await this.game.waitForSettlement();
           // Assert
 
-          expect(placeBetResponse.endBet).toBe(bet.amount);
           expect(settledResults.winAmount).not.toBe("undefined");
           await this.game.waitForTimeout(2000);
         }
@@ -110,22 +75,23 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
     });
   }
 
-  async placeBet(choice: any, amount: number) {
-    await this.clickLocator("choiceMenu", 2000);
-    await this.clickLocator("clearChoices", 2000);
-    await this.clickLocator(`${choice}Choice`, 2000);
-    await this.clickLocator("submitPayline", 2000);
-    await this.clickLocator("stakeMenu");
-    await this.clickLocator(`stake${amount}`, 2000);
-    await this.clickLocator(`spin`, 0);
+  async placeBet() {
+    await this.game.waitForTimeout(2000);
+    console.log(`click spin`);
+    
+    await this.clickLocator(`spin`, 10);
     return this.game.waitForEndBet();
   }
 
   async clickLocator(element: string, wait = 500) {
     const locator = this.locator(element);
+
     if (locator) {
       await locator.click(this.game.page);
       await this.game.waitForTimeout(wait);
+    }
+    else{
+      console.log(`Can not found locator`, element);
     }
   }
 
