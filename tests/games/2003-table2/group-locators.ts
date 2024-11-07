@@ -90,4 +90,21 @@ export const GroupLocators = {
     new Components.ImageLocator("startbet", 440, 311, 100, 30),
     new Components.ImageLocator("collect", 600, 350, 110, 30),
   ],
+  78: [
+    new Components.ImageLocator("homeChoice", 237, 388, 205, 32),
+    new Components.ImageLocator("awayChoice", 776, 388, 269, 35),
+    new Components.ImageLocator("stake1", 448, 465, 50, 30),
+  ],
+  80: [
+    new Components.ImageLocator("headChoice", 455, 321, 61, 65),
+  ],
+  93: [
+    new Components.ImageLocator("homeChoice", 455, 321, 61, 65),
+  ], 
+  95: [
+    new Components.ImageLocator("redChoice", 213, 280, 70, 45),
+  ],
+  96: [
+    new Components.ImageLocator("karaChoice", 213, 280, 70, 45),
+  ],
 };

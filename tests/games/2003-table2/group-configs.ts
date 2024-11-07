@@ -38,5 +38,10 @@ export const gameConfigs = {
   79: { name: "FootballSlot", betchoice: "big", betBoard: false },
   43: { name: "bitcoinmaster", betchoice: "up", betBoard: true },
   45: { name: "hilo", betchoice: "hi", betBoard: false },
+  78: { name: "FootballDice", betchoice: "home", betBoard: false },
+  80: { name: "CoinToss", betchoice: "head", betBoard: false },
+  93: { name: "FootballCointoss", betchoice: "home", betBoard: false },
+  95: { name: "SeDie3", betchoice: "red", betBoard: false },
+  96: { name: "KaraKrus", betchoice: "kara", betBoard: false },
 
 };

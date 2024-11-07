@@ -4,8 +4,8 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-const listGames = [21, 26, 27, 28, 35, 45, 48, 50, 61, 71, 79];
-// 21, 26, 27, 28, 35, 45, 48, 50, 59, 61, 71, 79
+const listGames = [21, 26, 27, 28, 35, 45, 48, 50, 61, 71,78, 79,80,93,95,96];
+// 21, 26, 27, 28, 35, 45, 48, 50, 61, 71,
 class Group4SmokeSpec extends SmokeBases.TableGameBase {
   constructor() {
     let smokeOptions: SmokeBases.IBaseOptions = {

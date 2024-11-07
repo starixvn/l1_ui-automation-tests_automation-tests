@@ -1,0 +1,11 @@
+docker-build-game-2006:
+  extends: docker-build
+  variables:
+    GAMEID: 2006
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/2006-*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile
