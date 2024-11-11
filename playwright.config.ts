@@ -24,9 +24,9 @@ const config: PlaywrightTestConfig = {
   reporter: [["html",{ open: "never" }],["line"], [
     "allure-playwright",
     {
-      detail: true,
+      detail: false,
       resultsDir: "allure-results",
-      suiteTitle: false,
+      suiteTitle: true,
       environmentInfo: {
         Browser: "Chromium",
         Env: process.env.npm_config_env,
