@@ -41,13 +41,22 @@ class CandyLandSmokeSpec extends SmokeBases.SlotGameBase {
         bet.amount
       );
 
-      await console.log(placeBetResponse);
       await this.game.waitForSettlement();
 
       // Assert
 
       expect(placeBetResponse.endBet).toBe(bet.amount * parseFloat(bet.choice));
     });
+  }
+
+  protected inGameOddsTests(): void {
+    Components.test("Ensure that the odds displayed for each bet choice are accurate.", async () => {
+      await Components.test.step("Ensure that the odds displayed for each bet choice are accurate.", async () => {
+        await this.game.waitForTimeout(2000)
+          // Assert
+          expect(this.game.odds).toStrictEqual(this.options.gameConfiguration.odds);
+      });
+  });
   }
 }
 
