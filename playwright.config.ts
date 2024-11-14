@@ -48,18 +48,10 @@ const config: PlaywrightTestConfig = {
     },
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
       name: "Smoke_Club",
       testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
-    {
-      name: "Smoke_Saba_Play",
-      testMatch: `**/2005-SabaPlay/smoke-tests/*.smoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
       },
