@@ -76,3 +76,81 @@ export const GroupLocators = {
   ],
 
 };
+import { Components } from "sc-automation-core";
+const ImageLocator = Components.ImageLocator;
+
+export const GroupLocators = {
+  29: [
+    new ImageLocator("choiceMenu", 64, 615, 120, 60),
+    new ImageLocator("1Choice", 194, 125, 115, 67),
+    new ImageLocator("stakeMenu", 270, 645),
+    new ImageLocator("stake1", 307, 653, 70, 50),
+    new ImageLocator("stake10", 307, 653, 70, 50),
+    new ImageLocator("submitPayline", 542, 623, 200, 40),
+    new ImageLocator("clearChoices", 866, 580, 135, 35),
+    new ImageLocator("spin", 1180, 632),
+
+  ],
+  38: [
+    new ImageLocator("choiceMenu", 273, 662),
+    new ImageLocator("1Choice", 254, 150),
+    new ImageLocator("stakeMenu", 400, 655),
+    new ImageLocator("stake1", 437, 633, 70, 50),
+    new ImageLocator("stake10", 437, 633, 70, 50),
+    new ImageLocator("submitPayline", 635, 665),
+    new ImageLocator("clearChoices", 916, 575),
+    new ImageLocator("spin", 1121, 641),
+  ],
+  47:[
+    new ImageLocator("choiceMenu", 360, 666),
+    new ImageLocator("1.2Choice", 434, 362),
+    new ImageLocator("stakeMenu", 0, 0),
+    new ImageLocator("stake1", 0, 0),
+    new ImageLocator("stake5", 0, 0),
+    new ImageLocator("spin", 1100, 630, 30, 30),
+    new ImageLocator("submitPayline", 525, 255),
+    new ImageLocator("clearChoices", 481, 331),
+    new ImageLocator("25Choice", 147, 569),
+  ],
+  46:[
+    new ImageLocator("choiceMenu", 226, 658),
+    new ImageLocator("1Choice", 261, 152),
+    new ImageLocator("stakeMenu", 300, 620, 75, 46),
+    new ImageLocator("stake1", 353, 506),
+    new ImageLocator("stake10", 303, 556, 78, 46),
+    new ImageLocator("spin", 980, 607),
+    new ImageLocator("submitPayline", 633, 663),
+    new ImageLocator("clearChoices", 957, 575),
+  ],
+  49:[
+    new ImageLocator("choiceMenu", 178, 584, 90, 80),
+    new ImageLocator("1Choice", 329, 144, 70, 45),
+    new ImageLocator("stakeMenu", 306, 580, 140, 30),
+    new ImageLocator("stake1", 450, 603, 70, 50),
+    new ImageLocator("stake10", 450, 603, 70, 50),
+    new ImageLocator("spin", 1011, 596, 60, 60),
+    new ImageLocator("submitPayline", 559, 567, 160, 40),
+    new ImageLocator("clearChoices", 890, 506, 150, 30),
+  ],
+  62:[
+    new ImageLocator("choiceMenu", 260, 650),
+    new ImageLocator("1Choice", 260, 150),
+    new ImageLocator("stakeMenu", 306, 580, 140, 30),
+    new ImageLocator("stake1", 325, 600, 57, 40),
+    new ImageLocator("stake10", 325, 600, 57, 40),
+    new ImageLocator("spin", 927, 555, 120, 120),
+    new ImageLocator("submitPayline", 635, 650),
+    new ImageLocator("clearChoices", 975, 575),
+  ],
+  63:[
+    new ImageLocator("choiceMenu", 135, 620, 82, 45),
+    new ImageLocator("1Choice", 240, 186, 100, 70),
+    new ImageLocator("stakeMenu", 300, 620, 75, 46),
+    new ImageLocator("stake1", 375, 550, 70, 50),
+    new ImageLocator("stake10", 375, 550, 70, 50),
+    new ImageLocator("spin", 927, 555, 120, 120),
+    new ImageLocator("submitPayline", 532, 612, 210, 55),
+    new ImageLocator("clearChoices", 860, 110, 182, 58),
+  ],
+
+};

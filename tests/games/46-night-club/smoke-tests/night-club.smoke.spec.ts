@@ -8,7 +8,7 @@ class NightClubSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [NightClubConfigs.choices[0]],
+      placeBetChoices: ["25"],
       gameConfiguration: NightClubConfigs,
       locators: NightClubLocators,
       waitBetTimeout: 5000,
