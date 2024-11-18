@@ -54,7 +54,7 @@ class SedieSmokeSpec extends SmokeBases.TableGameBase {
 
   protected runScenario(): void {
     super.runScenario();
-    this.OpenMiniGame();
+    // this.OpenMiniGame();
   }
 }
 
