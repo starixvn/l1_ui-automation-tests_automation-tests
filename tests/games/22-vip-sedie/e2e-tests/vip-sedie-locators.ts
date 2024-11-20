@@ -41,6 +41,14 @@ export const extVipSedieLocators = [
   new ImageLocator("msgMaxbetred2l1", 459, 520, 380, 37),
   new ImageLocator("msgMaxbetwhite3l1", 459, 520, 380, 37),
   new ImageLocator("msgMaxbetwhite4l1", 459, 520, 380, 37),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
 
 ];
 

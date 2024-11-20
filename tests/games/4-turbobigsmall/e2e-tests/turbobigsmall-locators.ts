@@ -46,18 +46,15 @@ export const extTurboBigSmallLocators = [
   new Components.ImageLocator("locHistoryRoundId", 340, 189, 106, 26),
   new Components.ImageLocator("locHistoryTotalStake", 782, 189, 57, 26),
   new Components.ImageLocator("locHistoryBetWin", 1000, 190, 55, 26),
+  new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-7", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const TurboBigSmallLocators = extTurboBigSmallLocators.concat(Components.BaseLocator.GameLobbyLocator)
 
-
-// export const SedieLocators = extSedieLocators.concat(Components.TableLocator.TableLocators).filter((item, index) => {
-//   return !Components.TableLocator.TableLocators.some((array1Item, array1Index) => {
-//     return array1Index === index && item === array1Item;
-//   });
-// });
-
-
-// const lblHistoryDetailRoundId = {x: 639}
- 
-// HappyFishLocators.forEach((item, i)=>{ if (item.name == "lblHistoryDetailRoundId") item.x = lblHistoryDetailRoundId.x } )

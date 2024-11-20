@@ -21,6 +21,12 @@ export const extBigSmallLocators = [
   new Components.ImageLocator("outside", 5, 5, 5, 5),
   new Components.ImageLocator("msgMaxbetLimitl1", 488, 378, 350, 30),
   new Components.ImageLocator("msgMaxbetLimitl2", 488, 378, 350, 30),
+  new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-6", 150, 72, 976, 580),
 ];
 
 export const BigSmallLocators = extBigSmallLocators.concat(Components.BaseLocator.MiniGameLocators, Components.BaseLocator.GameLobbyLocator)

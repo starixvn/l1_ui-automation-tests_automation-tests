@@ -37,7 +37,7 @@ export const HiLoConfigs: Components.GameConfiguration = {
   },
   betBoard: false,
   accounts: {
-    local: "222257",
+    local: "222221",
     local1: "222257",
     local2: "222257",
     local3: "222257",

@@ -40,7 +40,6 @@ export const dragonballLocators = [
   new ImageLocator("guide-JP-6", 150, 72, 976, 580),
   new ImageLocator("guide-JP-7", 150, 72, 976, 580),
   new ImageLocator("guide-JP-8", 150, 72, 976, 580),
-
 ];
 const guideMenu = {y: 588}
  

@@ -20,7 +20,7 @@ export const BitCoinMasterConfigs: Components.GameConfiguration = {
   },
   betBoard: true,
   accounts: {
-    local: "222256",
+    local: "222221",
     local1: "222256",
     local2: "222256",
     local3: "222256",

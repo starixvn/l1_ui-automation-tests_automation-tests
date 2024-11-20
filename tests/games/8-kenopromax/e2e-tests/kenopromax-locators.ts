@@ -34,6 +34,14 @@ export const extKenoProMaxLocators = [
   new ImageLocator("btnRightArrow", 930, 603, 30, 48),
   new ImageLocator("btnLeftArrow", 347, 607, 29, 50),
   new ImageLocator("lblRoundIdOnTable", 578, 530, 140, 26),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const KenoProMaxLocators = extKenoProMaxLocators.concat(Components.BaseLocator.GameLobbyLocator)

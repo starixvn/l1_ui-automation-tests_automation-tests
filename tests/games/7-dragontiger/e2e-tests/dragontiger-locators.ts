@@ -20,6 +20,14 @@ export const extDragonTigerLocators = [
   new Components.ImageLocator("btnRightArrow", 866, 481, 30, 39),
   new Components.ImageLocator("btnLeftArrow", 385, 485, 30, 32),
   new Components.ImageLocator("outside", 5, 5, 5, 5),
+  new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-7", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const DragonTigerLocators = extDragonTigerLocators.concat(Components.BaseLocator.GameLobbyLocator)

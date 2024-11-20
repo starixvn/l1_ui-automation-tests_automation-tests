@@ -96,4 +96,12 @@ export const ClassicSlotLocators = [
     new ImageLocator(CSLocatorNames.btnConfirmPayline, 545, 620, 190, 40),
     new ImageLocator(CSLocatorNames.imgConfirmPaylineDisabled, 545, 620, 190, 40),
     new ImageLocator(CSLocatorNames.btnClosePopup, 5, 5, 2, 2),
+    new ImageLocator("guide-1", 150, 72, 976, 580),
+    new ImageLocator("guide-2", 150, 72, 976, 580),
+    new ImageLocator("guide-3", 150, 72, 976, 580),
+    new ImageLocator("guide-4", 150, 72, 976, 580),
+    new ImageLocator("guide-5", 150, 72, 976, 580),
+    new ImageLocator("guide-6", 150, 72, 976, 580),
+    new ImageLocator("guide-7", 150, 72, 976, 580),
+    new ImageLocator("guide-8", 150, 72, 976, 580),
 ];

@@ -75,6 +75,14 @@ export const extBlackjackLocators = [
     new ImageLocator("stake20", 481, 597, 40, 40),
     new ImageLocator("btnConfirmStand", 507, 397, 98, 50),
     new ImageLocator("lblHistoryFirstRow", 105, 187, 1000, 40),
+    new ImageLocator("guide-1", 150, 72, 976, 580),
+    new ImageLocator("guide-2", 150, 72, 976, 580),
+    new ImageLocator("guide-3", 150, 72, 976, 580),
+    new ImageLocator("guide-4", 150, 72, 976, 580),
+    new ImageLocator("guide-5", 150, 72, 976, 580),
+    new ImageLocator("guide-6", 150, 72, 976, 580),
+    new ImageLocator("guide-7", 150, 72, 976, 580),
+    new ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const BlackjackLocators = Components.BaseLocator.GameLobbyLocator.concat(extBlackjackLocators)

@@ -33,6 +33,14 @@ export const extFPCLocators = [
   new Components.ImageLocator("lblRoundIdOnTable", 432, 261, 96, 24),
   new Components.ImageLocator("btnRightArrow", 867,  515, 29, 35),
   new Components.ImageLocator("btnLeftArrow", 387, 516, 26, 36),
+  new Components.ImageLocator("guide-1", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-2", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-3", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-4", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-5", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-7", 150, 72, 976, 580),
+  new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
 export const FPCLocators = extFPCLocators.concat(Components.BaseLocator.GameLobbyLocator)

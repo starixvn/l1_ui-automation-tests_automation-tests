@@ -56,29 +56,6 @@ class BaccaratXSmokeSpec extends SmokeBases.TableGameBase {
 
     });
   }
-
-  // protected hedgeBetTests(): void {
-  //   Components.test("THEN player should get error when they hedge their bets", async () => {
-  //     // Arrange
-  //     const { maxTimeout, hedgeBetGroups,durations } = this.options.gameConfiguration;
-  //     Components.test.setTimeout(maxTimeout);
-
-  //     // Act
-  //     await this.game.waitUntilNextRound()
-  //     await this.game.waitForTimeout(durations.wholeRound - durations.placingBets )
-  //     await this.game.waitForTimeout(3000)
-
-  //     await this.player.betOn(hedgeBetGroups[0][0], this.options.placeBetAmount ?? 1);
-  //     await this.player.betOn(hedgeBetGroups[0][1], this.options.placeBetAmount ?? 1);
-  //     await this.game.waitForTimeout(500)
-  //     const error = await this.game.captureErrorMessage();
-
-  //     // Assert
-  //     expect(error.image).toMatchSnapshot(error.name, { maxDiffPixelRatio: 0.3 });
-  // });
-  // }
-
-
 }
 
 new BaccaratXSmokeSpec().start();
