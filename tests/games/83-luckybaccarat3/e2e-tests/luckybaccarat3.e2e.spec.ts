@@ -19,7 +19,7 @@ class LuckyBaccarat3E2ESpec extends E2EBases.TableGameBase {
       locators: LuckyBaccarat3Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 30 : 3,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 5,
       multiPlaceBetChoices: [LuckyBaccarat3Configs.choices[1], LuckyBaccarat3Configs.choices[4], LuckyBaccarat3Configs.choices[3], LuckyBaccarat3Configs.choices[2]],
       indexTicketHistory: { totalbet: -2, isIdLink: false },
       gameLobbyNavigation: [

@@ -24,7 +24,7 @@ class Baccarat8E2ESpec extends E2EBases.TableGameBase {
       locators: Baccarat8Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 40 : 5,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 5,
       multiPlaceBetChoices: ["banker",
          "tie",
          "playerPair",
