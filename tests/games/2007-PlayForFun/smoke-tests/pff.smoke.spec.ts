@@ -4,8 +4,8 @@ import { allure }  from "allure-playwright";
 const lobbyUrl = {
   l1local: "https://l1-info1.lumigame.com/category/allGames",
   l2local: "https://l2-info.lumigame.com/category/allGames",
-  l1prod: "https://l1-info1.lumigame.com/category/allGames",
-  l2prod: "https://l2-info.lumigame.com/category/allGames",
+  l1prod: "https://www.sabagames.io/category/allGames",
+  l2prod: "https://www.sabagames.io/category/allGames",
 };
 
 test.describe.configure({ mode: "parallel" });
@@ -36,7 +36,7 @@ test(`Check game list 1`, async ({ page }) => {
       page.locator(`//section[@class='container']/div[${i}]//button`).click(), // Click the button
     ]);
     await newPage.waitForLoadState();
-    await submitTestCurrency(newPage);
+    // await submitTestCurrency(newPage);
     await test.step(`Verify game ${gameName} load`, async () => {
       await verifyGameUiLoad(newPage, gameName);
     });
@@ -70,7 +70,7 @@ test(`Check game list 2`, async ({ page }) => {
       page.locator(`//section[@class='container']/div[${i}]//button`).click(), // Click the button
     ]);
     await newPage.waitForLoadState();
-    await submitTestCurrency(newPage);
+    // await submitTestCurrency(newPage);
     await test.step(`Verify game ${gameName} load`, async () => {
       await verifyGameUiLoad(newPage, gameName);
     });
