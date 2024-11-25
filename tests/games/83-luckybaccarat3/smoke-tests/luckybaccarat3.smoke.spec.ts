@@ -17,7 +17,7 @@ class LuckyBaccarat3SmokeSpec extends SmokeBases.TableGameBase {
       locators: LuckyBaccarat3Locators,
       waitBetTimeout: 14000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 5,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 3,
     };
     super(smokeOptions);
   }

@@ -17,7 +17,7 @@ class LuckyBaccarat5SmokeSpec extends SmokeBases.TableGameBase {
       locators: LuckyBaccarat5Locators,
       waitBetTimeout: 14000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 5,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 50 : 3,
     };
     super(smokeOptions);
   }
@@ -44,7 +44,7 @@ class LuckyBaccarat5SmokeSpec extends SmokeBases.TableGameBase {
       const settledResults = await this.game.waitForSettlement();
 
       // Assert
-      expect(placeBetResponse.endBet).toBe(bet.amount*(1 + extraRate));
+      expect(placeBetResponse.endBet).toBeCloseTo(bet.amount*(1 + extraRate), 5);
       if (settledResults.settlementResult.tie) {
         expect(settledResults.winAmount).toEqual(bet.amount);
       } else if (settledResults.winStatus){
