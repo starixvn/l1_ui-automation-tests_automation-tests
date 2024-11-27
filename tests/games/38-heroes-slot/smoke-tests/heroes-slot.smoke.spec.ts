@@ -8,7 +8,7 @@ class HeroesSlotSmokeSpec extends SmokeBases.SlotGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [HeroesSlotConfigs.choices[0]],
+      placeBetChoices: ['25'],
       gameConfiguration: HeroesSlotConfigs,
       locators: HeroesSlotLocators,
       waitBetTimeout: 1000,
