@@ -32,6 +32,7 @@ class healthSmokeSpec extends SmokeBases.TableGameBase {
     Components.test(
       "Verify that game looby is loaded success without error",
       async () => {
+        await this.game.waitForTimeout(3000)
         await this.game.page.mouse.click(15,15)
         await this.game.waitForTimeout(2000)
         const gamelobby = await this.game.captureLocator("gamelobby");
