@@ -37,6 +37,7 @@ export const Baccarat2Configs: Components.GameConfiguration = {
     l2uat: "TestSep2749",
     l2prod: "VNtest041",
   },
+  socketName: "baccaratx",
   productId:  { l1: "1695", l2: "3881" },
 };
 
