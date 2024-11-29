@@ -23,6 +23,8 @@ class BaccaratLobbySmokeSpec extends SmokeBases.TableGameBase {
   }
   protected lobbyUITests(): void {
     Components.test("Verify UI of baccarat lobby", async () => {
+      await this.game.waitForTimeout(5000)
+      await this.game.clickLocator(`outside`)
       await verifyImage(this.game, `imgCategories`)
       await this.game.clickLocator(`imgCategoryClassic`)
       await this.game.clickLocator(`imgCategorySpeed`)

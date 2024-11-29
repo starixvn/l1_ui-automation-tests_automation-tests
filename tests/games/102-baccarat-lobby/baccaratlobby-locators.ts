@@ -12,6 +12,7 @@ export const BaccaratLobbyLocators = [
     new ImageLocator("firstGame", 328, 63, 98, 122),
     new ImageLocator("imgDealer", 580, 15, 122, 156),
     new ImageLocator("icoHome", 35, 56, 12, 12),
+    new ImageLocator("outside", 5, 5, 5, 5),
     
 
 ];
