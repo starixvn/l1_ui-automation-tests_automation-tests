@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export let GroupConfigs: Components.GameConfiguration = {
   id: 42,
-  name: "QuickSmokeTestsCards",
+  name: "texasholdempoker",
   durations:{ wholeRound: 0,
     placingBets: 0,
     lockingBet: 0,
