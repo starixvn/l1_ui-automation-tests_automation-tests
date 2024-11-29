@@ -2,16 +2,19 @@ import { MobiLocators } from "../dragontiger-locators";
 import { DragonTigerConfigs } from "../dragontiger-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...DragonTigerConfigs };
+extConfigs.socketName = "gw";
+
+class DragonTigerSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: DragonTigerConfigs,
+      gameConfiguration: extConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: DragonTigerConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
     };
@@ -20,4 +23,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new DragonTigerSmokeSpec().start();

@@ -2,16 +2,19 @@ import { MobiLocators } from "../special-sedie-locators";
 import { SpecialSedieConfigs } from "../special-sedie-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...SpecialSedieConfigs };
+extConfigs.socketName = "gw";
+
+class SmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: SpecialSedieConfigs,
+      gameConfiguration: extConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: SpecialSedieConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
     };
@@ -20,4 +23,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new SmokeSpec().start();

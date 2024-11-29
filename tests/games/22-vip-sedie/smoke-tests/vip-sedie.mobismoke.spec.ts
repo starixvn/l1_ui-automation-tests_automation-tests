@@ -2,16 +2,19 @@ import { MobiLocators } from "../vip-sedie-locators";
 import { VipSedieConfigs } from "../vip-sedie-configs";
 import { SmokeBases } from "sc-automation-core";
 
+let extConfigs = { ...VipSedieConfigs };
+extConfigs.socketName = "gw";
+
 class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: VipSedieConfigs,
+      gameConfiguration: extConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: VipSedieConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 50,
     };

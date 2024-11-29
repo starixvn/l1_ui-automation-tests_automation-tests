@@ -2,16 +2,19 @@ import { KenoLocators } from "../keno-east-locators";
 import { KenoConfigs } from "../keno-east-configs";
 import {  SmokeBases, Components  } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...KenoConfigs };
+extConfigs.socketName = "gw";
+
+class KenoSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: KenoConfigs,
+      gameConfiguration: extConfigs,
       locators: KenoLocators,
       waitBetTimeout: 1000,
-      placeBetChoices: KenoConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
     };
@@ -43,4 +46,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new KenoSmokeSpec().start();

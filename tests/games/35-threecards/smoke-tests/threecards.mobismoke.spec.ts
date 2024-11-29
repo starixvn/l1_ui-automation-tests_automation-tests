@@ -2,16 +2,19 @@ import { MobiLocators } from "../threecards-locators";
 import { ThreeCardsConfigs } from "../threecards-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...ThreeCardsConfigs };
+extConfigs.socketName = "gw";
+
+class SmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: ThreeCardsConfigs,
+      gameConfiguration: extConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: ThreeCardsConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project.includes("l2") ? 50 : 10
     };
@@ -20,4 +23,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new SmokeSpec().start();

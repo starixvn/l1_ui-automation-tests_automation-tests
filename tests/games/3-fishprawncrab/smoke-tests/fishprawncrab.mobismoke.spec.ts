@@ -2,16 +2,19 @@ import { MobiLocators } from "../fishprawncrab-locators";
 import { FPCConfigs } from "../fishprawncrab-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...FPCConfigs };
+extConfigs.socketName = "gw";
+
+class FPCSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: FPCConfigs,
+      gameConfiguration: extConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: FPCConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
     };
@@ -24,4 +27,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new FPCSmokeSpec().start();

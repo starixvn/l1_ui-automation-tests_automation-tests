@@ -2,16 +2,19 @@ import { MobiLocators } from "../turbobigsmall-locators";
 import { TurboBigSmallConfigs } from "../turbobigsmall-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...TurboBigSmallConfigs };
+extConfigs.socketName = "gw";
+
+class TurboBigSmallSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: TurboBigSmallConfigs,
+      gameConfiguration: extConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: TurboBigSmallConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
     };
@@ -20,4 +23,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new TurboBigSmallSmokeSpec().start();

@@ -2,16 +2,19 @@ import { KenoLocators } from "../keno-mini2-locators";
 import { KenoConfigs } from "../keno-mini2-configs";
 import { SmokeBases ,Components} from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+let extConfigs = { ...KenoConfigs };
+extConfigs.socketName = "gw";
+
+class KenoSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: KenoConfigs,
+      gameConfiguration: extConfigs,
       locators: KenoLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: KenoConfigs.choices,
+      placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: 10,
     };
@@ -23,9 +26,7 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
       // Arrange
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       await this.game.waitForTimeout(this.options.waitBetTimeout);
-      const isFrame = await this.game.page.$("#frmGame")
-      console.log(isFrame+ "55555555");
-      
+      const isFrame = await this.game.page.$("#frmGame")     
       if (isFrame) {
           await this.game.page.frameLocator("#frmGame").locator("//div[contains(@class,'game-category_category')][text()='Mega Keno']").click()
           await this.game.waitForTimeout(3000)
@@ -50,4 +51,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new KenoSmokeSpec().start();
