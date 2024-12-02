@@ -8,7 +8,7 @@ const lobbyUrl = {
   l2prod: "https://www.sabagames.io/category/allGames",
 };
 
-test.describe.configure({ mode: "parallel" });
+test.describe.configure({ mode: "serial" });
 
 test(`Check game list 1`, async ({ page }) => {
   await allure.suite("Play For Fun");
