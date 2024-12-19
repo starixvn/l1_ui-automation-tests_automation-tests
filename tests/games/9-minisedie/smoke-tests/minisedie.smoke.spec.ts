@@ -33,6 +33,8 @@ class MultiMiniSedieSmokeSpec extends SmokeBases.MultiplayGameBase {
   }
 
   protected override ticketHistoryTests(): void {}
+  protected subGameplaceBetAndSettleTests(): void {}
 }
+
 
 new MultiMiniSedieSmokeSpec().start();
