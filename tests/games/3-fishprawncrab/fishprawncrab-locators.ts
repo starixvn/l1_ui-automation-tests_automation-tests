@@ -38,7 +38,7 @@ export const MobiLocators = {
     },
   };
 
-
-  export const IsLocators = [
-    new Components.ImageLocator("fishChoice",  1015, 512, 0, 0),
-  ];
+  export const IsLocators = {
+    fish: {x: 588,y: 299},
+    gameIcon: "//div[contains(@style,'SBC_FishPrawnCrab')]"
+  }

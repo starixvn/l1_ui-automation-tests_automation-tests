@@ -28,9 +28,11 @@ export const DragonTigerLocators = [
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
-export const IsLocators = [
-  new Components.ImageLocator("dragonChoice", 1030, 460, 0, 0),
-];
+
+export const IsLocators = {
+  dragon: {x: 365,y: 311},
+  gameIcon: "//div[contains(@style,'SBC_DragonTiger')]"
+}
 
 export const MobiLocators = {
     inGameUI: [

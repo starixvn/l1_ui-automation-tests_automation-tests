@@ -34,11 +34,11 @@ export const MiniSedieLocators = [
   new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
-export const IsLocators = [
-  new Components.ImageLocator("oddChoice", 1027, 418, 0, 0),
-  new Components.ImageLocator("stake1", 1035, 609, 0, 0),
-  new Components.ImageLocator("stake10", 1035, 609, 0, 0),
-];
+export const IsLocators = {
+  odd: {x: 365,y: 311},
+  gameIcon: "//div[contains(@style,'SBC_SeDie')]"
+}
+
 
 export const MobiLocators = {
   inGameUI: [

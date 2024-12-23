@@ -31,8 +31,8 @@ export const ColorGameLocators = [
   new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
 
-export const IsLocators = [
-  new Components.ImageLocator("yellowChoice", 1015, 492, 0, 0),
-  new Components.ImageLocator("stake1", 1035, 609, 0, 0),
-  new Components.ImageLocator("stake10", 1035, 609, 0, 0),
-];
+
+export const IsLocators = {
+  yellow: {x: 614,y: 311},
+  gameIcon: "//div[contains(@style,'Saba_Colorgame')]"
+}

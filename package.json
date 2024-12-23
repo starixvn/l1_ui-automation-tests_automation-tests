@@ -30,7 +30,7 @@
     "node-fetch": "^3.3.2",
     "prettier": "^3.2.5",
     "prom-client": "^15.1.3",
-    "sc-automation-core": "1.59.2"
+    "sc-automation-core": "1.60.0"
   },
   "devDependencies": {
     "@playwright/test": "1.44.0",

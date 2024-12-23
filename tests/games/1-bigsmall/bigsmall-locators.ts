@@ -42,6 +42,7 @@ export const MobiLocators = {
     }
   };
   
-  export const IsLocators = [
-    new Components.ImageLocator("bigChoice", 1037, 478, 0, 0),
-  ];
+  export const IsLocators = {
+    big: {x: 332,y: 183},
+    gameIcon: "//div[contains(@style,'SBC_BigSmall')]"
+}

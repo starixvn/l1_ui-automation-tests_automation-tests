@@ -27,6 +27,7 @@ export const FootballCointossConfigs: Components.GameConfiguration = {
     prod: "supertestte120201002",
     l2uat: "TestSep2740",
     l2prod: "VNtest040",
+    l1isprod: "supertestte120201002"
   },
   productId: { l1: "1687", l2: 3879 },
 };

@@ -33,8 +33,3 @@ export const CoinTossLocators = [
 
 ];
 
-export const IsLocators = [
-    new Components.ImageLocator("headChoice", 1123, 489, 0, 0),
-    new Components.ImageLocator("stake1",1035, 609, 0, 0),
-    new Components.ImageLocator("stake10", 1035, 609, 0, 0),
-  ];

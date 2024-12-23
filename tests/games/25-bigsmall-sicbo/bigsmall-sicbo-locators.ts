@@ -24,8 +24,7 @@ export const BigSmallSicBoLocators = [
 ];
 
 
-export const IsLocators = [
-  new Components.ImageLocator("bigChoice", 1040, 418, 0, 0),
-  new Components.ImageLocator("stake1", 1035, 609, 0, 0),
-  new Components.ImageLocator("stake10", 1035, 609, 0, 0),
-];
+export const IsLocators = {
+  big: {x: 313,y: 311},
+  gameIcon: "//div[contains(@style,'Saba_SicBo')]"
+}

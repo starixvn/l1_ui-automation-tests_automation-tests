@@ -33,8 +33,7 @@ export const FootballCointossLocators = [
 
 ];
 
-export const IsLocators = [
-    new Components.ImageLocator("homeChoice", 1123, 489, 0, 0),
-    new Components.ImageLocator("stake1",1035, 609, 0, 0),
-    new Components.ImageLocator("stake10", 1035, 609, 0, 0),
-  ];
+export const IsLocators = {
+    head: {x: 342,y: 311},
+    gameIcon: "//div[contains(@style,'Saba_EURO2024RNG')]"
+  }
