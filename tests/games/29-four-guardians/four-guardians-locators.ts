@@ -1,27 +1,29 @@
 import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
+
 export const FourGuardiansLocators = [
-  new ImageLocator("choiceMenu", 64, 615, 120, 60),
-  new ImageLocator("1Choice", 194, 125, 115, 67),
-  new ImageLocator("AllChoice", 139, 114, 970, 440),
-  new ImageLocator("EvenChoice", 139, 114, 970, 440),
-  new ImageLocator("OddChoice", 139, 114, 970, 440),
-  new ImageLocator("25Choice", 764, 572),
-  new ImageLocator("stakeMenu", 270, 645),
-  new ImageLocator("imgStakeLevell1", 160, 655, 220, 50),
-  new ImageLocator("imgStakeLevell2", 160, 655, 220, 50),
-  new ImageLocator("hamburgerMenu", 45, 97),
-  new ImageLocator("historyMenu", 53, 360),
-  new ImageLocator("historyPopup", 500, 38, 250, 68),
-  new ImageLocator("stake1", 307, 653, 70, 50),
-  new ImageLocator("stake10", 307, 653, 70, 50),
-  new ImageLocator("spin", 1180, 632),
-  new ImageLocator("submitPayline", 542, 623, 200, 40),
-  new ImageLocator("clearChoices", 866, 580, 135, 35),
-  new ImageLocator("icoGuide", 30, 405, 35, 35),
-  new ImageLocator("outside", 5, 5, 5, 5),
-  new ImageLocator("guideMenu", 40, 412, 17, 16),
-  new ImageLocator("icoGuideJP", 37, 473, 19, 28),
+  new ImageLocator("choiceMenu", 135, 620, 82, 45),
+  new ImageLocator("1Choice", 240, 186, 100, 70),
+  new ImageLocator("2Choice", 546, 186, 100, 70),
+  new ImageLocator("25Choice", 942, 515, 100, 70),
+  new ImageLocator("stakeMenu", 300, 620, 75, 46),
+  new ImageLocator("imgStakeLevell1", 184, 295, 315, 312),
+  new ImageLocator("imgStakeLevell2", 184, 295, 315, 312),
+  new ImageLocator("hamburgerMenu", 42, 72, 65, 65),
+  new ImageLocator("historyMenu", 50, 416, 50, 50),
+  new ImageLocator("jackpotMenu", 50, 510, 50, 50),
+  new ImageLocator("historyPopup", 546, 40, 192, 50),
+  new ImageLocator("jackpotPopup", 180, 32, 890, 130),
+  new ImageLocator("guideMenu", 55, 502, 45, 45),
+  new ImageLocator("icoGuideJP", 63, 592, 27, 36),
+  new ImageLocator("stake1", 306, 494, 78, 42),
+  new ImageLocator("stake10", 303, 556, 78, 46),
+  new ImageLocator("spin", 927, 555, 120, 120),
+  new ImageLocator("submitPayline", 532, 612, 210, 55),
+  new ImageLocator("clearChoices", 860, 110, 182, 58),
+  new ImageLocator("imgJackpot", 1097, 143, 130, 40),
+  new ImageLocator("outside", 10, 10, 10, 10),
+  new ImageLocator("roundId", 1027, 65, 145, 20),
   new ImageLocator("guide-1", 150, 72, 976, 580),
   new ImageLocator("guide-2", 150, 72, 976, 580),
   new ImageLocator("guide-3", 150, 72, 976, 580),
@@ -38,8 +40,7 @@ export const FourGuardiansLocators = [
   new ImageLocator("guide-JP-6", 150, 72, 976, 580),
   new ImageLocator("guide-JP-7", 150, 72, 976, 580),
   new ImageLocator("guide-JP-8", 150, 72, 976, 580),
-
 ];
-const guideMenu = {y: 470}
+const guideMenu = {y: 588}
  
 FourGuardiansLocators.forEach((item, i)=>{ if (item.name == "guideMenu" && process.env.npm_config_project == "l2") item.y = guideMenu.y } )
