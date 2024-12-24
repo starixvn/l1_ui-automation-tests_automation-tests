@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-export const MarbalFootBallConfigs: Components.GameConfiguration = {
+export const MarbleFootBallConfigs: Components.GameConfiguration = {
   id: 104,
   name: "marblefootball",
   durations: {
@@ -13,14 +13,14 @@ export const MarbalFootBallConfigs: Components.GameConfiguration = {
   hedgeBetGroups: [["over", "under"]],
   maxTimeout: 350 * 1000, // miliseconds x,
   odds: {
-    home: 2.4,
-    away: 2.4,
-    draw: 3.5,
+    home: 2.44,
+    away: 2.44,
+    draw: 3.2,
     draw4: 50,
-    over: 1.96,
-    under: 1.96,
-    odd: 1.95,
-    even: 1.95,
+    over: 2.29,
+    under: 1.59,
+    odd: 1.91,
+    even: 1.84,
   },
   betBoard: false,
   accounts: {

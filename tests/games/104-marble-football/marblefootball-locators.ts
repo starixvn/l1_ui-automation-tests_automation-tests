@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 
 
-export const MarbalFootBallLocators = [
+export const MarbleFootBallLocators = [
     new Components.ImageLocator("dealer", 570, 114, 140, 70),
     new Components.ImageLocator("homeChoice", 340, 316, 117, 15),
     new Components.ImageLocator("awayChoice", 815, 316, 140, 15),

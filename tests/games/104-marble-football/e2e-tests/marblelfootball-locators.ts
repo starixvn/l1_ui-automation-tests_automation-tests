@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
-export const extMarbalFootBallLocators = [
+export const extMarbleFootBallLocators = [
   new ImageLocator("homeChoice", 340, 316, 117, 15),
   new ImageLocator("awayChoice", 815, 316, 140, 15),
   new ImageLocator("overChoice", 175, 316, 40, 15),
@@ -46,6 +46,6 @@ export const extMarbalFootBallLocators = [
 
 ];
 
-export const MarbalFootBallLocators = extMarbalFootBallLocators.concat(
+export const MarblelFootBallLocators = extMarbleFootBallLocators.concat(
   Components.BaseLocator.GameLobbyLocator
 );
