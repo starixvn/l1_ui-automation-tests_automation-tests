@@ -2,7 +2,7 @@ import { MarbleFootBallLocators } from "../marblefootball-locators";
 import { MarbleFootBallConfigs } from "../marblelfootball-configs";
 import {SmokeBases } from "sc-automation-core";
 
-class MarbleFootBallSmokeSpec extends SmokeBases.MarbalGameBase {
+class MarbleFootBallSmokeSpec extends SmokeBases.MarbleGameBase {
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: ["home", "away", "draw","over", "under", "odd", "even"],

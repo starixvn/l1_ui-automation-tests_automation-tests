@@ -2,7 +2,7 @@ import { MarblelFootBallLocators } from "./marblelfootball-locators";
 import { MarbleFootBallConfigs } from "../marblelfootball-configs";
 import { E2EBases, Components} from "sc-automation-core";
 
-class MarbleFootBallE2ESpec extends E2EBases.MarbalGameBase {
+class MarbleFootBallE2ESpec extends E2EBases.MarbleGameBase {
     constructor() {
         const E2EOptions: E2EBases.IBaseOptions = {
             placeBetChoices: MarbleFootBallConfigs.choices,
