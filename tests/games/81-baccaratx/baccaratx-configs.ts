@@ -17,7 +17,7 @@ export const BaccaratXConfigs: Components.GameConfiguration = {
     "bankerPair",
   ],
   hedgeBetGroups: [["player", "banker"]],
-  maxTimeout: 100 * 1000, // miliseconds,
+  maxTimeout: 150 * 1000, // miliseconds,
   odds: {
     player: 2,
     banker: 1.95,
