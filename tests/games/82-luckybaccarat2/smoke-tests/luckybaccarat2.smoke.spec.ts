@@ -38,8 +38,8 @@ class LuckyBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
              
       // Act 
-      await this.game.waitUntilPlaceBet();
-      await this.game.waitForTimeout(2000)
+      await this.game.waitUntilPlaceBet();    
+      await this.game.waitForTimeout(4000)
       const placeBetResponse = await this.player.betOn(bet.choice, bet.amount);
       const settledResults = await this.game.waitForSettlement();
 

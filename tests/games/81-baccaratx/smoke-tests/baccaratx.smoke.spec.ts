@@ -40,7 +40,7 @@ class BaccaratXSmokeSpec extends SmokeBases.TableGameBase {
              
       // Act 
       await this.game.waitUntilPlaceBet();
-      await this.game.waitForTimeout(2000)
+      await this.game.waitForTimeout(4000)
       const placeBetResponse = await this.player.betOn(bet.choice, bet.amount);
       const settledResults = await this.game.waitForSettlement();
 
