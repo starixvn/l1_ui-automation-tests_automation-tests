@@ -75,6 +75,17 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
+      name: "Smoke_MobiDirect",
+      testMatch: `**/${testMatch}/smoke-tests/*.mobidirectsmoke.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],channel:"chrome",
+        "viewport": {
+          "width": 500,
+          "height": 608
+        }
+      },
+    },
+    {
       name: "Smoke_Keno",
       testMatch: `**/${testMatch}/smoke-tests/*.kenosmoke.spec.ts`,
       use: {
