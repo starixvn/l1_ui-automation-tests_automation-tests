@@ -13,8 +13,8 @@ export const FootballCointossConfigs: Components.GameConfiguration = {
   hedgeBetGroups: [["home", "away"]],
   maxTimeout: 250 * 1000, // miliseconds x,
   odds: {
-    home: 1.98,
-    away: 1.98,
+    home: 1.96,
+    away: 1.96,
   },
   betBoard: false,
   accounts: {

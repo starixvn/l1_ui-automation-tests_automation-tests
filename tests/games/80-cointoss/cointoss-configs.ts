@@ -13,8 +13,8 @@ export const CoinTossConfigs: Components.GameConfiguration = {
   hedgeBetGroups: [["head", "tail"]],
   maxTimeout: 250 * 1000, // miliseconds x,
   odds: {
-    head: 1.98,
-    tail: 1.98,
+    head: 1.96,
+    tail: 1.96,
   },
   betBoard: false,
   accounts: {
