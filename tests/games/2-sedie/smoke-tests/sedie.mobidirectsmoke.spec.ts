@@ -1,8 +1,6 @@
 import { MobiDirectLocators } from "../sedie-locators";
 import { SedieConfigs } from "../sedie-configs";
 import { SmokeBases } from "sc-automation-core";
-let extConfigs = { ...SedieConfigs };
-extConfigs.socketName = "sedie";
 
 class SedieSmokeSpec extends SmokeBases.MiniGameBase {
   /**
@@ -10,7 +8,7 @@ class SedieSmokeSpec extends SmokeBases.MiniGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: extConfigs,
+      gameConfiguration: SedieConfigs,
       locators: MobiDirectLocators,
       waitBetTimeout: 5000,
       placeBetChoices: ["even", "odd"],
@@ -22,13 +20,8 @@ class SedieSmokeSpec extends SmokeBases.MiniGameBase {
   }
 
   protected inGameOddsTests(): void {
-      
   }
 
-  inGameBetChoiceTests(): void {
-      
-  }
-  
 }
 
 new SedieSmokeSpec().start();

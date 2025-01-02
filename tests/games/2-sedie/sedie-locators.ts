@@ -38,10 +38,10 @@ export const MobiLocators = {
 };
 
 export const MobiDirectLocators = [
-  new Components.ImageLocator("dealer", 207, 200, 90, 70),
-  new Components.ImageLocator("evenChoice", 116, 345, 55, 25),
-  new Components.ImageLocator("oddChoice", 297, 345, 26, 25),
-  new Components.ImageLocator("hamburgerMenu", 23, 230, 20, 20),
+  new Components.ImageLocator("dealer", 213, 200, 81, 70),
+  new Components.ImageLocator("evenChoice", 127, 332, 50, 25),
+  new Components.ImageLocator("oddChoice", 292, 332, 30, 25),
+  new Components.ImageLocator("hamburgerMenu", 22, 230, 20, 20),
   new Components.ImageLocator("historyMenu", 26, 320, 15, 15),
   new Components.ImageLocator("historyPopup", 218, 94, 68, 15),
   new Components.ImageLocator("errorMessage", 179, 492, 155, 15),
