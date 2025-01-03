@@ -91,6 +91,14 @@ test(`Smoke Test Games Locations and navigation on Member Site`, async ({ browse
   const env = process.env.npm_config_env;
   const project = process.env.npm_config_project;
   await page.goto(envConfig[`${project}${env}`]);
+  const alertDialogSelector = "//div[@class='modal modal--alert']//div[1]/a";
+  await page.waitForSelector(alertDialogSelector, { timeout: 5000 }).catch(() => {
+      console.log("Alert dialog not found within the timeout period.");
+  });
+  const alertDialogExists = await page.$(alertDialogSelector);
+  if (alertDialogExists) {
+      await page.click(alertDialogSelector);
+  }
   await page.click(locator.iconMode);
   await page.click(locator.iconMobile);
   await page.click(locator.lblLogin);

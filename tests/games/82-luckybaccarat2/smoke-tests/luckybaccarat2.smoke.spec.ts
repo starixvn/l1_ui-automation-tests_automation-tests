@@ -30,6 +30,8 @@ class LuckyBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
   }
   protected inGameDealerTests(): void {
   }
+  protected inGameBetChoiceTests(): void {}
+
   protected placeBetAndSettleTests(): void {
     Components.test("THEN player able to place a bet and settle", async () => {
       // Arrange

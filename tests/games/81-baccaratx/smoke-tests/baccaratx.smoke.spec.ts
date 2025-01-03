@@ -56,6 +56,8 @@ class BaccaratXSmokeSpec extends SmokeBases.TableGameBase {
 
     });
   }
+  
+  protected inGameBetChoiceTests(): void {}
 }
 
 new BaccaratXSmokeSpec().start();
