@@ -44,7 +44,6 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
             // Assert
             expect(betChoice.image).toMatchSnapshot(betChoice.name);
         }
-        await this.game.waitForTimeout(5000);
     });
 }
 
