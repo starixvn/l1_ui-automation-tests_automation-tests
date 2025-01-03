@@ -2,7 +2,6 @@ import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
 export const tapfortuneLocators = [
-  // new ImageLocator("choiceMenu", 273, 600, 100, 50),
   new ImageLocator("stakeMenu", 273, 600, 100, 50),
   new ImageLocator("imgStakeLevell1", 110, 326, 440, 250),
   new ImageLocator("imgStakeLevell2", 110, 326, 440, 250),
@@ -23,5 +22,14 @@ export const tapfortuneLocators = [
   new ImageLocator("guide-6", 150, 72, 976, 580),
   new ImageLocator("guide-7", 150, 72, 976, 580),
   new ImageLocator("guide-8", 150, 72, 976, 580),
+  new ImageLocator("imgGameName", 973, 62, 290, 126),
+  new ImageLocator("defaultRoundID", 1065, 30, 150, 42),
+  new ImageLocator("popAutoSpin", 400, 180, 495, 350),
+  new ImageLocator("cboBetLevel", 276, 598, 100, 50),
+  new ImageLocator("stake1", 136, 344, 60, 30),
+  new ImageLocator("stake10",  136, 344, 60, 30),
+  new ImageLocator("btnAutoSpin", 510, 600, 34, 40),
+  new ImageLocator("btnAutoSpinStart", 592, 470, 100, 40),
+  new ImageLocator("btnAutoSpin10", 440, 325, 50, 38),
 ];
 

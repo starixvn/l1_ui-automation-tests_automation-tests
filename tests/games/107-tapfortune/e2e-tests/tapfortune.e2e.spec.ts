@@ -1,8 +1,8 @@
 import { E2EBases } from "sc-automation-core";
-import { tapfortuneLocators } from "../tapfortune-locators";
+import { tapfortuneLocators } from "./tapfortune-locators";
 import { tapfortuneConfigs } from "../tapfortune-configs";
 
-class tapfortuneE2ESpec extends E2EBases.TableGameBase {
+class tapfortuneE2ESpec extends E2EBases.TapGameBase {
     /**
      *
      */
