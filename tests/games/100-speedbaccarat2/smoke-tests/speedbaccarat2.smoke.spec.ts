@@ -15,7 +15,7 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [SpeedBaccarat2Configs.choices[0]],
       gameConfiguration: SpeedBaccarat2Configs,
       locators: SpeedBaccarat2Locators,
-      waitBetTimeout: 11500,
+      waitBetTimeout: 10000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 2,
     };
@@ -34,8 +34,8 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
     Components.test("AND bet choices should be displayed on table", async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-        await this.game.gnWaitUntilPlaceBet();
-        // await this.game.waitForTimeout(this.options.waitBetTimeout);
+        await this.game.waitUntilNextRound();
+        await this.game.waitForTimeout(this.options.waitBetTimeout);
 
         for (const placeBetChoice of this.options.placeBetChoices) {
             // Act
@@ -44,6 +44,7 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
             // Assert
             expect(betChoice.image).toMatchSnapshot(betChoice.name);
         }
+        await this.game.waitForTimeout(5000);
     });
 }
 
