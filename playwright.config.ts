@@ -78,7 +78,7 @@ const config: PlaywrightTestConfig = {
       name: "Smoke_MobiDirect",
       testMatch: `**/${testMatch}/smoke-tests/*.mobidirectsmoke.spec.ts`,
       use: {
-        ...devices["Desktop Chrome"],channel:"chrome",
+        ...devices["Desktop Chrome"],
         "viewport": {
           "width": 500,
           "height": 608
