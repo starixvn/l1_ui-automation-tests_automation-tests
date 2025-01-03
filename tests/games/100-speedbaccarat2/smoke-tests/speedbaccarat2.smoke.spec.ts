@@ -34,8 +34,8 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
     Components.test("AND bet choices should be displayed on table", async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-        await this.game.waitUntilNextRound();
-        await this.game.waitForTimeout(this.options.waitBetTimeout);
+        await this.game.gnWaitUntilPlaceBet();
+        // await this.game.waitForTimeout(this.options.waitBetTimeout);
 
         for (const placeBetChoice of this.options.placeBetChoices) {
             // Act
