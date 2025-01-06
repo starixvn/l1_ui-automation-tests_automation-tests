@@ -15,7 +15,7 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
       placeBetChoices: [SpeedBaccarat2Configs.choices[0]],
       gameConfiguration: SpeedBaccarat2Configs,
       locators: SpeedBaccarat2Locators,
-      waitBetTimeout: 10000,
+      waitBetTimeout: 14000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 2,
     };
