@@ -24,7 +24,7 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
   protected inGameOddsTests(): void {
     Components.test("AND odds should be correct", async () => {
       // Assert
-      await this.game.waitUntilGameUiLoad(1);
+      await this.game.waitUntilGameUiLoad();
       expect(this.game.odds).toStrictEqual(this.options.gameConfiguration.odds);
   });
   }
