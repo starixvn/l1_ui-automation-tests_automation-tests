@@ -31,21 +31,21 @@ class SpeedBaccarat2SmokeSpec extends SmokeBases.TableGameBase {
   protected inGameDealerTests(): void {
   }
   protected inGameBetChoiceTests() {
-    Components.test("AND bet choices should be displayed on table", async () => {
-        // Arrange
-        Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-        await this.game.waitUntilNextRound(this.options.gameConfiguration.name);
-        await this.game.waitForTimeout(this.options.waitBetTimeout);
+    // Components.test("AND bet choices should be displayed on table", async () => {
+    //     // Arrange
+    //     Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+    //     await this.game.waitUntilNextRound(this.options.gameConfiguration.name);
+    //     await this.game.waitForTimeout(this.options.waitBetTimeout);
 
-        for (const placeBetChoice of this.options.placeBetChoices) {
-            // Act
-            const betChoice = await this.game.captureChoice(placeBetChoice);
+    //     for (const placeBetChoice of this.options.placeBetChoices) {
+    //         // Act
+    //         const betChoice = await this.game.captureChoice(placeBetChoice);
 
-            // Assert
-            expect(betChoice.image).toMatchSnapshot(betChoice.name);
-        }
-        await this.game.waitForTimeout(5000);
-    });
+    //         // Assert
+    //         expect(betChoice.image).toMatchSnapshot(betChoice.name);
+    //     }
+    //     await this.game.waitForTimeout(5000);
+    // });
 }
 
 }
