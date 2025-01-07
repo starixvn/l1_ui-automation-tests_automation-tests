@@ -1,5 +1,5 @@
-import { PusoyLocators } from "../Pusoy-locators";
-import { PusoyConfigs } from "../Pusoy-configs";
+import { PusoyLocators } from "../pusoy-locators";
+import { PusoyConfigs } from "../pusoy-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import  verifyImage from "sc-automation-core/lib/expects/verify-image";
 

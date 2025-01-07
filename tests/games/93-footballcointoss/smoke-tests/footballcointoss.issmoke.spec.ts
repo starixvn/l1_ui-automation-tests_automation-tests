@@ -1,5 +1,5 @@
-import { IsLocators } from "../../80-cointoss/cointoss-locators";
-import { CoinTossConfigs,Isconfigs } from "../../80-cointoss/cointoss-configs";
+import { IsLocators } from "../footballcointoss-locators";
+import { FootballCointossConfigs,Isconfigs } from "../footballcointoss-configs";
 import { SmokeBases ,Components} from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
@@ -10,10 +10,10 @@ class ISSmokeSpec extends SmokeBases.ISGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: CoinTossConfigs,
+      gameConfiguration: FootballCointossConfigs,
       locators: IsLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: CoinTossConfigs.choices,
+      placeBetChoices: ["head"],
       snapshotFolderPath: __filename,
       placeBetAmount: 1,
       isconfig: Isconfigs

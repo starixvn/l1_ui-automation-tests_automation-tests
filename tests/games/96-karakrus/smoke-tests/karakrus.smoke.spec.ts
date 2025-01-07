@@ -1,5 +1,5 @@
-import { KaraKrusLocators } from "../KaraKrus-locators";
-import { KaraKrusConfigs } from "../KaraKrus-configs";
+import { KaraKrusLocators } from "../karakrus-locators";
+import { KaraKrusConfigs } from "../karakrus-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 
 class KaraKrusSmokeSpec extends SmokeBases.TableGameBase {

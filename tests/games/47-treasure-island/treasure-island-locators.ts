@@ -15,7 +15,7 @@ export const TreasureIslandLocators = [
   new ImageLocator("submitPayline", 525, 255),
   new ImageLocator("clearChoices", 481, 331),
   new ImageLocator("outside", 5, 5, 5, 5),
-  new ImageLocator("guideMenu", 93, 442, 19, 23),
+  new ImageLocator("guideMenu", 98, 450, 0, 0),
   new ImageLocator("guide-1", 150, 92, 976, 540),
   new ImageLocator("guide-2", 150, 92, 976, 540),
   new ImageLocator("guide-3", 150, 92, 976, 540),

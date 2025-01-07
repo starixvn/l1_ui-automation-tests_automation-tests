@@ -1,5 +1,5 @@
-import { LuckyBaccarat5Locators } from "../LuckyBaccarat5-locators";
-import { LuckyBaccarat5Configs } from "../LuckyBaccarat5-configs";
+import { LuckyBaccarat5Locators } from "../luckybaccarat5-locators";
+import { LuckyBaccarat5Configs } from "../luckybaccarat5-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";

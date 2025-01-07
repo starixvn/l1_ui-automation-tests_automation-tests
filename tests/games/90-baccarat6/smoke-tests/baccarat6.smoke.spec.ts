@@ -1,5 +1,5 @@
-import { Baccarat6Locators } from "../Baccarat6-locators";
-import { Baccarat6Configs } from "../Baccarat6-configs";
+import { Baccarat6Locators } from "../baccarat6-locators";
+import { Baccarat6Configs } from "../baccarat6-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";

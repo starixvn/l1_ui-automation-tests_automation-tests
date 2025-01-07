@@ -14,7 +14,7 @@ export const WayToGoalLocators = [
   new ImageLocator("jackpotMenu", 50, 510, 50, 50),
   new ImageLocator("historyPopup", 546, 40, 192, 50),
   new ImageLocator("jackpotPopup", 180, 32, 890, 130),
-  new ImageLocator("guideMenu", 55, 502, 45, 45),
+  new ImageLocator("guideMenu", 78, 514, 0, 0),
   new ImageLocator("icoGuideJP", 63, 592, 27, 36),
   new ImageLocator("stake1", 306, 494, 78, 42),
   new ImageLocator("stake10", 303, 556, 78, 46),

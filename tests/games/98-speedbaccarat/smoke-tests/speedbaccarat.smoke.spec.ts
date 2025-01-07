@@ -1,5 +1,5 @@
-import { SpeedBaccaratLocators } from "../SpeedBaccarat-locators";
-import { SpeedBaccaratConfigs } from "../SpeedBaccarat-configs";
+import { SpeedBaccaratLocators } from "../speedbaccarat-locators";
+import { SpeedBaccaratConfigs } from "../speedbaccarat-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
