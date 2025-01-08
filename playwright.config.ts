@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
   /* Run tests in files in parallel */
   fullyParallel: false,
   // reporter: [["list"], ["html", { open: "never" }]],
-  reporter: [["html",{ open: "never" }],["line"], [
+  reporter: [["html",{ open: "never" }],["list"], [
     "allure-playwright",
     {
       detail: false,
@@ -78,7 +78,7 @@ const config: PlaywrightTestConfig = {
       name: "Smoke_MobiDirect",
       testMatch: `**/${testMatch}/smoke-tests/*.mobidirectsmoke.spec.ts`,
       use: {
-        ...devices["Desktop Chrome"],
+        ...devices['Desktop Chrome'],
         "viewport": {
           "width": 500,
           "height": 608
