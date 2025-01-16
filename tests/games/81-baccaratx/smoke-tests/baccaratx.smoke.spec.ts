@@ -17,6 +17,10 @@ class BaccaratXSmokeSpec extends SmokeBases.BacGameBase {
     };
     super(smokeOptions);
   }
+  
+  protected inGameBetChoiceTests(): void {
+      
+  }
 
 }
 
