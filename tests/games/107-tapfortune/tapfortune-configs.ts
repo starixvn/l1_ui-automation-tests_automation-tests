@@ -22,7 +22,7 @@ export const tapfortuneConfigs: Components.GameConfiguration = {
       "2": 0,
       "3": 5,
       "4": 10,
-      "5": 20,
+      "5": 25,
     },
     "2": {
       "2": 0,

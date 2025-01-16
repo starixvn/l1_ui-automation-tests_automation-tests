@@ -18,11 +18,12 @@ const config: PlaywrightTestConfig = {
   },
   fullyParallel: false,
   reporter: [
-  ["list"], ["html", { open: "never" }],
-  ['json', {  outputFile: 'test-results.json' }]],
+    ["list"],
+    ["html", { open: "never" }],
+    ["json", { outputFile: "test-results.json" }],
+  ],
   use: {
     actionTimeout: 0,
-    trace: "off",
     headless: true,
     viewport: {
       width: 1280,
@@ -30,8 +31,14 @@ const config: PlaywrightTestConfig = {
     },
     screenshot: "only-on-failure",
     launchOptions: {
-      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu", '--disable-web-security'],
+      args: [
+        "--no-sandbox",
+        "--use-angle=gl",
+        "--enable-gpu",
+        "--disable-web-security",
+      ],
     },
+    trace: "retain-on-failure",
   },
 
   /* Configure projects for major browsers */
@@ -48,11 +55,9 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
-
       },
     },
   ],
-
 };
 
 export default config;

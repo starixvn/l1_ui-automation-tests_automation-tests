@@ -36,7 +36,6 @@ const config: PlaywrightTestConfig = {
   ]],
   use: {
     actionTimeout: 0,
-    trace: "off",
     screenshot: "only-on-failure",
     headless: true,
     viewport: {
@@ -46,6 +45,7 @@ const config: PlaywrightTestConfig = {
     launchOptions: {
       args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu", '--disable-web-security'],
     },
+    trace: "retain-on-failure"
   },
 
   projects: [
@@ -54,7 +54,7 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
-      },
+      }
     },
     {
       name: "Smoke_XD",
