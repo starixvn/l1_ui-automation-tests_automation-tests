@@ -17,5 +17,9 @@ class BaccaratSmokeSpec extends SmokeBases.TableGameBase {
     };
     super(smokeOptions);
   }
+
+  protected inGameDealerTests(): void {
+      // cannot compare image because animation beside dealer
+  }
 }
 new BaccaratSmokeSpec().start();
