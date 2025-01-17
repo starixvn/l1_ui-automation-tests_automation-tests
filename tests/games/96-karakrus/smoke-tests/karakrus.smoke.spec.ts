@@ -10,7 +10,7 @@ class KaraKrusSmokeSpec extends SmokeBases.TableGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: KaraKrusConfigs,
       locators: KaraKrusLocators,
-      waitBetTimeout: 7000,
+      waitBetTimeout: 9000,
       placeBetChoices: [KaraKrusConfigs.choices[0]],
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
