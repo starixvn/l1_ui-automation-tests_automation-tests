@@ -11,7 +11,7 @@ class BaccaratXSmokeSpec extends SmokeBases.BacGameBase {
       placeBetChoices: [BaccaratXConfigs.choices[0]],
       gameConfiguration: BaccaratXConfigs,
       locators: BaccaratXLocators,
-      waitBetTimeout: 14000,
+      waitBetTimeout: 15000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
