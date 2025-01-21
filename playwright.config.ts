@@ -45,7 +45,7 @@ const config: PlaywrightTestConfig = {
     launchOptions: {
       args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu", '--disable-web-security'],
     },
-    trace: "retain-on-failure"
+    trace: "off"
   },
 
   projects: [
