@@ -1,6 +1,6 @@
 variables:
   GIT_CLEAN_FLAGS: none
-  ALLURE_URL: "http://10.70.70.120:8080/api/result"
+  ALLURE_URL: "http://10.10.50.160:8080/api/result"
   HEADER: "Content-Type: multipart/form-data;accept: */*"
 
 stages:

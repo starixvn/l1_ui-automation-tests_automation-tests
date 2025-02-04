@@ -1,7 +1,7 @@
 
 async function fetchData() { 
   try {
-    const response = await fetch(`http://10.70.70.120:8080/api/result`, {
+    const response = await fetch(`http://10.10.50.160:8080/api/result`, {
       method: 'GET',
       headers: {
         Accept: '*/*'
@@ -21,7 +21,7 @@ async function fetchData() {
 
 
 async function generateReport(reportData) {
-  const url = `http://10.70.70.120:8080/api/report`; 
+  const url = `http://10.10.50.160:8080/api/report`; 
   const options = {
     method: 'POST',
     headers: {
@@ -48,7 +48,7 @@ async function generateReport(reportData) {
 
 async function deleteHistoryAllureReport() {
   try {
-      const response = await fetch(`http://10.70.70.120:8080/api/report/history`, {
+      const response = await fetch(`http://10.10.50.160:8080/api/report/history`, {
           method: "DELETE",
           headers: {
               Accept: "*/*",

@@ -24,7 +24,7 @@ export const SedieLocators = [
   new Components.ImageLocator("guide-5", 150, 72, 976, 580),
   new Components.ImageLocator("guide-6", 150, 72, 976, 580),
   new Components.ImageLocator("minigamesicon", 1201, 641, 10, 10),
-  ];
+];
 
 export const MobiLocators = {
   inGameUI: ["//div[contains(@class,'game-header_title')][text()='Xóc Đĩa']"],
@@ -39,19 +39,18 @@ export const MobiLocators = {
 
 export const MobiDirectLocators = [
   new Components.ImageLocator("dealer", 213, 200, 81, 70),
-  new Components.ImageLocator("evenChoice", 127, 332, 50, 25),
-  new Components.ImageLocator("oddChoice", 292, 332, 30, 25),
-  new Components.ImageLocator("hamburgerMenu", 22, 230, 20, 20),
-  new Components.ImageLocator("historyMenu", 26, 320, 15, 15),
-  new Components.ImageLocator("historyPopup", 218, 94, 68, 15),
-  new Components.ImageLocator("errorMessage", 179, 492, 155, 15),
-  new Components.ImageLocator("guideMenu", 28, 320, 15, 15),
-  new Components.ImageLocator("outside", 5, 5, 5, 5),
-  new Components.ImageLocator("guide-1", 10, 30, 478, 595),
-  new Components.ImageLocator("guide-2", 10, 30, 478, 595),
-  new Components.ImageLocator("guide-3", 10, 30, 478, 595),
-  new Components.ImageLocator("guide-4", 10, 30, 478, 595),
-  new Components.ImageLocator("guide-5", 10, 30, 478, 595),
-  new Components.ImageLocator("guide-6", 10, 30, 478, 595),
-  new Components.ImageLocator("minigamesicon", 1201, 641, 10, 10),
-  ];
+  new Components.ImageLocator("evenChoice", 46, 303, 80, 35),
+  new Components.ImageLocator("oddChoice", 256, 303, 40, 35),
+  new Components.ImageLocator("hamburgerMenu", 58, 50, 20, 20),
+  new Components.ImageLocator("historyMenu", 53, 170, 15, 15),
+  new Components.ImageLocator("historyPopup", 180, 53, 140, 15),
+  new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
+  new Components.ImageLocator("guideMenu", 53, 214, 15, 15),
+  new Components.ImageLocator("outside", 447, 60, 0, 0),
+  new Components.ImageLocator("guide-1", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-2", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-3", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-4", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-5", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-6", 62, 78, 380, 505),
+];
