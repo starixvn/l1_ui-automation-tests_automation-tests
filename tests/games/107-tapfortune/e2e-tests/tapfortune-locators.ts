@@ -26,8 +26,6 @@ export const tapfortuneLocators = [
   new ImageLocator("defaultRoundID", 1065, 30, 150, 42),
   new ImageLocator("popAutoSpin", 400, 180, 495, 350),
   new ImageLocator("cboBetLevel", 276, 598, 100, 50),
-  new ImageLocator("stake1", 136, 344, 60, 30),
-  new ImageLocator("stake10",  136, 344, 60, 30),
   new ImageLocator("btnAutoSpin", 500, 605, 25, 25),
   new ImageLocator("btnAutoSpinStart", 716, 480, 25, 25),
   new ImageLocator("btnAutoSpin10", 440, 325, 25, 25),

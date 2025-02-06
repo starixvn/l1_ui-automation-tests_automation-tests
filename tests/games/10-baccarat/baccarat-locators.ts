@@ -44,3 +44,23 @@ export const MobiLocators = {
     player: {x: 365,y: 311},
     gameIcon: "//div[contains(@style,'Saba_Baccarat')]"
   }
+
+  export const MobiDirectLocators = [
+    new Components.ImageLocator("dealer", 213, 200, 81, 70),
+    new Components.ImageLocator("playerChoice", 46, 285, 138, 25),
+    new Components.ImageLocator("bankerChoice", 330, 285, 105, 25),
+    new Components.ImageLocator("bigChoice", 73, 207, 37, 23),
+    new Components.ImageLocator("smallChoice", 394, 207, 37, 23),
+    new Components.ImageLocator("hamburgerMenu", 58, 50, 20, 20),
+    new Components.ImageLocator("historyMenu", 53, 170, 15, 15),
+    new Components.ImageLocator("historyPopup", 180, 53, 140, 15),
+    new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
+    new Components.ImageLocator("guideMenu", 53, 214, 15, 15),
+    new Components.ImageLocator("outside", 447, 60, 0, 0),
+    new Components.ImageLocator("guide-1", 62, 78, 380, 505),
+    new Components.ImageLocator("guide-2", 62, 78, 380, 505),
+    new Components.ImageLocator("guide-3", 62, 78, 380, 505),
+    new Components.ImageLocator("guide-4", 62, 78, 380, 505),
+    new Components.ImageLocator("guide-5", 62, 78, 380, 505),
+    new Components.ImageLocator("guide-6", 62, 78, 380, 505),
+  ];

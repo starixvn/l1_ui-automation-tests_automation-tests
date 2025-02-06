@@ -5,7 +5,7 @@ import { SmokeBases } from "sc-automation-core";
 let extConfigs = { ...VipSedieConfigs };
 extConfigs.socketName = "gw";
 
-class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+class VipSedieSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
@@ -23,4 +23,4 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new VipSedieSmokeSpec().start();
