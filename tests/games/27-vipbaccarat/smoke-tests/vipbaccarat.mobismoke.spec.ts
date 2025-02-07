@@ -16,7 +16,7 @@ class SmokeSpec extends SmokeBases.MobiGameBase {
       waitBetTimeout: 5000,
       placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project.includes("l2") ? 50 : 10
+      placeBetAmount: process.env.npm_config_project.includes("l2") ? 100 : 10
     };
 
     super(smokeOptions);
