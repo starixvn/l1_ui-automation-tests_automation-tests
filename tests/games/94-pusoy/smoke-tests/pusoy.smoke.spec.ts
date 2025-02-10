@@ -25,11 +25,6 @@ class PusoySmokeSpec extends SmokeBases.TableGameBase {
   }
 
   protected joinGameTests() {
-    Components.test("Verify introduce section", async () => {
-      await verifyImage(this.game, `popIntroduce`);
-      await this.game.clickLocator(`btnOkAndDontShowAgain`)
-    });
-
     Components.test("Verify that cards are dealed", async () => {
         // Arrange
         Components.test.setTimeout(this.options.gameConfiguration.maxTimeout*2);

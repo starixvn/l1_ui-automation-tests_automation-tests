@@ -118,17 +118,11 @@ test(`Smoke Test Games Locations and navigation on Member Site`, async ({ browse
         await page.click(locator[element]["xpath"]),
       ]);
 
-      await submitTestCurrency(newtab);
       await verifyGameUiLoad(newtab, locator[element].name);
       await newtab.close();
     }
   });
 });
-
-const submitTestCurrency = async (page: any) => {
-  await page.click("text=Submit");
-  await page.waitForLoadState("domcontentloaded");
-};
 
 const verifyGameUiLoad = async (page: any, gameName: string) => {
   const waitRange = 1;
@@ -158,6 +152,7 @@ const verifyGameUiLoad = async (page: any, gameName: string) => {
     });
   }
   if (gameName == "Saba Mobi" || gameName == "Mega Keno") {
+    await page.waitForTimeout(5000);
     const title = await page.title();
     expect(title).toContain(gameName);
     filterA.push(gameName);
