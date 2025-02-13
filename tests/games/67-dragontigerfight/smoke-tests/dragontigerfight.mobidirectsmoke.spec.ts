@@ -10,17 +10,14 @@ class DragonTigerFightSmokeSpec extends SmokeBases.MiniGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: DragonTigerConfigs,
       locators: MobiDirectLocators,
-      waitBetTimeout: 10000,
-      placeBetChoices: [DragonTigerConfigs.choices[0]],
+      waitBetTimeout: 8000,
+      placeBetChoices: ["dragon","tiger"],
       snapshotFolderPath: __filename,
       placeBetAmount: 1,
     };
 
     super(smokeOptions);
   }
-protected inGameBetChoiceTests(): void {
-  
-}
 
 }
 
