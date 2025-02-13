@@ -31,3 +31,21 @@ export const DragonTigerLocators = [
   new ImageLocator("guide-7", 150, 72, 976, 580),
   new ImageLocator("guide-8", 150, 72, 976, 580),
 ];
+export const MobiDirectLocators = [
+  new Components.ImageLocator("dealer", 683, 217, 87, 94),
+  new Components.ImageLocator("dragonChoice", 586, 333, 110, 33),
+  new Components.ImageLocator("tigerChoice", 801, 332, 91, 30),
+  new Components.ImageLocator("tieChoice", 667, 330, 51, 27),
+  new Components.ImageLocator("hamburgerMenu", 58, 50, 20, 20),
+  new Components.ImageLocator("historyMenu", 53, 170, 15, 15),
+  new Components.ImageLocator("historyPopup", 180, 53, 140, 15),
+  new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
+  new Components.ImageLocator("guideMenu", 53, 214, 15, 15),
+  new Components.ImageLocator("outside", 447, 60, 0, 0),
+  new Components.ImageLocator("guide-1", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-2", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-3", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-4", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-5", 62, 78, 380, 505),
+  new Components.ImageLocator("guide-6", 62, 78, 380, 505),
+];
