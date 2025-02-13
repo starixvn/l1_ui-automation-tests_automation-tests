@@ -18,7 +18,6 @@ class SedieAdminSpec extends AdminBases.TicketDetailGameBase {
       Adminconfiguration:
         gameconfig[`AdminDataSet_` + process.env.npm_config_env],
     };
-
     super(adminOptions);
   }
 

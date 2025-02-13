@@ -26,6 +26,7 @@ export const BigSmallLocators = [
     new Components.ImageLocator("guide-4", 150, 72, 976, 580),
     new Components.ImageLocator("guide-5", 150, 72, 976, 580),
     new Components.ImageLocator("guide-6", 150, 72, 976, 580),
+    new Components.ImageLocator("roundId", 454, 236, 86, 20),
 
 ];
 

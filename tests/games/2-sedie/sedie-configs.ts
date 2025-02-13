@@ -36,9 +36,9 @@ export const SedieConfigs: Components.GameConfiguration = {
   productId: { l1: "1613", l2: 3803 },
 };
 
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 ={
   accountId: 222222,
-  datasetRER:{
+  l2datasetRER:{
     "TC1_expect": {
       totalAmount: 0,
       totalWin: 0,
@@ -106,7 +106,7 @@ export const AdminDataSet_local ={
       errorDescription: null
     },
   },
-  datasetTicket:{
+  l2datasetTicket:{
     "TC3_settle": {
       "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[2]/img",
