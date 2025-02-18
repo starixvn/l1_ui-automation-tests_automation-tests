@@ -23,6 +23,8 @@ export const VipSedieLocators = [
     new Components.ImageLocator("guide-6", 150, 72, 976, 580),
     new Components.ImageLocator("guide-7", 150, 72, 976, 580),
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
+    new Components.ImageLocator("roundId", 338, 200, 80, 16),
+
 ];
 
 export const MobiLocators = {

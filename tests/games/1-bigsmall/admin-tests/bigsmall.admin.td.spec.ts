@@ -2,13 +2,13 @@ import { BigSmallLocators} from "../bigsmall-locators";
 import * as gameconfig from "../bigsmall-configs";
 import { AdminBases } from "sc-automation-core";
 
-class BigSmallAdminSpec extends AdminBases.TicketDetailGameBase {
+class BigSmallAdminSpec extends AdminBases.RoundBetDetailGameBase {
   /**
    *
    */
   constructor() {
     const adminOptions: AdminBases.IBaseOptions = {
-      placeBetChoices: ["small"],
+      placeBetChoices: ["big"],
       gameConfiguration: gameconfig.BigSmallConfigs,
       locators: BigSmallLocators,
       waitBetTimeout: 8000,
@@ -20,9 +20,6 @@ class BigSmallAdminSpec extends AdminBases.TicketDetailGameBase {
     };
     super(adminOptions);
   }
-   protected TC6(): void {
-       // not offer multiple choices
-   }
 
 }
 

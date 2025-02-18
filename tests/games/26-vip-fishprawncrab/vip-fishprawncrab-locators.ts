@@ -4,6 +4,7 @@ export const VIPFPCLocators = [
     new Components.ImageLocator("dealer", 560, 13, 180, 150),
     new Components.ImageLocator("mountainChoice", 461, 413, 174, 94),
     new Components.ImageLocator("oceanChoice", 653, 413, 174, 94),
+    new Components.ImageLocator("stagChoice", 308, 286, 0, 0),
     new Components.ImageLocator("hamburgerMenu", 28, 155, 40, 40),
     new Components.ImageLocator("historyMenu", 28, 347, 44, 44),
     new Components.ImageLocator("historyPopup", 564, 71, 150, 35),
@@ -23,6 +24,7 @@ export const VIPFPCLocators = [
     new Components.ImageLocator("guide-6", 150, 72, 976, 580),
     new Components.ImageLocator("guide-7", 150, 72, 976, 580),
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
+    new Components.ImageLocator("roundId", 350, 203, 100, 25),
 ];
 
 export const MobiDirectLocators = [

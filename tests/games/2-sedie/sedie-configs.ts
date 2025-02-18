@@ -36,115 +36,66 @@ export const SedieConfigs: Components.GameConfiguration = {
   productId: { l1: "1613", l2: 3803 },
 };
 
-export const AdminDataSet_local2 ={
+export const AdminDataSet_local ={
   accountId: 222222,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
   l2datasetRER:{
-    "TC1_expect": {
+    "Expect_NoData": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist."
     },
-    "TC2_expect": {
-      totalAmount: 0,
-      totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
-    },
-    "TC3_expect": {
-      totalAmount: 1,
-      totalWin: 1.96,
-      validBetAmount: 1,
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
       errorCode: "0",
       errorDescription: null
     },
-    "TC3_settle": {
+    "Settle_Win": {
       "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[2]/img"
     },
-    "TC4_settle": {
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[2]/img"
-    },
-    "TC4_expect": {
-      totalAmount: 0,
-      totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
-    },
-    "TC5_settle": {
+    "Settle_Lose": {
       "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[1]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[1]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[1]/img"
     },
-    "TC5_expect": {
-      totalAmount: 1,
+    "Expect_Lose": {
+      totalAmount: 10,
       totalWin: 0,
-      validBetAmount: 1,
-      errorCode: "0",
-      errorDescription: null
-    },
-    "TC6_settle": {
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[1]/img"
-    },
-    "TC6_expect": {
-      totalAmount: 2,
-      totalWin: 0,
-      validBetAmount: 2,
+      validBetAmount: 10,
       errorCode: "0",
       errorDescription: null
     },
   },
   l2datasetTicket:{
-    "TC3_settle": {
+    "Settle_Win": {
       "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[2]/img"
     },
-    "TC3_expect": { "snapshot":{
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "4red.png",
-      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "even4red.png",
-      "//*[@id='game-ticket']/table[2]": "4redbetdetailwin.png",}
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winChoices.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
     },
-    "TC4_settle": {
+    "Settle_Lose": {
       "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[2]/img"
-    },
-    "TC5_settle": {
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[1]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[1]/img",
       "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[1]/img"
     },
-    "TC6_settle": {
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[1]/img"
-    },
-    "TC5_expect": { "snapshot":{
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "1red.png",
-      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "ode1red.png",
-      "//*[@id='game-ticket']/table[2]": "tc5betdetail.png",}
-    },
-    "TC6_expect": { "snapshot":{
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "1red.png",
-      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "ode1red.png",
-      "//*[@id='game-ticket']/table[2]": "tc6betdetail.png",}
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossChoices.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
     },
   }
 }

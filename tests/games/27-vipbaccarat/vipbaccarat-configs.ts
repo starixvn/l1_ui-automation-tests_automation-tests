@@ -45,3 +45,57 @@ export const VipBaccaratConfigs: Components.GameConfiguration = {
   productId: { l1: "1638", l2: 3827 },
 
 };
+
+export const AdminDataSet_local ={
+  accountId: 222245,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='vipbaccarat']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 50,
+      validBetAmount: 50,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 50,
+      totalWin: 0,
+      validBetAmount: 50,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Settle_Win": {
+      "//*/div[contains(@class,'col-12 col-xl-6')][1]/div[2]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[4]",
+      "//*/div[contains(@class,'col-12 col-xl-6')][1]/div[2]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[5]",
+      "//*/div[contains(@class,'col-12 col-xl-6')][2]/div[2]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[2]",
+      "//*/div[contains(@class,'col-12 col-xl-6')][2]/div[2]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[3]"
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winChoices.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "//*/div[contains(@class,'col-12 col-xl-6')][1]/div[2]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[2]",
+      "//*/div[contains(@class,'col-12 col-xl-6')][1]/div[2]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[3]",
+      "//*/div[contains(@class,'col-12 col-xl-6')][2]/div[2]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[4]",
+      "//*/div[contains(@class,'col-12 col-xl-6')][2]/div[2]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[5]"
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossChoices.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  }
+}

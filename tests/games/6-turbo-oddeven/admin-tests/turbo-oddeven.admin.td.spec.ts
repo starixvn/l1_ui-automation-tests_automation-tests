@@ -2,7 +2,7 @@ import { TurboOddEvenLocators} from "../turbo-oddeven-locators";
 import * as gameconfig from "../turbo-oddeven-configs";
 import { AdminBases } from "sc-automation-core";
 
-class TurboOddEvenAdminSpec extends AdminBases.TicketDetailGameBase {
+class TurboOddEvenAdminSpec extends AdminBases.RoundBetDetailGameBase {
   /**
    *
    */
@@ -20,9 +20,6 @@ class TurboOddEvenAdminSpec extends AdminBases.TicketDetailGameBase {
     };
     super(adminOptions);
   }
-   protected TC6(): void {
-       // not offer multiple choices
-   }
 
 }
 

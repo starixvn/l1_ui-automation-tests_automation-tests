@@ -3,6 +3,7 @@ const ImageLocator = Components.ImageLocator;
 
 export const VipBaccaratLocators = [
     new ImageLocator("dealer", 555, 30, 160, 130),
+    new ImageLocator("playerChoice", 420, 390, 0, 0),
     new ImageLocator("bigChoice", 133, 350, 50, 40),
     new ImageLocator("bigOwnbet", 450, 370, 30, 30),
     new ImageLocator("smallChoice", 954, 355, 50, 50),
@@ -25,6 +26,8 @@ export const VipBaccaratLocators = [
     new ImageLocator("guide-6", 150, 72, 976, 580),
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
+    new ImageLocator("roundId", 236, 178, 120, 27),
+
 ];
 
 export const MobiLocators = {

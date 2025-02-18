@@ -2,7 +2,7 @@ import { SedieLocators } from "../sedie-locators";
 import * as gameconfig from "../sedie-configs";
 import { AdminBases } from "sc-automation-core";
 
-class SedieAdminSpec extends AdminBases.TicketDetailGameBase {
+class SedieAdminSpec extends AdminBases.RoundBetDetailGameBase {
   /**
    *
    */

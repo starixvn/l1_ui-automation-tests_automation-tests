@@ -3,6 +3,7 @@ const ImageLocator = Components.ImageLocator;
 
 export const SedieWarLocators = [
     new ImageLocator("playerChoice", 140, 210, 180, 40),
+    new ImageLocator("playerEvenChoice", 63, 325, 0, 0),
     new ImageLocator("bankerChoice", 910, 210, 180, 40),
     new ImageLocator("hamburgerMenu", 36, 629),
     new ImageLocator("historyMenu", 23, 468, 44, 44),
@@ -20,6 +21,6 @@ export const SedieWarLocators = [
     new ImageLocator("guide-6", 150, 72, 976, 580),
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
-
+    new ImageLocator("roundId", 605, 138, 90, 25),
 ];
 

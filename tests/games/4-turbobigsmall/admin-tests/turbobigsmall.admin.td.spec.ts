@@ -2,7 +2,7 @@ import { TurboBigSmallLocators} from "../turbobigsmall-locators";
 import * as gameconfig from "../turbobigsmall-configs";
 import { AdminBases } from "sc-automation-core";
 
-class TurboBigSmallAdminSpec extends AdminBases.TicketDetailGameBase {
+class TurboBigSmallAdminSpec extends AdminBases.RoundBetDetailGameBase {
   /**
    *
    */
@@ -20,9 +20,6 @@ class TurboBigSmallAdminSpec extends AdminBases.TicketDetailGameBase {
     };
     super(adminOptions);
   }
-   protected TC6(): void {
-       // not offer multiple choices
-   }
 
 }
 

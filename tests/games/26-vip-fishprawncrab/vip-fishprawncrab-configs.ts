@@ -45,3 +45,54 @@ export const VIPFPCConfigs: Components.GameConfiguration = {
   productId: { l1: "1637", l2: 3826 },
 
 };
+
+
+export const AdminDataSet_local ={
+  accountId: 222244,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='vipfishprawncrab']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 100,
+      validBetAmount: 100,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 100,
+      totalWin: 0,
+      validBetAmount: 100,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Settle_Win": {
+      "#dice-0": "//*/div[@class='modal-content']//div[4]/img",
+      "#dice-1": "//*/div[@class='modal-content']//div[5]/img",
+      "#dice-2": "//*/div[@class='modal-content']//div[6]/img",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "#dice-0": "//*/div[@class='modal-content']//div[1]/img",
+      "#dice-1": "//*/div[@class='modal-content']//div[2]/img",
+      "#dice-2": "//*/div[@class='modal-content']//div[3]/img",
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  }
+}

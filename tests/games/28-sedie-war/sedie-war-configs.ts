@@ -62,3 +62,58 @@ export const SedieWarConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1639", l2: 3828 },
 };
+
+
+export const AdminDataSet_local ={
+  accountId: 222246,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='vipsediewar']",
+  isSettleNextRound: false,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Settle_Win": {
+      "#player-0": "//*/div[@class='modal-content']//div[1]/img",
+      "#player-1": "//*/div[@class='modal-content']//div[1]/img",
+      "#player-2": "//*/div[@class='modal-content']//div[1]/img",
+      "#player-3": "//*/div[@class='modal-content']//div[1]/img"
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winChoices.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "#player-0": "//*/div[@class='modal-content']//div[2]/img",
+      "#player-1": "//*/div[@class='modal-content']//div[1]/img",
+      "#player-2": "//*/div[@class='modal-content']//div[1]/img",
+      "#player-3": "//*/div[@class='modal-content']//div[1]/img"
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossChoices.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  }
+}

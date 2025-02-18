@@ -26,6 +26,8 @@ export const DragonTigerLocators = [
     new Components.ImageLocator("guide-6", 150, 72, 976, 580),
     new Components.ImageLocator("guide-7", 150, 72, 976, 580),
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
+    new Components.ImageLocator("roundId", 615, 207, 70, 20),
+
 ];
 
 
