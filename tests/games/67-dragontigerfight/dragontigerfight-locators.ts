@@ -30,6 +30,8 @@ export const DragonTigerLocators = [
   new ImageLocator("guide-6", 150, 72, 976, 580),
   new ImageLocator("guide-7", 150, 72, 976, 580),
   new ImageLocator("guide-8", 150, 72, 976, 580),
+  new ImageLocator("roundId", 332, 215, 70, 24),
+
 ];
 export const MobiDirectLocators = [
   new Components.ImageLocator("dealer", 683, 217, 87, 94),

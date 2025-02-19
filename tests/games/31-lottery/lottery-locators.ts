@@ -5,6 +5,8 @@ export const LotteryLocators = [
     new ImageLocator("othersChoice", 1050, 121, 170, 40),
     new ImageLocator("bigChoice", 132, 310, 130, 130),
     new ImageLocator("smallChoice", 400, 310, 140, 130),
+    new ImageLocator("oddChoice", 1035, 306, 180, 110),
+    new ImageLocator("evenChoice", 720, 306, 180, 110),
     new ImageLocator("27SetsChoice", 91, 121, 42, 40),
     new ImageLocator("4SetsChoice", 260, 121, 170, 40),
     new ImageLocator("hamburgerMenu", 54, 633, 40, 40),
@@ -25,5 +27,5 @@ export const LotteryLocators = [
     new ImageLocator("guide-6", 150, 72, 976, 580),
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
-
+    new ImageLocator("roundId", 470, 25, 89, 30),
 ];

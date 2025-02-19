@@ -57,3 +57,41 @@ export const LotteryConfigs: ILotteryConfigs = {
   },
   productId: { l1: "1642", l2: 3830 },
 };
+
+export const AdminDataSet_local ={
+  accountId: 222248,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='lottery']",
+  isSettleNextRound: false,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[2]/tbody": "winDetail.png"
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[2]/tbody": "lossDetail.png"
+    },
+  }
+}

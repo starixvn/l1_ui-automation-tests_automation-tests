@@ -53,3 +53,51 @@ export const RouletteConfigs: Components.GameConfiguration = {
   productId: { l1: "1632", l2: 3819 },
 
 };
+
+export const AdminDataSet_local ={
+  accountId: 222239,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='roulette']",
+  isSettleNextRound: false,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Settle_Win": {
+      "//*/div[contains(@class,'styles_result')]": "//div[@class='modal-body']/div[1]/div[2]/div[2]",
+
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "//*/div[contains(@class,'styles_result')]": "//div[@class='modal-body']/div[1]/div[2]/div[1]",
+
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  }
+}

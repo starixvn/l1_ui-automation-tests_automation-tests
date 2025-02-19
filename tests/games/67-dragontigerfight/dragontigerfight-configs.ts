@@ -36,3 +36,51 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
   productId: { l1: "1676", l2: 3868 },
   rebet: true
 };
+
+export const AdminDataSet_local ={
+  accountId: 222227,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='dragontigerfight']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Settle_Win": {
+      "//div[contains(@class,'dragontigerresult')]/div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[5]",
+      "//div[contains(@class,'dragontigerresult')]/div[3]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[2]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "//div[contains(@class,'dragontigerresult')]/div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[3]",
+      "//div[contains(@class,'dragontigerresult')]/div[3]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[6]",
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  }
+}
