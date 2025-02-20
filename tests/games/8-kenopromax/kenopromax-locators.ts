@@ -23,6 +23,7 @@ export const KenoProMaxLocators = [
     new Components.ImageLocator("guide-6", 150, 72, 976, 580),
     new Components.ImageLocator("guide-7", 150, 72, 976, 580),
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
+    new Components.ImageLocator("roundId", 615, 533, 80, 20),
 ];
 
 export const MobiLocators = {

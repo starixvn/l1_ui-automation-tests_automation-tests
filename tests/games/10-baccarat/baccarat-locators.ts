@@ -2,6 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const BaccaratLocators = [
     new Components.ImageLocator("dealer", 555, 70, 160, 130),
+    new Components.ImageLocator("playerChoice", 316, 390, 80, 24),
     new Components.ImageLocator("bigChoice", 276, 514, 40, 26),
     new Components.ImageLocator("bigOwnbet", 450, 370, 30, 30),
     new Components.ImageLocator("smallChoice", 786, 500, 50, 50),
@@ -24,6 +25,7 @@ export const BaccaratLocators = [
     new Components.ImageLocator("guide-6", 150, 72, 976, 580),
     new Components.ImageLocator("guide-7", 150, 72, 976, 580),
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
+    new Components.ImageLocator("roundId", 367, 210, 80, 24),
 ];
 
 export const MobiLocators = {
