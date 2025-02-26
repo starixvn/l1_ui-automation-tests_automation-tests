@@ -1,0 +1,11 @@
+docker-build-game-56:
+  extends: docker-build
+  variables:
+    GAMEID: 56
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/56*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile

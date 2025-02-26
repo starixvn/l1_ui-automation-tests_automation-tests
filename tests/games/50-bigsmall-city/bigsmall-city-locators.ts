@@ -36,3 +36,15 @@ export const BigSmallCityLocators = [
     new Components.ImageLocator("guide-7", 150, 72, 976, 580),
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
 ];
+
+export const GameLocators = [
+    new Components.ImageLocator("bigChoice", 300, 340, 0, 0),
+    new Components.ImageLocator("smallChoice", 660, 340, 0, 0),
+    new Components.ImageLocator("roundId", 298, 240, 70, 18),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
+    new Components.ImageLocator("switchMarinaBay", 1067, 110, 0, 0),
+    new Components.ImageLocator("switchMacaw", 1067, 296, 0, 0),
+    new Components.ImageLocator("switchMonteCarlo", 1067, 475, 0, 0),
+    new Components.ImageLocator("closeguide", 890, 571, 100, 20),
+
+  ]

@@ -35,12 +35,12 @@ export const DragonTigerLocators = [
 ];
 export const MobiDirectLocators = [
   new Components.ImageLocator("dealer", 683, 217, 87, 94),
-  new Components.ImageLocator("dragonChoice", 76, 262, 83, 33),
-  new Components.ImageLocator("tigerChoice", 357, 262, 83, 33),
+  new Components.ImageLocator("dragonChoice", 76, 255, 83, 33),
+  new Components.ImageLocator("tigerChoice", 357, 250, 83, 33),
   new Components.ImageLocator("tieChoice", 211, 262, 85, 33),
   new Components.ImageLocator("hamburgerMenu", 58, 50, 20, 20),
   new Components.ImageLocator("historyMenu", 53, 170, 15, 15),
-  new Components.ImageLocator("historyPopup", 180, 63, 140, 15),
+  new Components.ImageLocator("historyPopup", 180, 55, 140, 15),
   new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
   new Components.ImageLocator("guideMenu", 53, 214, 15, 15),
   new Components.ImageLocator("outside", 447, 60, 0, 0),

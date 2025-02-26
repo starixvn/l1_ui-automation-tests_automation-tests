@@ -35,6 +35,7 @@ export const BigSmallCity1Configs: Components.GameConfiguration = {
 export const BigSmallCity2Configs: Components.GameConfiguration = {
   id: 50,
   name: "unbalancedbigsmall2",
+  socketName: "unbalancedbigsmall",
   durations: {
     wholeRound: 40 * 1000,
     placingBets: 30 * 1000,
@@ -63,6 +64,7 @@ export const BigSmallCity2Configs: Components.GameConfiguration = {
 export const BigSmallCity3Configs: Components.GameConfiguration = {
   id: 50,
   name: "unbalancedbigsmall3",
+  socketName: "unbalancedbigsmall",
   durations: {
     wholeRound: 60 * 1000,
     placingBets: 50 * 1000,
@@ -91,6 +93,7 @@ export const BigSmallCity3Configs: Components.GameConfiguration = {
 export const BigSmallCity4Configs: Components.GameConfiguration = {
   id: 50,
   name: "unbalancedbigsmall4",
+  socketName: "unbalancedbigsmall",
   durations: {
     wholeRound: 40 * 1000,
     placingBets: 30 * 1000,
@@ -115,3 +118,200 @@ export const BigSmallCity4Configs: Components.GameConfiguration = {
   },
   productId: { l1: "1659", l2: 3850 },
 };
+
+export const LasvegasAdminDataSet_local ={
+  accountId: 222262,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='unbalancedbigsmall1']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+     "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    }
+  }, 
+  l2datasetTicket:{
+    "Settle_Win": {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "LasVegas-resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "LasVegas-detailWin.png",
+    },
+    "Settle_Lose": {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    "Expect_Lose": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "LasVegas-resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "LasVegas-detailLoss.png",}
+  }
+}
+
+export const MarinaBayAdminDataSet_local ={
+  accountId: 222262,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='unbalancedbigsmall2']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+     "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    }
+  }, 
+  l2datasetTicket:{
+    "Settle_Win": {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MarinaBay-resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "MarinaBay-detailWin.png",
+    },
+    "Settle_Lose": {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    "Expect_Lose": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MarinaBay-resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "MarinaBay-detailLoss.png",}
+  }
+}
+
+export const MacawAdminDataSet_local ={
+  accountId: 222262,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='unbalancedbigsmall3']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+     "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    }
+  }, 
+  l2datasetTicket:{
+    "Settle_Win": {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "Macaw-resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "Macaw-detailWin.png",
+    },
+    "Settle_Lose": {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    "Expect_Lose": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "Macaw-resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "Macaw-detailLoss.png",}
+  }
+}
+
+export const MonteCarloAdminDataSet_local ={
+  accountId: 222262,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='unbalancedbigsmall4']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+     "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    }
+  }, 
+  l2datasetTicket:{
+    "Settle_Win": {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MonteCarlo-resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "MonteCarlo-detailWin.png",
+    },
+    "Settle_Lose": {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    "Expect_Lose": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MonteCarlo-resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "MonteCarlo-detailLoss.png",}
+  }
+}
+

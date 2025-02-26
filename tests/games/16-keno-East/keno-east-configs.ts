@@ -6,8 +6,8 @@ export const generateConfig = (
   choices: any
 ): Components.GameConfiguration => {
   return {
-    id: 16,
-    name: "kenoeast",
+    id: 52,
+    name: gamename,
     durations: durations,
     choices: choices,
     hedgeBetGroups: [["big", "small"]],
@@ -23,7 +23,7 @@ export const generateConfig = (
       water: 2.4,
       wood: 4.6,
     },
-    socketName: "kenoeast",
+    socketName: "minikeno",
     accounts: {
       local: "222242",
       local1: "222242",
@@ -50,3 +50,47 @@ export const KenoConfigs: Components.GameConfiguration = generateConfig(
   },
   ["big", "small", "odd", "even", "gold", "wood", "water", "fire", "earth"]
 );
+
+export const AdminDataSet_local ={
+  accountId: 222242,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='kenoeast']",
+  isSettleNextRound: true,
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+     "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null
+    }
+  }, 
+  l2datasetTicket:{
+    "Settle_Win": {
+      "//*/div[contains(@class,'keno-result_keno-result')]/div[1]": ["//*/div[text()='Big']/following::input[1]", "//*/div[text()='Fire']/following::input[1]", "//*/div[text()='Odd']/following::input[1]"],
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    "Settle_Lose": {
+      "//*/div[contains(@class,'keno-result_keno-result')]/div[1]": ["//*/div[text()='Small']/following::input[1]", "//*/div[text()='Water']/following::input[1]", "//*/div[text()='Even']/following::input[1]"],
+    },
+    "Expect_Lose": { 
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    }
+  }
+}

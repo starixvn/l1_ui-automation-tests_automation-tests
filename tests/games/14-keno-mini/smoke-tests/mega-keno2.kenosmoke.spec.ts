@@ -1,8 +1,8 @@
 import { KenoLocators } from "../keno-mini-locators";
-import { KenoConfigs } from "../keno-mini-configs";
+import { KenoMiniConfigs } from "../keno-mini-configs";
 import { SmokeBases,Components } from "sc-automation-core";
 
-let extConfigs = { ...KenoConfigs };
+let extConfigs = { ...KenoMiniConfigs };
 extConfigs.socketName = "gw";
 
 class KenoSmokeSpec extends SmokeBases.MobiGameBase {
