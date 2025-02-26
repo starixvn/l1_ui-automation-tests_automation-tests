@@ -23,4 +23,5 @@ export const FruitSlotLocators = [
     new ImageLocator("guide-6", 150, 72, 976, 580),
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
+    new ImageLocator("roundId", 192, 25, 90, 26),
 ];
