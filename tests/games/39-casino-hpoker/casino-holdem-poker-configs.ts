@@ -46,112 +46,79 @@ export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
     l2prod: "VNtest041",
   },
   productId: { l1: "1650", l2: 3836 },
-
 };
 
-export const AdminDataSet_local ={
-  accountId: 222275,
-  settlePath: "SetHoldemPokerResult",
-  wsGameName: process.env.npm_config_project+'-proxy',
-  datasetRER:{
-    "TC1_expect": {
-      totalAmount: 0,
-      totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1005",
-      errorDescription: "Game round is running."
-    },
-    "TC2_expect": {
+export const AdminDataSet_local2 = {
+  accountId: 222252,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*/td[contains(text(),'Casino Hold')]//following::a[1]",
+  l2datasetRER: {
+    "Expect_NoData": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist."
     },
-    "TC3_expect": {
-      totalAmount: 3,
-      totalWin: 6,
-      validBetAmount: 3,
-      errorCode: "0",
-      errorDescription: null
-    },
-    "TC3_settle": `gameConfigName=casinoholdempoker&roundName=Banana73390&player%5B0%5D%5Brank%5D=9&player%5B0%5D%5Bsuit%5D=0&player%5B1%5D%5Brank%5D=10&player%5B1%5D%5Bsuit%5D=0&dealer%5B0%5D%5Brank%5D=2&dealer%5B0%5D%5Bsuit%5D=2&dealer%5B1%5D%5Brank%5D=3&dealer%5B1%5D%5Bsuit%5D=2&communityCards%5B0%5D%5Brank%5D=8&communityCards%5B0%5D%5Bsuit%5D=3&communityCards%5B1%5D%5Brank%5D=1&communityCards%5B1%5D%5Bsuit%5D=3&communityCards%5B2%5D%5Brank%5D=8&communityCards%5B2%5D%5Bsuit%5D=2&communityCards%5B3%5D%5Brank%5D=10&communityCards%5B3%5D%5Bsuit%5D=2&communityCards%5B4%5D%5Brank%5D=2&communityCards%5B4%5D%5Bsuit%5D=3`,
-    "TC4_settle": `gameConfigName=casinoholdempoker&roundName=Banana73390&player%5B0%5D%5Brank%5D=2&player%5B0%5D%5Bsuit%5D=2&player%5B1%5D%5Brank%5D=3&player%5B1%5D%5Bsuit%5D=2&dealer%5B0%5D%5Brank%5D=9&dealer%5B0%5D%5Bsuit%5D=0&dealer%5B1%5D%5Brank%5D=10&dealer%5B1%5D%5Bsuit%5D=0&communityCards%5B0%5D%5Brank%5D=9&communityCards%5B0%5D%5Bsuit%5D=1&communityCards%5B1%5D%5Brank%5D=10&communityCards%5B1%5D%5Bsuit%5D=1&communityCards%5B2%5D%5Brank%5D=0&communityCards%5B2%5D%5Bsuit%5D=2&communityCards%5B3%5D%5Brank%5D=9&communityCards%5B3%5D%5Bsuit%5D=2&communityCards%5B4%5D%5Brank%5D=8&communityCards%5B4%5D%5Bsuit%5D=3`,
-    "TC4_expect": {
-      totalAmount: 3,
-      totalWin: 0,
-      validBetAmount: 3,
-      errorCode: "0",
-      errorDescription: null
-    },
-    "TC5_expect": {
-      totalAmount: 1,
-      totalWin: 0,
-      validBetAmount: 1,
-      errorCode: "0",
-      errorDescription: null
-    },
-    "TC6_settle":  `gameConfigName=casinoholdempoker&roundName=Banana73390&player%5B0%5D%5Brank%5D=9&player%5B0%5D%5Bsuit%5D=0&player%5B1%5D%5Brank%5D=10&player%5B1%5D%5Bsuit%5D=0&dealer%5B0%5D%5Brank%5D=2&dealer%5B0%5D%5Bsuit%5D=2&dealer%5B1%5D%5Brank%5D=3&dealer%5B1%5D%5Bsuit%5D=2&communityCards%5B0%5D%5Brank%5D=8&communityCards%5B0%5D%5Bsuit%5D=3&communityCards%5B1%5D%5Brank%5D=1&communityCards%5B1%5D%5Bsuit%5D=3&communityCards%5B2%5D%5Brank%5D=8&communityCards%5B2%5D%5Bsuit%5D=2&communityCards%5B3%5D%5Brank%5D=10&communityCards%5B3%5D%5Bsuit%5D=2&communityCards%5B4%5D%5Brank%5D=2&communityCards%5B4%5D%5Bsuit%5D=3`,
-    "TC6_expect": {
-      totalAmount: 4,
-      totalWin: 6,
-      validBetAmount: 4,
-      errorCode: "0",
-      errorDescription: null
-    },
-  }
-}
-
-export const AdminDataSet_uat ={
-  tokenGameName: "",
-  settlePath: "SetHoldemPokerResult",
-  settleRequestType: "POST",
-  wsGameName: process.env.npm_config_project+'-proxy',
-  dataset:{
-    "TC1_expect": {
+    "Expect_Running": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1005",
       errorDescription: "Game round is running."
     },
-    "TC2_expect": {
-      totalAmount: 0,
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
       totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
-    },
-    "TC3_expect": {
-      totalAmount: 3,
-      totalWin: 6,
-      validBetAmount: 3,
+      validBetAmount: 10,
       errorCode: "0",
       errorDescription: null
     },
-    "TC3_settle": `gameConfigName=casinoholdempoker&roundName=Banana73390&player%5B0%5D%5Brank%5D=9&player%5B0%5D%5Bsuit%5D=0&player%5B1%5D%5Brank%5D=10&player%5B1%5D%5Bsuit%5D=0&dealer%5B0%5D%5Brank%5D=2&dealer%5B0%5D%5Bsuit%5D=2&dealer%5B1%5D%5Brank%5D=3&dealer%5B1%5D%5Bsuit%5D=2&communityCards%5B0%5D%5Brank%5D=8&communityCards%5B0%5D%5Bsuit%5D=3&communityCards%5B1%5D%5Brank%5D=1&communityCards%5B1%5D%5Bsuit%5D=3&communityCards%5B2%5D%5Brank%5D=8&communityCards%5B2%5D%5Bsuit%5D=2&communityCards%5B3%5D%5Brank%5D=10&communityCards%5B3%5D%5Bsuit%5D=2&communityCards%5B4%5D%5Brank%5D=2&communityCards%5B4%5D%5Bsuit%5D=3`,
-    "TC4_settle": `gameConfigName=casinoholdempoker&roundName=Banana73390&player%5B0%5D%5Brank%5D=2&player%5B0%5D%5Bsuit%5D=2&player%5B1%5D%5Brank%5D=3&player%5B1%5D%5Bsuit%5D=2&dealer%5B0%5D%5Brank%5D=9&dealer%5B0%5D%5Bsuit%5D=0&dealer%5B1%5D%5Brank%5D=10&dealer%5B1%5D%5Bsuit%5D=0&communityCards%5B0%5D%5Brank%5D=9&communityCards%5B0%5D%5Bsuit%5D=1&communityCards%5B1%5D%5Brank%5D=10&communityCards%5B1%5D%5Bsuit%5D=1&communityCards%5B2%5D%5Brank%5D=0&communityCards%5B2%5D%5Bsuit%5D=2&communityCards%5B3%5D%5Brank%5D=9&communityCards%5B3%5D%5Bsuit%5D=2&communityCards%5B4%5D%5Brank%5D=8&communityCards%5B4%5D%5Bsuit%5D=3`,
-    "TC4_expect": {
-      totalAmount: 3,
-      totalWin: 0,
-      validBetAmount: 3,
-      errorCode: "0",
-      errorDescription: null
+  },
+  l2datasetTicket: {
+    "Settle_Win": {
+      //11- 16-1q1032
+      nickname: { locator: "#nickname", value: "Plum1467" },
+      hand: [
+        "//div[contains(@class,'form-row')][1]/div[1]",
+        "//div[contains(@class,'form-row')][2]/div[1]",
+        "//div[contains(@class,'form-row')][3]/div[1]",
+        "//div[contains(@class,'form-row')][1]/div[6]",
+        "//div[contains(@class,'form-row')][4]/div[1]",
+        "//div[contains(@class,'form-row')][1]/div[11]",
+        "//div[contains(@class,'form-row')][1]/div[10]",
+        "//div[contains(@class,'form-row')][1]/div[2]",
+        "//div[contains(@class,'form-row')][1]/div[3]",
+      ],
+      btnSubmit: "//button",
     },
-    "TC5_expect": {
-      totalAmount: 1,
-      totalWin: 0,
-      validBetAmount: 1,
-      errorCode: "0",
-      errorDescription: null
+    "Expect_Win": {
+      "//*[@id='game-ticket']/table[1]/tbody": "winResult.png",
     },
-    "TC6_settle":  `gameConfigName=casinoholdempoker&roundName=Banana73390&player%5B0%5D%5Brank%5D=9&player%5B0%5D%5Bsuit%5D=0&player%5B1%5D%5Brank%5D=10&player%5B1%5D%5Bsuit%5D=0&dealer%5B0%5D%5Brank%5D=2&dealer%5B0%5D%5Bsuit%5D=2&dealer%5B1%5D%5Brank%5D=3&dealer%5B1%5D%5Bsuit%5D=2&communityCards%5B0%5D%5Brank%5D=8&communityCards%5B0%5D%5Bsuit%5D=3&communityCards%5B1%5D%5Brank%5D=1&communityCards%5B1%5D%5Bsuit%5D=3&communityCards%5B2%5D%5Brank%5D=8&communityCards%5B2%5D%5Bsuit%5D=2&communityCards%5B3%5D%5Brank%5D=10&communityCards%5B3%5D%5Bsuit%5D=2&communityCards%5B4%5D%5Brank%5D=2&communityCards%5B4%5D%5Bsuit%5D=3`,
-    "TC6_expect": {
-      totalAmount: 4,
-      totalWin: 6,
-      validBetAmount: 4,
-      errorCode: "0",
-      errorDescription: null
+    "Settle_Lose": {
+      nickname: { locator: "#nickname", value: "Lavender99456" },
+      hand: [
+        "//div[contains(@class,'form-row')][1]/div[12]",
+        "//div[contains(@class,'form-row')][1]/div[9]",
+        "//div[contains(@class,'form-row')][2]/div[9]",
+        "//div[contains(@class,'form-row')][9]/div[9]",
+        "//div[contains(@class,'form-row')][1]/div[10]",
+        "//div[contains(@class,'form-row')][1]/div[1]",
+        "//div[contains(@class,'form-row')][1]/div[2]",
+        "//div[contains(@class,'form-row')][1]/div[7]",
+        "//div[contains(@class,'form-row')][2]/div[10]",
+      ],
+      btnSubmit: "//button",
     },
-  }
-}
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody": "lossResult.png",
+    },
+  },
+};

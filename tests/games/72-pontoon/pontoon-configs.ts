@@ -37,7 +37,6 @@ export const AdminDataSet_local ={
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*/td[text()='Pontoon']//following::a[1]",
-  isSettleNextRound: true,
   l2datasetRER:{
     "Expect_NoData": {
       totalAmount: 0,

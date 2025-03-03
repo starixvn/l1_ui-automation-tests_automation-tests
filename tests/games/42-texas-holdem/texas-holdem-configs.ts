@@ -40,3 +40,78 @@ export const TexasHoldemPokerrConfigs: Components.GameConfiguration = {
   },
   productId: { l1: "1652", l2: 3837 },
 };
+
+export const AdminDataSet_local = {
+  accountId: 222255,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*/td[contains(text(),'Texas Hold')]//following::a[1]",
+  l2datasetRER: {
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Running": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1005",
+      errorDescription: "Game round is running."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket: {
+    "Settle_Win": {
+      //11- 16-1q1032
+      nickname: { locator: "#nickname", value: "Froggy20560" },
+      hand: [
+        "//div[contains(@class,'form-row')][1]/div[1]",
+        "//div[contains(@class,'form-row')][2]/div[1]",
+        "//div[contains(@class,'form-row')][3]/div[1]",
+        "//div[contains(@class,'form-row')][1]/div[6]",
+        "//div[contains(@class,'form-row')][4]/div[1]",
+        "//div[contains(@class,'form-row')][1]/div[11]",
+        "//div[contains(@class,'form-row')][1]/div[10]",
+        "//div[contains(@class,'form-row')][1]/div[2]",
+        "//div[contains(@class,'form-row')][1]/div[3]",
+      ],
+      btnSubmit: "//button",
+    },
+    "Expect_Win": {
+      "//*[@id='game-ticket']/table[1]/tbody": "winResult.png",
+    },
+    "Settle_Lose": {
+      nickname: { locator: "#nickname", value: "Lavender99456" },
+      hand: [
+        "//div[contains(@class,'form-row')][1]/div[12]",
+        "//div[contains(@class,'form-row')][1]/div[9]",
+        "//div[contains(@class,'form-row')][2]/div[9]",
+        "//div[contains(@class,'form-row')][9]/div[9]",
+        "//div[contains(@class,'form-row')][1]/div[10]",
+        "//div[contains(@class,'form-row')][1]/div[1]",
+        "//div[contains(@class,'form-row')][1]/div[2]",
+        "//div[contains(@class,'form-row')][1]/div[7]",
+        "//div[contains(@class,'form-row')][2]/div[10]",
+      ],
+      btnSubmit: "//button",
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody": "lossResult.png",
+    },
+  },
+};

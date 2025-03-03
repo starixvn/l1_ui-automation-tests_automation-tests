@@ -12,6 +12,7 @@ export const TexasHoldemPokerrLocators = [
     new ImageLocator("stake1", 413, 610, 80, 60),
     new ImageLocator("stake10", 413, 610, 80, 60),
     new ImageLocator("submitBetBoard", 982, 596, 80, 69),
+    new ImageLocator("hitcard", 982, 596, 80, 69),
     new ImageLocator("followcard", 982, 596, 80, 69),
     new ImageLocator("standcard", 1116, 537, 90, 90),
     new ImageLocator("cancelbet", 1116, 537, 90, 90),
@@ -30,5 +31,6 @@ export const TexasHoldemPokerrLocators = [
     new ImageLocator("guide-6", 150, 72, 976, 580),
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
+    new ImageLocator("roundId", 309, 73, 91, 30),
 
 ];

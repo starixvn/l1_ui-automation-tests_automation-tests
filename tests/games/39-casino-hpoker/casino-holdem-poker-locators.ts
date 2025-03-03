@@ -9,6 +9,7 @@ export const CasinoHoldemPokerLocators = [
     new ImageLocator("historyPopup", 162, 90, 966, 92),
     new ImageLocator("stake1", 381, 590, 80, 60),
     new ImageLocator("submitBetBoard", 1017, 571, 80, 69),
+    new ImageLocator("hitcard", 1017, 571, 80, 69),
     new ImageLocator("followcard",  1017, 571, 80, 69),
     new ImageLocator("standcard", 1181, 503, 90, 90),
     new ImageLocator("cancelbet", 1181, 503, 90, 90),
