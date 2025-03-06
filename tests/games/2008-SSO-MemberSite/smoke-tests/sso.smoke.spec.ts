@@ -18,7 +18,7 @@ const locator = {
   iconMode: "//div[@class='header-option']/div[1]",
   iconMobile: "//div[@class='header-option']/div[1]/div//span[text()='Mobile']",
   logoBet: "//div[@gtag='lobby_Casino']",
-  iconSaba: "//div[2]/span[text()='Cổng Game SABA']",
+  iconSaba: "//span[text()='Cổng Game SABA']",
   "Saba Club": {
     name: "Saba Club",
     xpath:
