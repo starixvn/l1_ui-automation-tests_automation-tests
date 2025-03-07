@@ -11,7 +11,7 @@ export const coinminingLocators = [
   new ImageLocator("historyPopup", 529, 84, 195, 50),
   new ImageLocator("historyFirstRow", 380, 222, 20, 20),
   new ImageLocator("guideMenu",  45, 377, 25, 25),
-  new ImageLocator("stake5", 390, 400, 25, 25),
+  new ImageLocator("stake1", 390, 400, 25, 25),
   new ImageLocator("stake10",  390, 400, 25, 25),
   new ImageLocator("spin", 950, 555, 90, 90),
   new ImageLocator("collect", 950, 555, 90, 90),

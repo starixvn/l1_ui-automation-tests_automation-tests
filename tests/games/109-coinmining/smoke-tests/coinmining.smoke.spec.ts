@@ -15,7 +15,7 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
       locators: coinminingLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 5,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
       isJackpot: process.env.npm_config_project === "l2" ? true : false,
     };
     super(smokeOptions);
