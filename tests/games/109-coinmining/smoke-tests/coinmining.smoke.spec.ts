@@ -26,7 +26,7 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
     Components.test("THEN player able to place a bet and settle", async () => {
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
-      this.game.attachSocketAndCaptureEvent("multiplier");
+      this.game.attachSocketAndCaptureEvent("winAmount");
       const bet = {
         amount: this.options.placeBetAmount ?? 1,
         numberOfClicks: 3,
@@ -113,8 +113,9 @@ const placeBet = async (game: any, amount: number, numberOfClicks: number) => {
   for (let i = 0; i < numberOfClicks; i++) {
     await game.waitForTimeout(500);
     await game.clickLocator("stone", 10);
-    multiplier = (await game.waitForEvent("multiplier")).multiplier;
-    console.log("multiplier",i, multiplier);
+    let event = await game.waitForEvent("winAmount");
+    multiplier = event.multiplier;
+    console.log("event", multiplier,i);
     if (multiplier == 0) {
       break;
     }
@@ -123,6 +124,7 @@ const placeBet = async (game: any, amount: number, numberOfClicks: number) => {
   if (multiplier > 0 || multiplier === undefined) {
     await game.clickLocator("collect", 0);
   }
+
   const message = await game.waitForEvent(GameEvent.WinStatus);
   console.log("message", message);
   const settledResults = {
