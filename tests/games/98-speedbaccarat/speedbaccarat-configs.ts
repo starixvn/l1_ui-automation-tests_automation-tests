@@ -27,10 +27,10 @@ export const SpeedBaccaratConfigs: Components.GameConfiguration = {
     tie: 9
   },
   accounts: {
-    local: "222263",
-    local1: "222263",
-    local2: "222263",
-    local3: "222263",
+    local: "222276",
+    local1: "222276",
+    local2: "222276",
+    local3: "222276",
     sit: "supertestsaba70",
     uat: "IT49Test789",
     prod: "supertestte120201008",
@@ -42,7 +42,7 @@ export const SpeedBaccaratConfigs: Components.GameConfiguration = {
 };
 
 export const AdminDataSet_local ={
-  accountId: 222263,
+  accountId: 222276,
   l1datasetRER:{
     "expect_running": {
       totalAmount: 0,

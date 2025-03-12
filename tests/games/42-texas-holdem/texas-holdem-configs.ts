@@ -47,36 +47,36 @@ export const AdminDataSet_local = {
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*/td[contains(text(),'Texas Hold')]//following::a[1]",
   l2datasetRER: {
-    "Expect_NoData": {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Running": {
+    Expect_Running: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1005",
-      errorDescription: "Game round is running."
+      errorDescription: "Game round is running.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
   l2datasetTicket: {
-    "Settle_Win": {
+    Settle_Win: {
       //11- 16-1q1032
       nickname: { locator: "#nickname", value: "Froggy20560" },
       hand: [
@@ -92,10 +92,10 @@ export const AdminDataSet_local = {
       ],
       btnSubmit: "//button",
     },
-    "Expect_Win": {
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody": "winResult.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       nickname: { locator: "#nickname", value: "Lavender99456" },
       hand: [
         "//div[contains(@class,'form-row')][1]/div[12]",
@@ -110,7 +110,7 @@ export const AdminDataSet_local = {
       ],
       btnSubmit: "//button",
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody": "lossResult.png",
     },
   },

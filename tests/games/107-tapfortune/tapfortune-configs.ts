@@ -94,7 +94,7 @@ export const tapfortuneConfigs: Components.GameConfiguration = {
   productId: { l1: "107", l2: 107 },
 };
 
-export const AdminDataSet_local = {
+export const AdminDataSet_local2 = {
   settleDomain: process.env.npm_config_project + "-proxy",
   settlePath: "SetSlotResult",
   accountId: 222275,

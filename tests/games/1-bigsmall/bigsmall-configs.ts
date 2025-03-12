@@ -36,7 +36,7 @@ export const Isconfigs = {
   clickCount: 3,
 };
 
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 ={
   accountId: 222221,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",

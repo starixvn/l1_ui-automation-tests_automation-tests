@@ -22,17 +22,17 @@ export const luckythreeConfigs: Components.GameConfiguration = {
     blue4: 14.4,
   },
   accounts: {
-    local: "222280",
-    local1: "222280",
-    local2: "222280",
-    local3: "222280",
+    local: "222281",
+    local1: "222281",
+    local2: "222281",
+    local3: "222281",
   },
   productId: { gn: 10807 },
 };
 
-export const AdminDataSet_local = {
+export const AdminDataSet_local2 = {
   settleDomain: process.env.npm_config_project + "-proxy",
-  accountId: 222280,
+  accountId: 222281,
   gndatasetRER: {
     operatorId: "ONEworksVGCash",
     runningRound: {

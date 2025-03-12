@@ -55,51 +55,50 @@ export const FanTanConfigs: Components.GameConfiguration = {
     l2prod: "VNtest044",
   },
   productId: { l1: "1667", l2: 3859 },
-
 };
 
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 = {
   accountId: 222264,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='fantan']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l2datasetTicket:{
-    "Settle_Win": {
+  l2datasetTicket: {
+    Settle_Win: {
       "//div[contains(@class,'fan-tan_result')]": "//button[text()='36']",
-      },
-    "Expect_Win": { 
+    },
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
-      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
     },
-    "Settle_Lose": {
-      "//div[contains(@class,'fan-tan_result')]": "//button[text()='31']"
-      },
-    "Expect_Lose": {
+    Settle_Lose: {
+      "//div[contains(@class,'fan-tan_result')]": "//button[text()='31']",
+    },
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
-      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
     },
-  }
-}
+  },
+};

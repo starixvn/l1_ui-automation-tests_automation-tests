@@ -41,7 +41,7 @@ export const SpeedBaccarat2Configs: Components.GameConfiguration = {
   productId:  { l1: "1689", l2: "3881" },
 };
 
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 ={
   accountId: 222263,
   l1datasetRER:{
     "expect_running": {

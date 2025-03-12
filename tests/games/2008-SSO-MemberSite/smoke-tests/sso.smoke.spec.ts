@@ -22,52 +22,52 @@ const locator = {
   "Saba Club": {
     name: "Saba Club",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[1]//div[@data-name='Sảnh SABA.club']",
+      "//div[@class='c-lobby-game-group__content']/div[4]//div[@data-name='Sảnh SABA.club']",
   },
   "Saba Mobi": {
     name: "Saba Mobi",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[2]//div[@data-name='Sảnh SABA.mobi']",
+      "//div[@class='c-lobby-game-group__content']/div[5]//div[@data-name='Sảnh SABA.mobi']",
   },
   "Mega Keno": {
     name: "Mega Keno",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[3]//div[@data-name='Mega Keno']",
+      "//div[@class='c-lobby-game-group__content']/div[6]//div[@data-name='Mega Keno']",
   },
   Sedie: {
     name: "Sedie",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[4]//div[@data-name='Xóc Đĩa']",
+      "//div[@class='c-lobby-game-group__content']/div[8]//div[@data-name='Xóc Đĩa']",
   },
   Baccarat: {
     name: "Baccarat",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[6]//div[@data-name='Cào Baccarat']",
+      "//div[@class='c-lobby-game-group__content']/div[9]//div[@data-name='Cào Baccarat']",
   },
   Fourguardians: {
     name: "fourguardians",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[8]//div[@data-name='Long Lân Quy Phụng']",
+      "//div[@class='c-lobby-game-group__content']/div[11]//div[@data-name='Long Lân Quy Phụng']",
   },
   Fishprawncrab: {
     name: "fishprawncrab",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[10]//div[@data-name='Bầu Cua']",
+      "//div[@class='c-lobby-game-group__content']/div[13]//div[@data-name='Bầu Cua']",
   },
   Blackjack: {
     name: "blackjack",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[7]//div[@data-name='Blackjack']",
+      "//div[@class='c-lobby-game-group__content']/div[10]//div[@data-name='Blackjack']",
   },
   BaccaratX: {
     name: "gateway",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[9]//div[@data-name='BaccaratX']",
+      "//div[@class='c-lobby-game-group__content']/div[12]//div[@data-name='BaccaratX']",
   },
   Bigsmall: {
     name: "Tài Xỉu",
     xpath:
-      "//div[@class='c-lobby-game-group__content']/div[11]//div[@data-name='Tài Xỉu']",
+      "//div[@class='c-lobby-game-group__content']/div[7]//div[@data-name='Tài Xỉu']",
   },
 };
 

@@ -33,7 +33,7 @@ export const FootballDiceConfigs: Components.GameConfiguration = {
   productId: { l1: "1685", l2: 3877 },
 }
 
-export const AdminDataSet_local1 ={
+export const AdminDataSet_local2 ={
   accountId: 222222,
   l1datasetRER:{
     "expect_running": {

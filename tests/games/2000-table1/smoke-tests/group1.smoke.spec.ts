@@ -24,21 +24,9 @@ class Group1SmokeSpec extends SmokeBases.TableGameBase {
       await Components.test.step(
         `Verify that game ${gameConfigs[gameId].name} can be opened.`,
         async () => {
-          const tagGame = "gameId"
+          const tagGame = "gameId"         
           const ssoLink = global.ssoLink.split(tagGame);    
           await this.game.page.goto(ssoLink[0] + tagGame + "=" + gameId);
-
-          if (!process.env.npm_config_env?.includes("local")) {
-            const frameExists = await this.game.page.$("#frmGame");
-            if (frameExists) {
-              await this.game.page
-                .frameLocator("#frmGame")
-                .locator("text=Submit")
-                .click();
-            } else {
-              await this.game.page.locator("text=Submit").click();
-            }
-          }
           await this.game.waitUntilGameUiLoad();
           // this.game.gameSocket =
           global.wsName == gameConfigs[gameId].name;

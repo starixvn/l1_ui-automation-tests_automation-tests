@@ -48,7 +48,7 @@ export const CasinoHoldemPokerConfigs: Components.GameConfiguration = {
   productId: { l1: "1650", l2: 3836 },
 };
 
-export const AdminDataSet_local2 = {
+export const AdminDataSet_local = {
   accountId: 222252,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",

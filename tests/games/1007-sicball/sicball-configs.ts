@@ -9,12 +9,21 @@ export const sicballConfigs: Components.GameConfiguration = {
     lockingBet: 3,
     shakeThePlateDuration: 10,
   },
-  choices: ["specific1", "big", "small", "specific2", "specific3", "specific4", "specific5", "specific6","drawId"],
+  choices: [
+    "specific1",
+    "big",
+    "small",
+    "specific2",
+    "specific3",
+    "specific4",
+    "specific5",
+    "specific6",
+    "drawId",
+  ],
   hedgeBetGroups: ["big", "small"],
   maxTimeout: 300 * 1000, // miliseconds,
-  odds: {
-  },
-  accounts: {
+  odds: {},
+  accounts: {AdminDataSet_local2222222
     local: "222282",
     local1: "222282",
     local2: "222282",
@@ -23,7 +32,7 @@ export const sicballConfigs: Components.GameConfiguration = {
   productId: { gn: 10808 },
 };
 
-export const AdminDataSet_local = {
+export const AdminDataSet_local2 = {
   settleDomain: process.env.npm_config_project + "-proxy",
   accountId: 222280,
   gndatasetRER: {

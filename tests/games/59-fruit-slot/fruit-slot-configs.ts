@@ -66,52 +66,50 @@ export const FruitSlotConfigs: Components.GameConfiguration = {
     l2prod: "VNtest041",
   },
   productId: { l1: "1666", l2: 3858 },
-
 };
 
-
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 = {
   accountId: 222263,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='fruitslot']",
   isSettleNextRound: false,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l2datasetTicket:{
-    "Settle_Win": {
+  l2datasetTicket: {
+    Settle_Win: {
       "//select": "4",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winResult.png",
-      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       "//select": "12",
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossResult.png",
-      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
     },
-  }
-}
+  },
+};

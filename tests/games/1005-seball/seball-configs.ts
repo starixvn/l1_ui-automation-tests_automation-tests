@@ -9,7 +9,7 @@ export const seballConfigs: Components.GameConfiguration = {
     lockingBet: 3,
     shakeThePlateDuration: 10,
   },
-  choices: ["odd", "even", "red2", "red3", "red4", "blue3", "blue4","drawId"],
+  choices: ["odd", "even", "red2", "red3", "red4", "blue3", "blue4", "drawId"],
   hedgeBetGroups: ["odd", "even"],
   maxTimeout: 250 * 1000, // miliseconds,
   odds: {
@@ -30,7 +30,7 @@ export const seballConfigs: Components.GameConfiguration = {
   productId: { gn: 10806 },
 };
 
-export const AdminDataSet_local = {
+export const AdminDataSet_local2 = {
   settleDomain: process.env.npm_config_project + "-proxy",
   accountId: 222280,
   gndatasetRER: {

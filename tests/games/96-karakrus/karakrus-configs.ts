@@ -19,14 +19,13 @@ export const KaraKrusConfigs: Components.GameConfiguration = {
     head2: 2.5,
     head3: 7.5,
     tail3: 7.5,
-
   },
   accounts: {
-    local: "222222",
-    local1: "222222",
-    local2: "222222",
-    l2local2: "222222",
-    local3: "222222",
+    local: "222274",
+    local1: "222274",
+    local2: "222274",
+    l2local2: "222274",
+    local3: "222274",
     sit: "supertestsaba67",
     uat: "IT56Test789",
     prod: "supertestte120201003",
@@ -34,55 +33,60 @@ export const KaraKrusConfigs: Components.GameConfiguration = {
     l2prod: "VNtest041",
   },
   productId: { l1: "1691", l2: "3883" },
-}
+};
 
-export const AdminDataSet_local ={
-  accountId: 222222,
+export const AdminDataSet_local2 = {
+  accountId: 222274,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='karakrus']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l2datasetTicket:{
-    "Settle_Win": {
-      "//*/div[contains(@class,'dice_dice')][1]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'dice_dice')][2]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'dice_dice')][3]": "//*/div[@class='modal-content']//div[1]/img",
+  l2datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'dice_dice')][1]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'dice_dice')][2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'dice_dice')][3]":
+        "//*/div[@class='modal-content']//div[1]/img",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[2]": "winResult.png",
-      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
     },
-    "Settle_Lose": {
-        "//*/div[contains(@class,'dice_dice')][1]": "//*/div[@class='modal-content']//div[2]/img",
-        "//*/div[contains(@class,'dice_dice')][2]": "//*/div[@class='modal-content']//div[2]/img",
-        "//*/div[contains(@class,'dice_dice')][3]": "//*/div[@class='modal-content']//div[2]/img",
+    Settle_Lose: {
+      "//*/div[contains(@class,'dice_dice')][1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'dice_dice')][2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'dice_dice')][3]":
+        "//*/div[@class='modal-content']//div[2]/img",
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[2]": "lossResult.png",
-      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
     },
-  }
-}
-
+  },
+};

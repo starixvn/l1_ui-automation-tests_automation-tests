@@ -9,14 +9,7 @@ export const Baccarat7Configs: Components.GameConfiguration = {
     lockingBet: 7 * 1000,
     shakeThePlateDuration: 5 * 1000,
   },
-  choices: [    
-   "player",
-    "banker",
-    "tie",
-    "playerPair",
-    "bankerPair",
-    "natural"
-  ],
+  choices: ["player", "banker", "tie", "playerPair", "bankerPair", "natural"],
   hedgeBetGroups: [["player", "banker"]],
   maxTimeout: 100 * 1000, // miliseconds,
   odds: {
@@ -24,13 +17,13 @@ export const Baccarat7Configs: Components.GameConfiguration = {
     banker: 1.95,
     playerPair: 12,
     bankerPair: 12,
-    tie: 9
+    tie: 9,
   },
   accounts: {
-    local: "222263",
-    local1: "222263",
-    local2: "222263",
-    local3: "222263",
+    local: "222271",
+    local1: "222271",
+    local2: "222271",
+    local3: "222271",
     sit: "supertestsaba70",
     uat: "IT49Test789",
     prod: "supertestte120201008",
@@ -38,34 +31,34 @@ export const Baccarat7Configs: Components.GameConfiguration = {
     l2prod: "VNtest041",
   },
   socketName: "baccaratx",
-  productId:  { l1: "1689", l2: "3881" },
+  productId: { l1: "1689", l2: "3881" },
 };
 
-export const AdminDataSet_local ={
-  accountId: 222263,
-  l1datasetRER:{
-    "expect_running": {
+export const AdminDataSet_local2 = {
+  accountId: 222271,
+  l1datasetRER: {
+    expect_running: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "expect_archive": {
+    expect_archive: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "expect_win": {
+    expect_win: {
       totalAmount: 1.2,
       totalWin: 2,
       validBetAmount: 1.2,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "settle_win": {
+    settle_win: {
       "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
       "#cutCardIndex": "300",
       "#cards0": "2d",
@@ -83,25 +76,25 @@ export const AdminDataSet_local ={
       "#cards6": "7s",
       "#multiplier6": "8",
       "#cards7": "8s",
-      "#multiplier7": "9"
+      "#multiplier7": "9",
     },
-    "expect_lose": {
+    expect_lose: {
       totalAmount: 1.2,
       totalWin: 0,
       validBetAmount: 1.2,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "expect_multiple_choices": {
+    expect_multiple_choices: {
       totalAmount: 4.8,
       totalWin: 245,
       validBetAmount: 4.8,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l1datasetTicket:{
-    "settle_win": {
+  l1datasetTicket: {
+    settle_win: {
       "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
       "#cutCardIndex": "300",
       "#cards0": "2d",
@@ -119,57 +112,63 @@ export const AdminDataSet_local ={
       "#cards6": "7s",
       "#multiplier6": "8",
       "#cards7": "8s",
-      "#multiplier7": "9"
+      "#multiplier7": "9",
     },
-    "expect_win": { "snapshot":{
-      "//*[@id='game-ticket']/div": "TableName.png",
-      "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
-      "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png"
-    }},
-    "expect_lose": { "snapshot":{
-      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png"
-    }},
-    "expect_multiple_choices": { "snapshot": {
-      "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
-      "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]" : "BankerWin.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]" : "Tie.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]" : "BankerPair.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]" : "PlayerPair.png"
+    expect_win: {
+      snapshot: {
+        "//*[@id='game-ticket']/div": "TableName.png",
+        "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
+        "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png",
+      },
+    },
+    expect_lose: {
+      snapshot: {
+        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png",
+      },
+    },
+    expect_multiple_choices: {
+      snapshot: {
+        "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
+        "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "BankerWin.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]": "Tie.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]": "BankerPair.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]": "PlayerPair.png",
+      },
+    },
+  },
+};
 
-    }},
-}}
-
-export const AdminDataSet_uat ={
+export const AdminDataSet_uat = {
   accountId: 44269329,
-  l1datasetRER:{
-    "expect_running": {
+  l1datasetRER: {
+    expect_running: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "expect_archive": {
+    expect_archive: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "expect_win": {
+    expect_win: {
       totalAmount: 1.2,
       totalWin: 2,
       validBetAmount: 1.2,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "settle_win": {
+    settle_win: {
       "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
       "#cutCardIndex": "300",
       "#cards0": "2d",
@@ -187,25 +186,25 @@ export const AdminDataSet_uat ={
       "#cards6": "7s",
       "#multiplier6": "8",
       "#cards7": "8s",
-      "#multiplier7": "9"
+      "#multiplier7": "9",
     },
-    "expect_lose": {
+    expect_lose: {
       totalAmount: 1.2,
       totalWin: 0,
       validBetAmount: 1.2,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "expect_multiple_choices": {
+    expect_multiple_choices: {
       totalAmount: 4.8,
       totalWin: 245,
       validBetAmount: 4.8,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l1datasetTicket:{
-    "settle_win": {
+  l1datasetTicket: {
+    settle_win: {
       "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
       "#cutCardIndex": "300",
       "#cards0": "2d",
@@ -223,28 +222,34 @@ export const AdminDataSet_uat ={
       "#cards6": "7s",
       "#multiplier6": "8",
       "#cards7": "8s",
-      "#multiplier7": "9"
+      "#multiplier7": "9",
     },
-    "expect_win": { "snapshot":{
-      "//*[@id='game-ticket']/div": "TableName.png",
-      "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
-      "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png"
-    }},
-    "expect_lose": { "snapshot":{
-      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png"
-    }},
-    "expect_multiple_choices": { "snapshot": {
-      "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
-      "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]" : "BankerWin.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]" : "Tie.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]" : "BankerPair.png",
-      "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]" : "PlayerPair.png"
-
-    }},
-}}
+    expect_win: {
+      snapshot: {
+        "//*[@id='game-ticket']/div": "TableName.png",
+        "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
+        "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png",
+      },
+    },
+    expect_lose: {
+      snapshot: {
+        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png",
+      },
+    },
+    expect_multiple_choices: {
+      snapshot: {
+        "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
+        "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "BankerWin.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]": "Tie.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]": "BankerPair.png",
+        "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]": "PlayerPair.png",
+      },
+    },
+  },
+};

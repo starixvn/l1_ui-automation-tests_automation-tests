@@ -14,11 +14,11 @@ export let GroupConfigs: Components.GameConfiguration = {
   },
   slotsgame: true,
   accounts: {
-    local: "222247",
-    local1: "222247",
-    local2: "222247",
-    l2local2: "222247",
-    local3: "222247",
+    local: "222249",
+    local1: "222249",
+    local2: "222249",
+    l2local2: "222249",
+    local3: "222249",
   },
   productId: { l1: "1640", l2: 3829 },
 };

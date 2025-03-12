@@ -25,10 +25,10 @@ export const generateConfig = (
     },
     socketName: "minikeno",
     accounts: {
-      local: "222242",
-      local1: "222242",
-      local2: "222242",
-      local3: "222242",
+      local: "222245",
+      local1: "222245",
+      local2: "222245",
+      local3: "222245",
       sit: "supertestsaba68",
       uat: "IT57Test789",
       prod: "supertestte120201006",
@@ -36,7 +36,6 @@ export const generateConfig = (
       l2prod: "VNtest040",
     },
     productId: { l1: "3848", l2: 3848 },
-
   };
 };
 
@@ -51,46 +50,54 @@ export const KenoConfigs: Components.GameConfiguration = generateConfig(
   ["big", "small", "odd", "even", "gold", "wood", "water", "fire", "earth"]
 );
 
-export const AdminDataSet_local ={
-  accountId: 222242,
+export const AdminDataSet_local2 = {
+  accountId: AdminDataSet_local2222222222222222222222222
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='kenowest']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-     "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
-    }
-  }, 
-  l2datasetTicket:{
-    "Settle_Win": {
-      "//*/div[contains(@class,'keno-result_keno-result')]/div[1]": ["//*/div[text()='Big']/following::input[1]", "//*/div[text()='Fire']/following::input[1]", "//*/div[text()='Odd']/following::input[1]"],
+      errorDescription: null,
     },
-    "Expect_Win": { 
+  },
+  l2datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'keno-result_keno-result')]/div[1]": [
+        "//*/div[text()='Big']/following::input[1]",
+        "//*/div[text()='Fire']/following::input[1]",
+        "//*/div[text()='Odd']/following::input[1]",
+      ],
+    },
+    Expect_Win: {
       "//*[@id='game-ticket']/table[2]": "detailWin.png",
     },
-    "Settle_Lose": {
-      "//*/div[contains(@class,'keno-result_keno-result')]/div[1]": ["//*/div[text()='Small']/following::input[1]", "//*/div[text()='Water']/following::input[1]", "//*/div[text()='Even']/following::input[1]"],
+    Settle_Lose: {
+      "//*/div[contains(@class,'keno-result_keno-result')]/div[1]": [
+        "//*/div[text()='Small']/following::input[1]",
+        "//*/div[text()='Water']/following::input[1]",
+        "//*/div[text()='Even']/following::input[1]",
+      ],
     },
-    "Expect_Lose": { 
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[2]": "detailLoss.png",
-    }
-  }
-}
+    },
+  },
+};

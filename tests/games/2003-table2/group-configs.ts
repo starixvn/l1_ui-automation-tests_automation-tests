@@ -15,11 +15,11 @@ export let GroupConfigs: Components.GameConfiguration = {
   odds: {},
   betBoard: true,
   accounts: {
-    local: "222222",
-    local1: "222222",
-    local2: "222222",
-    l2local2: "222222",
-    local3: "222222",
+    local: "222250",
+    local1: "222250",
+    local2: "222250",
+    l2local2: "222250",
+    local3: "222250",
   },
   productId: { l1: "1651", l2: 3844 },
 };

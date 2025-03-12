@@ -28,17 +28,17 @@ class Group4SmokeSpec extends SmokeBases.TableGameBase {
           const ssoLink = global.ssoLink.split(tagGame);    
           await this.game.page.goto(ssoLink[0] + tagGame + "=" + gameId);
 
-          if (!process.env.npm_config_env?.includes("local")) {
-            const frameExists = await this.game.page.$("#frmGame");
-            if (frameExists) {
-              await this.game.page
-                .frameLocator("#frmGame")
-                .locator("text=Submit")
-                .click();
-            } else {
-              await this.game.page.locator("text=Submit").click();
-            }
-          }
+          // if (!process.env.npm_config_env?.includes("local")) {
+          //   const frameExists = await this.game.page.$("#frmGame");
+          //   if (frameExists) {
+          //     await this.game.page
+          //       .frameLocator("#frmGame")
+          //       .locator("text=Submit")
+          //       .click();
+          //   } else {
+          //     await this.game.page.locator("text=Submit").click();
+          //   }
+          // }
           await this.game.waitUntilGameUiLoad();
           // this.game.gameSocket =
           global.wsName == gameConfigs[gameId].name;

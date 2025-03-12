@@ -9,7 +9,7 @@ export const MarbleFootBallConfigs: Components.GameConfiguration = {
     lockingBet: 8 * 1000,
     shakeThePlateDuration: 10 * 1000,
   },
-  choices: ["home", "away", "draw", "draw4","over", "under", "odd", "even"], 
+  choices: ["home", "away", "draw", "draw4", "over", "under", "odd", "even"],
   hedgeBetGroups: [["over", "under"]],
   maxTimeout: 350 * 1000, // miliseconds x,
   odds: {
@@ -126,4 +126,3 @@ export const AdminDataSet_local2 = {
     },
   },
 };
-

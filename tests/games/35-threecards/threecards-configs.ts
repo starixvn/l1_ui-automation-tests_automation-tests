@@ -35,53 +35,58 @@ export const ThreeCardsConfigs: Components.GameConfiguration = {
   productId: { l1: "1643", l2: 3831 },
 };
 
-
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 = {
   accountId: 222264,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='threecards']",
   isSettleNextRound: false,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l2datasetTicket:{
-    "Settle_Win": {
-      "//div[contains(@class,'styles_result')]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[1]",
-      "//div[contains(@class,'styles_result')]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[2]",
-      "//div[contains(@class,'styles_result')]/div[3]": "//*/div[contains(@class,'modal-body')]/div[1]/div[3]",
+  l2datasetTicket: {
+    Settle_Win: {
+      "//div[contains(@class,'styles_result')]/div[1]":
+        "//*/div[contains(@class,'modal-body')]/div[1]/div[1]",
+      "//div[contains(@class,'styles_result')]/div[2]":
+        "//*/div[contains(@class,'modal-body')]/div[1]/div[2]",
+      "//div[contains(@class,'styles_result')]/div[3]":
+        "//*/div[contains(@class,'modal-body')]/div[1]/div[3]",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
-      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
     },
-    "Settle_Lose": {
-      "//div[contains(@class,'styles_result')]/div[1]": "//*/div[contains(@class,'modal-body')]/div[3]/div[1]",
-      "//div[contains(@class,'styles_result')]/div[2]": "//*/div[contains(@class,'modal-body')]/div[3]/div[2]",
-      "//div[contains(@class,'styles_result')]/div[3]": "//*/div[contains(@class,'modal-body')]/div[3]/div[3]",
+    Settle_Lose: {
+      "//div[contains(@class,'styles_result')]/div[1]":
+        "//*/div[contains(@class,'modal-body')]/div[3]/div[1]",
+      "//div[contains(@class,'styles_result')]/div[2]":
+        "//*/div[contains(@class,'modal-body')]/div[3]/div[2]",
+      "//div[contains(@class,'styles_result')]/div[3]":
+        "//*/div[contains(@class,'modal-body')]/div[3]/div[3]",
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
-      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
     },
-  }
-}
+  },
+};

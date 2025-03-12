@@ -77,54 +77,52 @@ export const Isconfigs = {
   clickCount: 8,
 };
 
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 = {
   accountId: 222243,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='sicbo']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
   },
-  l2datasetTicket:{
-    "Settle_Win": {
+  l2datasetTicket: {
+    Settle_Win: {
       "#dice-0": "//div[@class='modal-content']/div/div[1]",
       "#dice-1": "//div[@class='modal-content']/div/div[2]",
       "#dice-2": "//div[@class='modal-content']/div/div[3]",
-
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
-      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       "#dice-0": "//div[@class='modal-content']/div/div[4]",
       "#dice-1": "//div[@class='modal-content']/div/div[5]",
       "#dice-2": "//div[@class='modal-content']/div/div[6]",
-
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
-      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
     },
-  }
-}
+  },
+};

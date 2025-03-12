@@ -37,50 +37,55 @@ export const Isconfigs = {
   clickCount: 4,
 };
 
-
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 = {
   accountId: 222227,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='dragontiger']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-    "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       totalWin: 1.96,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 10,
       errorCode: "0",
-      errorDescription: null
-    }
+      errorDescription: null,
+    },
   },
-  l2datasetTicket:{
-    "Settle_Win": {
-      "//div[contains(@class,'dragon-tiger-result_dragonCol')]": "//div[@class='modal-body']/div[1]/div[10]",
-      "//div[contains(@class,'dragon-tiger-result_tigerCol')]": "//div[@class='modal-body']/div[1]/div[2]",
+  l2datasetTicket: {
+    Settle_Win: {
+      "//div[contains(@class,'dragon-tiger-result_dragonCol')]":
+        "//div[@class='modal-body']/div[1]/div[10]",
+      "//div[contains(@class,'dragon-tiger-result_tigerCol')]":
+        "//div[@class='modal-body']/div[1]/div[2]",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
-      "//*[@id='game-ticket']/table[2]": "detailWin.png",},
-    "Settle_Lose": {
-      "//div[contains(@class,'dragon-tiger-result_dragonCol')]": "//div[@class='modal-body']/div[1]/div[2]",
-      "//div[contains(@class,'dragon-tiger-result_tigerCol')]": "//div[@class='modal-body']/div[1]/div[10]",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
     },
-    "Expect_Lose": { 
+    Settle_Lose: {
+      "//div[contains(@class,'dragon-tiger-result_dragonCol')]":
+        "//div[@class='modal-body']/div[1]/div[2]",
+      "//div[contains(@class,'dragon-tiger-result_tigerCol')]":
+        "//div[@class='modal-body']/div[1]/div[10]",
+    },
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
-      "//*[@id='game-ticket']/table[2]": "detailLoss.png",}
-  }
-}
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
+};

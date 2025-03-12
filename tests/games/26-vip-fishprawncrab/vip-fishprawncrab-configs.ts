@@ -47,7 +47,7 @@ export const VIPFPCConfigs: Components.GameConfiguration = {
 };
 
 
-export const AdminDataSet_local ={
+export const AdminDataSet_local2 ={
   accountId: 222244,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",

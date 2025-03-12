@@ -18,10 +18,10 @@ export const BigSmallCity1Configs: Components.GameConfiguration = {
   },
   socketName: "unbalancedbigsmall",
   accounts: {
-    local: "222262",
-    local1: "222262",
-    local2: "222262",
-    local3: "222262",
+    local: "222263",
+    local1: "222263",
+    local2: "222263",
+    local3: "222263",
     sit: "supertestsaba67",
     uat: "IT56Test789",
     prod: "supertestte120201004",
@@ -29,7 +29,6 @@ export const BigSmallCity1Configs: Components.GameConfiguration = {
     l2prod: "VNtest050",
   },
   productId: { l1: "1659", l2: 3850 },
-
 };
 
 export const BigSmallCity2Configs: Components.GameConfiguration = {
@@ -50,10 +49,10 @@ export const BigSmallCity2Configs: Components.GameConfiguration = {
     small: 1.96,
   },
   accounts: {
-    local: "222262",
-    local1: "222262",
-    local2: "222262",
-    local3: "222262",
+    local: "222263",
+    local1: "222263",
+    local2: "222263",
+    local3: "222263",
     sit: "supertestsaba67",
     uat: "IT56Test789",
     prod: "supertestte120201012",
@@ -79,10 +78,10 @@ export const BigSmallCity3Configs: Components.GameConfiguration = {
     small: 1.96,
   },
   accounts: {
-    local: "222262",
-    local1: "222262",
-    local2: "222262",
-    local3: "222262",
+    local: "222263",
+    local1: "222263",
+    local2: "222263",
+    local3: "222263",
     sit: "supertestsaba67",
     uat: "IT56Test789",
     prod: "supertestte120201012",
@@ -108,10 +107,10 @@ export const BigSmallCity4Configs: Components.GameConfiguration = {
     small: 1.96,
   },
   accounts: {
-    local: "222262",
-    local1: "222262",
-    local2: "222262",
-    local3: "222262",
+    local: "222263",
+    local1: "222263",
+    local2: "222263",
+    local3: "222263",
     sit: "supertestsaba67",
     uat: "IT56Test789",
     prod: "supertestte120201012",
@@ -119,199 +118,205 @@ export const BigSmallCity4Configs: Components.GameConfiguration = {
   productId: { l1: "1659", l2: 3850 },
 };
 
-export const LasvegasAdminDataSet_local ={
-  accountId: 222262,
+export const LasvegasAdminDataSet_local2 = {
+  accountId: 222263,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='unbalancedbigsmall1']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-     "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
-    }
-  }, 
-  l2datasetTicket:{
-    "Settle_Win": {
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
       "#dice-0": "//div[@class='modal-content']/div/div[1]",
       "#dice-1": "//div[@class='modal-content']/div/div[2]",
       "#dice-2": "//div[@class='modal-content']/div/div[3]",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "LasVegas-resultWin.png",
       "//*[@id='game-ticket']/table[2]": "LasVegas-detailWin.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       "#dice-0": "//div[@class='modal-content']/div/div[4]",
       "#dice-1": "//div[@class='modal-content']/div/div[5]",
       "#dice-2": "//div[@class='modal-content']/div/div[6]",
     },
-    "Expect_Lose": { 
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "LasVegas-resultLoss.png",
-      "//*[@id='game-ticket']/table[2]": "LasVegas-detailLoss.png",}
-  }
-}
+      "//*[@id='game-ticket']/table[2]": "LasVegas-detailLoss.png",
+    },
+  },
+};
 
-export const MarinaBayAdminDataSet_local ={
+export const MarinaBayAdminDataSet_local2 = {
   accountId: 222262,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='unbalancedbigsmall2']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-     "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
-    }
-  }, 
-  l2datasetTicket:{
-    "Settle_Win": {
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
       "#dice-0": "//div[@class='modal-content']/div/div[1]",
       "#dice-1": "//div[@class='modal-content']/div/div[2]",
       "#dice-2": "//div[@class='modal-content']/div/div[3]",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MarinaBay-resultWin.png",
       "//*[@id='game-ticket']/table[2]": "MarinaBay-detailWin.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       "#dice-0": "//div[@class='modal-content']/div/div[4]",
       "#dice-1": "//div[@class='modal-content']/div/div[5]",
       "#dice-2": "//div[@class='modal-content']/div/div[6]",
     },
-    "Expect_Lose": { 
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MarinaBay-resultLoss.png",
-      "//*[@id='game-ticket']/table[2]": "MarinaBay-detailLoss.png",}
-  }
-}
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]":
+        "MarinaBay-resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "MarinaBay-detailLoss.png",
+    },
+  },
+};
 
-export const MacawAdminDataSet_local ={
+export const MacawAdminDataSet_local2 = {
   accountId: 222262,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='unbalancedbigsmall3']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-     "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
-    }
-  }, 
-  l2datasetTicket:{
-    "Settle_Win": {
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
       "#dice-0": "//div[@class='modal-content']/div/div[1]",
       "#dice-1": "//div[@class='modal-content']/div/div[2]",
       "#dice-2": "//div[@class='modal-content']/div/div[3]",
     },
-    "Expect_Win": { 
+    Expect_Win: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "Macaw-resultWin.png",
       "//*[@id='game-ticket']/table[2]": "Macaw-detailWin.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       "#dice-0": "//div[@class='modal-content']/div/div[4]",
       "#dice-1": "//div[@class='modal-content']/div/div[5]",
       "#dice-2": "//div[@class='modal-content']/div/div[6]",
     },
-    "Expect_Lose": { 
+    Expect_Lose: {
       "//*[@id='game-ticket']/table[1]/tbody//td[3]": "Macaw-resultLoss.png",
-      "//*[@id='game-ticket']/table[2]": "Macaw-detailLoss.png",}
-  }
-}
+      "//*[@id='game-ticket']/table[2]": "Macaw-detailLoss.png",
+    },
+  },
+};
 
-export const MonteCarloAdminDataSet_local ={
+export const MonteCarloAdminDataSet_local2 = {
   accountId: 222262,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='unbalancedbigsmall4']",
   isSettleNextRound: true,
-  l2datasetRER:{
-    "Expect_NoData": {
+  l2datasetRER: {
+    Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
+      errorDescription: "The game round does not exist.",
     },
-     "Expect_Win": {
+    Expect_Win: {
       totalAmount: 10,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
+      errorDescription: null,
     },
-    "Expect_Lose": {
+    Expect_Lose: {
       totalAmount: 10,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "0",
-      errorDescription: null
-    }
-  }, 
-  l2datasetTicket:{
-    "Settle_Win": {
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
       "#dice-0": "//div[@class='modal-content']/div/div[1]",
       "#dice-1": "//div[@class='modal-content']/div/div[2]",
       "#dice-2": "//div[@class='modal-content']/div/div[3]",
     },
-    "Expect_Win": { 
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MonteCarlo-resultWin.png",
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]":
+        "MonteCarlo-resultWin.png",
       "//*[@id='game-ticket']/table[2]": "MonteCarlo-detailWin.png",
     },
-    "Settle_Lose": {
+    Settle_Lose: {
       "#dice-0": "//div[@class='modal-content']/div/div[4]",
       "#dice-1": "//div[@class='modal-content']/div/div[5]",
       "#dice-2": "//div[@class='modal-content']/div/div[6]",
     },
-    "Expect_Lose": { 
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "MonteCarlo-resultLoss.png",
-      "//*[@id='game-ticket']/table[2]": "MonteCarlo-detailLoss.png",}
-  }
-}
-
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]":
+        "MonteCarlo-resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "MonteCarlo-detailLoss.png",
+    },
+  },
+};

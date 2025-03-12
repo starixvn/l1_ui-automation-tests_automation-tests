@@ -15,10 +15,10 @@ export const BaccaratLobbyConfigs: Components.GameConfiguration = {
   odds: {
   },
   accounts: {
-    local: "222263",
-    local1: "222263",
-    local2: "222263",
-    local3: "222263",
+    local: "222264",
+    local1: "222264",
+    local2: "222264",
+    local3: "222264",
     sit: "supertestsaba70",
     uat: "IT49Test789",
     prod: "supertestte120201008",
