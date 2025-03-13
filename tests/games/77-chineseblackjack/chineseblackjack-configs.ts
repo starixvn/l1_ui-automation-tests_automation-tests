@@ -19,7 +19,7 @@ export const ChineseBlackjackConfigs: Components.GameConfiguration = {
   },
   cardgame: true,
   accounts: {
-    local: "2152363",
+    local: "222241",
     local1: "222241",
     local2: "222241",
     local3: "222241",
@@ -34,7 +34,7 @@ export const ChineseBlackjackConfigs: Components.GameConfiguration = {
   isDoubleFunction: false,
 };
 
-export const AdminDataSet_local2 = {
+export const AdminDataSet_local = {
   settlePath: "SetChineseBlackjackResult",
   settleDomain: process.env.npm_config_project + "-proxy1",
   accountId: 222241,
@@ -145,7 +145,7 @@ export const AdminDataSet_local2 = {
 export const AdminDataSet_local2 = {
   settlePath: "SetChineseBlackjackResult",
   settleDomain: process.env.npm_config_project + "-proxy",
-  accountId: 2152363,
+  accountId: 222241,
   datasetRER: {
     TC1_expect: {
       totalAmount: 0,

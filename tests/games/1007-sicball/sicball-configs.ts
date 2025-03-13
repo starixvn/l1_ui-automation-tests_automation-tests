@@ -23,7 +23,7 @@ export const sicballConfigs: Components.GameConfiguration = {
   hedgeBetGroups: ["big", "small"],
   maxTimeout: 300 * 1000, // miliseconds,
   odds: {},
-  accounts: {AdminDataSet_local2222222
+  accounts: {
     local: "222282",
     local1: "222282",
     local2: "222282",
