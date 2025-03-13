@@ -38,7 +38,7 @@ export const VipSedieConfigs: Components.GameConfiguration = {
 
 export const AdminDataSet_local2 = {
   accountId: 222240,
-  l1operatorIAdminDataSet_local2222222222222222222
+  l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='vipsedie']",
   isSettleNextRound: true,
