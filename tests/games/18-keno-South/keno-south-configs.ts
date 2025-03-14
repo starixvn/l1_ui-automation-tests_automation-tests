@@ -51,7 +51,7 @@ export const KenoConfigs: Components.GameConfiguration = generateConfig(
 );
 
 export const AdminDataSet_local2 = {
-  accountId: AdminDataSet_local2222222222222222222
+  accountId: 222246,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='kenosouth']",

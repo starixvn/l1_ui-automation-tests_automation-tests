@@ -52,7 +52,7 @@ export const KenoMiniConfigs: Components.GameConfiguration = generalConfig(
 
 export const AdminDataSet_local2 = {
   accountId: 222242,
-  l1operatorIAdminDataSet_local22222222222222
+  l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='kenomini']",
   isSettleNextRound: true,
