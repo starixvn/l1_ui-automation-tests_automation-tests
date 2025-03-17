@@ -4,7 +4,7 @@ import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 
-class SedieSmokeSpec extends SmokeBases.ISGameBase {
+class ColorGameSmokeSpec extends SmokeBases.ISGameBase {
   /**
    *
    */
@@ -21,7 +21,27 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
 
     super(smokeOptions);
   }
+protected preCondition(): void {
+  Components.test("preCondition is instant games offered", async () => {
+    // Arrange
+    Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+    const currentUrl = this.game.page.url();
+    const url = new URL(currentUrl);
+    const domain = url.hostname;
+    await this.game.page.goto('https://'+domain+'/#Sports/s=1_0&d=l')
+    await this.game.page.reload()
+    await this.game.page.waitForLoadState('domcontentloaded')
+    await this.game.waitForTimeout(5000);
+    const isPromotionPopup = await this.game.page.locator("//div[contains(@class,'promo-highlight__btn')]/label").count();
+    if (isPromotionPopup>0) {
+      await this.game.page.locator("//div[contains(@class,'promo-highlight__btn')]/label").click();
+      await this.game.page.locator("//div[contains(@class,'promo-highlight__btn')]/a").click();
+      await this.game.waitForTimeout(5000);
+      await this.game.page.locator("//div[@id='dialogMessage']//a").click();
+    }
+});
 
+}
   protected openInstantGame(): void {
     Components.test(`Smoke Tests ${this.options.gameConfiguration.name}`, async () => {
       await this.game.click(this.options.locators.gameIcon)
@@ -48,4 +68,4 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
   }
 }
 
-new SedieSmokeSpec().start();
+new ColorGameSmokeSpec().start();
