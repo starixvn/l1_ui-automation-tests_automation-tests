@@ -34,58 +34,35 @@ export const LuckyBaccarat5Configs: Components.GameConfiguration = {
   productId: { l1: "1689", l2: "3881" },
 };
 
-export const AdminDataSet_local2 = {
+export const AdminDataSet_local = {
   accountId: 222269,
-  l1datasetRER: {
-    expect_running: {
+  mornitorlocator: "//*[contains(@onclick,'Lucky Baccarat 5')]",
+  isSettleNextRound : true,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  l1datasetRER:{
+    "Expect_NoData": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist.",
     },
-    expect_archive: {
-      totalAmount: 0,
-      totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1001",
-      errorDescription: "The game round does not exist.",
-    },
-    expect_win: {
+    "Expect_Win": {
       totalAmount: 1.2,
       totalWin: 2,
       validBetAmount: 1.2,
       errorCode: "0",
       errorDescription: null,
     },
-    settle_win: {
-      "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
-      "#cutCardIndex": "300",
-      "#cards0": "2d",
-      "#multiplier0": "4",
-      "#cards1": "2s",
-      "#multiplier1": "2",
-      "#cards2": "2h",
-      "#multiplier2": "3",
-      "#cards3": "4c",
-      "#multiplier3": "6",
-      "#cards4": "13s",
-      "#multiplier4": "5",
-      "#cards5": "6s",
-      "#multiplier5": "7",
-      "#cards6": "7s",
-      "#multiplier6": "8",
-      "#cards7": "8s",
-      "#multiplier7": "9",
-    },
-    expect_lose: {
+    "Expect_Lose": {
       totalAmount: 1.2,
       totalWin: 0,
       validBetAmount: 1.2,
       errorCode: "0",
       errorDescription: null,
     },
-    expect_multiple_choices: {
+    "Expect_Multiple_Choices": {
       totalAmount: 4.8,
       totalWin: 245,
       validBetAmount: 4.8,
@@ -93,8 +70,8 @@ export const AdminDataSet_local2 = {
       errorDescription: null,
     },
   },
-  l1datasetTicket: {
-    settle_win: {
+  l1datasetTicket:{
+    "Settle": {
       "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
       "#cutCardIndex": "300",
       "#cards0": "2d",
@@ -112,63 +89,63 @@ export const AdminDataSet_local2 = {
       "#cards6": "7s",
       "#multiplier6": "8",
       "#cards7": "8s",
-      "#multiplier7": "9",
+      "#multiplier7": "9"
     },
-    expect_win: {
-      snapshot: {
-        "//*[@id='game-ticket']/div": "TableName.png",
-        "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
-        "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png",
-      },
-    },
-    expect_lose: {
-      snapshot: {
-        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png",
-      },
-    },
-    expect_multiple_choices: {
-      snapshot: {
-        "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
-        "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "BankerWin.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]": "Tie.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]": "BankerPair.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]": "PlayerPair.png",
-      },
-    },
-  },
-};
+    "Expect_Win": { "snapshot":{
+      "//*[@id='game-ticket']/div": "TableName.png",
+      "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
+      "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png"
+    }},
+    "Expect_Lose": { "snapshot":{
+      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png"
+    }},
+    "Expect_Multiple_Choices": { "snapshot": {
+      "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
+      "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]" : "BankerWin.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]" : "Tie.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]" : "BankerPair.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]" : "PlayerPair.png"
 
-export const AdminDataSet_uat = {
-  accountId: 44269329,
-  l1datasetRER: {
-    expect_running: {
+    }},
+  },
+  l2datasetRER:{
+    "Expect_NoData": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist.",
     },
-    expect_archive: {
-      totalAmount: 0,
-      totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1001",
-      errorDescription: "The game round does not exist.",
-    },
-    expect_win: {
-      totalAmount: 1.2,
-      totalWin: 2,
-      validBetAmount: 1.2,
+    "Expect_Win": {
+      totalAmount: 12,
+      totalWin: 20,
+      validBetAmount: 12,
       errorCode: "0",
       errorDescription: null,
     },
-    settle_win: {
+    "Expect_Lose": {
+      totalAmount: 12,
+      totalWin: 0,
+      validBetAmount: 12,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    "Expect_Multiple_Choices": {
+      totalAmount: 48,
+      totalWin: 2340,
+      validBetAmount: 48,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket:{
+    "Settle": {
       "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
       "#cutCardIndex": "300",
       "#cards0": "2d",
@@ -186,70 +163,29 @@ export const AdminDataSet_uat = {
       "#cards6": "7s",
       "#multiplier6": "8",
       "#cards7": "8s",
-      "#multiplier7": "9",
+      "#multiplier7": "9"
     },
-    expect_lose: {
-      totalAmount: 1.2,
-      totalWin: 0,
-      validBetAmount: 1.2,
-      errorCode: "0",
-      errorDescription: null,
-    },
-    expect_multiple_choices: {
-      totalAmount: 4.8,
-      totalWin: 245,
-      validBetAmount: 4.8,
-      errorCode: "0",
-      errorDescription: null,
-    },
+    "Expect_Win": { "snapshot":{
+      "//*[@id='game-ticket']/div": "TableName.png",
+      "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
+      "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "l2TotalWin.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "l2WinLossWin.png"
+    }},
+    "Expect_Lose": { "snapshot":{
+      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "l2TotalLose.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "l2WinLossLose.png"
+    }},
+    "Expect_Multiple_Choices": { "snapshot": {
+      "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
+      "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]" : "BankerWin.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]" : "Tie.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]" : "BankerPair.png",
+      "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]" : "PlayerPair.png"
+
+    }},
   },
-  l1datasetTicket: {
-    settle_win: {
-      "#cards": "1s,8h,9h,8c,10h,10d,9h,8c,10h,10d,2d,2h,2s,2c,3s,3c",
-      "#cutCardIndex": "300",
-      "#cards0": "2d",
-      "#multiplier0": "4",
-      "#cards1": "2s",
-      "#multiplier1": "2",
-      "#cards2": "2h",
-      "#multiplier2": "3",
-      "#cards3": "4c",
-      "#multiplier3": "6",
-      "#cards4": "13s",
-      "#multiplier4": "5",
-      "#cards5": "6s",
-      "#multiplier5": "7",
-      "#cards6": "7s",
-      "#multiplier6": "8",
-      "#cards7": "8s",
-      "#multiplier7": "9",
-    },
-    expect_win: {
-      snapshot: {
-        "//*[@id='game-ticket']/div": "TableName.png",
-        "//*[@id='game-ticket']/table[1]/thead/tr": "RoundRessultHeader.png",
-        "//*[@id='game-ticket']/table[3]/thead/tr": "BetDetailsHeader.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Player.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalWin.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossWin.png",
-      },
-    },
-    expect_lose: {
-      snapshot: {
-        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "Banker.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[2]": "TotalLose.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[3]": "WinLossLose.png",
-      },
-    },
-    expect_multiple_choices: {
-      snapshot: {
-        "//*[@id='game-ticket']/table[1]/tbody/tr/td[2]": "RoundResult.png",
-        "//*[@id='game-ticket']/table[2]/tbody": "LuckyCards.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[1]/td[2]": "BankerWin.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[2]/td[2]": "Tie.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[3]/td[2]": "BankerPair.png",
-        "//*[@id='game-ticket']/table[3]/tbody/tr[4]/td[2]": "PlayerPair.png",
-      },
-    },
-  },
-};
+}

@@ -1,6 +1,7 @@
 import { gamelobbyConfigs } from "../gamelobby-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
+import test from "node:test";
 
 export const gameLobbyLocators = [
   new Components.ImageLocator("gamelobby", 405, 667, 136, 44),
@@ -30,7 +31,7 @@ class healthSmokeSpec extends SmokeBases.TableGameBase {
 
   protected gameLobbyLoadsucceess(): void {
     Components.test(
-      "Verify that game looby is loaded success without error",
+      "Verify that game lobby is loaded success without error",
       async () => {
         await this.game.waitForTimeout(3000)
         await this.game.page.mouse.click(15,15)
@@ -58,8 +59,18 @@ class healthSmokeSpec extends SmokeBases.TableGameBase {
     );
   }
 
+  protected sabaPlayHealthCheck(): void {
+    Components.test("Verify Sabaplay service is OK", async() => {
+      this.game.page.goto("https://www.sabaplay.top/health")
+      await this.game.page.waitForLoadState()
+      const text = await this.game.page.locator("body").innerText();
+      expect(text).toContain("OK");
+    })
+  }
+
   protected runScenario(): void {
     this.gameLobbyLoadsucceess();
+    this.sabaPlayHealthCheck();
   }
 }
 

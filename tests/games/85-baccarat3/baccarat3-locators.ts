@@ -17,7 +17,7 @@ export const Baccarat3Locators = [
     new ImageLocator("errorMessage", 435, 553, 400, 30),
     new ImageLocator("msgMaxbetLimit", 476, 558, 300, 25),
     new ImageLocator("btnRightArrow", 890, 600, 35, 35),
-    new ImageLocator("roundId", 288, 305, 98, 27),
+    new ImageLocator("roundId", 266, 307, 130, 25),
     new ImageLocator("guideMenu", 36, 403, 17, 21),
     new ImageLocator("outside", 5, 5, 5, 5),
     new ImageLocator("guide-1", 150, 72, 976, 580),

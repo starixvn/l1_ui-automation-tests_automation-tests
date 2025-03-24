@@ -1,13 +1,13 @@
-import { speedbacarrat3Configs } from "../speedbacarrat3-configs";
+import { speedbaccarat3Configs } from "../speedbaccarat3-configs";
 import { E2EBases, Components } from "sc-automation-core";
-import { speedbacarrat3Locators } from "./speedbacarrat3-locators";
+import { speedbaccarat3Locators } from "./speedbaccarat3-locators";
 import { baseLocatorNames } from "sc-automation-core/lib/components/base-game-locator";
 import { GameEvent } from "sc-automation-core/lib/_shared";
 import { expect } from "sc-automation-core/lib/expects";
 import  verifyImage from "sc-automation-core/lib/expects/verify-image";
 import { BaseGame } from "sc-automation-core/lib/components";
 
-class speedbacarrat3E2ESpec extends E2EBases.TableGameBase {
+class speedbaccarat3E2ESpec extends E2EBases.TableGameBase {
   /**
    *
    */
@@ -20,8 +20,8 @@ class speedbacarrat3E2ESpec extends E2EBases.TableGameBase {
          "playerPair",
          "bankerPair",
        ],
-      gameConfiguration: speedbacarrat3Configs,
-      locators: speedbacarrat3Locators,
+      gameConfiguration: speedbaccarat3Configs,
+      locators: speedbaccarat3Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 2,
@@ -268,4 +268,4 @@ class speedbacarrat3E2ESpec extends E2EBases.TableGameBase {
 //   };
 // };
 
-new speedbacarrat3E2ESpec().start();
+new speedbaccarat3E2ESpec().start();

@@ -59,6 +59,6 @@ export const extSpeedBaccaratLocators = [
   new ImageLocator("locHistoryBetWin", 738, 215, 74, 27),
 ];
 
-export const speedbacarrat3Locators = extSpeedBaccaratLocators.concat(Components.BaseLocator.GameLobbyLocator)
+export const speedbaccarat3Locators = extSpeedBaccaratLocators.concat(Components.BaseLocator.GameLobbyLocator)
 
 
