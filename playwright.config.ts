@@ -37,7 +37,7 @@ const config: PlaywrightTestConfig = {
   use: {
     actionTimeout: 0,
     screenshot: "only-on-failure",
-    headless: false,
+    headless: true,
     viewport: {
       width: 1280,
       height: 720,
