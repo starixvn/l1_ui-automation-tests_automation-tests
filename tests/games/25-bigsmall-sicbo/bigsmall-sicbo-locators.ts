@@ -25,7 +25,12 @@ export const BigSmallSicBoLocators = [
 ];
 
 
-export const IsLocators = {
+export const L1IsLocators = {
   big: {x: 313,y: 311},
   gameIcon: "//div[contains(@style,'Saba_SicBo')]"
+}
+
+export const L2IsLocators = {
+  big: {x: 313,y: 311},
+  gameIcon: "//div[contains(@style,'3821_Vgaming_SicBo')]"
 }

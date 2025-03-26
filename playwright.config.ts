@@ -54,6 +54,7 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
+        storageState: ".auth/user.json",
       }
     },
     {
@@ -79,10 +80,6 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/smoke-tests/*.mobidirectsmoke.spec.ts`,
       use: {
         ...devices['Desktop Chrome'],
-        "viewport": {
-          "width": 500,
-          "height": 608
-        }
       },
     },
     {
@@ -127,6 +124,14 @@ const config: PlaywrightTestConfig = {
         ...devices["Desktop Chrome"],
 
       },
+    },
+    {
+      name: "setup",
+      use: { ...devices["Desktop Chrome"] , "viewport": {
+        "width": 1280,
+        "height": 720
+      }},
+      testMatch: /.*\.setup\.ts/,
     },
   ],
 

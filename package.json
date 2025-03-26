@@ -13,10 +13,11 @@
     "test:e2e": "playwright test --config=e2e.config.ts --project=E2E_CI",
     "test:guide": "playwright test --config=e2e.config.ts --project=Guide --workers=3",
     "test:admin": "playwright test --project=admin",
-    "update-snapshots": "playwright test --update-snapshots  --project=admin",
+    "update-snapshots": "playwright test --update-snapshots  --project=Smoke_MobiDirect",
     "clonegame": "node clonegame.js",
     "sendresult": "node pushResults.js",
-    "allure": "node allureReport.js"
+    "allure": "node allureReport.js",
+    "setup": "playwright test --project=setup"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,7 @@
     "google-spreadsheet": "^4.1.1",
     "prettier": "^3.2.5",
     "prom-client": "^15.1.3",
-    "sc-automation-core": "1.68.2",
+    "sc-automation-core": "1.69.0",
     "undici": "^7.3.0"
   },
   "devDependencies": {

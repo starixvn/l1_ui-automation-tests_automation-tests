@@ -33,7 +33,12 @@ export const FootballCointossLocators = [
 
 ];
 
-export const IsLocators = {
+export const L1IsLocators = {
     head: {x: 342,y: 311},
     gameIcon: "//div[contains(@style,'Saba_EURO2024RNG')]"
+  }
+
+  export const L2IsLocators = {
+    head: {x: 342,y: 311},
+    gameIcon: "//div[contains(@style,'3880_Vgaming_EURO2024RNG')]"
   }

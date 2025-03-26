@@ -1,4 +1,4 @@
-import { IsLocators } from "../SevenUpDown-locators";
+import { L1IsLocators,L2IsLocators } from "../SevenUpDown-locators";
 import { SevenUpDownConfigs,Isconfigs } from "../SevenUpDown-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
@@ -11,11 +11,11 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: SevenUpDownConfigs,
-      locators: IsLocators,
+      locators: process.env.npm_config_project?.includes("l2") ? L2IsLocators : L1IsLocators,
       waitBetTimeout: 5000,
       placeBetChoices: SevenUpDownConfigs.choices,
       snapshotFolderPath: __filename,
-      placeBetAmount: 1,
+      placeBetAmount: process.env.npm_config_project?.includes("l2") ? 10 : 1,
       isconfig: Isconfigs
     };
 

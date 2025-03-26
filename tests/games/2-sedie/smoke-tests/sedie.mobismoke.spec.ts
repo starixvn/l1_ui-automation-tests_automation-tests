@@ -16,7 +16,7 @@ class SedieSmokeSpec extends SmokeBases.MobiGameBase {
       waitBetTimeout: 5000,
       placeBetChoices: extConfigs.choices,
       snapshotFolderPath: __filename,
-      placeBetAmount: 10,
+      placeBetAmount: process.env.npm_config_project?.includes("l2") ? 10 : 1,
     };
 
     super(smokeOptions);

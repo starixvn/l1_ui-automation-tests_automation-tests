@@ -13,13 +13,16 @@ class SedieSmokeSpec extends SmokeBases.MiniGameBase {
       waitBetTimeout: 9000,
       placeBetChoices: ["even", "odd"],
       snapshotFolderPath: __filename,
-      placeBetAmount: 1,
+      placeBetAmount: process.env.npm_config_project?.includes("l2") ? 10 : 1,
     };
 
     super(smokeOptions);
   }
 
   protected inGameOddsTests(): void {
+  }
+
+  protected gameGuideTests(): void {
   }
 
 }

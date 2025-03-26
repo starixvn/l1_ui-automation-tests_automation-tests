@@ -1,4 +1,4 @@
-import { IsLocators } from "../footballcointoss-locators";
+import { L1IsLocators,L2IsLocators } from "../footballcointoss-locators";
 import { FootballCointossConfigs,Isconfigs } from "../footballcointoss-configs";
 import { SmokeBases ,Components} from "sc-automation-core";
 import { expect } from "@playwright/test";
@@ -11,11 +11,11 @@ class ISSmokeSpec extends SmokeBases.ISGameBase {
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: FootballCointossConfigs,
-      locators: IsLocators,
+      locators: process.env.npm_config_project?.includes("l2") ? L2IsLocators : L1IsLocators,
       waitBetTimeout: 5000,
       placeBetChoices: ["head"],
       snapshotFolderPath: __filename,
-      placeBetAmount: 1,
+      placeBetAmount: process.env.npm_config_project?.includes("l2") ? 10 : 1,
       isconfig: Isconfigs
     };
 
@@ -24,7 +24,7 @@ class ISSmokeSpec extends SmokeBases.ISGameBase {
   protected openInstantGame(): void {
     Components.test(`Smoke Tests ${this.options.gameConfiguration.name}`, async () => {
       await this.game.click(this.options.locators.gameIcon)
-      await this.game.page.frameLocator('iframe').first().getByRole('button', { name: 'Submit' }).click();
+      // await this.game.page.frameLocator('iframe').first().getByRole('button', { name: 'Submit' }).click();
       await this.game.waitUntilGameUiLoad(2)
       await this.game.waitForTimeout(3000)
       await this.game.page.frameLocator('iframe').first().locator('#GameCanvas').scrollIntoViewIfNeeded()

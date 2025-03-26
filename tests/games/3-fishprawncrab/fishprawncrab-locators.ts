@@ -38,7 +38,12 @@ export const MobiLocators = {
     },
   };
 
-  export const IsLocators = {
+  export const L1IsLocators = {
     fish: {x: 588,y: 299},
     gameIcon: "//div[contains(@style,'SBC_FishPrawnCrab')]"
+  }
+
+  export const L2IsLocators = {
+    fish: {x: 588,y: 299},
+    gameIcon: "//div[contains(@style,'3822_Vgaming_FishPrawnCrab')]"
   }

@@ -16,7 +16,7 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
       waitBetTimeout: 5000,
       placeBetChoices: ["big"],
       snapshotFolderPath: __filename,
-      placeBetAmount: 1,
+      placeBetAmount: process.env.npm_config_project?.includes("l2") ? 10 : 1,
       isconfig: Isconfigs
     };
 

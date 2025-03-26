@@ -42,9 +42,14 @@ export const MobiLocators = {
   };
 
 
-  export const IsLocators = {
+    export const L1IsLocators = {
+      player: {x: 365,y: 311},
+      gameIcon: "//div[contains(@style,'Saba_Baccarat')]"
+    }
+
+    export const L2IsLocators = {
     player: {x: 365,y: 311},
-    gameIcon: "//div[contains(@style,'Saba_Baccarat')]"
+    gameIcon: "//div[contains(@style,'3834_Vgaming_BaccaratRuby')]"
   }
 
   export const MobiDirectLocators = [

@@ -35,11 +35,15 @@ export const MiniSedieLocators = [
   new Components.ImageLocator("roundId", 310, 306, 60, 15),
 ];
 
-export const IsLocators = {
+export const L1IsLocators = {
   odd: {x: 365,y: 311},
   gameIcon: "//div[contains(@style,'SBC_SeDie')]"
 }
 
+export const L2IsLocators = {
+  odd: {x: 365,y: 311},
+  gameIcon: "//div[contains(@style,'Vgaming_MiniSeDie')]"
+}
 
 export const MobiLocators = {
   inGameUI: [

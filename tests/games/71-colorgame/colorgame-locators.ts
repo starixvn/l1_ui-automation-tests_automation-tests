@@ -33,7 +33,12 @@ export const ColorGameLocators = [
 ];
 
 
-export const IsLocators = {
+export const L1IsLocators = {
   yellow: {x: 614,y: 311},
   gameIcon: "//div[contains(@style,'Saba_Colorgame')]"
+}
+
+export const L2IsLocators = {
+  yellow: {x: 614,y: 311},
+  gameIcon: "//div[contains(@style,'3870_Vgaming_Colorgame')]"
 }
