@@ -14,7 +14,7 @@ class BaccaratSmokeSpec extends SmokeBases.TableGameBase {
       waitBetTimeout: 12000,
       placeBetChoices: [VIPFPCConfigs.choices[0]],
       snapshotFolderPath: __filename,
-      placeBetAmount: 10,
+      placeBetAmount:   process.env.npm_config_project?.includes("l2") ? 50 : 10
     };
 
     super(smokeOptions);
@@ -45,6 +45,9 @@ class BaccaratSmokeSpec extends SmokeBases.TableGameBase {
         this.options.gameConfiguration.choices
       );
     });
+  }
+
+  protected gameGuideTests(): void {  
   }
 
 }

@@ -48,3 +48,23 @@ export const GameLocators = [
     new Components.ImageLocator("closeguide", 890, 571, 100, 20),
 
   ]
+
+
+  export const MobiDirectLocators = [
+    new Components.ImageLocator("dealer", 213, 200, 81, 70),
+    new Components.ImageLocator("bigChoice", 100, 250, 80, 35),
+    new Components.ImageLocator("smallChoice", 315, 250, 80, 35),
+    new Components.ImageLocator("hamburgerMenu", 113, 136, 0, 0),
+    new Components.ImageLocator("historyMenu", 110, 224, 0, 0),
+    new Components.ImageLocator("historyPopup", 180, 53, 140, 15),
+    new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
+    new Components.ImageLocator("guideMenu", 90, 225, 0, 0),
+    new Components.ImageLocator("outside", 404, 100, 0, 0),
+    new Components.ImageLocator("guide-1", 87, 97, 315, 440),
+    new Components.ImageLocator("guide-2", 87, 97, 315, 440),
+    new Components.ImageLocator("guide-3", 87, 97, 315, 440),
+    new Components.ImageLocator("guide-4", 87, 97, 315, 440),
+    new Components.ImageLocator("guide-5", 87, 97, 315, 440),
+    new Components.ImageLocator("guide-6", 87, 97, 315, 440),
+  ];
+  

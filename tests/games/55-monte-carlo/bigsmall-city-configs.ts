@@ -99,8 +99,8 @@ export const BigSmallCity4Configs: Components.GameConfiguration = {
     lockingBet: 5 * 1000,
     shakeThePlateDuration: 5 * 1000,
   },
-  choices: ["big4", "small4"],
-  hedgeBetGroups: [["big4", "small4"]],
+  choices: ["big", "small"],
+  hedgeBetGroups: [["big", "small"]],
   maxTimeout: 200 * 1000, // miliseconds,
   odds: {
     big: 1.96,

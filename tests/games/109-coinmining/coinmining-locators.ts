@@ -14,7 +14,7 @@ export const coinminingLocators = [
   new ImageLocator("stake1", 390, 400, 25, 25),
   new ImageLocator("stake10",  390, 400, 25, 25),
   new ImageLocator("spin", 950, 555, 90, 90),
-  new ImageLocator("collect", 950, 555, 90, 90),
+  new ImageLocator("collect", 769, 608, 0, 0),
   new ImageLocator("stone", 639, 280, 10, 10),
   new ImageLocator("outside", 10, 10, 10, 10),
   new ImageLocator("roundId", 167, 21, 60, 25),

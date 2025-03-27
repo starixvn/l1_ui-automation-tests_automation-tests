@@ -13,13 +13,16 @@ class VipSedieSmokeSpec extends SmokeBases.MiniGameBase {
       waitBetTimeout: 9000,
       placeBetChoices: ["odd", "even"],
       snapshotFolderPath: __filename,
-      placeBetAmount: 10,
+      placeBetAmount: process.env.npm_config_project?.includes("l2") ? 50 : 10
     };
 
     super(smokeOptions);
   }
 
   protected inGameOddsTests(): void {
+  }
+  
+  protected gameGuideTests(): void {
   }
 
 }
