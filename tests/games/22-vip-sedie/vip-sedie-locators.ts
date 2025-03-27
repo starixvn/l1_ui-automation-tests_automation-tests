@@ -43,8 +43,8 @@ export const MobiLocators = {
   
 export const MobiDirectLocators = [
   new Components.ImageLocator("dealer", 213, 200, 81, 70),
-  new Components.ImageLocator("evenChoice", 46, 303, 80, 35),
-  new Components.ImageLocator("oddChoice", 256, 303, 40, 35),
+  new Components.ImageLocator("evenChoice", 100, 322, 56, 30),
+  new Components.ImageLocator("oddChoice", 257, 322, 56, 30),
   new Components.ImageLocator("hamburgerMenu", 90, 100, 0, 0),
   new Components.ImageLocator("historyMenu", 90, 193, 0, 0),
   new Components.ImageLocator("historyPopup", 180, 53, 140, 15),
