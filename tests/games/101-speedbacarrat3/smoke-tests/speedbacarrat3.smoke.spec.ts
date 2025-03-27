@@ -23,6 +23,7 @@ class speedbaccarat3SmokeSpec extends SmokeBases.BacGameBase {
   protected inGameDealerTests() {
     Components.test("Ensure player joined game and saw dealer", async () => {
         // Act
+        await this.game.waitForTimeout(5000)
         verifyImage(this.game, "imgDealer", 0.05)
     });
   }
