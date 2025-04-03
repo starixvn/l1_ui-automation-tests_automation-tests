@@ -4,8 +4,8 @@ export const BigSmallSicBoConfigs: Components.GameConfiguration = {
   id: 25,
   name: "SicBo",
   durations: {
-    wholeRound: 57 * 1000,
-    placingBets: 45 * 1000,
+    wholeRound: 42 * 1000,
+    placingBets: 30 * 1000,
     lockingBet: 5 * 1000,
     shakeThePlateDuration: 2 * 1000,
   },

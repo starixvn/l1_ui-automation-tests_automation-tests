@@ -23,6 +23,23 @@ export const BigSmallSicBoLocators = [
   new Components.ImageLocator("guide-8", 150, 72, 976, 580),
   new Components.ImageLocator("roundId", 548, 18, 80, 24),
 ];
+export const MobiDirectLocators = [
+  new Components.ImageLocator("bigChoice", 103, 276, 58, 36),
+  new Components.ImageLocator("smallChoice", 339, 278, 54, 37),
+  new Components.ImageLocator("anyTriple", 564, 291, 153, 34),
+  new Components.ImageLocator("hamburgerMenu", 77, 75, 42, 42),
+  new Components.ImageLocator("historyMenu", 92, 191, 0, 0),
+  new Components.ImageLocator("historyPopup", 206, 87, 110, 20),
+  new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
+  new Components.ImageLocator("guideMenu", 90, 225, 0, 0),
+  new Components.ImageLocator("outside", 404, 100, 0, 0),
+  new Components.ImageLocator("guide-1", 87, 97, 315, 440),
+  new Components.ImageLocator("guide-2", 87, 97, 315, 440),
+  new Components.ImageLocator("guide-3", 87, 97, 315, 440),
+  new Components.ImageLocator("guide-4", 87, 97, 315, 440),
+  new Components.ImageLocator("guide-5", 87, 97, 315, 440),
+  new Components.ImageLocator("guide-6", 87, 97, 315, 440),
+];
 
 
 export const L1IsLocators = {
