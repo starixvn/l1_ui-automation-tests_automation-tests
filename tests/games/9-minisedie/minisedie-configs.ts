@@ -136,12 +136,179 @@ export const Isconfigs = {
   clickCount: 0,
 };
 
+export const AdminDataSet_uat = {
+  accountId: 222229,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='minisedie']",
+  isSettleNextRound: true,
+  l1datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      totalWin: 19.6,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'mini-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[2]/img",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    Settle_Lose: {
+      "//*/div[contains(@class,'mini-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[1]/img",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
+  l2datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      totalWin: 19.6,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'mini-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[2]/img",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    Settle_Lose: {
+      "//*/div[contains(@class,'mini-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[1]/img",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
+};
+
 export const AdminDataSet_local2 = {
   accountId: 222229,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='minisedie']",
   isSettleNextRound: true,
+  l1datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      totalWin: 19.6,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'mini-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[2]/img",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    Settle_Lose: {
+      "//*/div[contains(@class,'mini-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'mini-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[1]/img",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
   l2datasetRER: {
     Expect_NoData: {
       totalAmount: 0,

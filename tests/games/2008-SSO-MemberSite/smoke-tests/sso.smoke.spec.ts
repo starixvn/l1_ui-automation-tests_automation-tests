@@ -3,14 +3,14 @@ import { allure } from "allure-playwright";
 
 const envConfig = {
   l1prod: "https://www.viva88.net/b/vn?fromMode=1",
-  l2prod: "https://www.nova88.com/b/vn?fromMode=1",
+  l2prod: "https://www.nova88.com/b/vn",
   l1account: "supertestte120201001",
-  l2account: "SUPERTESTIBCAge0233",
+  l2account: "SUPERTESTIBCAge0246",
   l1pwd: "1234aa",
-  l2pwd: "1234AAaa",
+  l2pwd: "1q2w3e4r",
 };
 
-const locator = {
+const l1locator = {
   lblLogin: "//div[@class='header']//a[@class='btn btn--secondary']",
   inputUserName: "#username",
   inputPwd: "#password",
@@ -18,7 +18,7 @@ const locator = {
   iconMode: "//div[@class='header-option']/div[1]",
   iconMobile: "//div[@class='header-option']/div[1]/div//span[text()='Mobile']",
   logoBet: "//div[@gtag='lobby_Casino']",
-  iconSaba: "//span[text()='Cổng Game SABA']",
+  iconGame: "//span[text()='Cổng Game SABA']",
   "Saba Club": {
     name: "Saba Club",
     xpath:
@@ -71,7 +71,7 @@ const locator = {
   },
 };
 
-const lstGames = [
+const l1lstGames = [
   "Saba Club",
   "Saba Mobi",
   "Mega Keno",
@@ -84,8 +84,115 @@ const lstGames = [
   "Bigsmall",
 ];
 
+const l2locator = {
+  lblLogin: "//div[@class='header']//a[@class='btn btn--secondary']",
+  inputUserName: "#username",
+  inputPwd: "#password",
+  btnLogin: "//div[@class='login-form__item']//span[text()='Đăng nhập']",
+  iconMode: "//div[@class='header-option']/div[1]",
+  iconMobile: "//div[@class='header-option']/div[1]/div//span[text()='Mobile']",
+  logoBet: "//div[@gtag='lobby_Casino']",
+  iconGame: "//span[text()='Vgaming']",
+  "Cào Baccarat": {
+    name: "Baccarat",
+    xpath:
+      "//div[@data-name='Cào Baccarat']",
+  },
+  "Bóng Xoáy": {
+    name: "MarbleFootball",
+    xpath:
+      "//div[@data-name='Bóng Xoáy']",
+  },
+  "Sảnh Vgaming": {
+    name: "Sảnh Vgaming",
+    xpath:
+      "//div[@data-name='Sảnh Vgaming']",
+  },
+  "Vgaming Mobi": {
+    name: "Vgaming Mobi",
+    xpath:
+      "//div[@data-name='Vgaming Mobi']",
+  },
+  "Vgaming Keno": {
+    name: "Vgaming Keno",
+    xpath:
+      "//div[@data-name='Vgaming Keno']",
+  },
+  "Tài Xỉu Sic Bo": {
+    name: "SicBo",
+    xpath:
+      "//div[@data-name='Tài Xỉu Sic Bo']",
+  },
+  "Roulette": {
+    name: "Roulette",
+    xpath:
+      "//div[@data-name='Roulette']",
+  },
+  "Texas Hold’em Poker": {
+    name: "TexasHoldemPoker",
+    xpath:
+      "//div[@data-name='Texas Hold’em Poker']",
+  },
+  "Casino Hold’em Poker": {
+    name: "CasinoHoldemPoker",
+    xpath:
+      "//div[@data-name='Casino Hold’em Poker']",
+  },
+  "Rồng Hổ": {
+    name: "Rồng Hổ",
+    xpath:
+      "//div[@data-name='Rồng Hổ']",
+  },
+  "Bầu Cua": {
+    name: "Bầu Cua",
+    xpath:
+      "//div[@data-name='Bầu Cua']",
+  },
+  "Xóc Đĩa": {
+    name: "Xóc Đĩa",
+    xpath:
+      "//div[@data-name='Xóc Đĩa']",
+  },
+  "Keno Pro Max": {
+    name: "Keno Pro Max",
+    xpath:
+      "//div[@data-name='Keno Pro Max']",
+  },
+  "Keno Mini": {
+    name: "Keno Mini",
+    xpath:
+      "//div[@data-name='Keno Mini']"
+    },
+  "Blackjack": {
+    name: "Blackjack",
+    xpath:
+      "//div[@data-name='Blackjack']"
+  }
+};
+
+const l2lstGames = [
+  "Cào Baccarat",
+  "Vgaming Mobi",
+  "Vgaming Keno",
+  "Blackjack",
+  "Tài Xỉu Sic Bo",
+  "Roulette",
+  "Texas Hold’em Poker",
+  // "Casino Hold’em Poker",
+  // "Rồng Hổ",
+  // "Bầu Cua",
+  // "Xóc Đĩa",
+  // "Keno Pro Max",
+  // "Keno Mini",
+];
+
+
 test(`Smoke Test Games Locations and navigation on Member Site`, async ({ browser }) => {
-  await allure.suite("Smoke Test Games Locations and navigation on Member Site");
+  const projectCode = process.env.npm_config_project?.includes("l1") ? "SG" : "VG";
+  const locator = projectCode == "SG" ? l1locator : l2locator;
+  const lstGames = projectCode == "SG" ? l1lstGames : l2lstGames;
+  await allure.suite(`${projectCode}-Smoke Test Games Locations and navigation on Member Site`);
+  console.log("projectCode", projectCode);
   const context = await browser.newContext();
   const page = await context.newPage();
   const env = process.env.npm_config_env;
@@ -106,9 +213,11 @@ test(`Smoke Test Games Locations and navigation on Member Site`, async ({ browse
   await page.fill(locator.inputPwd, envConfig[`${project}pwd`]);
   await page.click(locator.btnLogin);
   await page.waitForLoadState();
+  await page.waitForTimeout(5000);
   await test.step("Verify Logo is displayed at correct location", async () => {
     await page.click(locator.logoBet);
-    await page.click(locator.iconSaba);
+    expect(await page.isVisible(locator.iconGame)).toBeTruthy();
+    await page.click(locator.iconGame);
   });
   await test.step("Verify All games load successfully", async () => {
     for (const element of lstGames) {
@@ -151,7 +260,7 @@ const verifyGameUiLoad = async (page: any, gameName: string) => {
       }
     });
   }
-  if (gameName == "Saba Mobi" || gameName == "Mega Keno") {
+  if (gameName.includes("Mobi") || gameName.includes("Keno")) {
     await page.waitForTimeout(5000);
     const title = await page.title();
     expect(title).toContain(gameName);

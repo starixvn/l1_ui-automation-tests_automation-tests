@@ -36,12 +36,182 @@ export const VipSedieConfigs: Components.GameConfiguration = {
   productId: { l1: "1633", l2: 3824 },
 };
 
+export const AdminDataSet_uat = {
+  accountId: 222240,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='vipsedie']",
+  isSettleNextRound: true,
+  l1datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'vip-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[2]/img",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winChoices.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
+    },
+    Settle_Lose: {
+      "//*/div[contains(@class,'vip-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[1]/img",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossChoices.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
+    },
+  },
+  l2datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 50,
+      validBetAmount: 50,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 50,
+      totalWin: 0,
+      validBetAmount: 50,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'vip-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[2]/img",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winChoices.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
+    },
+    Settle_Lose: {
+      "//*/div[contains(@class,'vip-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[1]/img",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossChoices.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
+    },
+  },
+};
+
 export const AdminDataSet_local2 = {
   accountId: 222240,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='vipsedie']",
   isSettleNextRound: true,
+  l1datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Settle_Win: {
+      "//*/div[contains(@class,'vip-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[2]/img",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "winChoices.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png",
+    },
+    Settle_Lose: {
+      "//*/div[contains(@class,'vip-sedie_result')]/div[1]":
+        "//*/div[@class='modal-content']//div[2]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[2]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[3]":
+        "//*/div[@class='modal-content']//div[1]/img",
+      "//*/div[contains(@class,'vip-sedie_result')]/div[4]":
+        "//*/div[@class='modal-content']//div[1]/img",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "lossChoices.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png",
+    },
+  },
   l2datasetRER: {
     Expect_NoData: {
       totalAmount: 0,

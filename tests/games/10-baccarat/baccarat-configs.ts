@@ -50,12 +50,56 @@ export const Isconfigs = {
   clickCount: 7,
 };
 
-export const AdminDataSet_local2 ={
+export const AdminDataSet_uat ={
   accountId: 222230,
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='baccarat']",
   isSettleNextRound: true,
+  l1datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 1,
+      validBetAmount: 1,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 1,
+      totalWin: 0,
+      validBetAmount: 1,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l1datasetTicket:{
+    "Settle_Win": {
+      "//div[text()='Player']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[9]",
+      "//div[text()='Player']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[10]",
+      "//div[text()='Banker']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[7]",
+      "//div[text()='Banker']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[8]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "//div[text()='Player']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[2]/div[8]",
+      "//div[text()='Player']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[2]/div[4]",
+      "//div[text()='Banker']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[2]/div[9]",
+      "//div[text()='Banker']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[2]/div[10]",
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  },
   l2datasetRER:{
     "Expect_NoData": {
       totalAmount: 0,
@@ -100,4 +144,102 @@ export const AdminDataSet_local2 ={
       "//*[@id='game-ticket']/table[2]": "lossDetail.png"
     },
   }
+
+}
+
+export const AdminDataSet_local2 ={
+  accountId: 222230,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='baccarat']",
+  isSettleNextRound: true,
+  l1datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 1,
+      validBetAmount: 1,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 1,
+      totalWin: 0,
+      validBetAmount: 1,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l1datasetTicket:{
+    "Settle_Win": {
+      "//div[text()='Player']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[9]",
+      "//div[text()='Player']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[10]",
+      "//div[text()='Banker']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[7]",
+      "//div[text()='Banker']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[8]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "//div[text()='Player']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[2]/div[8]",
+      "//div[text()='Player']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[2]/div[4]",
+      "//div[text()='Banker']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[2]/div[9]",
+      "//div[text()='Banker']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[2]/div[10]",
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  },
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+  },
+  l2datasetTicket:{
+    "Settle_Win": {
+      "//div[text()='Player']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[9]",
+      "//div[text()='Player']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[10]",
+      "//div[text()='Banker']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[1]/div[7]",
+      "//div[text()='Banker']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[1]/div[8]",
+    },
+    "Expect_Win": { 
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "winResult.png",
+      "//*[@id='game-ticket']/table[2]": "winDetail.png"
+    },
+    "Settle_Lose": {
+      "//div[text()='Player']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[2]/div[8]",
+      "//div[text()='Player']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[2]/div[4]",
+      "//div[text()='Banker']/following::div[1]/div[1]": "//*/div[contains(@class,'modal-body')]/div[2]/div[9]",
+      "//div[text()='Banker']/following::div[1]/div[2]": "//*/div[contains(@class,'modal-body')]/div[2]/div[10]",
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "lossResult.png",
+      "//*[@id='game-ticket']/table[2]": "lossDetail.png"
+    },
+  }
+
 }

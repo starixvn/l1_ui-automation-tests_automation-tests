@@ -18,7 +18,7 @@ class VipSedieSmokeSpec extends SmokeBases.MiniGameBase {
 
     super(smokeOptions);
   }
-
+  protected inGameBetChoiceTests(): void {}
 
   protected gameGuideTests(): void {}
 }

@@ -37,6 +37,174 @@ export const AdminDataSet_local2 = {
   l1operatorId: "ONEworks1",
   l2operatorId: "ONEworksVGCash",
   mornitorlocator: "//*[@data-game-name='txturbo']",
+  l1datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      totalWin: 1.96,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Settle_Win: {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    Settle_Lose: {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Settle_Win: {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    Settle_Lose: {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
+
+  l2datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      totalWin: 1.96,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Settle_Win: {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    Settle_Lose: {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l2datasetTicket: {
+    Settle_Win: {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    Settle_Lose: {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
+};
+
+export const AdminDataSet_uat = {
+  accountId: 222224,
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
+  mornitorlocator: "//*[@data-game-name='txturbo']",
+  l1datasetRER: {
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 10,
+      totalWin: 1.96,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Settle_Win: {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    Settle_Lose: {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    Expect_Lose: {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Settle_Win: {
+      "#dice-0": "//div[@class='modal-content']/div/div[1]",
+      "#dice-1": "//div[@class='modal-content']/div/div[2]",
+      "#dice-2": "//div[@class='modal-content']/div/div[3]",
+    },
+    Expect_Win: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultWin.png",
+      "//*[@id='game-ticket']/table[2]": "detailWin.png",
+    },
+    Settle_Lose: {
+      "#dice-0": "//div[@class='modal-content']/div/div[4]",
+      "#dice-1": "//div[@class='modal-content']/div/div[5]",
+      "#dice-2": "//div[@class='modal-content']/div/div[6]",
+    },
+    Expect_Lose: {
+      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "resultLoss.png",
+      "//*[@id='game-ticket']/table[2]": "detailLoss.png",
+    },
+  },
+
   l2datasetRER: {
     Expect_NoData: {
       totalAmount: 0,

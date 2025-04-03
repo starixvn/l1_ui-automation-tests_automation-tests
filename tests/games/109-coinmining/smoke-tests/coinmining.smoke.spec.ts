@@ -45,20 +45,31 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
       await this.game.waitForTimeout(3000);
       await this.game.clickHistory();
       await this.game.clickLocator("historyFirstRow", 5000);
-      // Helper function to get text content from locators
       const getTextContent = async (
         locator: string,
         defaultValue: string = ""
       ) => {
-        return (
-          (await this.game.page
-            .locator("#microsite")
-            .contentFrame()
-            .locator("#webview")
-            .contentFrame()
-            .locator(locator)
-            .textContent()) ?? defaultValue
-        );
+        if(process.env.npm_config_project === "l2"){
+          return (
+            (await this.game.page
+              .locator("#webview")
+              .contentFrame()
+              .locator(locator)
+              .textContent()) ?? defaultValue
+          )
+        }
+        else{
+          return (
+            (await this.game.page
+              .locator("#microsite")
+              .contentFrame()
+              .locator("#webview")
+              .contentFrame()
+              .locator(locator)
+              .textContent()) ?? defaultValue
+          )
+        }
+        
       };
 
       const ticket_numofclicks = await getTextContent(
@@ -84,7 +95,6 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
         settledResults.totalClicks == 1 && settledResults.multiplier == 0
           ? "-"
           : settledResults.multiplier + "x";
-
       expect(ticket_numofclicks).toBe(settledResults.totalClicks.toString());
       expect(ticket_result).toBe(merged_results);
       expect(ticket_multiplier).toBe(merged_multiplier);
@@ -99,7 +109,9 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
   }
 
   protected ticketHistoryTests(): void {}
-  // protected gameGuideTests(): void {}
+
+  protected gameGuideTests(): void {
+  }
 }
 
 new coinminingSmokeSpec().start();
@@ -115,7 +127,7 @@ const placeBet = async (game: any, amount: number, numberOfClicks: number) => {
     await game.clickLocator("stone", 10);
     let event = await game.waitForEvent("winAmount");
     multiplier = event.multiplier;
-    console.log("event", multiplier,i);
+    console.log("event", multiplier, i);
     if (multiplier == 0) {
       break;
     }

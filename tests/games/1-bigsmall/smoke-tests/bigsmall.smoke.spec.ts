@@ -1,6 +1,6 @@
 import { BigSmallLocators } from "../bigsmall-locators";
 import { BigSmallConfigs } from "../bigsmall-configs";
-import { SmokeBases, Components } from "sc-automation-core";
+import { SmokeBases } from "sc-automation-core";
 import { expect } from "@playwright/test";
 
 class BigSmallSmokeSpec extends SmokeBases.BalancedBettingGameBase {

@@ -21,19 +21,29 @@ const config: PlaywrightTestConfig = {
   /* Run tests in files in parallel */
   fullyParallel: false,
   // reporter: [["list"], ["html", { open: "never" }]],
-  reporter: [["html",{ open: "never", outputFolder: `playwright-report/${process.env.npm_config_gameid}` }],["list"], [
-    "allure-playwright",
-    {
-      detail: false,
-      resultsDir: "allure-results",
-      suiteTitle: true,
-      environmentInfo: {
-        Browser: "Chromium",
-        Env: process.env.npm_config_env,
-        OS: os.platform() + ' - ' + os.version()
+  reporter: [
+    [
+      "html",
+      {
+        open: "never",
+        outputFolder: `playwright-report/${process.env.npm_config_gameid}`,
       },
-    },
-  ]],
+    ],
+    ["list"],
+    [
+      "allure-playwright",
+      {
+        detail: false,
+        resultsDir: "allure-results",
+        suiteTitle: true,
+        environmentInfo: {
+          Browser: "Chromium",
+          Env: process.env.npm_config_env,
+          OS: os.platform() + " - " + os.version(),
+        },
+      },
+    ],
+  ],
   use: {
     actionTimeout: 0,
     screenshot: "only-on-failure",
@@ -43,9 +53,14 @@ const config: PlaywrightTestConfig = {
       height: 720,
     },
     launchOptions: {
-      args: ["--no-sandbox", "--use-angle=gl", "--enable-gpu", '--disable-web-security'],
+      args: [
+        "--no-sandbox",
+        "--use-angle=gl",
+        "--enable-gpu",
+        "--disable-web-security",
+      ],
     },
-    trace: "off"
+    trace: "off",
   },
 
   projects: [
@@ -54,18 +69,18 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
-        storageState: ".auth/user.json",
-      }
+        // storageState: `.auth/user.json`,
+      },
     },
     {
       name: "Smoke_XD",
       testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
-        "viewport": {
-          "width": 600,
-          "height": 930
-        }
+        viewport: {
+          width: 600,
+          height: 930,
+        },
       },
     },
     {
@@ -79,7 +94,7 @@ const config: PlaywrightTestConfig = {
       name: "Smoke_MobiDirect",
       testMatch: `**/${testMatch}/smoke-tests/*.mobidirectsmoke.spec.ts`,
       use: {
-        ...devices['Desktop Chrome'],
+        ...devices["Desktop Chrome"],
       },
     },
     {
@@ -107,7 +122,7 @@ const config: PlaywrightTestConfig = {
       name: "android",
       testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
       use: {
-        browserName: 'chromium',
+        browserName: "chromium",
       },
     },
     {
@@ -122,15 +137,17 @@ const config: PlaywrightTestConfig = {
       testMatch: `**/${testMatch}/game-guide-tests/*.gameguide.spec.ts`,
       use: {
         ...devices["Desktop Chrome"],
-
       },
     },
     {
       name: "setup",
-      use: { ...devices["Desktop Chrome"] , "viewport": {
-        "width": 1280,
-        "height": 720
-      }},
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: {
+          width: 1280,
+          height: 720,
+        },
+      },
       testMatch: /.*\.setup\.ts/,
     },
   ],
