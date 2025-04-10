@@ -28,7 +28,7 @@ class RocketXSmokeSpec extends SmokeBases.CrashGameBase {
     console.log("No hedgeBetTests");
   }
 
-
+  
 }
 
 new RocketXSmokeSpec().start();
