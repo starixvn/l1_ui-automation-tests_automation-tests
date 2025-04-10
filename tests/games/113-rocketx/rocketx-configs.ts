@@ -19,6 +19,12 @@ export const RocketXConfigs: Components.GameConfiguration = {
     local2: "222277",
     l2local2: "222277",
     local3: "222277",
+    prod: "supertestte120201003",
+    l2uat: "TestSep2741",
+    l2prod: "VNtest041",
+    l1modirectprod: "supertestte120201003",
+    l2creditmodirectprod: "SUPERTESTIBCAge0248",
+
   },
   productId: { l1: "1613", l2: 3803 },
 };
