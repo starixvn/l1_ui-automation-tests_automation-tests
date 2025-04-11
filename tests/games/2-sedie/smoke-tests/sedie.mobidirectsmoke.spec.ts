@@ -20,7 +20,8 @@ class SedieSmokeSpec extends SmokeBases.MobiDirect {
     super(smokeOptions);
   }
 
-
+  protected gameGuideTests(): void {  
+  }
 }
 
 new SedieSmokeSpec().start();

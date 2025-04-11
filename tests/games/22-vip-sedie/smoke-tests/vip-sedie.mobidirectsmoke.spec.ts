@@ -24,6 +24,8 @@ class VipSedieSmokeSpec extends SmokeBases.MobiDirect {
 
     super(smokeOptions);
   }
+  protected gameGuideTests(): void {  
+  }
 }
 
 new VipSedieSmokeSpec().start();

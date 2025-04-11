@@ -33,20 +33,38 @@ export const DragonTigerLocators = [
   new ImageLocator("roundId", 332, 215, 70, 24),
 
 ];
-export const MobiDirectLocators = [
+export const L1MobiDirectLocators = [
   new Components.ImageLocator("dealer", 683, 217, 87, 94),
-  new Components.ImageLocator("dragonChoice", 100, 255, 83, 33),
-  new Components.ImageLocator("tigerChoice", 300, 255, 83, 33),
+  new Components.ImageLocator("l1dragonChoice", 100, 255, 83, 33),
+  new Components.ImageLocator("l1tigerChoice", 300, 255, 83, 33),
   new Components.ImageLocator("hamburgerMenu", 100, 136, 0, 0),
   new Components.ImageLocator("historyMenu", 103, 223, 0, 0),
   new Components.ImageLocator("historyPopup", 222, 129, 60, 15),
   new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
   new Components.ImageLocator("guideMenu", 90, 225, 0, 0),
   new Components.ImageLocator("outside", 404, 100, 0, 0),
-  new Components.ImageLocator("guide-1", 87, 97, 315, 440),
-  new Components.ImageLocator("guide-2", 87, 97, 315, 440),
-  new Components.ImageLocator("guide-3", 87, 97, 315, 440),
-  new Components.ImageLocator("guide-4", 87, 97, 315, 440),
-  new Components.ImageLocator("guide-5", 87, 97, 315, 440),
-  new Components.ImageLocator("guide-6", 87, 97, 315, 440),
+  new Components.ImageLocator("l1guide-1", 87, 97, 315, 440),
+  new Components.ImageLocator("l1guide-2", 87, 97, 315, 440),
+  new Components.ImageLocator("l1guide-3", 87, 97, 315, 440),
+  new Components.ImageLocator("l1guide-4", 87, 97, 315, 440),
+  new Components.ImageLocator("l1guide-5", 87, 97, 315, 440),
+  new Components.ImageLocator("l1guide-6", 87, 97, 315, 440),
+];
+
+export const L2MobiDirectLocators = [
+  new Components.ImageLocator("dealer", 683, 217, 87, 94),
+  new Components.ImageLocator("l2dragonChoice", 100, 255, 83, 33),
+  new Components.ImageLocator("l2tigerChoice", 300, 255, 83, 33),
+  new Components.ImageLocator("hamburgerMenu", 100, 136, 0, 0),
+  new Components.ImageLocator("historyMenu", 103, 223, 0, 0),
+  new Components.ImageLocator("historyPopup", 222, 129, 60, 15),
+  new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
+  new Components.ImageLocator("guideMenu", 90, 225, 0, 0),
+  new Components.ImageLocator("outside", 404, 100, 0, 0),
+  new Components.ImageLocator("l2guide-1", 87, 97, 315, 440),
+  new Components.ImageLocator("l2guide-2", 87, 97, 315, 440),
+  new Components.ImageLocator("l2guide-3", 87, 97, 315, 440),
+  new Components.ImageLocator("l2guide-4", 87, 97, 315, 440),
+  new Components.ImageLocator("l2guide-5", 87, 97, 315, 440),
+  new Components.ImageLocator("l2guide-6", 87, 97, 315, 440),
 ];
