@@ -74,7 +74,6 @@ const l1locator = {
 const l1lstGames = [
   "Saba Club",
   "Saba Mobi",
-  "Mega Keno",
   "Sedie",
   "Baccarat",
   "Fourguardians",
