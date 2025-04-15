@@ -1,12 +1,13 @@
 import { VipBaccaratLocators } from "../vipbaccarat-locators";
 import { VipBaccaratConfigs } from "../vipbaccarat-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
 
 class VipBaccaratSmokeSpec extends SmokeBases.TableGameBase {
   /**
    *
    */
   constructor() {
+    VipBaccaratConfigs.id = 102;
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: [VipBaccaratConfigs.choices[3]],
       gameConfiguration: VipBaccaratConfigs,
@@ -16,6 +17,18 @@ class VipBaccaratSmokeSpec extends SmokeBases.TableGameBase {
       snapshotFolderPath: __filename,
     };
     super(smokeOptions);
+  }
+  protected openGameTests(): void {
+    Components.test("Precondition: Open game from baccarat lobby", async () => {
+      await this.game.clickLocator(`gameicon`);
+      await this.game.waitUntilGameUiLoad();
+
+    });
+  }
+
+  protected runScenario(): void {
+    this.openGameTests();
+    super.runScenario();
   }
 }
 new VipBaccaratSmokeSpec().start();

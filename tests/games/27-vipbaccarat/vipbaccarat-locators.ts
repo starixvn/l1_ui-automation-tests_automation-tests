@@ -27,7 +27,7 @@ export const VipBaccaratLocators = [
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
     new ImageLocator("roundId", 236, 178, 120, 27),
-
+    new ImageLocator("gameicon", 366, 170, 0, 0),
 ];
 
 export const MobiLocators = {

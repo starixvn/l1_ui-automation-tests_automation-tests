@@ -25,4 +25,5 @@ export const BlockchainBaccaratLocators = [
     new ImageLocator("guide-6", 150, 72, 976, 580),
     new ImageLocator("guide-7", 150, 72, 976, 580),
     new ImageLocator("guide-8", 150, 72, 976, 580),
+    new ImageLocator("gameicon", 366, 483, 0, 0),
 ];
