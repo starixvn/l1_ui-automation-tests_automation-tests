@@ -22,6 +22,9 @@ class BaccaratSmokeSpec extends SmokeBases.MobiDirect {
   protected inGameOddsTests(): void {
   }
 
+  protected gameGuideTests(): void {  
+  }
+
 }
 
 new BaccaratSmokeSpec().start();
