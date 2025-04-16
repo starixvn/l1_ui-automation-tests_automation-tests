@@ -1,7 +1,6 @@
 import { L1MobiDirectLocators, L2MobiDirectLocators } from "../rocketx-locators";
 import { RocketXConfigs } from "../rocketx-configs";
 import { SmokeBases, Components } from "sc-automation-core";
-import { expect } from "sc-automation-core/lib/expects";
 
 class RocketXSmokeSpec extends SmokeBases.CrashGameBase {
   /**
@@ -26,6 +25,9 @@ class RocketXSmokeSpec extends SmokeBases.CrashGameBase {
 
   protected hedgeBetTests(): void {
     console.log("No hedgeBetTests");
+  }
+
+  protected ticketHistoryTests(): void {  
   }
   
   protected gameGuideTests(): void {

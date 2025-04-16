@@ -1,5 +1,5 @@
 import { L1MobiDirectLocators, L2MobiDirectLocators } from "../vip-fishprawncrab-locators";
-import { SmokeBases, Components } from "sc-automation-core";
+import { SmokeBases } from "sc-automation-core";
 import { VIPFPCConfigs } from "../vip-fishprawncrab-configs";
 class BaccaratSmokeSpec extends SmokeBases.MobiDirect {
   /**

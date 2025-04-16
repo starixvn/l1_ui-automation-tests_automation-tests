@@ -2,20 +2,18 @@ import { MobiLocators } from "../bigsmall-locators";
 import { BigSmallConfigs } from "../bigsmall-configs";
 import { SmokeBases } from "sc-automation-core";
 
-let extConfigs = { ...BigSmallConfigs };
-extConfigs.betBoard = false;
-extConfigs.socketName = "gw";
-
 class SedieSmokeSpec extends SmokeBases.MobiGameBase {
   /**
    *
    */
   constructor() {
+    BigSmallConfigs.betBoard = false;
+    BigSmallConfigs.socketName = "gw";
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: extConfigs,
+      gameConfiguration: BigSmallConfigs,
       locators: MobiLocators,
       waitBetTimeout: 5000,
-      placeBetChoices: extConfigs.choices,
+      placeBetChoices: BigSmallConfigs.choices,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project.includes("l2") ? 50 : 10
     };
