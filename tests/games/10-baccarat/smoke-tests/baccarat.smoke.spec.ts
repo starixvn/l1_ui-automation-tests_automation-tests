@@ -7,6 +7,7 @@ class BaccaratSmokeSpec extends SmokeBases.TableGameBase {
    *
    */
   constructor() {
+    BaccaratConfigs.hedgeBetGroups = [["big", "small"]]
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: [BaccaratConfigs.choices[3]],
       gameConfiguration: BaccaratConfigs,

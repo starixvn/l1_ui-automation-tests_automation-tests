@@ -1,4 +1,4 @@
-import { L1MobiDirectLocators, L2MobiDirectLocators, MobiDirectLocatorsL1, MobiDirectLocatorsL2 } from '../baccarat-locators';
+import { L1MobiDirectLocators, L2MobiDirectLocators} from '../baccarat-locators';
 import { SmokeBases } from "sc-automation-core";
 import { BaccaratConfigs } from "../baccarat-configs";
 
