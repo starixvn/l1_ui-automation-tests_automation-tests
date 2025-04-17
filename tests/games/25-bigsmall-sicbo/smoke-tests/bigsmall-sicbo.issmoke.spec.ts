@@ -2,7 +2,7 @@ import { L1IsLocators,L2IsLocators  } from "../bigsmall-sicbo-locators";
 import { BigSmallSicBoConfigs,Isconfigs } from "../bigsmall-sicbo-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SedieSmokeSpec extends SmokeBases.ISGameBase {
+class SicBoSmokeSpec extends SmokeBases.ISGameBase {
   /**
    *
    */
@@ -19,6 +19,7 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
 
     super(smokeOptions);
   }
+  
 }
 
-new SedieSmokeSpec().start();
+new SicBoSmokeSpec().start();

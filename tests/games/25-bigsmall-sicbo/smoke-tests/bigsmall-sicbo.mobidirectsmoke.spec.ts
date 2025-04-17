@@ -24,8 +24,7 @@ class BigSmallSicboSmokeSpec extends SmokeBases.MiniGameBase {
   protected gameGuideTests(): void {
   }
 
-  protected ticketHistoryTests(): void {
-      
+  protected ticketHistoryTests(): void {  
   }
 
 

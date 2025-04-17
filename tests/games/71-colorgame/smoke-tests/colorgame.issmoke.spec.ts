@@ -54,13 +54,8 @@ class ColorGameSmokeSpec extends SmokeBases.ISGameBase {
       `Smoke Tests ${this.options.gameConfiguration.name}`,
       async () => {
         await this.game.click(this.options.locators.gameIcon);
-        await this.game.waitUntilGameUiLoad();
-        await this.game.waitForTimeout(3000);
-        await this.game.page
-          .frameLocator("iframe")
-          .first()
-          .locator("#GameCanvas")
-          .scrollIntoViewIfNeeded();
+        await this.game.waitUntilGameUiLoad(2)
+        await this.game.page.addStyleTag({content: `div.content li {display: none !important;}`,});
       }
     );
   }
