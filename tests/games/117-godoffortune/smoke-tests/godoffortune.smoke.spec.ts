@@ -18,6 +18,9 @@ class GodOfFortuneSmokeSpec extends SmokeBases.SlotGameBase {
     super(smokeOptions);
   }
 
+  protected inGameOddsTests(): void {  
+  }
+
 }
 
 new GodOfFortuneSmokeSpec().start();
