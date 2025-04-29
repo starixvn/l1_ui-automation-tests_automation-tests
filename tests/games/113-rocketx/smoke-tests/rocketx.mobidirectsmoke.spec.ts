@@ -1,5 +1,5 @@
 import { L1MobiDirectLocators, L2MobiDirectLocators } from "../rocketx-locators";
-import { RocketXConfigs } from "../rocketx-configs";
+import { rocketXConfigs } from "../rocketx-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 
 class RocketXSmokeSpec extends SmokeBases.CrashGameBase {
@@ -8,7 +8,7 @@ class RocketXSmokeSpec extends SmokeBases.CrashGameBase {
    */
   constructor() {
     const smokeOptions: SmokeBases.IBaseOptions = {
-      gameConfiguration: RocketXConfigs,
+      gameConfiguration: rocketXConfigs,
       locators: process.env.npm_config_project?.includes("l2") ? L2MobiDirectLocators : L1MobiDirectLocators,
       waitBetTimeout: 9000,
       placeBetChoices: process.env  .npm_config_project?.includes("l2") ? ["l2key0","l2key1"] : ["l1key0", "l1key1"],

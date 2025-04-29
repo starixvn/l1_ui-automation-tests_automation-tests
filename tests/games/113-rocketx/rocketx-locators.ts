@@ -42,3 +42,29 @@ export const L2MobiDirectLocators = [
   new Components.ImageLocator("imgControlAreal2creditmodirect", 75, 315, 160, 222),
 ];
 
+
+export const rocketxLocators = [
+  new ImageLocator("placeBetChoice", 375, 500, 200, 80),
+  new ImageLocator("btnCashOut",  375, 500, 200, 80),
+  new ImageLocator("hamburgerMenu", 35, 115, 25,25),
+  new ImageLocator("historyMenu", 36, 308, 20,20),
+  new ImageLocator("historyPopup", 584, 80, 110, 30),
+  new ImageLocator("imgControlAreal1", 16, 460, 1250, 220),
+  new ImageLocator("imgControlAreal2", 16, 460, 1250, 220),
+  new ImageLocator("btnPlaceBetBetAccepted", 375, 500, 200, 80),
+  new ImageLocator("btnPlaceBet",375, 500, 200, 80),
+  new ImageLocator("guideMenu", 35, 371, 20, 20),
+  new ImageLocator("outside", 5, 5, 5, 5),
+  new ImageLocator("guide-1", 150, 72, 976, 580),
+  new ImageLocator("guide-2", 150, 72, 976, 580),
+  new ImageLocator("guide-3", 150, 72, 976, 580),
+  new ImageLocator("guide-4", 150, 72, 976, 580),
+  new ImageLocator("guide-5", 150, 72, 976, 580),
+  new ImageLocator("guide-6", 150, 72, 976, 580),
+  new ImageLocator("guide-7", 150, 72, 976, 580),
+  new ImageLocator("guide-8", 150, 72, 976, 580),
+  new ImageLocator("roundId", 108, 58, 75, 30),
+
+];
+
+
