@@ -23,8 +23,8 @@ export const L1MobiDirectLocators = [
 ];
 
 export const L2MobiDirectLocators = [
-  new Components.ImageLocator("l1key0Choice", 273, 328, 110, 30),
-  new Components.ImageLocator("l1key1Choice", 273, 328, 110, 30),
+  new Components.ImageLocator("l2key0Choice", 273, 328, 110, 30),
+  new Components.ImageLocator("l2key1Choice", 273, 328, 110, 30),
   new Components.ImageLocator("hamburgerMenu", 95, 127, 0, 0),
   new Components.ImageLocator("historyMenu", 93, 230, 0, 0),
   new Components.ImageLocator("guideMenu", 93, 258, 0, 0),

@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const FootballCointossConfigs: Components.GameConfiguration = {
   id: 93,
-  name: "FootballCointoss",
+  name: "footballcointoss",
   durations: {
     wholeRound: 61 * 1000,
     placingBets: 50 * 1000,
