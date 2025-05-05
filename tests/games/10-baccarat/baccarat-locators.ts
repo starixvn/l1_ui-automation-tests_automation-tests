@@ -73,11 +73,11 @@ export const MobiLocators = {
   ];
   export const L2MobiDirectLocators = [
     new Components.ImageLocator("dealer", 213, 200, 81, 70),
-    new Components.ImageLocator("l2playerChoice", 91, 291, 95, 25),
-    new Components.ImageLocator("l2bankerChoice", 317, 293, 85, 24),
+    new Components.ImageLocator("l2playerChoice", 118, 315, 70, 18),
+    new Components.ImageLocator("l2bankerChoice", 311, 315, 70, 18),
     new Components.ImageLocator("bigChoice", 73, 207, 37, 23),
     new Components.ImageLocator("smallChoice", 394, 207, 37, 23),
-    new Components.ImageLocator("hamburgerMenu", 80, 81, 41, 31),
+    new Components.ImageLocator("hamburgerMenu", 111, 137, 0, 0),
     new Components.ImageLocator("historyMenu", 85, 193, 0, 0),
     new Components.ImageLocator("historyPopup", 206, 87, 110, 20),
     new Components.ImageLocator("errorMessage", 133, 340, 250, 15),
