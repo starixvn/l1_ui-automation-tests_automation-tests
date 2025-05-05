@@ -25,7 +25,7 @@ class ISSmokeSpec extends SmokeBases.ISGameBase {
     Components.test(`Smoke Tests ${this.options.gameConfiguration.name}`, async () => {
       await this.game.click(this.options.locators.gameIcon)
       await this.game.waitUntilGameUiLoad(2)
-      await this.game.page.addStyleTag({content: `div.content [class*="live"] {display: none !important;}`})
+      await this.game.page.addStyleTag({content: `div.content [class*="live"] {display: none !important;}`,})
   });
   }
 
