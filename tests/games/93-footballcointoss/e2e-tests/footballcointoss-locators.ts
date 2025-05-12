@@ -24,7 +24,7 @@ export const extFootballCointossLocators = [
   new Components.ImageLocator("msgMaxbetLimitl1", 488, 368, 350, 30),
   new Components.ImageLocator("msgMaxbetLimitl2", 488, 368, 350, 30),
   new Components.ImageLocator("icoHistory", 328, 347, 37, 30),
-  new Components.ImageLocator("icoGuide", 890, 442, 32, 34),
+  new Components.ImageLocator("icoGuide", 905, 460, 0, 0),
   new Components.ImageLocator("btnFirstChip", 453, 501, 64, 24),
   new Components.ImageLocator("lblRoundIdOnTable",600, 422, 70, 18),
   new Components.ImageLocator("locHistoryBetDate", 225, 195, 104, 29),
