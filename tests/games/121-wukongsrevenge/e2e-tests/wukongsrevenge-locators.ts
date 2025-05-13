@@ -19,13 +19,10 @@ const mnuHamburgerExpandSoundOn = {x: 29, y:88, w:69};
 const mnuHamburgerExpandSoundOff = {x: 29, y:88, w:69};
 const icoGuide = {x: 45, y:522, w: 42, h:42};
 const popGameGuide = {x: 555, y: 52, w: 177, h: 40}
-
-
-
-
-
-
-
+const guideMenu = new Components.ImageLocator("guideMenu",56, 492, 40, 40 );
+const hamburgerMenu = new Components.ImageLocator("hamburgerMenu", 45, 62, 55, 55);
+WukongsRevengeLocators.push(guideMenu);
+WukongsRevengeLocators.push(hamburgerMenu);
 
 WukongsRevengeLocators.forEach((item, i)=> 
     { 
