@@ -199,7 +199,7 @@ export const wukongsrevengeConfigs: Components.GameConfiguration = {
     local3: "222274",
     sit: "supertestsaba66",
     uat: "IT57Test789",
-    prod: "supertestte120201004",
+    l1prod: "supertestte120201006",
     l2uat: "TestSep2745",
     l2prod: "VNtest046",
   },
