@@ -201,7 +201,7 @@ export const wukongsrevengeConfigs: Components.GameConfiguration = {
     uat: "IT57Test789",
     l1prod: "supertestte120201006",
     l2uat: "TestSep2745",
-    l2prod: "VNtest046",
+    l2prod: "QCTest22082304",
   },
   productId: { l1: "1675", l2: 3867 },
 };
