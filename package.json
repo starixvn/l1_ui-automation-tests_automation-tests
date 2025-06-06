@@ -31,7 +31,7 @@
     "google-spreadsheet": "^4.1.1",
     "prettier": "^3.2.5",
     "prom-client": "^15.1.3",
-    "sc-automation-core": "1.73.0",
+    "sc-automation-core": "1.73.1",
     "undici": "^7.3.0"
   },
   "devDependencies": {
