@@ -18,7 +18,7 @@ const cfgGameNames = {
     "Xóc Đĩa VIP",
     "Tên Lửa X",
     "SABA.games",
-    "Bóng Xoáy",
+    "Bóng Xoáy X",
     "Sảnh SABA.club",
     "Sảnh SABA.mobi",
     "SABA Keno",
@@ -37,7 +37,7 @@ const cfgGameNames = {
 
   l2: [
     "Tên Lửa X",
-    "Bóng Xoáy",
+    "Bóng Xoáy X",
     "Sảnh Vgaming",
     "Vgaming",
     "Vgaming Mobi",

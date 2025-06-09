@@ -49,16 +49,16 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
         locator: string,
         defaultValue: string = ""
       ) => {
-        if(process.env.npm_config_project === "l2"){
-          return (
-            (await this.game.page
-              .locator("#webview")
-              .contentFrame()
-              .locator(locator)
-              .textContent()) ?? defaultValue
-          )
-        }
-        else{
+        // if(process.env.npm_config_project === "l2"){
+        //   return (
+        //     (await this.game.page
+        //       .locator("#webview")
+        //       .contentFrame()
+        //       .locator(locator)
+        //       .textContent()) ?? defaultValue
+        //   )
+        // }
+        // else{
           return (
             (await this.game.page
               .locator("#microsite")
@@ -68,7 +68,7 @@ class coinminingSmokeSpec extends SmokeBases.MiniGameBase {
               .locator(locator)
               .textContent()) ?? defaultValue
           )
-        }
+        // }
         
       };
 
