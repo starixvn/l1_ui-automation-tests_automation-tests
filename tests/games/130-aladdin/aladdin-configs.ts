@@ -207,6 +207,7 @@ export const AdminDataSet_local = {
   l2operatorId: "ONEworksVGCash",
   botRatio: "1",
   expectBotRatio: "10 bot(s)",
+  l1maxWinPerRound: 2000,
   mornitorlocator: `//*/td[text()='Aladdin']//following::a[1]`,
   betBoard: false,
   l1odds: {
@@ -274,6 +275,20 @@ export const AdminDataSet_local = {
       "#Item-9": 0,
       "#Item-10": 1,
     },
+    Settle_MaxWin: {
+      "#Item-0": 0,
+      "#Item-1": 0,
+      "#Item-2": 0,
+      "#Item-3": 0,
+      "#Item-4": 2,
+      "#Item-5": 0,
+      "#Item-6": 6,
+      "#Item-7": 8,
+      "#Item-8": 10,
+      "#Item-9": 0,
+      "#Item-10": 4,
+      "//div[@class='board-row'][11]/div[@class='div-multipler'][4]/input[@class='input-multiplier']": 200
+    },
     Expect_NoData: {
       totalAmount: 0,
       totalWin: 0,
@@ -308,6 +323,12 @@ export const AdminDataSet_local = {
       errorDescription: null,
     },
     Expect_Multiplier: {
+      totalAmount: 0.2,
+      validBetAmount: 0.2,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_MaxWin: {
       totalAmount: 0.2,
       validBetAmount: 0.2,
       errorCode: "0",
