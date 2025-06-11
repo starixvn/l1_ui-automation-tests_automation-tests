@@ -1,7 +1,6 @@
-import { expect } from "@playwright/test";
 import { AladdinLocators } from "./aladdin-locators";
 import { AladdinConfigs } from "../aladdin-configs";
-import { E2EBases, Components } from "sc-automation-core";
+import { E2EBases } from "sc-automation-core";
 
 class AladdinE2ESpec extends E2EBases.CascadingSlotGameBase {
   /**

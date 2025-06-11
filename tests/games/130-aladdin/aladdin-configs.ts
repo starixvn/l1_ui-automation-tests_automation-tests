@@ -9,7 +9,7 @@ export const AladdinConfigs: Components.GameConfiguration = {
     lockingBet: 0,
     shakeThePlateDuration: 0,
   },
-  choices: ["1", "25"],
+  choices: [],
   maxTimeout: 100 * 1000, // miliseconds,
   odds: {
     symbols: {
@@ -195,7 +195,7 @@ export const AladdinConfigs: Components.GameConfiguration = {
     local: "6767507",
     local1: "6767507",
     local2: "6767507",
-    local3: "5063205",
+    local3: "6767507",
   },
   productId: { l1: "1654", l2: 3846 },
 };

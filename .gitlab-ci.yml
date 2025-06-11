@@ -18,7 +18,8 @@ before_script:
   - npm ci --cache .npm
   - rm -rf allure-results
   - rm -f allure-results.zip
-
+  - npx playwright install
+  
 docker-build:
   image: hub.lumigame.com/base/docker:20.10.7
   tags:
