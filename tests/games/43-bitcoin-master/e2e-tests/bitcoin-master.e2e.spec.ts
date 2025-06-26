@@ -4,6 +4,7 @@ import { BitcoinMasterLocatorsLocators } from "./bitcoin-master-locators";
 import { expect } from "sc-automation-core/lib/expects";
 import  verifyImage from "sc-automation-core/lib/expects/verify-image";
 import { GameEvent } from "sc-automation-core/lib/_shared";
+import { GameGuides } from "sc-automation-core/lib/game-components/guides/guides.spec";
 
 class TexasHoldemPokerE2ESpec extends E2EBases.TableGameBase {
   /**
@@ -54,19 +55,29 @@ class TexasHoldemPokerE2ESpec extends E2EBases.TableGameBase {
       // Assert
       expect(placebetticket.endBet).toBe(bet.amount);
       expect(placebetticket.betChoice).toBe(bet.choice);
-      const settleResult = await this.game.waitForEvent(GameEvent.Settlement)
+      const settleResult = await waitforSettlement(this.game)
       const settledata = {
         roundId: settleResult?.finish?.roundId,
         betwin: bet.amount,
         bet: bet.amount,
     };
-
+    global.settledata = settledata;
     });
+  }
+  protected guideTests(): void {
+    Components.test("Verify game guide", async () => {
+      await this.game.clickLocator("outside", 2000);
+      await this.game.clickLocator("icoHistory", 6000);
+      await verifyImage(this.game, 'imgGameGuide')
+      await this.game.clickLocator("outside", 2000);
+  });
   }
   protected runScenario(): void {
     this.inGameUiTests();
     this.placeBetAndSettleTests();
     this.betHistory.tests();
+    this.guideTests();
+
   }
 }
 

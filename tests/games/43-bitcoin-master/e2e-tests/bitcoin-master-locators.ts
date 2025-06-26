@@ -12,6 +12,15 @@ export const extBitcoinMasterLocators = [
   new ImageLocator("upChoiceBetBoard", 876, 271),
   new ImageLocator("downChoiceBetBoard", 1093, 271),
   new ImageLocator("submitBetBoard", 1082, 556, 30, 30),
+  new ImageLocator("imgGameName", 203, 98, 330, 44),
+  new ImageLocator("icoHistory", 137, 220, 39, 36),
+  new ImageLocator("icoCloseGame", 138, 142, 42, 36),
+  new ImageLocator("icoGameGuide", 138, 297, 39, 34),
+  new ImageLocator("icoStatistic", 135, 552, 43, 38),
+  new ImageLocator("imgStatistic", 311, 152, 369, 129),
+  new ImageLocator("icoStatisticClose", 763, 165, 28, 30),
+  new ImageLocator("imgGameGuide", 150, 72, 976, 580),
+  new ImageLocator("outside", 5, 5, 5, 5),
 ];
 
 export const BitcoinMasterLocatorsLocators = Components.BaseLocator.GameLobbyLocator.concat(extBitcoinMasterLocators)

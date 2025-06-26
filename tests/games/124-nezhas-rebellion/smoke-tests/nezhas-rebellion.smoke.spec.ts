@@ -13,7 +13,7 @@ class NezhasRebellionSmokeSpec extends SmokeBases.SlotGameBase {
       locators: NezhasRebellionLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.01,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 0.04 : 0.01,
       isJackpot: process.env.npm_config_project === "l2" ? true : false,
     };
     super(smokeOptions);

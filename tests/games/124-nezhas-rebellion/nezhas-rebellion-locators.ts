@@ -16,7 +16,7 @@ export const NezhasRebellionLocators = [
   new ImageLocator("historyPopup", 546, 40, 192, 50),
   new ImageLocator("guideMenu", 83, 512, 0, 0),
   new ImageLocator("icoGuideJP", 75, 605, 0, 0),
-  new ImageLocator("stake1", 306, 494, 78, 42),
+  new ImageLocator("stake1", 1, 1, 0, 0),
   new ImageLocator("stake10", 303, 556, 78, 46),
   new ImageLocator("spin", 927, 555, 120, 120),
   new ImageLocator("submitPayline", 532, 612, 210, 55),

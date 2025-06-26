@@ -1,14 +1,15 @@
 import { FootballDiceLocators } from "../footballdice-locators";
 import * as gameconfig from "../FootballDice-configs";
 import { AdminBases } from "sc-automation-core";
+let env = process.env.npm_config_env;
 
-class FootballDiceAdminSpec extends AdminBases.TableTicketDetailGameBase {
+class FootballDiceAdminSpec extends AdminBases.RoundBetDetailGameBase {
   /**
    *
    */
   constructor() {
     const adminOptions: AdminBases.IBaseOptions = {
-      placeBetChoices: [gameconfig.FootballDiceConfigs.choices[2],gameconfig.FootballDiceConfigs.choices[0]],
+      placeBetChoices: ["home"],
       gameConfiguration: gameconfig.FootballDiceConfigs,
       locators: FootballDiceLocators,
       waitBetTimeout: 8000,
@@ -16,13 +17,13 @@ class FootballDiceAdminSpec extends AdminBases.TableTicketDetailGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
       multiPlaceBetChoices: ["draw", "home"],
       Adminconfiguration:
-        gameconfig[`AdminDataSet_` + process.env.npm_config_env],
+        env?.includes("local") ? gameconfig[`AdminDataSet_local`] : gameconfig[`AdminDataSet_` + process.env.npm_config_env],
     };
 
     super(adminOptions);
   }
 
-  protected async fillGameResult(newTab: any ,data: object) {
+  public async fillGameResult(newTab: any ,data: object) {
     for (const [key, value] of Object.entries(data)) {
       await newTab.fill(key, value);
     }

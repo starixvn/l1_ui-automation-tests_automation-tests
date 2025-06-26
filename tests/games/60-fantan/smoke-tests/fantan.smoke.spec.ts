@@ -18,7 +18,8 @@ class FanTanSmokeSpec extends SmokeBases.TableGameBase {
 
     super(smokeOptions);
   }
-  protected override inGameDealerTests(): void {}
+  protected override inGameDealerTests(): void {
+  }
 }
 
 new FanTanSmokeSpec().start();

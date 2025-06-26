@@ -1,27 +1,22 @@
 import { dragonballLocators } from "../dragonball-locators";
 import * as gameconfig from "../dragonball-configs";
 import { AdminBases } from "sc-automation-core";
+let env = process.env.npm_config_env;
 
-class DragonBallAdminSpec extends AdminBases.SlotTicketDetailGameBase {
-  /**
-   *
-   */
+class DragonBallAdminSpec extends AdminBases.SlotBetDetailGameBase {
   constructor() {
     const adminOptions: AdminBases.IBaseOptions = {
-      placeBetChoices: ["1"],
+      placeBetChoices: ["25"],
       gameConfiguration: gameconfig.dragonballConfigs,
       locators: dragonballLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1, 
-      multiPlaceBetChoices: ["1", "2"],
       Adminconfiguration:
-        gameconfig[`AdminDataSet_` + process.env.npm_config_env],
+        env?.includes("local") ? gameconfig[`AdminDataSet_local`] : gameconfig[`AdminDataSet_` + process.env.npm_config_env],
     };
-
     super(adminOptions);
   }
-
 }
 
 new DragonBallAdminSpec().start();

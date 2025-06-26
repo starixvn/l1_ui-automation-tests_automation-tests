@@ -13,7 +13,7 @@ class HappyFishSmokeSpec extends SmokeBases.SlotGameBase {
       locators: HappyFishLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 0.4,
     };
     super(smokeOptions);
   }

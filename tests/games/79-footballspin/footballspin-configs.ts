@@ -70,101 +70,103 @@ export const FootballSpinConfigs: Components.GameConfiguration = {
 
 export const AdminDataSet_local ={
   accountId: 222263,
+  mornitorlocator: "//*[@data-game-name='footballslot']",
+  l1operatorId: "ONEworks1",
+  l2operatorId: "ONEworksVGCash",
   l1datasetRER:{
-    "expect_running": {
+    "Expect_NoData": {
       totalAmount: 0,
       totalWin: 0,
       validBetAmount: 0,
       errorCode: "SB1001",
       errorDescription: "The game round does not exist."
     },
-    "expect_archive": {
-      totalAmount: 0,
-      totalWin: 0,
-      validBetAmount: 0,
-      errorCode: "SB1001",
-      errorDescription: "The game round does not exist."
-    },
-    "expect_win": {
+    "Expect_Win": {
       totalAmount: 1,
       totalWin: 1.96,
       validBetAmount: 1,
       errorCode: "0",
       errorDescription: null
     },
-    "settle_win": {
-      dropDown: {
-      "//*[@id='__next']/div/div[4]/div/select": "10"},
-      button: "//*[@id='__next']/div/div[7]/div/img[1]"
-    },
-    "settle_lose": {
-      dropDown: {
-      "//*[@id='__next']/div/div[4]/div/select": "10"},
-      button: "//*[@id='__next']/div/div[7]/div/img[1]"
-    },
-    "settle_lose_multiple_choices": {
-      dropDown: {
-        "//*[@id='__next']/div/div[4]/div/select": "10"},
-        button: "//*[@id='__next']/div/div[7]/div/img[1]"
-    },
-    "expect_lose": {
+    "Expect_Lose": {
       totalAmount: 1,
       totalWin: 0,
       validBetAmount: 1,
       errorCode: "0",
       errorDescription: null
     },
-    "expect_multiple_choices": {
-      totalAmount: 2,
+  },
+  
+  l1datasetTicket:{
+    "Settle_Win": {
+      "//*[@id='__next']/div/div[4]/div/select": "10"
+    },
+    "Expect_Win": {
+      "//*[@id='game-ticket']/table[1]/tbody/tr/td[4]": "ResultBig.png",
+      "//*[@id='game-ticket']/table[1]/thead": "Header.png",
+      "//*[@id='game-ticket']/table[2]/thead": "HeaderDetails.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": "WinLossWin.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[2]": "TotalWin.png",
+
+    },
+    "Settle_Lose": {
+      "//*[@id='__next']/div/div[4]/div/select": "5"
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody/tr/td[4]": "ResultSmall.png",
+      "//*[@id='game-ticket']/table[1]/thead": "Header.png",
+      "//*[@id='game-ticket']/table[2]/thead": "HeaderDetails.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": "WinLossLose.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[1]/td[2]": "BetChoiceBig.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[2]": "TotalLose.png"
+    }, 
+  },
+
+  l2datasetRER:{
+    "Expect_NoData": {
+      totalAmount: 0,
       totalWin: 0,
-      validBetAmount: 2,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist."
+    },
+    "Expect_Win": {
+      totalAmount: 10,
+      totalWin: 19.6,
+      validBetAmount: 10,
+      errorCode: "0",
+      errorDescription: null
+    },
+    "Expect_Lose": {
+      totalAmount: 10,
+      totalWin: 0,
+      validBetAmount: 10,
       errorCode: "0",
       errorDescription: null
     },
   },
-  l1datasetTicket:{
-    "settle_win": {
-      "#Result_home_0_": "1",
-      "#Result_home_1_": "2",
-      "#Result_away_0_": "3",
-      "#Result_away_1_": "4"
+  
+  l2datasetTicket:{
+    "Settle_Win": {
+      "//*[@id='__next']/div/div[4]/div/select": "10"
     },
-    "expect_win": { "snapshot":{
-      "//*[@id='game-ticket']/table[1]/tbody/tr/td[3]/div/span/div": "Dice.png",
+    "Expect_Win": {
+      "//*[@id='game-ticket']/table[1]/tbody/tr/td[4]": "ResultBig.png",
       "//*[@id='game-ticket']/table[1]/thead": "Header.png",
       "//*[@id='game-ticket']/table[2]/thead": "HeaderDetails.png",
-      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": "WinLossWin.png",
-      "//*[@id='game-ticket']/table[2]/tbody/tr[1]/td[2]": "BetChoiceAwayWin.png",
-      "//*[@id='game-ticket']/table[2]/tbody/tr[2]": "Total.png"
-    }},
-    "settle_lose": {
-      "#Result_home_0_": "5",
-      "#Result_home_1_": "5",
-      "#Result_away_0_": "6",
-      "#Result_away_1_": "6"
+      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": "l2WinLossWin.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[2]": "l2TotalWin.png",
     },
-    "expect_lose": { "snapshot":{
-      "//*[@id='game-ticket']/table[1]/tbody/tr/td[3]/div/span/div": "Dice2.png",
+    "Settle_Lose": {
+      "//*[@id='__next']/div/div[4]/div/select": "5"
+    },
+    "Expect_Lose": {
+      "//*[@id='game-ticket']/table[1]/tbody/tr/td[4]": "ResultSmall.png",
       "//*[@id='game-ticket']/table[1]/thead": "Header.png",
       "//*[@id='game-ticket']/table[2]/thead": "HeaderDetails.png",
-      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": "WinLossLose.png",
-      "//*[@id='game-ticket']/table[2]/tbody/tr[1]/td[2]": "BetChoiceHome.png",
-      "//*[@id='game-ticket']/table[2]/tbody/tr[2]": "Total.png"
-    }},
-    "TC5_settle": {
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[1]": "//*/div[@class='modal-content']//div[2]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[2]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[3]": "//*/div[@class='modal-content']//div[1]/img",
-      "//*/div[contains(@class,'shake-the-plate_result')]/div[4]": "//*/div[@class='modal-content']//div[1]/img"
-    },
-    "TC5_expect": { "snapshot":{
-      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": `Total2.png`,
-      "//*[@id='game-ticket']/table[2]/tbody/tr[4]": "WinLossLose.png",
-    },
-    "TC6_expect": { "snapshot":{
-      "//*[@id='game-ticket']/table[1]/tbody//td[3]": "1red.png",
-      "//*[@id='game-ticket']/table[1]/tbody//td[4]": "ode1red.png",
-      "//*[@id='game-ticket']/table[2]": "tc6betdetail.png",}
-    },
-  }
-}}
+      "//*[@id='game-ticket']/table[2]/tbody/tr[3]": "l2WinLossLose.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[1]/td[2]": "BetChoiceBig.png",
+      "//*[@id='game-ticket']/table[2]/tbody/tr[2]": "l2TotalLose.png"
+    }, 
+  },
+}
