@@ -10,7 +10,7 @@ export const tapfortuneLocators = [
   new ImageLocator("historyMenu", 31, 310, 25, 25),
   new ImageLocator("historyPopup", 530, 86, 195, 50),
   new ImageLocator("guideMenu",  46, 376, 0, 0),
-  new ImageLocator("stake1", 167, 329, 25, 25),
+  new ImageLocator("stake2", 167, 329, 25, 25),
   new ImageLocator("stake20", 167, 329, 25, 25),
   new ImageLocator("spin", 632, 585, 70, 70),
   new ImageLocator("outside", 10, 10, 10, 10),

@@ -12,7 +12,7 @@ export const MagicForestLocators = [
   new ImageLocator("historyMenu", 50, 416, 50, 50),
   new ImageLocator("historyPopup", 546, 40, 192, 50),
   new ImageLocator("guideMenu", 55, 502, 45, 45),
-  new ImageLocator("stake1", 306, 494, 78, 42),
+  new ImageLocator("stake0.4", 306, 494, 78, 42),
   new ImageLocator("stake10", 303, 556, 78, 46),
   new ImageLocator("spin", 927, 555, 120, 120),
   new ImageLocator("submitPayline", 532, 612, 210, 55),

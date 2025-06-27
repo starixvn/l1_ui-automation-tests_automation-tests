@@ -13,7 +13,7 @@ class tapfortuneSmokeSpec extends SmokeBases.TapGameBase {
       locators: tapfortuneLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 20 : 2,
     };
     super(smokeOptions);
   }
