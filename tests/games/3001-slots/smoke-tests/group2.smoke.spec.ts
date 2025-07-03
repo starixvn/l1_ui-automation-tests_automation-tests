@@ -14,7 +14,7 @@ class Group1SmokeSpec extends SmokeBases.SlotGameBase {
       waitBetTimeout: 8000,
       placeBetChoices: [GroupConfigs.choices[0]],
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 0.1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 0.4,
     };
     super(smokeOptions);
   }
