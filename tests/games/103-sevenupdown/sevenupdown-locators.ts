@@ -25,11 +25,11 @@ export const SevenUpDownLocators = [
 ];
 
 export const L1IsLocators = {
-    p: {x: 342,y: 311},
+    up: {x: 342,y: 311},
     gameIcon: "//div[contains(@style,'Saba_7Up7Down')]"
   }
 
   export const L2IsLocators = {
-    p: {x: 342,y: 311},
+    up: {x: 342,y: 311},
     gameIcon: "//div[contains(@style,'13504_Vgaming_7Up7Down')]"
   }

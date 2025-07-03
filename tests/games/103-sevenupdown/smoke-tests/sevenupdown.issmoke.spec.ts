@@ -22,30 +22,6 @@ class SedieSmokeSpec extends SmokeBases.ISGameBase {
     super(smokeOptions);
   }
 
-  protected openInstantGame(): void {
-    Components.test(`Smoke Tests ${this.options.gameConfiguration.name}`, async () => {
-      await this.game.click(this.options.locators.gameIcon)
-      await this.game.waitUntilGameUiLoad(2)
-      await this.game.page.addStyleTag({content: `div.content li {display: none !important;}`,});
-  });
-  }
-
-  protected placeBetAndSettleTests(): void {
-    Components.test("THEN player able to place a bet and settle", async () => {           // Arrange
-      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-      this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
-
-      // Act
-      await this.game.waitUntilPlaceBet()
-      
-      await this.game.page.frameLocator('iframe').frameLocator('iframe').locator('#GameCanvas').click({clickCount: 6,position:{x: 117,y: 129}})
-      // Act
-      const settledResults = await this.game.waitForSettlement();
-
-      // Assert
-      expect(settledResults.settlementResult).toMatchBetOptions(this.options.gameConfiguration.choices);
-  });
-  }
 
 }
 

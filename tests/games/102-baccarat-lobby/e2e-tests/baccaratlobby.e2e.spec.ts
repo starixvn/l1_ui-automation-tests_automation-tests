@@ -99,7 +99,7 @@ class BaccaratLobbyE2ESpec extends E2EBases.TableGameBase {
         await this.game.clickLocator(`imgGameIcon${listGameAll[index]}`)
         console.log("CLICKKKK");
        // await this.game.waitForTimeout(3000);
-        await this.game.waitUntilGameUiLoad(1);
+        await this.game.waitUntilGameUiLoad();
         await verifyImage(this.game, `imgDealer${listGameAll[index]}`)
         await this.game.clickLocator(`btnHome${listGameAll[index]}`)
         await this.game.waitForTimeout(3000);

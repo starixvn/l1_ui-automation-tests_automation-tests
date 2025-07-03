@@ -38,7 +38,7 @@ class BaccaratLobbySmokeSpec extends SmokeBases.TableGameBase {
   protected joinGameTests(): void {
     Components.test("Verify joining a game from baccarat lobby", async () => {
       await this.game.clickLocator(`firstGame`)
-      await this.game.waitUntilGameUiLoad(1)
+      await this.game.waitUntilGameUiLoad()
       await verifyImage(this.game, `imgDealer`)
     });
   }

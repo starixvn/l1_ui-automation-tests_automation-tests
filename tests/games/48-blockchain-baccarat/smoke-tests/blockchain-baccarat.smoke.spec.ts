@@ -23,7 +23,7 @@ class BlockchainBaccaratSmokeSpec extends SmokeBases.TableGameBase {
   protected openGameTests(): void {
     Components.test("Precondition: Open game from baccarat lobby", async () => {
       await this.game.clickLocator(`gameicon`)
-      await this.game.waitUntilGameUiLoad(1)
+      await this.game.waitUntilGameUiLoad()
       await this.game.waitForTimeout(5000);
       await this.game.clickLocator("closeguide");
     });
