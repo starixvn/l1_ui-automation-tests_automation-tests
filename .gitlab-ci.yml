@@ -115,7 +115,7 @@ smoketest:
     - e2e-test
   script:
     - cd tests
-    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME --trackDownload=$PERFORMANCE --odds==$QUICKBET
+    - npm run test:smoke --env=$ENV --gameid=$GAMEID --project=$STACK_NAME --trackDownload=$PERFORMANCE --odds==$QUICKBET --isHealthcheck=$ISHEALTHCHECK
   after_script:
     - if [ "$UPLOAD_ALLURE_RP" = "true" ]; then
       zip -r allure-results.zip allure-results &&
