@@ -36,12 +36,12 @@ export const MiniSedieLocators = [
 ];
 
 export const L1IsLocators = {
-  odd: {x: 365,y: 311},
+  odd: {x: 180,y: 110},
   gameIcon: "//div[contains(@style,'SBC_SeDie')]"
 }
 
 export const L2IsLocators = {
-  odd: {x: 365,y: 311},
+  odd: {x: 180,y: 110},
   gameIcon: "//div[contains(@style,'Vgaming_MiniSeDie')]"
 }
 

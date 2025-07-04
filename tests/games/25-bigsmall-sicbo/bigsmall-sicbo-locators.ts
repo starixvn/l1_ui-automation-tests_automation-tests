@@ -43,11 +43,11 @@ export const MobiDirectLocators = [
 
 
 export const L1IsLocators = {
-  big: {x: 313,y: 311},
+  big: {x: 180,y: 100},
   gameIcon: "//div[contains(@style,'Saba_SicBo')]"
 }
 
 export const L2IsLocators = {
-  big: {x: 313,y: 311},
+  big: {x: 180,y: 100},
   gameIcon: "//div[contains(@style,'3821_Vgaming_SicBo')]"
 }

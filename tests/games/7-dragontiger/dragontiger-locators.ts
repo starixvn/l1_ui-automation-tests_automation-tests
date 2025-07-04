@@ -32,12 +32,12 @@ export const DragonTigerLocators = [
 
 
 export const L1IsLocators = {
-  dragon: {x: 365,y: 311},
+  dragon: {x: 160,y: 170},
   gameIcon: "//div[contains(@style,'SBC_DragonTiger')]"
 }
 
 export const L2IsLocators = {
-  dragon: {x: 365,y: 311},
+  dragon: {x: 160,y: 170},
   gameIcon: "//div[contains(@style,'3808_Vgaming_Dragontiger_')]"
 }
 

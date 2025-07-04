@@ -1,4 +1,4 @@
-import { IsLocators } from "../bigsmall-locators";
+import { L1IsLocators } from "../bigsmall-locators";
 import { BigSmallConfigs,Isconfigs } from "../bigsmall-configs";
 import { SmokeBases } from "sc-automation-core";
 
@@ -11,7 +11,7 @@ class BigSmallSmokeSpec extends SmokeBases.ISGameBase {
     BigSmallConfigs.betBoard = false;
     const smokeOptions: SmokeBases.IBaseOptions = {
       gameConfiguration: BigSmallConfigs,
-      locators: IsLocators,
+      locators: L1IsLocators,
       waitBetTimeout: 5000,
       placeBetChoices: ["big"],
       snapshotFolderPath: __filename,
