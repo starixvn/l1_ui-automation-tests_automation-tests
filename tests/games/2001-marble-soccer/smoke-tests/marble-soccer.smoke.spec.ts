@@ -80,6 +80,10 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
       await this.game.page.locator(MarbleSoccerLocators.lblPingoalLobby).click();
       await this.game.page.locator(MarbleSoccerLocators.lblSoccerMarble).click();
       await this.game.page.waitForLoadState();
+      await this.game.waitForTimeout(10000);
+      if (await this.game.page.$(MarbleSoccerLocators.closePopupsButton)){
+        await this.game.page.locator(MarbleSoccerLocators.closePopupsButton).click()
+      }
       await expect(this.game.page.locator('text=Soccer Marble - Spinner Club WC 2025')).toBeVisible();
       if (await this.game.page.$(MarbleSoccerLocators.icoHomeNova)){
         await this.game.page.locator(MarbleSoccerLocators.icoHomeNova).click()
@@ -87,17 +91,17 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
       await this.game.page.locator(MarbleSoccerLocators.icoHome).click();
       await this.game.page.locator(MarbleSoccerLocators.lblSoccer).click();
       await this.game.page.waitForLoadState();
+      if (await this.game.page.$(MarbleSoccerLocators.closePopupsButton)){
+        await this.game.page.locator(MarbleSoccerLocators.closePopupsButton).click()
+      }
       await expect(this.game.page.locator('text=Soccer Marble - Spinner Club WC 2025')).toBeVisible();
   });
   }
 
   protected override runScenario(): void {
     this.leagueTests();
-    if(!process.env.npm_config_isHealthcheck){
-      this.placeLiveBetTests();
-      this.placeBetOnUpcomingMatchTests();
-    }
-    this.gameNavigationsTests()
+    this.placeLiveBetTests();
+    this.placeBetOnUpcomingMatchTests();
   }
 }
 

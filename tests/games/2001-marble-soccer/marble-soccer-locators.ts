@@ -1,5 +1,5 @@
 export const MarbleSoccerLocators = {
-  closePopupsButton: `//*[contains(@id, "popup")]//*[contains(@class, "btn--clear")]`,
+  closePopupsButton: `//*[contains(@class, "c-modal c-modal--tw-promo")]//*[contains(@class, "--clear")]`,
   placeBetButtonRunningMatch: `(//*[contains(@class, "is-open")]/*[contains(@class, "in-play")][1]//*[contains(@data-quickbet-open, "false")])`,
   placeBetButtonUpcomingMatch1: `(//*[contains(@class, "is-open")]/*[contains(@class, "in-play")][2]//*[contains(@data-quickbet-open, "false")])`,
   placeBetButtonUpcomingMatch2: `(//*[contains(@class, "is-open")]/*[contains(@class, "in-play")][3]//*[contains(@data-quickbet-open, "false")])`,
