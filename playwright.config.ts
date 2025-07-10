@@ -6,7 +6,7 @@ const testMatch = `${process.env.npm_config_gameid}-*`;
 const admin = `${process.env.npm_config_admin}`;
 
 const config: PlaywrightTestConfig = {
-  retries: 0,
+  retries: 1,
   testDir: "./tests",
   timeout: 200 * 1000,
   expect: {

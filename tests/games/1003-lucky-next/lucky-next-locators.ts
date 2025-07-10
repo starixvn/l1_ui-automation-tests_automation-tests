@@ -1,5 +1,5 @@
 export const LuckyNextLocators = {
-  lobbyGameIcon: "#icon-luckynext1",
+  lobbyGameIcon: "//img[@alt='icon-luckynext1']",
   lobbyTimmer: "//*[@id='icon-luckynext1']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-luckynext1']/div/div[2]/div[2]",
   inGameUI: [

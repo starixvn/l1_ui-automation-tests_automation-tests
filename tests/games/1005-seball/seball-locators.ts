@@ -1,5 +1,5 @@
 export const seballLocators = {
-  lobbyGameIcon: "#icon-seball1",
+  lobbyGameIcon: "//img[@alt='icon-seball1']",
   lobbyTimmer: "//*[@id='icon-seball1']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-seball1']/div/div[2]/div[2]",
   inGameUI: [

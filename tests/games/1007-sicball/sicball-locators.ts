@@ -1,5 +1,5 @@
 export const sicballLocators = {
-  lobbyGameIcon: "#icon-sicball",
+  lobbyGameIcon: "//img[@alt='icon-sicball']",
   lobbyTimmer: "//*[@id='icon-sicball']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-sicball']/div/div[2]/div[2]",
   inGameUI: ["#img-game-name", "#icon-list-game", "#icon-menu"],

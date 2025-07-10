@@ -1,5 +1,5 @@
 export const BacNumbersLocators = {
-  lobbyGameIcon: "#icon-bacball2",
+  lobbyGameIcon: "//img[@alt='icon-bacball2']",
   lobbyTimmer: "//*[@id='icon-bacball2']/div/div[2]/div[1]",
   lobbyStatistic: "//*[@id='icon-bacball2']/div/div[2]/div[2]",
   inGameUI: [
