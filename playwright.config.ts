@@ -112,6 +112,13 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
+      name: "Smoke_Health_Check",
+      testMatch: `**/${testMatch}/smoke-tests/*.healthcheck.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+    {
       name: "admin",
       testMatch: `**/${testMatch}/admin-tests/*${admin}.spec.ts`,
       use: {
