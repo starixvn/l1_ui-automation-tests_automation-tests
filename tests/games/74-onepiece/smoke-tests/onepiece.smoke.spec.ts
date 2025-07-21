@@ -14,7 +14,7 @@ class OnePieceSmokeSpec extends SmokeBases.SlotGameBase {
       locators: OnePieceLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 0.4,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 0.4,
       isJackpot : process.env.npm_config_project === "l2" ? true : false,
     };
     super(smokeOptions);

@@ -13,7 +13,7 @@ class SummerHeatSmokeSpec extends SmokeBases.SlotGameBase {
       locators: SummerHeatLocators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 0.04 : 0.01,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 0.01,
       isJackpot: process.env.npm_config_project === "l2" ? true : false,
     };
     super(smokeOptions);

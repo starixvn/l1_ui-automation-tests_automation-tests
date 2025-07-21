@@ -13,7 +13,7 @@ class WayToGoalSmokeSpec extends SmokeBases.SlotGameBase {
       locators: WayToGoalLocators,
       waitBetTimeout: 8000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 0.4,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 0.4,
     };
     super(smokeOptions);
   }

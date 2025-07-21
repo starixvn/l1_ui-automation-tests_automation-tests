@@ -4,8 +4,8 @@ const ImageLocator = Components.ImageLocator;
 export const tapfortuneLocators = [
   // new ImageLocator("choiceMenu", 273, 600, 100, 50),
   new ImageLocator("stakeMenu", 273, 600, 100, 50),
-  new ImageLocator("imgStakeLevell1", 105, 326, 435, 250),
-  new ImageLocator("imgStakeLevell2", 105, 326, 435, 250),
+  new ImageLocator("imgStakeLevell1", 184, 295, 315, 312),
+  new ImageLocator("imgStakeLevell2", 145, 253, 327, 317),
   new ImageLocator("hamburgerMenu", 32, 115, 25, 25),
   new ImageLocator("historyMenu", 31, 310, 25, 25),
   new ImageLocator("historyPopup", 530, 86, 195, 50),
