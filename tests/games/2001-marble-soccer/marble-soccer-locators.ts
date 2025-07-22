@@ -24,5 +24,8 @@ export const MarbleSoccerLocators = {
   leagueNameMobi: `//div[contains(@class, "comleague_name")]`,
   icoHome: `#ico_home`,
   icoHomeNova: `//*[@class = 'icon icon-home']`,
-  lblSoccer: `(//*[@data-name= 'Bóng đá'])[1]`
+  lblSoccer: `(//*[@data-name= 'Bóng đá'])[1]`,
+  leagueBanner: `//*[@class = 'n-text-name' and text() = 'Soccer Marble - Spinner Club WC 2025']`,
+  btnClosepopup: `//*[@id='popupPanel']//*[contains(@class, 'icon--clear')]`,
+  checkboxDonotShow: `//*[@id='popupPanel']//*[@class='c-icon c-icon--checkbox']`,
 }; 

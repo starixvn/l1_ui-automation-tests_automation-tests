@@ -24,8 +24,15 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
 
   protected leagueTests(): void {
     Components.test('Verify league name', async () => {
+      if (await this.game.page.$(MarbleSoccerLocators.btnClosepopup)){
+        await this.game.page.locator(MarbleSoccerLocators.checkboxDonotShow).click();
+        await this.game.page.locator(MarbleSoccerLocators.btnClosepopup).click()
+      }
       await this.game.page.locator(MarbleSoccerLocators.sabaPingoalMenu).click();
       await this.game.page.locator(MarbleSoccerLocators.soccerMarbleLeftMenu).click();
+      await this.game.page.waitForLoadState();
+      await this.game.waitForTimeout(10000);
+      await this.game.page.locator(MarbleSoccerLocators.leagueBanner).click();
       await expect(this.game.page.locator(MarbleSoccerLocators.leagueName)).toHaveText('Soccer Marble - Spinner Club WC 2025');
     });
   }
@@ -144,6 +151,7 @@ const loginPROD = async (page: Page, accountId: string, pwd: string, langCode: s
           await page.fill(PRODLocator.usernameInput, accountId);
           await page.fill(PRODLocator.passwordInput, pwd);
           await page.click("//div[@class='login-form']//a[@class='btn btn--secondary']");
+          await page.waitForTimeout(3000);
           if (await page.$("//div[@class='login-form']//a[@class='btn btn--secondary']")){
             await page.locator("//div[@class='login-form']//a[@class='btn btn--secondary']").click()
           }
