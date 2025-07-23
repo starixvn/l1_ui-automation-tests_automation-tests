@@ -157,6 +157,14 @@ const config: PlaywrightTestConfig = {
       },
       testMatch: /.*\.setup\.ts/,
     },
+    {
+      name: "Quick_Smoke",
+      testMatch: `**/quicksmoke/${process.env.npm_config_gameid}-*/*.smoke.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+        storageState: `.auth/user.json`,
+      },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
