@@ -9,6 +9,9 @@ const config: PlaywrightTestConfig = {
   retries: 0,
   testDir: "./tests",
   timeout: 200 * 1000,
+  // Configure snapshot path template to remove platform suffix
+  snapshotPathTemplate:
+    "{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}{ext}",
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {

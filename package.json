@@ -38,7 +38,7 @@
     "undici": "^7.3.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.49.0",
+    "@playwright/test": "1.54.0",
     "@types/node": "^22.13.4",
     "csv-stringify": "^6.5.0",
     "msgpack-lite": "^0.1.26",
