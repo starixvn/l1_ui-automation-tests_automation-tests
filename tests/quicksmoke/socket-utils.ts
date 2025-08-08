@@ -7,8 +7,8 @@ import { Credentials, GameConfig } from "./types";
 const DEFAULT_TIMEOUT = {
   CREDENTIALS: 30000,
   HANDSHAKE: 20000,
-  CONNECTION: 15000,
-  AUTH: 15000,
+  CONNECTION: 45000,
+  AUTH: 30000,
   BETTING: 5000,
   SOCKET_CLOSE: 2000,
 } as const;
@@ -62,7 +62,7 @@ export const setupCredentialCapture = (
       try {
         const payload = frame.payload;
         let decodedData;
-
+        // console.log("payload", payload);
         if (typeof payload === "string") {
           if (payload.startsWith("0")) {
             decodedData = JSON.parse(payload.slice(1));
@@ -108,10 +108,10 @@ const isPfEvent = (data: any): boolean => {
   const result =
     data.type === 2 && data.data?.[1]?.pf && data.data[1].pf.roundId;
   if (data.type === 2 && data.data?.[0]) {
-    console.log(
-      `Message received: ${data.data[0]}, data:`,
-      JSON.stringify(data.data[1])
-    );
+    // console.log(
+    //   `Message received: ${data.data[0]}, data:`,
+    //   JSON.stringify(data.data[1])
+    // );
   }
   return result;
 };
@@ -356,14 +356,12 @@ async function executeGameFlow(
 
     // Step 7: For crash games, wait for pf event to get roundId
     if (gameType === "crash") {
-      console.log(`${gameName}: Waiting for pf event to get roundId...`);
       const pfEvent = await waitForResponse(
         socket,
         isPfEvent,
         45000 // 45 seconds timeout for crash games pf event
       );
       roundId = pfEvent.data?.[1]?.pf?.roundId;
-      console.log(`${gameName}: Received pf event, roundId: ${roundId}`);
       if (!roundId) {
         throw new Error(`${gameName} failed to get roundId from pf event`);
       }
@@ -533,10 +531,6 @@ async function attemptBetting(
   gameType: GameType,
   roundId?: number
 ): Promise<boolean> {
-  console.log(
-    `${gameName}: Starting betting attempts (gameType: ${gameType}, roundId: ${roundId})`
-  );
-
   let extractedRoundId = roundId; // For card games, will be extracted from deal response
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
@@ -550,14 +544,9 @@ async function attemptBetting(
         extractedRoundId,
         gameName
       );
-      console.log(
-        `${gameName}: Attempt ${attempt}, sending bet:`,
-        JSON.stringify(betData)
-      );
 
       // Wait 3 seconds before sending bet message for crash games
       if (gameType === "crash") {
-        console.log(`${gameName}: Waiting 3 seconds before sending bet...`);
         await new Promise((resolve) => setTimeout(resolve, 3000));
       }
 
@@ -568,10 +557,8 @@ async function attemptBetting(
 
       // Special handling for tap games
       if (gameType === "tap") {
-        console.log(`${gameName}: Waiting 2 second before sending cashOut...`);
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        console.log(`${gameName}: Sending cashOut message...`);
         await sendMessage(
           socket,
           createMessage(2, ["cashOut", {}], gameConfig.namespace, true)
@@ -580,85 +567,41 @@ async function attemptBetting(
 
       // Special handling for card games
       if (gameType === "card") {
-        console.log(`${gameName}: Waiting 500ms after sending deal message...`);
+        await new Promise((resolve) => setTimeout(resolve, 500));
         await new Promise((resolve) => setTimeout(resolve, 500));
 
-        console.log(`${gameName}: Waiting 500ms for messages with roundId...`);
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        const dealResponse = await waitForResponse(
+          socket,
+          (data) => isCardDealResponse(data, gameName),
+          DEFAULT_TIMEOUT.BETTING
+        );
 
-        // Set up message logging for debugging
-        const messageLogger = (event: MessageEvent) => {
-          try {
-            const data = decodeMessage(event.data);
-            console.log(`${gameName}: Received message:`, JSON.stringify(data));
-          } catch (error) {
-            console.log(`${gameName}: Raw message:`, event.data);
-          }
-        };
+        // Extract roundId from deal response for potential retries
+        extractedRoundId = dealResponse.data?.[1]?.deal?.roundId;
 
-        socket.addEventListener("message", messageLogger);
+        const handData = dealResponse.data?.[1]?.deal?.hands?.[0];
+        if (handData) {
+          const standData = {
+            ...handData,
+            actions: ["stand"],
+            isStand: true,
+          };
 
-        try {
-          console.log(
-            `${gameName}: Waiting for card deal response with roundId...`
-          );
-          const dealResponse = await waitForResponse(
+          // Use the actual game response name from the deal response
+          const gameResponseName = dealResponse.data?.[0] || gameName;
+          await sendMessage(
             socket,
-            (data) => {
-              const hasRoundId = isCardDealResponse(data, gameName);
-              console.log(
-                `${gameName}: Checking for roundId - found: ${hasRoundId}, data:`,
-                JSON.stringify(data)
-              );
-              return hasRoundId;
-            },
-            DEFAULT_TIMEOUT.BETTING
+            createMessage(
+              2,
+              [gameResponseName, { stand: standData }],
+              gameConfig.namespace,
+              true
+            )
           );
-
-          // Extract roundId from deal response for logging and potential retries
-          extractedRoundId = dealResponse.data?.[1]?.deal?.roundId;
-          console.log(
-            `${gameName}: Extracted roundId from deal response: ${extractedRoundId}`
+        } else {
+          throw new Error(
+            `${gameName}: Failed to extract hand data from card deal response`
           );
-          console.log(
-            `${gameName}: Full deal response:`,
-            JSON.stringify(dealResponse)
-          );
-
-          const handData = dealResponse.data?.[1]?.deal?.hands?.[0];
-          if (handData) {
-            console.log(
-              `${gameName}: Extracted hand data:`,
-              JSON.stringify(handData)
-            );
-            console.log(`${gameName}: Sending stand message...`);
-            const standData = {
-              ...handData,
-              actions: ["stand"],
-              isStand: true,
-            };
-
-            // Use the actual game response name from the deal response
-            const gameResponseName = dealResponse.data?.[0] || gameName;
-            console.log(
-              `${gameName}: Using game response name: ${gameResponseName}`
-            );
-            await sendMessage(
-              socket,
-              createMessage(
-                2,
-                [gameResponseName, { stand: standData }],
-                gameConfig.namespace,
-                true
-              )
-            );
-          } else {
-            throw new Error(
-              `${gameName}: Failed to extract hand data from card deal response`
-            );
-          }
-        } finally {
-          socket.removeEventListener("message", messageLogger);
         }
       }
 
@@ -666,11 +609,6 @@ async function attemptBetting(
         socket,
         (data) => isBetResponse(data, gameType),
         DEFAULT_TIMEOUT.BETTING
-      );
-
-      console.log(
-        `${gameName}: Received bet response:`,
-        JSON.stringify(response.data)
       );
 
       const responseData = response.data?.[1];
@@ -685,14 +623,15 @@ async function attemptBetting(
                 ? responseData?.endBet
                 : responseData?.ownBets
       ) {
-        console.log(`${gameName}: Betting successful!`);
         return true;
       }
     } catch (error) {
-      console.log(`${gameName}: Attempt ${attempt} failed:`, error);
+      // Only log if it's the final attempt
+      if (attempt === MAX_RETRIES) {
+        throw error;
+      }
     }
   }
 
-  console.log(`${gameName}: All betting attempts failed`);
-  return false;
+  throw new Error(`${gameName}: All betting attempts failed`);
 }

@@ -159,10 +159,10 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: "Quick_Smoke",
-      testMatch: `**/quicksmoke/${process.env.npm_config_gameid}-*/*.smoke.ts`,
+      testMatch: `**/quicksmoke/all-games.smoke.ts`,
       use: {
         ...devices["Desktop Chrome"],
-        storageState: `.auth/user.json`,
+        // storageState: `.auth/user.json`,
       },
     },
   ],
