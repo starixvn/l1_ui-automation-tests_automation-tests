@@ -36,7 +36,7 @@ function extractSuiteTitle(root) {
       return;
     }
     let nextTitle = currentTitle;
-    if (node.title && node.suites) nextTitle = node.title;
+    if (node.title && (node.suites || node.specs)) nextTitle = node.title;
     if (node.tests) {
       for (const test of node.tests) {
         if (suiteTitle) break;
@@ -61,6 +61,10 @@ function extractSuiteTitle(root) {
 function extractReason(root) {
   const isBeforeAll = (s) =>
     /beforeAll"?\s*hook\s*timeout/i.test(String(s || ""));
+  const isLoginMemberSite = (s) =>
+    /login\s+member\s+site\s+failed/i.test(String(s || ""));
+  const isNetworkOrCert = (s) =>
+    /net::ERR_|ERR_CERT_|ERR_NETWORK/i.test(String(s || ""));
   let reason = "";
   function visit(node) {
     if (!node || reason) return;
@@ -123,6 +127,8 @@ function extractReason(root) {
   visit(root);
   if (isBeforeAll(reason))
     return { icon: "⚠️", reason: "Login Failed Member Site" };
+  if (isLoginMemberSite(reason) || isNetworkOrCert(reason))
+    return { icon: "⚠️", reason: reason || "Failed" };
   return { icon: "❌", reason: reason || "Failed" };
 }
 
@@ -135,10 +141,23 @@ function main() {
   }
   const data = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
   const suiteTitle = extractSuiteTitle(data);
+  // If the suiteTitle still looks like a file path (contains '/' and ends with .spec.ts), try to use the immediate child suite title
+  let finalTitle = suiteTitle;
+  if (/\.spec\.ts$/i.test(finalTitle)) {
+    try {
+      const topSuites = Array.isArray(data.suites) ? data.suites : [];
+      const first = topSuites[0] || {};
+      const child =
+        (Array.isArray(first.suites) ? first.suites[0] : null) || {};
+      if (child && typeof child.title === "string" && child.title.trim()) {
+        finalTitle = child.title.trim();
+      }
+    } catch (_) {}
+  }
   const { icon, reason } = extractReason(data);
   const pipelineUrl = process.env.CI_PIPELINE_URL || "";
   const pipelineId = process.env.CI_PIPELINE_ID || "";
-  const message = `${icon}- ${suiteTitle} - Reason: ${reason} -  Pipeline: ${pipelineUrl} (#${pipelineId})`;
+  const message = `${icon}- ${finalTitle} - Reason: ${reason} -  Pipeline: ${pipelineUrl} (#${pipelineId})`;
   console.log(message);
 }
 
