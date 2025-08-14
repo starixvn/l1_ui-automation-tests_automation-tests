@@ -190,3 +190,33 @@ notify-smoketest-failure:
       TARGET_URL="${SKYNEX_BASE_URL}?token=${ENCODED_TOKEN}&message=${ENCODED_MESSAGE}&conversationId=${ENCODED_CONV}"
       echo "Calling Skynex: $TARGET_URL"
       curl -X POST "$TARGET_URL"
+
+  notify-smoketestOther-failure:
+    image: hub.lumigame.com/pentagon-base/automation-tests-game-0
+    stage: notify
+    before_script: []
+    tags:
+      - e2e-test
+    needs:
+      - job: smoketestOther
+        artifacts: true
+    rules:
+      - if: $TRIGGER == "true" && $MODE != "SMOKE" && $MODE != "E2E" && $TEST != "ALLURE"
+        when: on_failure
+      - when: never
+    script:
+      - |
+        node ci/format-smoke-failure.js "$JSON_PATH" > message.txt || true
+        MESSAGE=$(cat message.txt)
+        echo "Using message: $MESSAGE"
+        echo "$MESSAGE"
+        if [ -z "$SKYNEX_BASE_URL" ] || [ -z "$SKYNEX_TOKEN" ] || [ -z "$SKYNEX_CONVERSATION_ID" ]; then
+          echo "Skynex variables are missing; skipping notification."
+          exit 0
+        fi
+        ENCODED_MESSAGE=$(node -e "console.log(encodeURIComponent(process.argv.slice(1).join(' ')))" "$MESSAGE")
+        ENCODED_TOKEN=$(node -e "console.log(encodeURIComponent(process.argv[1]||''))" "$SKYNEX_TOKEN")
+        ENCODED_CONV=$(node -e "console.log(encodeURIComponent(process.argv[1]||''))" "$SKYNEX_CONVERSATION_ID")
+        TARGET_URL="${SKYNEX_BASE_URL}?token=${ENCODED_TOKEN}&message=${ENCODED_MESSAGE}&conversationId=${ENCODED_CONV}"
+        echo "Calling Skynex: $TARGET_URL"
+        curl -X POST "$TARGET_URL"
