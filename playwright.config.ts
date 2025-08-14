@@ -32,7 +32,7 @@ const config: PlaywrightTestConfig = {
         outputFolder: `playwright-report/${process.env.npm_config_gameid}`,
       },
     ],
-    ["list"],
+    ["json",  { outputFile: 'test-results/report.json' }],
     [
       "allure-playwright",
       {
