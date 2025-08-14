@@ -135,7 +135,7 @@ smoketestOther:
       zip -r allure-results.zip allure-results &&
       curl -X POST "${ALLURE_URL}" -H "${HEADER}" -F 'allureResults=@allure-results.zip;type=application/x-zip-compressed';
       fi
-  retry: 2
+  retry: 0
   rules:
     - if: $TRIGGER == "true" && $MODE != "SMOKE" &&  $MODE != "E2E" &&  $TEST != "ALLURE"
       when: always
@@ -189,7 +189,7 @@ notify-smoketest-failure:
       ENCODED_CONV=$(node -e "console.log(encodeURIComponent(process.argv[1]||''))" "$SKYNEX_CONVERSATION_ID")
       TARGET_URL="${SKYNEX_BASE_URL}?token=${ENCODED_TOKEN}&message=${ENCODED_MESSAGE}&conversationId=${ENCODED_CONV}"
       echo "Calling Skynex: $TARGET_URL"
-      curl -X POST "$TARGET_URL"
+      curl -sS -X POST --data "" "$TARGET_URL"
 
 notify-smoketestOther-failure:
   image: hub.lumigame.com/pentagon-base/automation-tests-game-0
@@ -219,4 +219,4 @@ notify-smoketestOther-failure:
       ENCODED_CONV=$(node -e "console.log(encodeURIComponent(process.argv[1]||''))" "$SKYNEX_CONVERSATION_ID")
       TARGET_URL="${SKYNEX_BASE_URL}?token=${ENCODED_TOKEN}&message=${ENCODED_MESSAGE}&conversationId=${ENCODED_CONV}"
       echo "Calling Skynex: $TARGET_URL"
-      curl -X POST "$TARGET_URL"
+      curl -sS -X POST --data "" "$TARGET_URL"
