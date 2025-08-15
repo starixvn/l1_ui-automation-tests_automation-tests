@@ -26,10 +26,25 @@ function stripAnsi(input) {
   return String(input || "").replace(/\x1B\[[0-9;]*m/g, "");
 }
 
-function firstLine(input) {
-  return stripAnsi(String(input || ""))
-    .split("\n")[0]
-    .trim();
+function firstLine(text) {
+  if (!text || typeof text !== "string") return "";
+  return stripAnsi(text).split("\n")[0].trim();
+}
+
+function truncateMessage(message, maxLength = 100) {
+  if (!message || typeof message !== "string") return message;
+  if (message.length <= maxLength) return message;
+
+  // Try to find a good breaking point at a word boundary
+  // This prevents cutting words in the middle for better readability
+  const truncated = message.substring(0, maxLength);
+  const lastSpace = truncated.lastIndexOf(" ");
+
+  if (lastSpace > maxLength * 0.8) {
+    return truncated.substring(0, lastSpace) + "...";
+  }
+
+  return truncated + "...";
 }
 
 function extractSuiteTitle(root) {
@@ -112,9 +127,28 @@ function extractReason(root) {
   // Use spec title if test title is not available
   const finalTitle = testTitle || specTitle;
 
-  // Combine test title with reason
-  const combinedReason =
-    finalTitle && reason ? `${finalTitle}: ${reason}` : reason || "Failed";
+  // Combine test title with reason, avoiding duplication
+  // This prevents cases like "Title: Title" or "Title: Title with more details"
+  let combinedReason;
+  if (finalTitle && reason) {
+    // Check if reason already contains the test title to avoid duplication
+    const normalizedTitle = finalTitle.trim();
+    const normalizedReason = reason.trim();
+
+    // If reason already contains title or vice versa, just use reason
+    // This prevents duplication like "Verify bet choices: Verify bet choices"
+    if (
+      normalizedReason.includes(normalizedTitle) ||
+      normalizedTitle.includes(normalizedReason)
+    ) {
+      combinedReason = reason;
+    } else {
+      // Otherwise combine them for better context
+      combinedReason = `${finalTitle} Reason: ${reason}`;
+    }
+  } else {
+    combinedReason = reason || "Failed";
+  }
 
   // Check for special cases
   if (
@@ -132,36 +166,31 @@ function extractTestReason(test) {
   const result = (test.results && test.results[0]) || {};
   const steps = Array.isArray(result.steps) ? result.steps : [];
 
-  // Try to find step with error first
-  const stepWithError = steps.find((s) => s && s.error && s.title);
-  if (stepWithError) {
-    return firstLine(stepWithError.title);
-  }
-
-  // Try last step if available
-  if (steps.length > 0 && steps[steps.length - 1].title) {
-    return firstLine(steps[steps.length - 1].title);
-  }
-
-  // Collect error candidates
+  // Collect error candidates in priority order
+  // Higher priority items are checked first and will be used if available
   const candidates = [];
 
-  // Check errors array
+  // First priority: Check errors array for meaningful error messages
   if (Array.isArray(result.errors)) {
     for (const e of result.errors) {
       if (e && e.message) {
-        candidates.push(firstLine(e.message).replace(ERROR_PREFIX, ""));
+        const errorMsg = firstLine(e.message).replace(ERROR_PREFIX, "");
+        if (errorMsg && errorMsg.trim()) {
+          candidates.push(truncateMessage(errorMsg));
+        }
       }
     }
   }
 
-  // Check single error
+  // Second priority: Check single error
   if (result.error && result.error.message) {
     const errorMsg = firstLine(result.error.message).replace(ERROR_PREFIX, "");
-    candidates.push(errorMsg);
+    if (errorMsg && errorMsg.trim()) {
+      candidates.push(truncateMessage(errorMsg));
+    }
   }
 
-  // Check stdout for timeout/reason messages
+  // Third priority: Check stdout for timeout/reason messages
   if (Array.isArray(result.stdout)) {
     for (const o of result.stdout) {
       const txt = firstLine(o && o.text);
@@ -171,7 +200,25 @@ function extractTestReason(test) {
     }
   }
 
+  // Fourth priority: Try to find step with error
+  const stepWithError = steps.find((s) => s && s.error && s.title);
+  if (stepWithError && stepWithError.title) {
+    const stepTitle = firstLine(stepWithError.title);
+    if (stepTitle && stepTitle.trim()) {
+      candidates.push(stepTitle);
+    }
+  }
+
+  // Fifth priority: Try last step if available
+  if (steps.length > 0 && steps[steps.length - 1].title) {
+    const lastStepTitle = firstLine(steps[steps.length - 1].title);
+    if (lastStepTitle && lastStepTitle.trim()) {
+      candidates.push(lastStepTitle);
+    }
+  }
+
   // Return first non-beforeAll candidate or fallback
+  // This ensures we get the most relevant error information available
   return (
     candidates.find((c) => c && !BEFORE_ALL_PATTERN.test(c)) ||
     candidates[0] ||
@@ -216,11 +263,11 @@ function main() {
   }
 
   const { icon, reason } = extractReason(data);
-  const pipelineUrl = process.env.CI_PIPELINE_URL || "";
+  const pipelineUrl = process.env.CI_PIPELIFY_URL || "";
 
   const message = pipelineUrl
-    ? `${icon} ${finalTitle} - Reason: ${reason} -  [Link](${pipelineUrl})`
-    : `${icon} ${finalTitle} - Reason: ${reason}`;
+    ? `${icon} ${finalTitle} - Step failure: ${reason} -  [Link](${pipelineUrl})`
+    : `${icon} ${finalTitle} - Step failure: ${reason}`;
 
   console.log(message);
 }
