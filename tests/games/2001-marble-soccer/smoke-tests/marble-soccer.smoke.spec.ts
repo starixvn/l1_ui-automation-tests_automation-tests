@@ -95,6 +95,7 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
       await this.game.page.locator(MarbleSoccerLocators.icoHome).click();
       await this.game.page.locator(MarbleSoccerLocators.lblSoccer).click();
       await this.game.page.waitForLoadState();
+      await this.game.waitForTimeout(10000);
       if (await this.game.page.$(MarbleSoccerLocators.closePopupsButton)) {
         await this.game.page.locator(MarbleSoccerLocators.closePopupsButton).click();
       }
