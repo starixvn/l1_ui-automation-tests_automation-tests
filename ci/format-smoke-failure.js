@@ -263,7 +263,10 @@ function main() {
   }
 
   const { icon, reason } = extractReason(data);
-  const pipelineUrl = process.env.CI_PIPELIFY_URL || "";
+
+  // GitLab CI environment variables for pipeline URL
+  const pipelineUrl =
+    process.env.CI_PIPELINE_URL || process.env.CI_JOB_URL || "";
 
   const message = pipelineUrl
     ? `${icon} ${finalTitle} - Step failure: ${reason} -  [Link](${pipelineUrl})`
