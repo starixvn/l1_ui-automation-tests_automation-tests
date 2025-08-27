@@ -1,10 +1,8 @@
-import { expect } from "@playwright/test";
-import { GameEvent } from "sc-automation-core/lib/_shared";
 import { HappyFarmLocators } from "../happy-farm-locators";
 import { HappyFarmConfigs} from "../happy-farm-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 
-class MahjongWinsSmokeSpec extends SmokeBases.SlotGameBase {
+class HappyFarmSmokeSpec extends SmokeBases.SlotGameBase {
   /**
    *
    */
@@ -25,4 +23,4 @@ class MahjongWinsSmokeSpec extends SmokeBases.SlotGameBase {
   }
 }
 
-new MahjongWinsSmokeSpec().start();
+new HappyFarmSmokeSpec().start();

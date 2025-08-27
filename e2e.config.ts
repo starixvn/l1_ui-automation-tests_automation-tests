@@ -7,6 +7,8 @@ const config: PlaywrightTestConfig = {
   retries: 0,
   testDir: "./tests",
   timeout: 180 * 1000,
+  snapshotPathTemplate:
+  "{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}{ext}",
   expect: {
     timeout: 10 * 1000,
     toMatchSnapshot: {

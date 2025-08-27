@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const WildWestMostWantedConfigs: Components.GameConfiguration = {
   id: 129,
-  name: "WildWestMostWanted",
+  name: "wildwestmostwanted",
   durations: {
     wholeRound: 0,
     placingBets: 0,
