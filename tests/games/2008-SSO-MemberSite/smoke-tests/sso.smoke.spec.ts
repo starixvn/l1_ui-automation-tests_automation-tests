@@ -35,15 +35,22 @@ const cfgGameNames = {
     "Keno Pro Max",
     "Roulette",
     "Christmas X",
+    "Công Chúa Aztec",
     "Ma Đồng Nổi Loạn",
+    "Vui Hội Mexico",
+    "Quán Bar Olympus",
+    "Vua Câu Cá",
+    "Mèo May Mắn",
     "Mùa Hè Nóng Bỏng",
     "Kho Báu Poseidon",
     "Aladdin Và Cây Đèn Thần",
+    "Mạt Chược Phát Tài",
     "Rước Lộc Thần Tài",
     "Tay Súng Cừ Khôi",
     "Nông Trại Vui Vẻ",
     "Kho Báu Ramses",
     "Đảo Thiên Đường",
+    "Chém Hoa Quả",
   ],
 
   l2: [
@@ -67,15 +74,22 @@ const cfgGameNames = {
     "Keno Pro Max",
     "Happy Fish",
     "Christmas X",
+    "Công Chúa Aztec",
+    "Ma Đồng Nổi Loạn",
+    "Vui Hội Mexico",
+    "Quán Bar Olympus",
+    "Vua Câu Cá",
+    "Mèo May Mắn",
+    "Mùa Hè Nóng Bỏng",
+    "Kho Báu Poseidon",
     "Aladdin Và Cây Đèn Thần",
+    "Mạt Chược Phát Tài",
     "Rước Lộc Thần Tài",
     "Tay Súng Cừ Khôi",
     "Nông Trại Vui Vẻ",
-    "Kho Báu Poseidon",
-    "Mùa Hè Nóng Bỏng",
     "Kho Báu Ramses",
-    "Ma Đồng Nổi Loạn",
     "Đảo Thiên Đường",
+    "Chém Hoa Quả",
   ],
 };
 
@@ -108,6 +122,7 @@ const cfgLocator = {
 test(`${projectCode} - Smoke Test Games Locations and navigation on Member Site`, async ({
   browser,
 }) => {
+  test.setTimeout(300 * 1000);
   const locator = projectCode == "SG" ? cfgLocator.l1 : cfgLocator.l2;
   const lstGames = projectCode == "SG" ? cfgGameNames.l1 : cfgGameNames.l2;
   await allure.suite(
