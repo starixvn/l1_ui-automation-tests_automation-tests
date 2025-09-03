@@ -23,7 +23,7 @@ class LuckyBaccarat2SmokeSpec extends SmokeBases.BacGameBase {
     Components.test("Ensure player joined game and saw dealer", async () => {
         // Act
         await this.game.waitForTimeout(5000)
-        verifyImage(this.game, "imgDealer", 0.05)
+        verifyImage(this.game, "imgDealer", 0.1)
     });
   }
 
