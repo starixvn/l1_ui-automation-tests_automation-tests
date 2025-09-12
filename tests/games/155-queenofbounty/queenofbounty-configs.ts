@@ -197,6 +197,7 @@ export const queenofbountyConfigs: Components.GameConfiguration = {
     local2: "6767507",
     local3: "5063205",
     prod: "supertestte120201002",
+    l1prod: "supertestte120201002",
     l2uat: "TestSep2740",
     l2prod: "VNtest040",
   },

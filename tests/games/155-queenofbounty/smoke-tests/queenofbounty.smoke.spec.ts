@@ -2,7 +2,7 @@ import { queenofbountyLocators } from "../queenofbounty-locators";
 import { queenofbountyConfigs } from "../queenofbounty-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 
-class luckynekoSmokeSpec extends SmokeBases.SlotGameBase {
+class queenofbountySmokeSpec extends SmokeBases.SlotGameBase {
   /**
    *
    */
@@ -23,4 +23,4 @@ class luckynekoSmokeSpec extends SmokeBases.SlotGameBase {
   }
 }
 
-new luckynekoSmokeSpec().start();
+new queenofbountySmokeSpec().start();
