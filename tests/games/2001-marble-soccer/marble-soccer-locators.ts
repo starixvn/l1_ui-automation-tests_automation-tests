@@ -28,4 +28,6 @@ export const MarbleSoccerLocators = {
   leagueBanner: `//*[@class = 'n-text-name' and text() = 'Soccer Marble - Spinner Club WC 2025']`,
   btnClosepopup: `//*[@id='popupPanel']//*[contains(@class, 'icon--clear')]`,
   checkboxDonotShow: `//*[@id='popupPanel']//*[@class='c-icon c-icon--checkbox']`,
+  oddsCloseMessage: `//span[@class='c-text' and text()='Tỷ lệ cược tạm thời bị đóng.']`,
+  clearBetButton: `(//span[@class = 'c-text' and text()='Xóa tất cả'])[1]`,
 }; 

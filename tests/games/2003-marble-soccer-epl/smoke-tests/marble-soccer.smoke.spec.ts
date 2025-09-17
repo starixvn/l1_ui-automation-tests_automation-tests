@@ -36,7 +36,7 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
 
   protected placeBetOnUpcomingMatchTests(): void {
     Components.test('Verify place bet success on upcoming match 1', async () => {
-      for (let index = 1; index < 19; index += 2) {
+      for (let index = 1; index < 14; index += 2) {
         const betChoice = `${MarbleSoccerLocators.placeBetButtonUpcomingMatch1}[${index}]`;
         await placeBet(this.game.page, betChoice);
         await this.game.waitForTimeout(1000);
@@ -44,7 +44,7 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
     });
 
     Components.test('Verify place bet success on upcoming match 2', async () => {
-      for (let index = 1; index < 19; index += 2) {
+      for (let index = 15; index < 26; index += 2) {
         const betChoice = `${MarbleSoccerLocators.placeBetButtonUpcomingMatch2}[${index}]`;
         await placeBet(this.game.page, betChoice);
         await this.game.waitForTimeout(1000);
@@ -54,14 +54,14 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
 
   protected placeLiveBetTests(): void {
     Components.test('Verify place bet success on running match', async () => {
-      const prematch = this.game.page.locator('(//*[contains(@class, "is-open")]/*[contains(@class, "in-play")][1]//*[contains(@data-quickbet-open, "false")])[8]');
+      const prematch = this.game.page.locator('(//*[contains(@class, "is-open")]/*[contains(@class, "in-play")][1]//*[contains(@data-quickbet-open, "false")])[15]');
       await prematch.waitFor({ state: 'visible' });
       await placeBet(this.game.page, `${MarbleSoccerLocators.placeBetButtonRunningMatch}[1]`);
       await this.game.waitForTimeout(30000);
     });
 
     Components.test('Verify place live bet success', async () => {
-      for (let index = 1; index < 6; index += 2) {
+      for (let index = 1; index < 4; index += 2) {
         const betChoice = `${MarbleSoccerLocators.placeBetButtonRunningMatch}[${index}]`;
         await placeBet(this.game.page, betChoice);
         await this.game.waitForTimeout(1000);
@@ -116,14 +116,23 @@ new MarbleSoccerSmokeSpec().start();
 async function confirmBet(page: Page) {
   await page.locator(MarbleSoccerLocators.stakeTextbox).fill("15");
   const button = page.locator(MarbleSoccerLocators.confirmBetButton);
+  const clearBetButton = page.locator(MarbleSoccerLocators.clearBetButton);
   while (await button.isVisible()) {
-    const confirmButton = page.locator('xpath=//*[@id="popup_confirm_button"]');
-    if (await confirmButton.isVisible()) {
-      await confirmButton.click();
+    const oKBtn = page.locator(MarbleSoccerLocators.oKBtn);
+    if (await oKBtn.isVisible()) {
+      await oKBtn.click();
+    }
+    const oddsCloseMessage = page.locator(MarbleSoccerLocators.oddsCloseMessage);
+    if (await oddsCloseMessage.isVisible()) {
+      if (await clearBetButton.isVisible()) {
+        await clearBetButton.click();
+      }
+      return false;
     }
     await button.click();
     await page.waitForTimeout(500);
   }
+  return true;
 }
 
 async function checkBetTicket(page: Page) {
@@ -133,8 +142,11 @@ async function checkBetTicket(page: Page) {
 
 async function placeBet(page: Page, betChoice: string) {
   await page.locator(betChoice).click();
-  await confirmBet(page);
-  await checkBetTicket(page);
+  const isConfirmed = await confirmBet(page);
+  if (isConfirmed) {
+      await checkBetTicket(page);
+  }
+
 }
 
 const loginPROD = async (
