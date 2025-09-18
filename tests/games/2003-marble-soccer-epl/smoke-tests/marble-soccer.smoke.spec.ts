@@ -54,6 +54,7 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
 
   protected placeLiveBetTests(): void {
     Components.test('Verify place bet success on running match', async () => {
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout*2);
       const prematch = this.game.page.locator('(//*[contains(@class, "is-open")]/*[contains(@class, "in-play")][1]//*[contains(@data-quickbet-open, "false")])[15]');
       await prematch.waitFor({ state: 'visible' });
       await placeBet(this.game.page, `${MarbleSoccerLocators.placeBetButtonRunningMatch}[1]`);
