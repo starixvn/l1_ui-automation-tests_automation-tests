@@ -1,8 +1,7 @@
-import { vivafiestaLocators } from "../vivafiesta-locators";
 import { vivafiestaConfigs } from "../vivafiesta-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 
-class vivafiestaSmokeSpec extends SmokeBases.SlotGameBase {
+class vivafiestaSmokeSpec extends SmokeBases.PortrailCascadingGameBase {
   /**
    *
    */
@@ -10,7 +9,7 @@ class vivafiestaSmokeSpec extends SmokeBases.SlotGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: [vivafiestaConfigs.choices[0]],
       gameConfiguration: vivafiestaConfigs,
-      locators: vivafiestaLocators,
+      locators: Components.BaseLocator.CascadingSlotLocatorsV3,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.2,
@@ -18,9 +17,6 @@ class vivafiestaSmokeSpec extends SmokeBases.SlotGameBase {
     super(smokeOptions);
   }
 
-  protected betStakeLevelTests(): void {
-    // no test
-  }
 }
 
 new vivafiestaSmokeSpec().start();

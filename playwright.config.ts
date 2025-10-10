@@ -59,7 +59,7 @@ const config: PlaywrightTestConfig = {
       args: [
         "--no-sandbox",
         "--use-angle=gl",
-        "--enable-gpu",
+        "--disable-gpu",
         "--disable-web-security",
         "--ignore-certificate-errors",
         "--ignore-ssl-errors",
@@ -161,7 +161,14 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "setup",
+      name: "Portrail",
+      testMatch: `**/${testMatch}/e2e-tests/*.pt.e2e.spec.ts`,
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+    {
+      name: "setup",  
       use: {
         ...devices["Desktop Chrome"],
         viewport: {

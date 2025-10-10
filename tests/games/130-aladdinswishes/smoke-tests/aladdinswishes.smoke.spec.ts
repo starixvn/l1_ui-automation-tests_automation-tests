@@ -1,8 +1,7 @@
-import { aladdinswishesLocators } from "../aladdinswishes-locators";
 import { aladdinswishesConfigs } from "../aladdinswishes-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
 
-class aladdinswishesSmokeSpec extends SmokeBases.SlotGameBase {
+class aladdinswishesSmokeSpec extends SmokeBases.PortrailCascadingGameBase {
   /**
    *
    */
@@ -11,7 +10,7 @@ class aladdinswishesSmokeSpec extends SmokeBases.SlotGameBase {
       placeBetChoices: [aladdinswishesConfigs.choices[0]],
       
       gameConfiguration: aladdinswishesConfigs,
-      locators: aladdinswishesLocators,
+      locators: Components.BaseLocator.CascadingSlotLocatorsV3,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.2,
@@ -19,9 +18,11 @@ class aladdinswishesSmokeSpec extends SmokeBases.SlotGameBase {
     super(smokeOptions);
   }
 
-  protected betStakeLevelTests(): void {
-    // no test
+  async clickPlayNowButton(): Promise<void> {
+    await this.game.page.mouse.click(640, 600);
+    await this.game.waitForTimeout(2000);
   }
+
 }
 
 new aladdinswishesSmokeSpec().start();
