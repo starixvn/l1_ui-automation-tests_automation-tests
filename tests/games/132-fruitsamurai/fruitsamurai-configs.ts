@@ -1,0 +1,416 @@
+import { Components } from "sc-automation-core";
+
+export const fruitsamuraiConfigs: Components.GameConfiguration = {
+  id: 132,
+  name: "fruitsamurai",
+  durations: {
+    wholeRound: 0,
+    placingBets: 0,
+    lockingBet: 0,
+    shakeThePlateDuration: 0,
+  },
+  choices: ["1", "25"],
+  maxTimeout: 100 * 1000, // miliseconds,
+  odds: {
+  "symbols": {
+  "symbols": {
+    "0": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 5
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 15
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 40
+      }
+    ],
+    "1": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 8
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 18
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 80
+      }
+    ],
+    "2": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 10
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 20
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 100
+      }
+    ],
+    "3": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 16
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 24
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 160
+      }
+    ],
+    "4": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 20
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 30
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 200
+      }
+    ],
+    "5": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 30
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 40
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 240
+      }
+    ],
+    "6": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 40
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 100
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 300
+      }
+    ],
+    "7": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 50
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 200
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 500
+      }
+    ],
+    "8": [
+      {
+        "from": 8,
+        "to": 9,
+        "odds": 200
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "odds": 500
+      },
+      {
+        "from": 12,
+        "to": 30,
+        "odds": 1000
+      }
+    ]
+  },
+  "freeSpins": {
+    "initialOdds": [
+      {
+        "count": 4,
+        "odds": 3
+      },
+      {
+        "count": 5,
+        "odds": 6
+      },
+      {
+        "count": 6,
+        "odds": 18
+      }
+    ],
+    "additionalOdds": [
+      {
+        "count": 4,
+        "odds": 5
+      }
+    ]
+  }
+},
+  "freeSpins": {
+    "initialOdds": [
+      {
+        "count": 4,
+        "odds": 3
+      },
+      {
+        "count": 5,
+        "odds": 6
+      },
+      {
+        "count": 6,
+        "odds": 18
+      }
+    ],
+    "additionalOdds": [
+      {
+        "count": 4,
+        "odds": 5
+      }
+    ]
+  }
+},
+  slotsgame: true,
+  accounts: {
+    local: "6767507",
+    local1: "6767507",
+    local2: "6767507",
+    local3: "5063205",
+  },
+  productId: { l1: "1654", l2: 3846 },
+};
+
+export const AdminDataSet_local = {
+  accountId: 6767507,
+  gameName: "HappyFarm",
+  l1operatorId: "1W",
+  l2operatorId: "ONEworksVGCash",
+  botRatio: "1",
+  expectBotRatio: "10 bot(s)",
+  l1maxWinPerRound: 2000,
+  mornitorlocator: `//*/td[text()='Happy Farm']//following::a[1]`,
+  betBoard: false,
+  l1odds: {
+    index: "0",
+    from: "8",
+    to: "9",
+    odds: "6",
+  },
+  l2odds: {
+    index: "0",
+    from: "8",
+    to: "9",
+    odds: "6",
+  },
+  l1datasetRER: {
+    Settle_Win: {
+      "#Item-0": 4,
+      "#Item-1": 4,
+      "#Item-2": 8,
+      "#Item-3": 4,
+      "#Item-4": 4,
+      "#Item-5": 2,
+      "#Item-6": 2,
+      "#Item-7": 0,
+      "#Item-8": 2,
+      "#Item-9": 0,
+      "#Item-10": 0,
+    },
+    Settle_Lose: {
+      "#Item-0": 4,
+      "#Item-1": 4,
+      "#Item-2": 4,
+      "#Item-3": 4,
+      "#Item-4": 6,
+      "#Item-5": 4,
+      "#Item-6": 2,
+      "#Item-7": 2,
+      "#Item-8": 0,
+      "#Item-9": 0,
+      "#Item-10": 0,
+    },
+    Settle_Freespin: {
+      "#Item-0": 0,
+      "#Item-1": 4,
+      "#Item-2": 2,
+      "#Item-3": 4,
+      "#Item-4": 2,
+      "#Item-5": 2,
+      "#Item-6": 8,
+      "#Item-7": 4,
+      "#Item-8": 0,
+      "#Item-9": 4,
+      "#Item-10": 0,
+    },
+    Settle_Multiplier: {
+      "#Item-0": 10,
+      "#Item-1": 4,
+      "#Item-2": 8,
+      "#Item-3": 4,
+      "#Item-4": 3,
+      "#Item-5": 0,
+      "#Item-6": 0,
+      "#Item-7": 0,
+      "#Item-8": 0,
+      "#Item-9": 0,
+      "#Item-10": 1,
+    },
+    Settle_MaxWin: {
+      "#Item-0": 0,
+      "#Item-1": 0,
+      "#Item-2": 0,
+      "#Item-3": 0,
+      "#Item-4": 2,
+      "#Item-5": 0,
+      "#Item-6": 6,
+      "#Item-7": 8,
+      "#Item-8": 10,
+      "#Item-9": 0,
+      "#Item-10": 4,
+      "//div[@class='board-row'][11]/div[@class='div-multipler'][4]/input[@class='input-multiplier']": 200
+    },
+    Expect_NoData: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "SB1001",
+      errorDescription: "The game round does not exist.",
+    },
+    Expect_Win: {
+      totalAmount: 0.2,
+      validBetAmount: 0.2,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_FreespinRound: {
+      totalAmount: 0,
+      totalWin: 0,
+      validBetAmount: 0,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Freespin: {
+      totalAmount: 0.2,
+      validBetAmount: 0.2,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Lose: {
+      totalAmount: 0.2,
+      totalWin: 0,
+      validBetAmount: 0.2,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_Multiplier: {
+      totalAmount: 0.2,
+      validBetAmount: 0.2,
+      errorCode: "0",
+      errorDescription: null,
+    },
+    Expect_MaxWin: {
+      totalAmount: 0.2,
+      validBetAmount: 0.2,
+      errorCode: "0",
+      errorDescription: null,
+    },
+  },
+  l1datasetTicket: {
+    Expect_Win: {
+      "symbol-0": 4,
+      "symbol-1": 4,
+      "symbol-2": 8,
+      "symbol-3": 4,
+      "symbol-4": 4,
+      "symbol-5": 2,
+      "symbol-6": 2,
+      "symbol-7": 0,
+      "symbol-8": 2,
+      "symbol-9": 0,
+      "symbol-10": 0,
+    },
+    Expect_Lose: {
+      "symbol-0": 4,
+      "symbol-1": 4,
+      "symbol-2": 4,
+      "symbol-3": 4,
+      "symbol-4": 6,
+      "symbol-5": 4,
+      "symbol-6": 2,
+      "symbol-7": 2,
+      "symbol-8": 0,
+      "symbol-9": 0,
+      "symbol-10": 0,
+    },
+    Expect_Freespin: {
+      "symbol-0": 0,
+      "symbol-1": 4,
+      "symbol-2": 2,
+      "symbol-3": 4,
+      "symbol-4": 2,
+      "symbol-5": 2,
+      "symbol-6": 8,
+      "symbol-7": 4,
+      "symbol-8": 0,
+      "symbol-9": 4,
+      "symbol-10": 0,
+    },
+    Expect_Multiplier: {
+      "symbol-0": 10,
+      "symbol-1": 4,
+      "symbol-2": 8,
+      "symbol-3": 4,
+      "symbol-4": 3,
+      "symbol-5": 0,
+      "symbol-6": 0,
+      "symbol-7": 0,
+      "symbol-8": 0,
+      "symbol-9": 0,
+      "symbol-10": 1,
+    },
+  },
+};

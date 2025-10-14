@@ -17,11 +17,6 @@ class CandyLandSmokeSpec extends SmokeBases.PortrailCascadingGameBase {
     super(smokeOptions);
   }
 
-  async clickPlayNowButton(): Promise<void> {
-    await this.game.page.mouse.click(640, 560);
-    await this.game.waitForTimeout(2000);
-  }
-
 }
 
 new CandyLandSmokeSpec().start();
