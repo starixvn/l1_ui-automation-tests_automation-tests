@@ -17,6 +17,7 @@ class olympubSmokeSpec extends SmokeBases.PortrailCascadingGameBase {
     super(smokeOptions);
   }
 
+
 }
 
 new olympubSmokeSpec().start();

@@ -161,13 +161,6 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "Portrail",
-      testMatch: `**/${testMatch}/e2e-tests/*.pt.e2e.spec.ts`,
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
-    {
       name: "setup",  
       use: {
         ...devices["Desktop Chrome"],
