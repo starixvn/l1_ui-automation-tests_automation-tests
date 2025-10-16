@@ -1,6 +1,6 @@
-import { GodOfFortuneLocators } from "../godoffortune-locators";
 import { GodOfFortuneConfigs } from "../godoffortune-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases , Components} from "sc-automation-core";
+import { GodOfFortuneLocators } from "../godoffortune-locators";
 
 class GodOfFortuneSmokeSpec extends SmokeBases.SlotGameBase {
   /**
