@@ -1,9 +1,7 @@
-import { expect } from "@playwright/test";
-import { HappyFarmLocators } from "./happy-farm-locators";
 import { HappyFarmConfigs} from "../happy-farm-configs";
 import { E2EBases, Components } from "sc-automation-core";
 
-class HappyFarmE2ESpec extends E2EBases.CascadingSlotGameBase {
+class PortrailHappyFarmE2ESpec extends E2EBases.PortrailCascadingGameBase {
   /**
    *
    */
@@ -11,7 +9,7 @@ class HappyFarmE2ESpec extends E2EBases.CascadingSlotGameBase {
     const smokeOptions: E2EBases.IBaseOptions = {
       placeBetChoices: [HappyFarmConfigs.choices[2]],
       gameConfiguration: HappyFarmConfigs,
-      locators: HappyFarmLocators,
+      locators: Components.Portrail_Cascading_Locators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 0.2,
@@ -21,4 +19,4 @@ class HappyFarmE2ESpec extends E2EBases.CascadingSlotGameBase {
   
 }
 
-new HappyFarmE2ESpec().start();
+new PortrailHappyFarmE2ESpec().start();

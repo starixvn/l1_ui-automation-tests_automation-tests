@@ -9,7 +9,7 @@ class luckynekoSmokeSpec extends SmokeBases.PortrailCascadingGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: [luckynekoConfigs.choices[0]],
       gameConfiguration: luckynekoConfigs,
-      locators: Components.BaseLocator.CascadingSlotLocatorsV3,
+      locators: Components.Portrail_Cascading_Locators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.2,

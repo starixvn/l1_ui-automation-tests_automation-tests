@@ -9,7 +9,7 @@ class PortrailaladdinswishesE2ESpec extends E2EBases.PortrailCascadingGameBase {
     const smokeOptions: E2EBases.IBaseOptions = {
       placeBetChoices: [aladdinswishesConfigs.choices[2]],
       gameConfiguration: aladdinswishesConfigs,
-      locators: Components.BaseLocator.CascadingSlotLocatorsV3,
+      locators: Components.Portrail_Cascading_Locators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 0.2,

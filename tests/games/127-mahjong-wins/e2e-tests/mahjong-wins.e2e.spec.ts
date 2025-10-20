@@ -1,9 +1,7 @@
-import { expect } from "@playwright/test";
-import { MahjongWinsLocators } from "./mahjong-wins-locators";
 import { MahjongWinsConfigs} from "../mahjong-wins-configs";
 import { E2EBases, Components } from "sc-automation-core";
 
-class MahjongWinsE2ESpec extends E2EBases.CascadingSlotGameBase {
+class MahjongWinsE2ESpec extends E2EBases.PortrailCascadingGameBase {
   /**
    *
    */
@@ -11,7 +9,7 @@ class MahjongWinsE2ESpec extends E2EBases.CascadingSlotGameBase {
     const smokeOptions: E2EBases.IBaseOptions = {
       placeBetChoices: [MahjongWinsConfigs.choices[2]],
       gameConfiguration: MahjongWinsConfigs,
-      locators: MahjongWinsLocators,
+      locators: Components.Portrail_Cascading_Locators,
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 5 : 0.2,
