@@ -33,7 +33,7 @@
     "google-spreadsheet": "^4.1.1",
     "prettier": "^3.2.5",
     "prom-client": "^15.1.3",
-    "sc-automation-core": "1.81.0",
+    "sc-automation-core": "1.82.0",
     "socket.io-client": "^4.8.1",
     "undici": "^7.3.0"
   },

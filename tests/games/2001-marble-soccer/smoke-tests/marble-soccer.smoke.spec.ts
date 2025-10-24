@@ -21,8 +21,27 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
     super(smokeOptions);
   }
 
+  private async closeAllPopups(): Promise<void> {
+    try {
+      await this.game.page.waitForSelector('#popupPanel', { timeout: 8000 });
+      await this.game.page.locator('#popupPanel label.c-checkbox').click();
+      await this.game.page.locator('#popupPanel .c-btn--primary').click();
+    } catch {}
+
+    const closeButtons = await this.game.page.locator('[class*="c-btn--clear"]').all();
+    for (const button of closeButtons) {
+      try {
+        if (await button.isVisible()) {
+          await button.click();
+          await this.game.waitForTimeout(500);
+        }
+      } catch {}
+    }
+  }
+
   protected leagueTests(): void {
     Components.test('Verify league name', async () => {
+      await this.closeAllPopups();
       if (await this.game.page.$(MarbleSoccerLocators.btnClosepopup)) {
         await this.game.page.locator(MarbleSoccerLocators.checkboxDonotShow).click();
         await this.game.page.locator(MarbleSoccerLocators.btnClosepopup).click();
