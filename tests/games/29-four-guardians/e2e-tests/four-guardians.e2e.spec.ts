@@ -1,8 +1,7 @@
-import { ClassicSlotLocators } from "./four-guardians-e2e-locators";
 import { FourGuardiansConfigs } from "../four-guardians-configs";
-import { SmokeBases } from "sc-automation-core";
+import { E2EBases, Components } from "sc-automation-core";
 
-class FourGuardiansE2ESpec extends SmokeBases.SlotGameBase {
+class FourGuardiansE2ESpec extends E2EBases.PortrailClassicGameBase {
     /**
      *
      */
@@ -13,7 +12,7 @@ class FourGuardiansE2ESpec extends SmokeBases.SlotGameBase {
                 FourGuardiansConfigs.choices[1],
             ],
             gameConfiguration: FourGuardiansConfigs,
-            locators: ClassicSlotLocators,
+            locators: Components.Portrail_Classic_Locators ,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
         };
