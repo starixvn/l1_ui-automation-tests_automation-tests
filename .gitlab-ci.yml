@@ -28,7 +28,7 @@ e2etest:
     - e2e-test
   script:
     - cd tests
-    - npm run test:e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME --jackpot=$jackpot
+    - npm run test:e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
 
   retry: 2
   rules:

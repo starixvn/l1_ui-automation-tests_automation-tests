@@ -13,6 +13,7 @@ class SummerHeatE2ESpec extends E2EBases.PortrailClassicGameBase {
       waitBetTimeout: 5000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 1 : 0.2,
+      isJackpot: process.env.npm_config_project === "l2" ? true : false,
     };
     super(smokeOptions);
   }

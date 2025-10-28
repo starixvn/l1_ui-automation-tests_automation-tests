@@ -13,3 +13,7 @@ allure-results/
 allure-report/
 eng.traineddata
 pushdata.js
+smoketest.js
+.auth/membersiteurl.txt
+.auth/user.json
+tests/session.setup.ts
