@@ -1,9 +1,8 @@
 import { dragonballConfigs } from "../dragonball-configs";
-import { E2EBases } from "sc-automation-core";
-import {extdragonballLocators} from "./dragonball-locators" 
+import { E2EBases , Components} from "sc-automation-core";
 
 
-class dragonballE2ESpec extends E2EBases.SlotGameBase {
+class dragonballE2ESpec extends E2EBases.PortrailClassicGameBase {
     /**
      *
      */
@@ -11,10 +10,11 @@ class dragonballE2ESpec extends E2EBases.SlotGameBase {
         const e2eOptions: E2EBases.IBaseOptions = {
             placeBetChoices: [dragonballConfigs.choices[0], dragonballConfigs.choices[1]],
             gameConfiguration: dragonballConfigs,
-            locators: extdragonballLocators ,
+            locators: Components.Portrail_Classic_Locators ,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
             placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+            isJackpot: process.env.npm_config_project === "l2" ? true : false,
         };
         super(e2eOptions);
     }

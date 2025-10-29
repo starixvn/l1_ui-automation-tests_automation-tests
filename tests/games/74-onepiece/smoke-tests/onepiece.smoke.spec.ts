@@ -1,9 +1,8 @@
 import { OnePieceLocators } from "../onepiece-locators";
 import { OnePieceConfigs } from "../onepiece-configs";
 import { SmokeBases, Components } from "sc-automation-core";
-import { expect } from "@playwright/test";
 
-class OnePieceSmokeSpec extends SmokeBases.SlotGameBase {
+class OnePieceSmokeSpec extends SmokeBases.PortrailClassicGameBase {
   /**
    *
    */
@@ -11,7 +10,7 @@ class OnePieceSmokeSpec extends SmokeBases.SlotGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: ["25"],
       gameConfiguration: OnePieceConfigs,
-      locators: OnePieceLocators,
+      locators: Components.Portrail_Classic_Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 0.4,

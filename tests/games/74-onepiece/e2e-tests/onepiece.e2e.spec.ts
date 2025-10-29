@@ -1,9 +1,8 @@
 import { OnePieceConfigs } from "../onepiece-configs";
-import { E2EBases } from "sc-automation-core";
-import {extOnePieceLocators} from "./onepiece-locators" 
+import { E2EBases , Components} from "sc-automation-core";
 
 
-class OnePieceE2ESpec extends E2EBases.SlotGameBase {
+class OnePieceE2ESpec extends E2EBases.PortrailClassicGameBase {
     /**
      *
      */
@@ -11,10 +10,11 @@ class OnePieceE2ESpec extends E2EBases.SlotGameBase {
         const e2eOptions: E2EBases.IBaseOptions = {
             placeBetChoices: [OnePieceConfigs.choices[0], OnePieceConfigs.choices[1]],
             gameConfiguration: OnePieceConfigs,
-            locators: extOnePieceLocators ,
+            locators: Components.Portrail_Classic_Locators ,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
             placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+            isJackpot: process.env.npm_config_project === "l2" ? true : false,
         };
         super(e2eOptions);
     }

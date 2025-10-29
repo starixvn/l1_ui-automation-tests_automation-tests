@@ -1,8 +1,7 @@
-import { dragonballLocators } from "../dragonball-locators";
 import { dragonballConfigs } from "../dragonball-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases , Components} from "sc-automation-core";
 
-class dragonballSmokeSpec extends SmokeBases.SlotGameBase {
+class dragonballSmokeSpec extends SmokeBases.PortrailClassicGameBase {
   /**
    *
    */
@@ -10,7 +9,7 @@ class dragonballSmokeSpec extends SmokeBases.SlotGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: ["25"],
       gameConfiguration: dragonballConfigs,
-      locators: dragonballLocators,
+      locators: Components.Portrail_Classic_Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 2,
