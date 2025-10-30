@@ -1,22 +1,26 @@
-import { HeroesSlotLocators } from "../heroes-slot-locators";
 import { HeroesSlotConfigs } from "../heroes-slot-configs";
-import { SmokeBases } from "sc-automation-core";
+import { E2EBases , Components} from "sc-automation-core";
 
-class HeroesSlotSmokeSpec extends SmokeBases.SlotGameBase {
+class HeroesSlotE2ESpec extends E2EBases.PortrailClassicGameBase {
     /**
      *
      */
     constructor() {
-        const e2eOptions: SmokeBases.IBaseOptions = {
+        const e2eOptions: E2EBases.IBaseOptions = {
             placeBetChoices: [HeroesSlotConfigs.choices[0]],
             gameConfiguration: HeroesSlotConfigs,
-            locators: HeroesSlotLocators,
+            locators: Components.Portrail_Classic_Locators,
             waitBetTimeout: 1000,
             snapshotFolderPath: __filename,
         };
         super(e2eOptions);
     }
-
+    async clickSpinButton() {
+        await this.game.waitForTimeout(2000);
+        await this.game.page.mouse.click(640, 570);
+        await this.game.waitForTimeout(200);
+       }
+      
 }
 
-new HeroesSlotSmokeSpec().start();
+new HeroesSlotE2ESpec().start();

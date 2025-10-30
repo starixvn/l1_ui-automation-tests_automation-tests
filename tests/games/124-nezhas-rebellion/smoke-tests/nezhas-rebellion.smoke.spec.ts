@@ -1,8 +1,7 @@
-import { NezhasRebellionLocators } from "../nezhas-rebellion-locators";
 import { NezhasRebellionConfigs } from "../nezhas-rebellion-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 
-class NezhasRebellionSmokeSpec extends SmokeBases.SlotGameBase {
+class NezhasRebellionSmokeSpec extends SmokeBases.PortrailClassicGameBase {
   /**
    *
    */
@@ -10,7 +9,7 @@ class NezhasRebellionSmokeSpec extends SmokeBases.SlotGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: ["25"],
       gameConfiguration: NezhasRebellionConfigs,
-      locators: NezhasRebellionLocators,
+      locators: Components.Portrail_Classic_Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 0.01,
@@ -19,13 +18,12 @@ class NezhasRebellionSmokeSpec extends SmokeBases.SlotGameBase {
     super(smokeOptions);
   }
 
-  protected runScenario(): void {
-    super.runScenario();
-  }
+  async clickSpinButton() {
+    await this.game.waitForTimeout(2000);
+    await this.game.page.mouse.click(640, 570);
+    await this.game.waitForTimeout(200);
+   }
 
-  protected gameGuideTests(): void {
-      
-  }
 }
 
 new NezhasRebellionSmokeSpec().start();
