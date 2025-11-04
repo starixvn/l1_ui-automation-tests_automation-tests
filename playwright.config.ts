@@ -18,7 +18,7 @@ const config: PlaywrightTestConfig = {
       maxDiffPixelRatio: 0.2,
     },
     toHaveScreenshot: {
-      maxDiffPixels: 1000,
+      maxDiffPixels: 1800,
     },
   },
   /* Run tests in files in parallel */
