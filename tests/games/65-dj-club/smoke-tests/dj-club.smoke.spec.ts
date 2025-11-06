@@ -1,8 +1,7 @@
-import { DJClubLocators } from "../dj-club-locators";
 import { DJClubConfigs } from "../dj-club-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
 
-class DJClubSmokeSpec extends SmokeBases.SlotGameBase {
+class DJClubSmokeSpec extends SmokeBases.PortrailClassicGameBase {
   /**
    *
    */
@@ -10,7 +9,7 @@ class DJClubSmokeSpec extends SmokeBases.SlotGameBase {
     const smokeOptions: SmokeBases.IBaseOptions = {
       placeBetChoices: ["25"],
       gameConfiguration: DJClubConfigs,
-      locators: DJClubLocators,
+      locators: Components.Portrail_Classic_Locators,
       waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
       placeBetAmount: process.env.npm_config_project === "l2" ? 0.02 : 0.4,
