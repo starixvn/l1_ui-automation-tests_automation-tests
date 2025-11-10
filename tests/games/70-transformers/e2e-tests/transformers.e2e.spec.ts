@@ -1,9 +1,8 @@
 import { transformersConfigs } from "../transformers-configs";
-import { E2EBases } from "sc-automation-core";
-import {exttransformersLocators} from "./transformers-locators" 
+import { E2EBases, Components } from "sc-automation-core";
 
 
-class transformersE2ESpec extends E2EBases.SlotGameBase {
+class transformersE2ESpec extends E2EBases.PortrailClassicGameBase {
     /**
      *
      */
@@ -11,7 +10,7 @@ class transformersE2ESpec extends E2EBases.SlotGameBase {
         const e2eOptions: E2EBases.IBaseOptions = {
             placeBetChoices: [transformersConfigs.choices[0], transformersConfigs.choices[1]],
             gameConfiguration: transformersConfigs,
-            locators: exttransformersLocators ,
+            locators: Components.Portrail_Classic_Locators ,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
             placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
