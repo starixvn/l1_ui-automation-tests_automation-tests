@@ -18,9 +18,9 @@ const cfgGameNames = {
     "Xóc Đĩa VIP",
     "Ngộ Không Báo Thù",
     "Xóc Đĩa",
-    "Bóng Xoáy X",
+    "Soccer PinGoal",
     "Tài Xỉu",
-    "Thần Tài Đến",
+    "Plinko X",
     "SABA.games",
     "Sảnh SABA.club",
     "Sảnh SABA.mobi",
@@ -35,12 +35,17 @@ const cfgGameNames = {
     "Keno Pro Max",
     "Roulette",
     "Christmas X",
+    "Bóng Xoáy X",
+    "Thần Tài Đến",
+    "Võ Đài Bóng Tối",
+    "Nữ Hoàng Hải Tặc",
     "Công Chúa Aztec",
     "Ma Đồng Nổi Loạn",
     "Vui Hội Mexico",
     "Quán Bar Olympus",
     "Vua Câu Cá",
     "Mèo May Mắn",
+    "Vương Quốc Kẹo Ngọt",
     "Mùa Hè Nóng Bỏng",
     "Kho Báu Poseidon",
     "Aladdin Và Cây Đèn Thần",
@@ -57,9 +62,9 @@ const cfgGameNames = {
     "Cào Baccarat",
     "Ngộ Không Báo Thù",
     "Tài Xỉu Sic Bo",
-    "Thần Tài Đến",
+    "Plinko X",
     "Blackjack",
-    "Bóng Xoáy X",
+    "Soccer PinGoal",
     "Sảnh Vgaming",
     "Vgaming",
     "Vgaming Mobi",
@@ -74,12 +79,17 @@ const cfgGameNames = {
     "Keno Pro Max",
     "Happy Fish",
     "Christmas X",
+    "Bóng Xoáy X",
+    "Thần Tài Đến",
+    "Võ Đài Bóng Tối",
+    "Nữ Hoàng Hải Tặc",
     "Công Chúa Aztec",
     "Ma Đồng Nổi Loạn",
     "Vui Hội Mexico",
     "Quán Bar Olympus",
     "Vua Câu Cá",
     "Mèo May Mắn",
+    "Vương Quốc Kẹo Ngọt",
     "Mùa Hè Nóng Bỏng",
     "Kho Báu Poseidon",
     "Aladdin Và Cây Đèn Thần",
@@ -122,7 +132,7 @@ const cfgLocator = {
 test(`${projectCode} - Smoke Test Games Locations and navigation on Member Site`, async ({
   browser,
 }) => {
-  test.setTimeout(300 * 1000);
+  test.setTimeout(400 * 1000);
   const locator = projectCode == "SG" ? cfgLocator.l1 : cfgLocator.l2;
   const lstGames = projectCode == "SG" ? cfgGameNames.l1 : cfgGameNames.l2;
   await allure.suite(
@@ -158,7 +168,7 @@ test(`${projectCode} - Smoke Test Games Locations and navigation on Member Site`
         });
 
         await newtab.waitForLoadState();
-        await newtab.waitForTimeout(5000);
+        await newtab.waitForTimeout(6000);
 
         // Check for critical errors in console messages, filtering out known non-critical errors
         const errorMessages = consoleMessages.filter((msg) => {
@@ -193,7 +203,7 @@ test(`${projectCode} - Smoke Test Games Locations and navigation on Member Site`
             !msg.includes("analytics")
         );
 
-        expect(
+        expect.soft(
           criticalErrors.length,
           `Critical errors found in console: ${criticalErrors.join(", ")}`
         ).toBe(0);
