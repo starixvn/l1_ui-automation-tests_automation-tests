@@ -49,6 +49,7 @@ class MarbleSoccerSmokeSpec extends SmokeBases.MarbleGameBase {
       await this.game.page.locator(MarbleSoccerLocators.sabaPingoalMenu).click();
       await this.game.page.locator(MarbleSoccerLocators.soccerMarbleLeftMenu).click();
       await this.game.page.locator(MarbleSoccerLocators.leagueBanner).click();
+      await this.game.waitForTimeout(5000);
       await expect(this.game.page.locator(MarbleSoccerLocators.leagueName)).toHaveText('Soccer Marble - Spinner Club WC 2025');
     });
   }
