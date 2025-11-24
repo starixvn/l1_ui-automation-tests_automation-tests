@@ -3,6 +3,7 @@ import { Components } from "sc-automation-core";
 export const TurboBigSmallConfigs: Components.GameConfiguration = {
   id: 4,
   name: "TXTurbo",
+  cocosNameSpace: "TurboBigSmall",
   durations: {
     wholeRound: 37 * 1000,
     placingBets: 30 * 1000,
