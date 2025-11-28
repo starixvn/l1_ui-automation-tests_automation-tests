@@ -1,23 +1,31 @@
 import { DragonTigerLocators } from "../dragontiger-locators";
 import { DragonTigerConfigs } from "../dragontiger-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
+import { test } from "@playwright/test";
 
-class DragonTigerSmokeSpec extends SmokeBases.MiniGameBase {
+
+class DragonTigerSmokeSpec extends SmokeBases.RoundGameBaseCocos {
   /**
    *
    */
   constructor() {
-    const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [DragonTigerConfigs.choices[0]],
+    const smokeOptions: SmokeBases.IBaseOptionsCocos = {
+      placeBetChoices: [DragonTigerLocators.btnDragon,DragonTigerLocators.btnTiger],
+      placeBetAmount: process.env.npm_config_project === "l2" ? [DragonTigerLocators.chip10] : [DragonTigerLocators.chip1],
       gameConfiguration: DragonTigerConfigs,
       locators: DragonTigerLocators,
-      waitBetTimeout: 7000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      uiLocatorsToVerify: DragonTigerLocators.uiLocatorsToVerify,
     };
 
     super(smokeOptions);
   }
+
+
+  protected runScenario(): void {
+    super.runScenario();
+  }
+
 }
 
 new DragonTigerSmokeSpec().start();

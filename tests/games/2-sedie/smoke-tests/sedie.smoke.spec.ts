@@ -3,6 +3,7 @@ import { SedieConfigs } from "../sedie-configs";
 import { SmokeBases, Components } from "sc-automation-core";
 import { expect } from "@playwright/test";
 
+
 const MiniGameG7Locators = [
   new Components.ImageLocator("game1", 725, 262, 10, 10),
   new Components.ImageLocator("game2", 768, 353, 10, 10),
@@ -22,21 +23,26 @@ const MiniGameG6Locators = [
   new Components.ImageLocator("game6", 536, 270, 0, 0),
 ];
 
-class SedieSmokeSpec extends SmokeBases.TableGameBase {
+class SedieSmokeSpec extends SmokeBases.RoundGameBaseCocos {
   /**
    *
    */
   constructor() {
-    const smokeOptions: SmokeBases.IBaseOptions = {
+    const smokeOptions: SmokeBases.IBaseOptionsCocos = {
+      placeBetChoices: [SedieLocators.btnBetOdd, SedieLocators.btnBetEven],
+      placeBetAmount: process.env.npm_config_project === "l2" ? [SedieLocators.chip10] : [SedieLocators.chip1],
       gameConfiguration: SedieConfigs,
       locators: SedieLocators,
-      waitBetTimeout: 8000,
-      placeBetChoices: [SedieConfigs.choices[0]],
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      uiLocatorsToVerify: SedieLocators.uiLocatorsToVerify,
     };
 
     super(smokeOptions);
+  }
+
+  protected runScenario(): void {
+    super.runScenario();
+    // this.OpenMiniGame();
   }
 
   protected OpenMiniGame(): void {
@@ -45,21 +51,13 @@ class SedieSmokeSpec extends SmokeBases.TableGameBase {
       async () => {
         const gameid = await getOfferedGameIds(this.game);
         for (let index = 1; index <= gameid.length; index++) {
-          if (gameid.length === 7) {
-            SedieLocators.push(...MiniGameG7Locators);
-          } else {
-            SedieLocators.push(...MiniGameG6Locators);
-          }
+          // Minigame locators are handled via game object's internal locator system
           await verifyopenminigame(this.game, index);
         }
       }
     );
   }
 
-  protected runScenario(): void {
-    super.runScenario();
-    this.OpenMiniGame();
-  }
 }
 
 new SedieSmokeSpec().start();

@@ -1,6 +1,27 @@
 import { Components } from "sc-automation-core";
 
-export const KenoProMaxLocators = [
+export const KenoProMaxLocators = {
+  ...Components.RoundGame_Locators,
+  btnBig: {x: 228,y: 330},
+  btnSmall: {x: 757,y: 330},
+  chip1: "Keno/center/main/container-user-bet/betChipContainer/BetChips/scroll/mask/Chips/1",
+  chip10: "Keno/center/main/container-user-bet/betChipContainer/BetChips/scroll/mask/Chips/10",
+  uiLocatorsToVerify: {btnInGameMenu:"Keno/buttons/menu/InGameMenu",
+    iconHome:"Keno/buttons/menu/InGameMenu/home-icon",
+  },
+  btnMenu: "Keno/buttons/menu/InGameMenu/expandableMenu/btn-menu",
+  lblRoundId:"Keno/center/main/game-round",
+  btnguide: "Keno/buttons/menu/InGameMenu/expandableMenu/expanded-menu/btn guide",
+  btnHistory: "Keno/buttons/menu/InGameMenu/expandableMenu/expanded-menu/btn history",
+  txtHistoryRoundId: `Keno/minipanelContainer/MiniPanel/userHistory/history-wrapper/BetDetail/auto scale/back-wrapper/wrapper/content/userHistoryItem/round`,
+  txtHistoryTotalBet: `Keno/minipanelContainer/MiniPanel/userHistory/history-wrapper/BetDetail/auto scale/back-wrapper/wrapper/content/userHistoryItem/bet/big`,
+  txtHistoryWin: `Keno/minipanelContainer/MiniPanel/userHistory/history-wrapper/BetDetail/auto scale/back-wrapper/wrapper/content/userHistoryItem/win`,
+  btnCloseHistory: "Keno/minipanelContainer/MiniPanel/userHistory/history-wrapper/BetDetail/auto scale/back-wrapper/CloseButton",
+  lblHedgeWarning: "Chỉ có thể đặt cược trên Tài hoặc Xỉu.",
+  lblMiniWarning: "Keno/center/main/notice/mini_warning/text",
+};
+
+export const KenoProMaxLocatorsImage = [
     new Components.ImageLocator("bigChoice", 228, 330, 60, 50),
     new Components.ImageLocator("bigOwnbet", 450, 370, 30, 30),
     new Components.ImageLocator("smallChoice", 757, 330, 60, 50),

@@ -1,6 +1,25 @@
 import { Components } from "sc-automation-core";
 
-export const FPCLocators = [
+export const FPCLocators = {
+  ...Components.RoundGame_Locators,
+  btnfish: "Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/LinhVat/fish",
+  chip1: "Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/betChipContainer/BetChips/scroll/mask/Chips/1",
+  chip10: "Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/betChipContainer/BetChips/scroll/mask/Chips/10",
+  uiLocatorsToVerify: {btnCloseGame:"Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/bR/CloseButton",
+    tableStatistics:"Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/bR/button_statistic",
+    lblMd5:"Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/md5",
+ },
+  lblRoundId:"Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/Disk/phienLabel",
+  btnguide: "Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/bR/button-help",
+  btnHistory: "Canvas/mini-panel/MiniPanel/MiniGames/BauCua/main/bR/button-history",
+  txtHistoryRoundId: `Canvas/mini-panel/MiniPanel/BauCuaHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/BauCuaHistoryItem/round`,
+  txtHistoryTotalBet: `Canvas/mini-panel/MiniPanel/BauCuaHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/BauCuaHistoryItem/fish`,
+  txtHistoryWin: `Canvas/mini-panel/MiniPanel/BauCuaHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/BauCuaHistoryItem/active`,
+  btnCloseHistory: "Canvas/mini-panel/MiniPanel/BauCuaHistory/history-frame/BetDetail/backClose",
+};
+
+
+export const FPCLocatorsImages = [
     new Components.ImageLocator("fishChoice", 595, 399, 55, 60),
     new Components.ImageLocator("fishOwnbet", 590, 399, 60, 60),
     new Components.ImageLocator("crabChoice", 686, 399, 60, 60),

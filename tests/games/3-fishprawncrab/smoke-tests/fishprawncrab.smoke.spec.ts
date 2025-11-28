@@ -1,51 +1,25 @@
 import { FPCLocators } from "../fishprawncrab-locators";
 import { FPCConfigs } from "../fishprawncrab-configs";
-import { SmokeBases, Components } from "sc-automation-core";
-import { GameEvent } from "sc-automation-core/lib/_shared";
-import { expect } from "@playwright/test";
+import { SmokeBases } from "sc-automation-core";
 
-class FPCSmokeSpec extends SmokeBases.MiniGameBase {
+class FPCSmokeSpec extends SmokeBases.RoundGameBaseCocos {
   /**
    *
    */
   constructor() {
-    const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [FPCConfigs.choices[3]],
+    const smokeOptions: SmokeBases.IBaseOptionsCocos = {
+      placeBetChoices: [FPCLocators.btnfish],
+      placeBetAmount: process.env.npm_config_project === "l2" ? [FPCLocators.chip10] : [FPCLocators.chip1],
       gameConfiguration: FPCConfigs,
       locators: FPCLocators,
-      waitBetTimeout: 10000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      uiLocatorsToVerify: FPCLocators.uiLocatorsToVerify,
     };
 
     super(smokeOptions);
   }
   protected override hedgeBetTests(): void {}
 
-  protected placeBetAndSettleTests(): void {
-    Components.test("THEN player able to place a bet and settle", async () => {
-      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
-      const bet = {
-        choice: this.options.placeBetChoices[0],
-        amount: this.options.placeBetAmount ?? 1,
-      };
-
-      this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
-
-      // Act
-      const placeBetResponse = await this.player.placeBet(
-        bet.choice,
-        bet.amount
-      );
-      const settledResults = await this.game.waitForSettlement();
-
-      // Assert
-      expect(placeBetResponse.endBet).toBe(bet.amount);
-      expect(settledResults.settlementResult).toMatchBetOptions(
-        this.options.gameConfiguration.choices
-      );
-    });
-  }
 }
 
 new FPCSmokeSpec().start();

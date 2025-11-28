@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-export const BaccaratLocators = [
+export const BaccaratLocatorsImage = [
     new Components.ImageLocator("dealer", 555, 70, 160, 130),
     new Components.ImageLocator("playerChoice", 316, 390, 80, 24),
     new Components.ImageLocator("bigChoice", 276, 514, 40, 26),
@@ -27,6 +27,31 @@ export const BaccaratLocators = [
     new Components.ImageLocator("guide-8", 150, 72, 976, 580),
     new Components.ImageLocator("roundId", 367, 210, 80, 24),
 ];
+
+export const BaccaratLocators = {
+    ...Components.RoundGame_Locators,
+    btnPlayer: {x: 316, y: 390},
+    btnBanker: {x: 900, y: 390},
+    chip1: "Canvas/Main/Body/BetBoard/BetChips/BetChips/scroll/mask/Chips/1",
+    chip10: "Canvas/Main/Body/BetBoard/BetChips/BetChips/scroll/mask/Chips/10",
+    uiLocatorsToVerify: {boardHistory:"Canvas/Main/TotalHistoryBoard",
+      dealer: "Canvas/Main/Body/Dealer",
+        boardBigRoad:"Canvas/Main/BigRoad",
+        md5: "Canvas/Main/md5",
+        basicHistoryBoard: "Canvas/Main/BasicHistoryBoard",
+        iconHome: "Canvas/menu-area/InGameMenu/home-icon"
+    },
+    lblRoundId: "Canvas/Main/Body/GameRound",
+    btnguide: "btn guide",
+    btnHistory: "btn history",
+    txtHistoryRoundId: `Canvas/MiniPanel/MiniPanel/History/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/BaccaratHistoryItem/row/round`,
+    txtHistoryTotalBet: `Canvas/MiniPanel/MiniPanel/History/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/BaccaratHistoryItem/row/player`,
+    txtHistoryWin: `Canvas/MiniPanel/MiniPanel/History/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/BaccaratHistoryItem/row/win`,
+    btnCloseHistory: "Canvas/MiniPanel/MiniPanel/History/history-frame/BetDetail/auto scale/back-wrapper/CloseButton",
+    lblHedgeWarning: "Chỉ có thể đặt cược trên Nhà Con hoặc Nhà Cái.",
+    lblMiniWarning: "Canvas/Main/Body/Notice/mini_warning",
+    btnMenu: "Canvas/menu-area/InGameMenu/expandableMenu/btn-menu"
+}
 
 export const MobiLocators = {
     inGameUI: [

@@ -2,25 +2,21 @@ import { BaccaratLocators } from "../baccarat-locators";
 import { BaccaratConfigs } from "../baccarat-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class BaccaratSmokeSpec extends SmokeBases.TableGameBase {
+class BaccaratSmokeSpec extends SmokeBases.RoundGameBaseCocos {
   /**
    *
    */
   constructor() {
-    BaccaratConfigs.hedgeBetGroups = [["big", "small"]]
-    const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [BaccaratConfigs.choices[3]],
+    const smokeOptions: SmokeBases.IBaseOptionsCocos = {
+      placeBetChoices: [ BaccaratLocators.btnPlayer, BaccaratLocators.btnBanker ],
       gameConfiguration: BaccaratConfigs,
       locators: BaccaratLocators,
-      waitBetTimeout: 10000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? [BaccaratLocators.chip10] : [BaccaratLocators.chip1],
+      uiLocatorsToVerify: BaccaratLocators.uiLocatorsToVerify,
     };
     super(smokeOptions);
   }
 
-  protected inGameDealerTests(): void {
-      // cannot compare image because animation beside dealer
-  }
 }
 new BaccaratSmokeSpec().start();

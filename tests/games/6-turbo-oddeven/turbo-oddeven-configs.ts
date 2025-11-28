@@ -3,6 +3,7 @@ import { Components } from "sc-automation-core";
 export const TurboOddEvenConfigs: Components.GameConfiguration = {
   id: 6,
   name: "OETurbo",
+  cocosNameSpace: "TurboOddEven",
   durations: {
     wholeRound: 37 * 1000,
     placingBets: 30 * 1000,

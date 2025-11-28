@@ -2,23 +2,20 @@ import { KenoProMaxLocators } from "../kenopromax-locators";
 import { KenoProMaxConfigs } from "../kenopromax-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class KenoProMaxSmokeSpec extends SmokeBases.TableGameBase {
+class KenoProMaxSmokeSpec extends SmokeBases.RoundGameBaseCocos {
   /**
    *
    */
   constructor() {
-    const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [KenoProMaxConfigs.choices[0]],
+    const smokeOptions: SmokeBases.IBaseOptionsCocos = {
+      placeBetChoices: [KenoProMaxLocators.btnBig, KenoProMaxLocators.btnSmall],
       gameConfiguration: KenoProMaxConfigs,
       locators: KenoProMaxLocators,
-      waitBetTimeout: 9000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? [KenoProMaxLocators.chip10] : [KenoProMaxLocators.chip1],
+      uiLocatorsToVerify: KenoProMaxLocators.uiLocatorsToVerify,
     };
-
     super(smokeOptions);
   }
-  protected inGameDealerTests(): void {}
 }
-
 new KenoProMaxSmokeSpec().start();

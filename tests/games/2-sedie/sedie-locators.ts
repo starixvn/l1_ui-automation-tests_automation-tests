@@ -1,6 +1,31 @@
 import { Components } from "sc-automation-core";
 
-export const SedieLocators = [
+export const SedieLocators = {
+  ...Components.RoundGame_Locators,
+  // btnBetOdd: {x: 741,y: 277},
+  // btnBetEven: {x: 256,y: 277},
+
+  btnBetOdd: "Canvas/UI_landscape/center_widget/center/main/chan-le/odd",
+  btnBetEven: "Canvas/UI_landscape/center_widget/center/main/chan-le/even",
+  chip1: "Canvas/UI_landscape/center_widget/center/main/container-user-bet/bet-chips-container/BetChips/scroll/mask/Chips/1",
+  chip10: "Canvas/UI_landscape/center_widget/center/main/container-user-bet/bet-chips-container/BetChips/scroll/mask/Chips/10",
+  lblRoundId:"Canvas/UI_landscape/center_widget/center/main/game-round",
+  uiLocatorsToVerify: {
+    imgDealer:"Canvas/UI_landscape/center_widget/center/main/dealer",
+    tableStatistics:"Canvas/UI_landscape/center_widget/center/top/scoreboard/SedieRoundHistory",
+    lblMd5:"Canvas/UI_landscape/center_widget/center/top/md5/md5",
+    lblMiniRoundHistory:"Canvas/UI_landscape/center_widget/center/main/logbottom/SedieMiniRoundHistory"},
+  lblHedgeWarning: "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
+  btnguide: "Canvas/UI_landscape/menu-area/InGameMenu/expandableMenu/expanded-menu/btn guide",
+  btnHistory: "Canvas/UI_landscape/menu-area/InGameMenu/expandableMenu/expanded-menu/btn history",
+  txtHistoryRoundId: `Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/XocXocHistoryItem/node/New Layout/phien`,
+  txtHistoryTotalBet: `Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/XocXocHistoryItem/node/le`,
+  txtHistoryWin: `Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/XocXocHistoryItem/node/win-container/win`,
+  btnCloseHistory: "Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/CloseButton",
+  lblMiniWarning: "Canvas/UI_landscape/center_widget/center/main/notice/mini_warning/text",
+};
+
+export const SedieImageLocators = [
   new Components.ImageLocator("dealer", 579, 44, 140, 156),
   new Components.ImageLocator("evenChoice", 256, 277, 150, 53),
   new Components.ImageLocator("evenOwnbet", 350, 356, 97, 28),

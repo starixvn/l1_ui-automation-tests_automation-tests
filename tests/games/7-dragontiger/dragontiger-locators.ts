@@ -1,7 +1,28 @@
 import { Components } from "sc-automation-core";
 
 
-export const DragonTigerLocators = [
+export const DragonTigerLocators = {
+  ...Components.RoundGame_Locators,
+  btnDragon: "Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/LinhVat/dragon",
+  btnTiger: "Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/LinhVat/tiger",
+  btnTie: "Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/LinhVat/tie",
+  chip1: "Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/BetChipsContainer/BetChips/scroll/mask/Chips/1",
+  chip10: "Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/BetChipsContainer/BetChips/scroll/mask/Chips/10",
+  uiLocatorsToVerify: {btnCloseGame:"Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/buttons/CloseButton",
+    tableStatistics:"button-statistic",
+  },
+  lblRoundId:"Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/gameround",
+  btnguide: "button-help",
+  btnHistory: "button-history",
+  txtHistoryRoundId: `Canvas/mini-panel/MiniPanel/Dialog/RongHoHistory/backCloseButton/BetDetail/auto scale/back-wrapper/wrapper/content/RongHoHistoryItem/round`,
+  txtHistoryTotalBet: `Canvas/mini-panel/MiniPanel/Dialog/RongHoHistory/backCloseButton/BetDetail/auto scale/back-wrapper/wrapper/content/RongHoHistoryItem/dragon`,
+  txtHistoryWin: `Canvas/mini-panel/MiniPanel/Dialog/RongHoHistory/backCloseButton/BetDetail/auto scale/back-wrapper/wrapper/content/RongHoHistoryItem/win`,
+  btnCloseHistory: "Canvas/mini-panel/MiniPanel/Dialog/RongHoHistory/backCloseButton/BetDetail/backClose",
+  lblHedgeWarning: "Chỉ có thể đặt cược trên Rồng hoặc Hổ.",
+  lblMiniWarning: "Canvas/mini-panel/MiniPanel/MiniGames/DragonTiger/Background/Notice/mini_warning/text",
+};
+
+export const DragonTigerLocatorsImages = [
     new Components.ImageLocator("dragonChoice", 420, 280, 100, 85),
     new Components.ImageLocator("dragonOwnbet", 450, 370, 30, 30),
     new Components.ImageLocator("tigerChoice", 776, 280, 100, 85),

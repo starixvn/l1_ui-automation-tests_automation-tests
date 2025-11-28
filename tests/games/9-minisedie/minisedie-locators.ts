@@ -1,6 +1,6 @@
 import { Components } from "sc-automation-core";
 
-export const MiniSedieLocators = [
+export const MiniSedieLocatorsImage = [
   new Components.ImageLocator("evenChoice", 255, 369, 100, 40),
   new Components.ImageLocator("evenOwnbet", 350, 356, 97, 28),
   new Components.ImageLocator("oddChoice", 572, 361, 100, 40),
@@ -58,3 +58,28 @@ export const MobiLocators = {
   },
 };
 
+export const MiniSedie1Locators = {
+  ...Components.RoundGame_Locators,
+  btnEven: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/main/MiniSeDie/Background/betChoices/New Layout/even",
+  btnOdd: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/main/MiniSeDie/Background/betChoices/New Layout/odd",
+  chip1: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/betchip/BetChips/scroll/mask/Chips/1",
+  chip10: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/betchip/BetChips/scroll/mask/Chips/10",
+  uiLocatorsToVerify: {btnStatistic:"Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/main/MiniSeDie/Background/bR/button-statistic",
+    btcClose:"Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/CloseButton",
+    btnCloseGuide: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/sub_container/sub-games-area/groupStatic/promotion-guide/Promotion_guidelines/close-button"
+  },
+  lblRoundId:"Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/main/MiniSeDie/Background/phienLabel",
+  btnguide: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/main/MiniSeDie/Background/bR/button-help",
+  btnHistory: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/main/MiniSeDie/Background/bR/button-history",
+  
+  txtHistoryRoundId: `Canvas/mini-panel/MiniPanel/Dialog/MegaMiniSedieHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/Content/MiniSedieHistoryItem/phien`,
+  txtHistoryTotalBet: `Canvas/mini-panel/MiniPanel/Dialog/MegaMiniSedieHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/Content/MiniSedieHistoryItem/chan`,
+  txtHistoryWin: `Canvas/mini-panel/MiniPanel/Dialog/MegaMiniSedieHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/Content/MiniSedieHistoryItem/win`,
+  btnCloseHistory: "Canvas/mini-panel/MiniPanel/Dialog/MegaMiniSedieHistory/history-frame/BetDetail/auto scale/back-wrapper/CloseButton",
+  lblHedgeWarning: "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
+  lblMiniWarning: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/main_container/StaticGroupContainerNotice-0/Notice/mini_warining/text",
+  btnCloseGuide: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/sub_container/sub-games-area/groupStatic/promotion-guide/Promotion_guidelines/close-button",
+  btnEven2: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/sub_container/sub-games-area/groupStatic/StaticGroupContainer-11/New Node/BetChoices/even",
+  btnOdd2: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/sub_container/sub-games-area/groupStatic/StaticGroupContainer-11/New Node/BetChoices/odd",
+  lblRoundId2: "Canvas/mini-panel/MiniPanel/MiniGames/MiniSedieMultiplay/New Layout/sub_container/sub-games-area/groupStatic/StaticGroupContainer-11/New Node/Phien",
+};

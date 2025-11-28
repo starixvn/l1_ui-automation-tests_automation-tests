@@ -3,6 +3,7 @@ import { Components } from "sc-automation-core";
 export const DragonTigerConfigs: Components.GameConfiguration = {
   id: 7,
   name: "dragontiger",
+  cocosNameSpace: "DragonTiger",
   durations: {
     wholeRound: 36 * 1000,
     placingBets: 30 * 1000,
