@@ -2,18 +2,15 @@ import { SpaceFlightLocators } from "../spaceflight-locators";
 import { SpaceFlightConfigs } from "../spaceflight-configs";
 import { SmokeBases } from "sc-automation-core";
 
-class SpaceFlightSmokeSpec extends SmokeBases.CrashGameBase {
+class SpaceFlightSmokeSpec extends SmokeBases.CrashGameBaseCocos {
 
   constructor() {
-    const smokeOptions: SmokeBases.IBaseOptions = {
-      placeBetChoices: [
-        SpaceFlightConfigs.choices[0]
-      ],
+    const smokeOptions: SmokeBases.IBaseOptionsCocos = {
       gameConfiguration: SpaceFlightConfigs,
       locators: SpaceFlightLocators,
-      waitBetTimeout: 1000,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 5,
+      placeBetAmount: process.env.npm_config_project === "l2" ? [SpaceFlightLocators.btnBetChip10] : [SpaceFlightLocators.btnBetChip1],
+      uiLocatorsToVerify: SpaceFlightLocators.uiLocatorsToVerify,
     };
 
     super(smokeOptions);

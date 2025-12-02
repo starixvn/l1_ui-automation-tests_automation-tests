@@ -1,7 +1,7 @@
 import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
-export const SpaceFlightLocators = [
+export const SpaceFlightLocatorsImage = [
     new ImageLocator("placeBetChoice", 770, 565, 150, 43),
     new ImageLocator("btnCashOut",  793, 555, 144, 46),
     new ImageLocator("hamburgerMenu", 40, 120, 20,20),
@@ -24,4 +24,11 @@ export const SpaceFlightLocators = [
     new ImageLocator("roundId", 150, 72, 976, 580),
 ];
 
-
+export const SpaceFlightLocators = {
+    btnBetChip1: {x: 542, y: 260},
+    btnBetChip10: {x: 542, y: 260},
+    ...Components.CrashGame_Locators,
+    uiLocatorsToVerify: {
+        lblRoundId: "Canvas/center/auto-scale-widget/RoundID",
+        playerProfile: "Canvas/center/auto-scale-widget/bottom-area/main-player/main-player-profile",
+    }}
