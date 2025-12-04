@@ -25,9 +25,9 @@ export const SpaceFlightLocatorsImage = [
 ];
 
 export const SpaceFlightLocators = {
+    ...Components.CrashGame_Locators,
     btnBetChip1: {x: 542, y: 260},
     btnBetChip10: {x: 542, y: 260},
-    ...Components.CrashGame_Locators,
     uiLocatorsToVerify: {
         lblRoundId: "Canvas/center/auto-scale-widget/RoundID",
         playerProfile: "Canvas/center/auto-scale-widget/bottom-area/main-player/main-player-profile",

@@ -30,8 +30,8 @@ export const BaccaratLocatorsImage = [
 
 export const BaccaratLocators = {
     ...Components.RoundGame_Locators,
-    btnPlayer: {x: 316, y: 390},
-    btnBanker: {x: 900, y: 390},
+    btnPlayer: "Canvas/Main/Body/BetOptions/player",
+    btnBanker: "Canvas/Main/Body/BetOptions/banker",
     chip1: "Canvas/Main/Body/BetBoard/BetChips/BetChips/scroll/mask/Chips/1",
     chip10: "Canvas/Main/Body/BetBoard/BetChips/BetChips/scroll/mask/Chips/10",
     uiLocatorsToVerify: {boardHistory:"Canvas/Main/TotalHistoryBoard",

@@ -18,11 +18,11 @@ export const SedieLocators = {
   lblHedgeWarning: "Chỉ có thể đặt cược trên Chẵn hoặc Lẻ.",
   btnguide: "Canvas/UI_landscape/menu-area/InGameMenu/expandableMenu/expanded-menu/btn guide",
   btnHistory: "Canvas/UI_landscape/menu-area/InGameMenu/expandableMenu/expanded-menu/btn history",
-  txtHistoryRoundId: `Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/XocXocHistoryItem/node/New Layout/phien`,
-  txtHistoryTotalBet: `Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/XocXocHistoryItem/node/le`,
-  txtHistoryWin: `Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/wrapper/content/XocXocHistoryItem/node/win-container/win`,
-  btnCloseHistory: "Canvas/UI_landscape/minipanel/MiniPanel/Dialog/XocXocHistory/history-frame/BetDetail/auto scale/back-wrapper/CloseButton",
-  lblMiniWarning: "Canvas/UI_landscape/center_widget/center/main/notice/mini_warning/text",
+  txtHistoryRoundId: `/node/New Layout/phien`,
+  txtHistoryTotalBet: `/node/le`,
+  txtHistoryWin: `/node/win-container/win`,
+  btnCloseHistory: "/auto scale/back-wrapper/CloseButton",
+  lblMiniWarning: "/center/main/notice/mini_warning/text",
 };
 
 export const SedieImageLocators = [
