@@ -8,6 +8,10 @@ export const BigSmallLocators = {
   chip10: "Canvas/mini-panel/MiniPanel/MiniGames/BigSmall/Background/BetBoardContainer/BetBoard/background/BetChips/10",
   uiLocatorsToVerify: {lblOdds:"Odds",lblRoundId:"Phien",tableStatistics:"statistics",lblMd5:"md5",lblMiniRoundHistory:"miniRoundHistoryContainer"},
   lblHedgeWarning: "Chỉ được cược 1 bên.",
+  txtHistoryRoundId: `/BigSmallHistoryItem/node/New Node/round`,
+  txtHistoryTotalBet: `/BigSmallHistoryItem/node/Cuoc`,
+  txtHistoryWin: `/BigSmallHistoryItem/node/Win`,
+  btnCloseHistory: "/auto scale/back-wrapper/CloseButton",
 };
 
 
